@@ -66536,7 +66536,11 @@ Ext.define('Ext.picker.Picker', {
                 Ext.Viewport.setActiveItem(view);
             },
             denied: function() {
-                console.log('user denied');
+                Ext.Viewport.getActiveItem().destroy();
+                var view = Ext.Viewport.add({
+                        xtype: 'NewCustomerSignUpForm'
+                    });
+                Ext.Viewport.setActiveItem(view);
             }
         });
     }
@@ -69936,10 +69940,10 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'businessName',
                 margin: '5 5 5 5 ',
                 styleHtmlContent: true,
-                label: 'Name',
-                labelWidth: '35%',
+                width: '95%',
                 labelWrap: true,
-                name: 'businessName'
+                name: 'businessName',
+                placeHolder: 'Business Name'
             },
             {
                 xtype: 'selectfield',
@@ -69948,15 +69952,47 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealStatus',
                 margin: '5 5 5 5 ',
                 maxHeight: '',
-                style: '',
                 styleHtmlContent: true,
-                label: 'Business Category',
-                labelWidth: '35%',
+                width: '95%',
                 labelWrap: true,
                 name: 'category',
                 value: 'Active',
-                placeHolder: 'Active',
+                placeHolder: 'Choose Business Category',
                 autoSelect: false,
+                options: [
+                    {
+                        text: 'Automotive',
+                        value: 'Automotive'
+                    },
+                    {
+                        text: 'Arts',
+                        value: 'Arts'
+                    },
+                    {
+                        text: 'Salon & Spa',
+                        value: 'Salon & Spa'
+                    },
+                    {
+                        text: 'Food & Dining',
+                        value: 'Food & Dining'
+                    },
+                    {
+                        text: 'Education',
+                        value: 'Education'
+                    },
+                    {
+                        text: 'Shopping',
+                        value: 'Shopping'
+                    },
+                    {
+                        text: 'Services',
+                        value: 'Services'
+                    },
+                    {
+                        text: 'Other',
+                        value: 'Other'
+                    }
+                ],
                 store: 'MyJsonPStore'
             },
             {
@@ -69979,10 +70015,16 @@ Ext.define('Ext.picker.Picker', {
                 padding: '5 0 0 5',
                 style: 'border:1px solid #C0C0C0!important',
                 styleHtmlContent: true,
-                width: '',
+                width: '95%',
+                component: {
+                    xtype: 'input',
+                    type: 'tel',
+                    fastFocus: true
+                },
                 clearIcon: false,
                 labelWidth: '35%',
-                name: 'phoneNumber'
+                name: 'phoneNumber',
+                placeHolder: '555-555-5555'
             },
             {
                 xtype: 'textareafield',
@@ -69996,29 +70038,53 @@ Ext.define('Ext.picker.Picker', {
                 minHeight: '10vh',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
+                width: '95%',
                 name: 'address',
                 required: true,
                 placeHolder: 'Enter Business Postal Address '
             },
             {
                 xtype: 'emailfield',
-                cls: 'icon-email',
+                cls: [
+                    'icon-email',
+                    'customfield'
+                ],
                 hidden: false,
                 id: 'customerId4',
                 itemId: 'customerId',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
+                width: '95%',
+                name: 'loginEmail',
+                placeHolder: 'Enter your Facebook Login Email ID'
+            },
+            {
+                xtype: 'emailfield',
+                cls: [
+                    'icon-email',
+                    'customfield'
+                ],
+                hidden: false,
+                id: 'customerId6',
+                itemId: 'customerId2',
+                padding: '5 5 5 5',
+                styleHtmlContent: true,
+                width: '95%',
                 name: 'emailAddress',
-                placeHolder: 'email@example.com'
+                placeHolder: 'Enter your Business Email ID '
             },
             {
                 xtype: 'urlfield',
-                cls: 'icon-globe',
+                cls: [
+                    'icon-globe',
+                    'customfield'
+                ],
                 hidden: false,
                 id: 'customerId5',
                 itemId: 'customerId1',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
+                width: '95%',
                 name: 'websiteDisplayName',
                 placeHolder: 'http://example.com'
             },
@@ -70030,8 +70096,6 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 width: '97%',
                 clearIcon: false,
-                label: 'Profile picture',
-                labelWidth: '29%',
                 labelWrap: true,
                 name: 'fileUpload',
                 accept: 'image',
