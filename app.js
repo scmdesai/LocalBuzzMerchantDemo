@@ -70046,7 +70046,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'emailfield',
                 cls: [
-                    'icon-email',
+                    'icon-key',
                     'customfield'
                 ],
                 hidden: false,
@@ -70057,7 +70057,7 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 width: '95%',
                 name: 'loginEmail',
-                placeHolder: 'Enter your Facebook Login Email ID'
+                placeHolder: 'Enter your Facebook Login Email ID *'
             },
             {
                 xtype: 'emailfield',
@@ -70073,7 +70073,7 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 width: '95%',
                 name: 'emailAddress',
-                placeHolder: 'Enter your Business Email ID '
+                placeHolder: 'Enter an email ID for customers to reach you**'
             },
             {
                 xtype: 'urlfield',
@@ -70103,7 +70103,8 @@ Ext.define('Ext.picker.Picker', {
                     fastFocus: false
                 },
                 clearIcon: false,
-                label: 'Profile Picture',
+                label: 'Set Cover Photo',
+                labelWidth: '20%',
                 labelWrap: true,
                 name: 'fileUpload',
                 accept: 'image',
@@ -70147,6 +70148,17 @@ Ext.define('Ext.picker.Picker', {
                         ]
                     }
                 ]
+            },
+            {
+                xtype: 'container',
+                docked: 'bottom',
+                height: '100px',
+                html: '<div style="font-size:2.5vw;" >*Facebook Login email will give you access to the Merchant App</div><div style="font-size:2.5vw;" >**Business Email ID will be displayed on the Local Buzz Consumer App<br>Example: info@company.com</div>',
+                itemId: 'mycontainer6',
+                margin: '5 5 5 10',
+                padding: '5 30 5 0',
+                styleHtmlContent: true,
+                layout: 'hbox'
             },
             {
                 xtype: 'container',
