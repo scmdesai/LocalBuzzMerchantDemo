@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.domain.Contact" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Local Buzz For Merchants</name>
+    <name>Local Buzz For Merchants Demo App</name>
     <description>
-        Local Buzz For Merchants
+        Local Buzz For Merchants Demo App
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
