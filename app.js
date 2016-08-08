@@ -61765,6 +61765,85 @@ Ext.define('Ext.picker.Picker', {
 ], 0));
 
 /**
+ * The Email field creates an HTML5 email input and is usually created inside a form. Because it creates an HTML email
+ * input field, most browsers will show a specialized virtual keyboard for email address input. Aside from that, the
+ * email field is just a normal text field. Here's an example of how to use it in a form:
+ *
+ *     @example
+ *     Ext.create('Ext.form.Panel', {
+ *         fullscreen: true,
+ *         items: [
+ *             {
+ *                 xtype: 'fieldset',
+ *                 title: 'Register',
+ *                 items: [
+ *                     {
+ *                         xtype: 'emailfield',
+ *                         label: 'Email',
+ *                         name: 'email'
+ *                     },
+ *                     {
+ *                         xtype: 'passwordfield',
+ *                         label: 'Password',
+ *                         name: 'password'
+ *                     }
+ *                 ]
+ *             }
+ *         ]
+ *     });
+ *
+ * Or on its own, outside of a form:
+ *
+ *     Ext.create('Ext.field.Email', {
+ *         label: 'Email address',
+ *         value: 'prefilled@email.com'
+ *     });
+ *
+ * Because email field inherits from {@link Ext.field.Text textfield} it gains all of the functionality that text fields
+ * provide, including getting and setting the value at runtime, validations and various events that are fired as the
+ * user interacts with the component. Check out the {@link Ext.field.Text} docs to see the additional functionality
+ * available.
+ *
+ * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
+ */
+(Ext.cmd.derive('Ext.field.Email', Ext.field.Text, {
+    alternateClassName: 'Ext.form.Email',
+    config: {
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        component: {
+            type: 'email'
+        },
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        autoCapitalize: false
+    }
+}, 0, [
+    "emailfield"
+], [
+    "component",
+    "field",
+    "textfield",
+    "emailfield"
+], {
+    "component": true,
+    "field": true,
+    "textfield": true,
+    "emailfield": true
+}, [
+    "widget.emailfield"
+], 0, [
+    Ext.field,
+    'Email',
+    Ext.form,
+    'Email'
+], 0));
+
+/**
  * @private
  */
 (Ext.cmd.derive('Ext.field.FileInput', Ext.field.Input, {
@@ -62009,6 +62088,80 @@ Ext.define('Ext.picker.Picker', {
 ], 0, [
     Ext.field,
     'File'
+], 0));
+
+/**
+ * The urlfield creates an HTML5 url input and is usually created inside a form. Because it creates an HTML url input
+ * field, most browsers will show a specialized virtual keyboard for web address input. Aside from that, the urlfield
+ * is just a normal text field. Here's an example of how to use it in a form:
+ *
+ *     @example
+ *     Ext.create('Ext.form.Panel', {
+ *         fullscreen: true,
+ *         items: [
+ *             {
+ *                 xtype: 'fieldset',
+ *                 title: 'Add Bookmark',
+ *                 items: [
+ *                     {
+ *                         xtype: 'urlfield',
+ *                         label: 'Url',
+ *                         name: 'url'
+ *                     }
+ *                 ]
+ *             }
+ *         ]
+ *     });
+ *
+ * Or on its own, outside of a form:
+ *
+ *     Ext.create('Ext.field.Url', {
+ *         label: 'Web address',
+ *         value: 'http://sencha.com'
+ *     });
+ *
+ * Because url field inherits from {@link Ext.field.Text textfield} it gains all of the functionality that text fields
+ * provide, including getting and setting the value at runtime, validations and various events that are fired as the
+ * user interacts with the component. Check out the {@link Ext.field.Text} docs to see the additional functionality
+ * available.
+ *
+ * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
+ */
+(Ext.cmd.derive('Ext.field.Url', Ext.field.Text, {
+    alternateClassName: 'Ext.form.Url',
+    config: {
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        autoCapitalize: false,
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        component: {
+            type: 'url'
+        }
+    }
+}, 0, [
+    "urlfield"
+], [
+    "component",
+    "field",
+    "textfield",
+    "urlfield"
+], {
+    "component": true,
+    "field": true,
+    "textfield": true,
+    "urlfield": true
+}, [
+    "widget.urlfield"
+], 0, [
+    Ext.field,
+    'Url',
+    Ext.form,
+    'Url'
 ], 0));
 
 /**
@@ -66030,7 +66183,7 @@ Ext.define('Ext.picker.Picker', {
                 name: 'dealName'
             },
             {
-                name: 'dealStatus'
+                name: 'category'
             },
             {
                 convert: function(v, rec) {
@@ -69738,6 +69891,269 @@ Ext.define('Ext.picker.Picker', {
 ], 0));
 
 /*
+ * File: app/view/NewCustomerSignUpForm.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.NewCustomerSignUpForm', Ext.form.Panel, {
+    config: {
+        html: '',
+        id: 'formpanel4',
+        itemId: 'formpanel',
+        padding: '0 0 35 0',
+        style: 'background:white',
+        ui: 'light',
+        autoDestroy: false,
+        modal: true,
+        scrollable: true,
+        multipartDetection: false,
+        layout: {
+            type: 'vbox',
+            align: 'stretchmax'
+        },
+        items: [
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                hidden: false,
+                id: 'businessName6',
+                itemId: 'businessName',
+                margin: '5 5 5 5 ',
+                styleHtmlContent: true,
+                label: 'Name',
+                labelWidth: '35%',
+                labelWrap: true,
+                name: 'businessName'
+            },
+            {
+                xtype: 'selectfield',
+                cls: 'customfield',
+                id: 'DealStatus3',
+                itemId: 'DealStatus',
+                margin: '5 5 5 5 ',
+                maxHeight: '',
+                style: '',
+                styleHtmlContent: true,
+                label: 'Business Category',
+                labelWidth: '35%',
+                labelWrap: true,
+                name: 'category',
+                value: 'Active',
+                placeHolder: 'Active',
+                autoSelect: false,
+                store: 'MyJsonPStore'
+            },
+            {
+                xtype: 'textfield',
+                hidden: true,
+                id: 'DealPictureURL3',
+                itemId: 'DealPictureURL',
+                name: 'DealPictureURL'
+            },
+            {
+                xtype: 'textfield',
+                cls: [
+                    'customfield',
+                    'icon-phone'
+                ],
+                height: '100%',
+                id: 'DealDescription3',
+                itemId: 'DealDescription',
+                margin: '5 5 5 5 ',
+                padding: '5 0 0 5',
+                style: 'border:1px solid #C0C0C0!important',
+                styleHtmlContent: true,
+                width: '',
+                clearIcon: false,
+                labelWidth: '35%',
+                name: 'phoneNumber'
+            },
+            {
+                xtype: 'textareafield',
+                cls: [
+                    'customfield',
+                    'icon-location'
+                ],
+                id: 'address2',
+                itemId: 'address1',
+                maxHeight: '15vh',
+                minHeight: '10vh',
+                padding: '5 5 5 5',
+                styleHtmlContent: true,
+                name: 'address',
+                required: true,
+                placeHolder: 'Enter Business Postal Address '
+            },
+            {
+                xtype: 'emailfield',
+                cls: 'icon-email',
+                hidden: false,
+                id: 'customerId4',
+                itemId: 'customerId',
+                padding: '5 5 5 5',
+                styleHtmlContent: true,
+                name: 'emailAddress',
+                placeHolder: 'email@example.com'
+            },
+            {
+                xtype: 'urlfield',
+                cls: 'icon-globe',
+                hidden: false,
+                id: 'customerId5',
+                itemId: 'customerId1',
+                padding: '5 5 5 5',
+                styleHtmlContent: true,
+                name: 'websiteDisplayName',
+                placeHolder: 'http://example.com'
+            },
+            {
+                xtype: 'filefield',
+                cls: 'customfield',
+                itemId: 'myfilefield2',
+                margin: '5 5 0 5',
+                styleHtmlContent: true,
+                width: '97%',
+                clearIcon: false,
+                label: 'Profile picture',
+                labelWidth: '29%',
+                labelWrap: true,
+                name: 'fileUpload',
+                accept: 'image',
+                capture: 'camera'
+            },
+            {
+                xtype: 'container',
+                left: '',
+                margin: '0 0 5 0',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'container',
+                        docked: 'left',
+                        html: '<input type="checkbox" name="chkbx" id="chkbx">',
+                        left: '40%',
+                        margin: '5 5 5 15',
+                        top: '50%'
+                    },
+                    {
+                        xtype: 'container',
+                        docked: 'right',
+                        height: '40px',
+                        html: '<a id="terms" style="font-size:2.5vw;" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
+                        itemId: 'mycontainer5',
+                        margin: '5 5 5 10',
+                        padding: '5 30 5 0',
+                        styleHtmlContent: true,
+                        layout: 'hbox',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    element.addListener('tap', function() {
+                                        //Ext.Viewport.add({xtype:'Terms'}).show();
+                                        var url = "http://www.appsonmobile.com/index.php/terms-and-conditions/";
+                                        window.open(url, '_system', 'location=yes');
+                                    });
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                height: 140,
+                margin: '0 10 50 10',
+                padding: '5 5 5 5',
+                styleHtmlContent: true,
+                layout: 'fit',
+                scrollable: false,
+                items: [
+                    {
+                        xtype: 'spacer',
+                        maxWidth: '',
+                        minWidth: ''
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, e) {
+                            Ext.Viewport.getActiveItem().destroy();
+                        },
+                        height: '7vh',
+                        margin: '0 0 5 0',
+                        style: 'font-size:5vw!important',
+                        ui: 'decline',
+                        width: '40%',
+                        text: 'Cancel'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, e) {
+                            var form = this.up('NewCustomerSignUpForm');
+                        },
+                        docked: 'right',
+                        height: '7vh',
+                        itemId: 'submit',
+                        margin: '0 0 5 0',
+                        style: 'font-size:5vw!important',
+                        ui: 'confirm',
+                        width: '30%',
+                        text: 'Submit'
+                    }
+                ]
+            }
+        ],
+        listeners: [
+            {
+                fn: 'onPhoneNumberKeyUp',
+                event: 'keyup',
+                delegate: '#DealDescription3'
+            }
+        ]
+    },
+    onPhoneNumberKeyUp: function(textfield, e, eOpts) {
+        var len = textfield.getValue().length;
+        if (len === 3 || len === 7) {
+            textfield.setValue(textfield.getValue() + '-');
+        }
+        if (len === 4) {
+            textfield.setValue(textfield.getValue().substr(0, 3));
+        }
+        if (len === 8) {
+            textfield.setValue(textfield.getValue().substr(0, 7));
+        }
+    }
+}, 0, [
+    "NewCustomerSignUpForm"
+], [
+    "component",
+    "container",
+    "panel",
+    "formpanel",
+    "NewCustomerSignUpForm"
+], {
+    "component": true,
+    "container": true,
+    "panel": true,
+    "formpanel": true,
+    "NewCustomerSignUpForm": true
+}, [
+    "widget.NewCustomerSignUpForm"
+], 0, [
+    LocalBuzzMerchantDemoStores.view,
+    'NewCustomerSignUpForm'
+], 0));
+
+/*
  * File: app.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
@@ -69779,7 +70195,8 @@ Ext.application({
         'UploadDealWithImageForm',
         'CreateBuzzOption',
         'DealImage',
-        'Welcome'
+        'Welcome',
+        'NewCustomerSignUpForm'
     ],
     controllers: [
         'Contacts'
