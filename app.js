@@ -66359,8 +66359,7 @@ Ext.define('Ext.picker.Picker', {
         listeners: [
             {
                 fn: 'onPanelInitialize',
-                event: 'initialize',
-                order: 'before'
+                event: 'initialize'
             }
         ]
     },
