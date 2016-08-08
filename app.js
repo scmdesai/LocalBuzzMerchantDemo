@@ -66499,6 +66499,13 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'button',
+                handler: function(button, e) {
+                    Ext.Viewport.getActiveItem().destroy();
+                    var view = Ext.Viewport.add({
+                            xtype: 'NewCustomerSignUpForm'
+                        });
+                    Ext.Viewport.setActiveItem(view);
+                },
                 height: '9vh',
                 left: '25%',
                 margin: '5 5 5 5',
