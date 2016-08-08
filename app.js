@@ -66359,7 +66359,6 @@ Ext.define('Ext.picker.Picker', {
     },
     initialize: function() {
         Ext.Panel.prototype.initialize.call(this);
-        this.setHidden(true);
         // Settings.
         FacebookInAppBrowser.settings.appId = '900651756709444';
         FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
@@ -66368,36 +66367,16 @@ Ext.define('Ext.picker.Picker', {
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         // Login(accessToken will be stored trough localStorage in 'accessToken');
         FacebookInAppBrowser.login({
-            send: function() {
-                console.log('login opened');
-            },
             success: function(access_token) {
-                console.log('done, access token: ' + access_token);
+                //console.log('done, access token: ' + access_token);
+                Ext.Viewport.getActiveItem().destroy();
+                var view = Ext.Viewport.add({
+                        xtype: 'Login'
+                    });
+                Ext.Viewport.setActiveItem(view);
             },
             denied: function() {
                 console.log('user denied');
-            },
-            timeout: function() {
-                console.log('a timeout has occurred, probably a bad internet connection');
-            },
-            complete: function(access_token) {
-                console.log('window closed');
-                if (access_token) {
-                    console.log(access_token);
-                } else {
-                    console.log('no access token');
-                }
-            },
-            userInfo: function(userInfo) {
-                if (userInfo) {
-                    Ext.Viewport.getActiveItem().destroy();
-                    var view = Ext.Viewport.add({
-                            xtype: 'Login'
-                        });
-                    Ext.Viewport.setActiveItem(view);
-                } else {
-                    this.setHidden(false);
-                }
             }
         });
     }
