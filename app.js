@@ -69992,8 +69992,7 @@ Ext.define('Ext.picker.Picker', {
                         text: 'Other',
                         value: 'Other'
                     }
-                ],
-                store: 'MyJsonPStore'
+                ]
             },
             {
                 xtype: 'textfield',
@@ -70034,6 +70033,7 @@ Ext.define('Ext.picker.Picker', {
                 ],
                 id: 'address2',
                 itemId: 'address1',
+                margin: '5 5 5 5 ',
                 maxHeight: '15vh',
                 minHeight: '10vh',
                 padding: '5 5 5 5',
@@ -70052,6 +70052,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: false,
                 id: 'customerId4',
                 itemId: 'customerId',
+                margin: '5 5 5 5 ',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
                 width: '95%',
@@ -70067,6 +70068,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: false,
                 id: 'customerId6',
                 itemId: 'customerId2',
+                margin: '5 5 5 5 ',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
                 width: '95%',
@@ -70082,6 +70084,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: false,
                 id: 'customerId5',
                 itemId: 'customerId1',
+                margin: '5 5 5 5 ',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
                 width: '95%',
@@ -70095,7 +70098,12 @@ Ext.define('Ext.picker.Picker', {
                 margin: '5 5 0 5',
                 styleHtmlContent: true,
                 width: '97%',
+                component: {
+                    xtype: 'fileinput',
+                    fastFocus: false
+                },
                 clearIcon: false,
+                label: 'Profile Picture',
                 labelWrap: true,
                 name: 'fileUpload',
                 accept: 'image',
