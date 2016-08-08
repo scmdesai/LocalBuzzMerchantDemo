@@ -66355,10 +66355,17 @@ Ext.define('Ext.picker.Picker', {
                 width: '50%',
                 text: 'Sign Up'
             }
+        ],
+        listeners: [
+            {
+                fn: 'onPanelInitialize',
+                event: 'initialize',
+                order: 'before'
+            }
         ]
     },
-    initialize: function() {
-        Ext.Panel.prototype.initialize.call(this);
+    onPanelInitialize: function(component, eOpts) {
+        this.callParent();
         // Settings.
         FacebookInAppBrowser.settings.appId = '900651756709444';
         FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
