@@ -66931,12 +66931,12 @@ Ext.define('Ext.picker.Picker', {
                             var store = Ext.getStore('MyJsonPStore');
                             var record = form.getRecord();
                             var customerId = form.getRecord().get('customerId');
-                            record.beginEdit(true, record.getChanges());
-                            form.updateRecord(record);
-                            record.endEdit(true, record.getChanges());
-                            record.commit();
-                            store.sync();
-                            store.load();
+                            /*record.beginEdit(true, record.getChanges());
+							form.updateRecord(record);
+							record.endEdit(true, record.getChanges());
+							record.commit();
+							store.sync();
+							store.load();*/
                             form.submit({
                                 url: 'http://services.appsonmobile.com/demoUpdateStoreInfo/' + customerId,
                                 success: function(form, action) {
@@ -68007,11 +68007,16 @@ Ext.define('Ext.picker.Picker', {
                             waitMsg: 'Please Wait...',
                             success: function(form, action) {
                                 //var view = Ext.Viewport.getActiveItem();
-                                record.setDirty();
-                                record.beginEdit(true, record.getChanges());
-                                form.updateRecord(record);
-                                record.endEdit(true, record.getChanges());
-                                record.commit();
+                                /*record.setDirty();
+
+								record.beginEdit(true,record.getChanges());
+
+								form.updateRecord(record);
+
+								record.endEdit(true,record.getChanges());
+
+
+								record.commit();*/
                                 store.sync();
                                 store.load();
                                 Ext.Msg.alert('Record updated', "Please login again to see the changes", null, null);
@@ -68201,6 +68206,7 @@ Ext.define('Ext.picker.Picker', {
                         html: '<div id="chart1"></div>',
                         itemId: 'mypanel',
                         styleHtmlContent: true,
+                        scrollable: true,
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -68280,6 +68286,7 @@ Ext.define('Ext.picker.Picker', {
                         html: '<div id="chart2"></div>',
                         itemId: 'mypanel1',
                         styleHtmlContent: true,
+                        scrollable: true,
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
