@@ -66355,16 +66355,11 @@ Ext.define('Ext.picker.Picker', {
                 width: '50%',
                 text: 'Sign Up'
             }
-        ],
-        listeners: [
-            {
-                fn: 'onPanelInitialize',
-                event: 'initialize'
-            }
         ]
     },
-    onPanelInitialize: function(component, eOpts) {
-        this.callParent();
+    initialize: function() {
+        Ext.Panel.prototype.initialize.call(this);
+        this.setHidden(true);
         // Settings.
         FacebookInAppBrowser.settings.appId = '900651756709444';
         FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
@@ -66400,6 +66395,8 @@ Ext.define('Ext.picker.Picker', {
                             xtype: 'Login'
                         });
                     Ext.Viewport.setActiveItem(view);
+                } else {
+                    this.setHidden(false);
                 }
             }
         });
