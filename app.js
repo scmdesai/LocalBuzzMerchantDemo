@@ -68017,13 +68017,14 @@ Ext.define('Ext.picker.Picker', {
                     //console.log(view.getData());
                     //Ext.Viewport.setActiveItem(view);
                     if (!record) {
-                        Ext.Msg.alert('Business not registered', "Register business or contact us at info@appsonmobile.com", null, null);
-                        FacebookInAppBrowser.logout(function() {
-                            window.localStorage.setItem('facebookAccessToken', null);
-                            location.reload();
-                        });
+                        Ext.Msg.alert('Business not registered', "Register business or contact us at info@appsonmobile.com", function() {
+                            FacebookInAppBrowser.logout(function() {
+                                window.localStorage.setItem('facebookAccessToken', null);
+                                location.reload();
+                            });
+                        }, //navigator.app.exitApp();
+                        null);
                     }
-                    //navigator.app.exitApp();
                     var storeUserDetails = Ext.getStore('UserDetails');
                     storeUserDetails.removeAll();
                     storeUserDetails.add({
