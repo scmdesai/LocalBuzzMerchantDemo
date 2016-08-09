@@ -68017,6 +68017,9 @@ Ext.define('Ext.picker.Picker', {
                     if (!record) {
                         Ext.Msg.alert('Business not registered', "Register business or contact us at info@appsonmobile.com", null, null);
                         //navigator.app.exitApp();
+                        FacebookInAppBrowser.logout(function() {
+                            window.localStorage.setItem('facebookAccessToken', null);
+                        });
                         var view = Ext.Viewport.add({
                                 xtype: 'WelcomeScreen'
                             });
