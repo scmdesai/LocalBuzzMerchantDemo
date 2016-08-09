@@ -68021,6 +68021,11 @@ Ext.define('Ext.picker.Picker', {
                         //navigator.app.exitApp();
                         FacebookInAppBrowser.logout(function() {
                             var view = Ext.Viewport.getComponent('WelcomeScreen');
+                            if (!view) {
+                                view = Ext.Viewport.add({
+                                    xtype: 'WelcomeScreen'
+                                });
+                            }
                             Ext.Viewport.setActiveItem(view);
                         });
                     }
