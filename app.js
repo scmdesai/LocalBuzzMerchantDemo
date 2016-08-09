@@ -70079,61 +70079,41 @@ Ext.define('Ext.picker.Picker', {
                             var category = form.getAt(1).getValue();
                             var loginEmail = form.getAt(3).getValue();
                             var pic = form.getAt(10).getValue();
-                            if (pic) {
-                                if (businessName) {
-                                    if (category) {
-                                        if (loginEmail) {
-                                            if (document.getElementById('chkbx').checked) {
-                                                form.submit({
-                                                    url: 'http://services.appsonmobile.com/democreateNewStore',
-                                                    xhr2: true,
-                                                    cache: false,
-                                                    waitMsg: 'Please Wait...',
-                                                    success: function(form, action) {
-                                                        Ext.Msg.alert('Success', action.msg, function() {
-                                                            location.reload();
-                                                        }, null);
-                                                    },
-                                                    //form.destroy();
-                                                    failure: function(form, action) {
-                                                        Ext.Msg.alert('Failure', action.msg, function() {
-                                                            location.reload();
-                                                        }, null);
-                                                    }
-                                                });
-                                            } else //form.destroy();
-                                            {
-                                                Ext.Msg.alert(null, 'You must agree to Terms & Conditions', null, null);
-                                            }
-                                        } else {
-                                            Ext.Msg.alert(null, "Facebook email ID is required to create the merchant account ", null, null);
+                            if (businessName) {
+                                if (category) {
+                                    if (loginEmail) {
+                                        if (document.getElementById('chkbx').checked) {
+                                            form.submit({
+                                                url: 'http://services.appsonmobile.com/democreateNewStore',
+                                                xhr2: true,
+                                                cache: false,
+                                                waitMsg: 'Please Wait...',
+                                                success: function(form, action) {
+                                                    Ext.Msg.alert('Success', action.msg, function() {
+                                                        location.reload();
+                                                    }, null);
+                                                },
+                                                //form.destroy();
+                                                failure: function(form, action) {
+                                                    Ext.Msg.alert('Failure', action.msg, function() {
+                                                        location.reload();
+                                                    }, null);
+                                                }
+                                            });
+                                        } else //form.destroy();
+                                        {
+                                            Ext.Msg.alert(null, 'You must agree to Terms & Conditions', null, null);
                                         }
                                     } else {
-                                        Ext.Msg.alert(null, "Please choose a category", null, null);
+                                        Ext.Msg.alert(null, "Facebook email ID is required to create the merchant account ", null, null);
                                     }
                                 } else {
-                                    Ext.Msg.alert(null, "Business name field is empty", null, null);
+                                    Ext.Msg.alert(null, "Please choose a category", null, null);
                                 }
                             } else {
-                                form.submit({
-                                    url: 'http://services.appsonmobile.com/democreateNewStore',
-                                    cache: false,
-                                    waitMsg: 'Please Wait...',
-                                    success: function(form, action) {
-                                        Ext.Msg.alert('Success', action.msg, function() {
-                                            location.reload();
-                                        }, null);
-                                    },
-                                    //form.destroy();
-                                    failure: function(form, action) {
-                                        Ext.Msg.alert('Failure', action.msg, function() {
-                                            location.reload();
-                                        }, null);
-                                    }
-                                });
+                                Ext.Msg.alert(null, "Business name field is empty", null, null);
                             }
                         },
-                        //form.destroy();
                         docked: 'right',
                         height: '7vh',
                         itemId: 'submit',
