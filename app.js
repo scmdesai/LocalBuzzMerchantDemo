@@ -68022,9 +68022,9 @@ Ext.define('Ext.picker.Picker', {
                         FacebookInAppBrowser.logout(function() {
                             var view = Ext.Viewport.getComponent('WelcomeScreen');
                             Ext.Viewport.setActiveItem(view);
-                            window.localStorage.setItem('facebookAccessToken', null);
                         });
                     }
+                    //window.localStorage.setItem('facebookAccessToken',null) ;
                     var storeUserDetails = Ext.getStore('UserDetails');
                     storeUserDetails.removeAll();
                     storeUserDetails.add({
