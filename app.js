@@ -68018,18 +68018,15 @@ Ext.define('Ext.picker.Picker', {
                     //Ext.Viewport.setActiveItem(view);
                     if (!record) {
                         Ext.Msg.alert('Business not registered', "Register business or contact us at info@appsonmobile.com", null, null);
-                        //navigator.app.exitApp();
-                        FacebookInAppBrowser.logout(function() {
-                            var view = Ext.Viewport.getComponent('WelcomeScreen');
-                            if (!view) {
-                                view = Ext.Viewport.add({
-                                    xtype: 'WelcomeScreen'
-                                });
-                            }
-                            Ext.Viewport.setActiveItem(view);
-                        });
+                        FacebookInAppBrowser.logout();
+                        var view1 = Ext.Viewport.getComponent('WelcomeScreen');
+                        if (!view1) {
+                            view1 = Ext.Viewport.add({
+                                xtype: 'WelcomeScreen'
+                            });
+                        }
+                        Ext.Viewport.setActiveItem(view1);
                     }
-                    //window.localStorage.setItem('facebookAccessToken',null) ;
                     var storeUserDetails = Ext.getStore('UserDetails');
                     storeUserDetails.removeAll();
                     storeUserDetails.add({
