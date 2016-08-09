@@ -69771,7 +69771,6 @@ Ext.application({
         'panel',
         'UpdateDealForm',
         'CreateNewBuzz',
-        'CreateBuzzOption',
         'DealImage',
         'CreateNewStore',
         'WelcomeScreen'
