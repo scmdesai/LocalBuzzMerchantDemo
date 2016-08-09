@@ -70088,7 +70088,7 @@ Ext.define('Ext.picker.Picker', {
                                                 cache: false,
                                                 waitMsg: 'Please Wait...',
                                                 success: function(form, action) {
-                                                    Ext.Msg.alert('Success', action.msg, function() {
+                                                    Ext.Msg.alert('Thank you for registering with us!', 'Please give us 2 business days to verify and validate your account.Your free trial period starts after activation', function() {
                                                         location.reload();
                                                     }, null);
                                                 },
