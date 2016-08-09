@@ -66310,6 +66310,8 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('Contact.view.WelcomeScreen', Ext.Panel, {
     config: {
+        id: 'WelcomeScreen',
+        itemId: 'WelcomeScreen',
         items: [
             {
                 xtype: 'component',
@@ -68019,10 +68021,7 @@ Ext.define('Ext.picker.Picker', {
                         //navigator.app.exitApp();
                         FacebookInAppBrowser.logout(function() {
                             window.localStorage.setItem('facebookAccessToken', null);
-                            var view = Ext.Viewport.add({
-                                    xtype: 'WelcomeScreen'
-                                });
-                            Ext.Viewport.getComponent(view);
+                            var view = Ext.Viewport.getComponent('WelcomeScreen');
                         });
                     }
                     var storeUserDetails = Ext.getStore('UserDetails');
