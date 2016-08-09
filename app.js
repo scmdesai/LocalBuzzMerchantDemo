@@ -68019,7 +68019,6 @@ Ext.define('Ext.picker.Picker', {
                         //navigator.app.exitApp();
                         FacebookInAppBrowser.logout(function() {
                             window.localStorage.setItem('facebookAccessToken', null);
-                            window.close();
                             var view = Ext.Viewport.add({
                                     xtype: 'WelcomeScreen'
                                 });
