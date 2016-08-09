@@ -70078,7 +70078,6 @@ Ext.define('Ext.picker.Picker', {
                             var businessName = form.getAt(0).getValue();
                             var category = form.getAt(1).getValue();
                             var loginEmail = form.getAt(3).getValue();
-                            var pic = form.getAt(10).getValue();
                             if (businessName) {
                                 if (category) {
                                     if (loginEmail) {
