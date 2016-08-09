@@ -66332,7 +66332,7 @@ Ext.define('Ext.picker.Picker', {
                 style: 'font-size:5vw;font-family:Arial',
                 ui: 'action',
                 width: '60%',
-                text: 'Login'
+                text: 'Registered User'
             },
             {
                 xtype: 'component',
@@ -66365,25 +66365,6 @@ Ext.define('Ext.picker.Picker', {
                 top: '65%'
             }
         ]
-    },
-    initialize: function() {
-        Ext.Panel.prototype.initialize.call(this);
-        // Settings.
-        FacebookInAppBrowser.settings.appId = '900651756709444';
-        FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
-        FacebookInAppBrowser.settings.permissions = 'email';
-        // Optional
-        FacebookInAppBrowser.settings.timeoutDuration = 7500;
-        // Login(accessToken will be stored trough localStorage in 'accessToken');
-        FacebookInAppBrowser.login({
-            success: function(access_token) {
-                Ext.Viewport.getActiveItem().destroy();
-                var view = Ext.Viewport.add({
-                        xtype: 'Login'
-                    });
-                Ext.Viewport.setActiveItem(view);
-            }
-        });
     }
 }, 0, 0, [
     "component",
