@@ -70309,11 +70309,24 @@ Ext.application({
             {
                 xtype: 'button',
                 handler: function(button, e) {
+                    var storeUserDetails = Ext.getStore('UserDetails');
+                    storeUserDetails.load();
+                    var customerId;
+                    var businessName;
+                    storeUserDetails.each(function(record) {
+                        //console.log('StoreUserDetails : ' +record.get('customerId'));
+                        customerId = record.get('customerId');
+                        businessName = record.get('businessName');
+                    });
+                    var store = Ext.getStore('MyJsonPStore');
+                    store.clearFilter();
+                    var record = Ext.getStore('MyJsonPStore').findRecord('customerId', customerId, 0, true, false, false);
                     Ext.Viewport.getActiveItem().destroy();
                     var view = Ext.Viewport.add({
                             xtype: 'CreateNewBuzzWithImage'
                         });
                     Ext.Viewport.setActiveItem(view);
+                    view.setRecord(record);
                 },
                 height: '9vh',
                 left: '20%',
@@ -70326,11 +70339,24 @@ Ext.application({
             {
                 xtype: 'button',
                 handler: function(button, e) {
+                    var storeUserDetails = Ext.getStore('UserDetails');
+                    storeUserDetails.load();
+                    var customerId;
+                    var businessName;
+                    storeUserDetails.each(function(record) {
+                        //console.log('StoreUserDetails : ' +record.get('customerId'));
+                        customerId = record.get('customerId');
+                        businessName = record.get('businessName');
+                    });
+                    var store = Ext.getStore('MyJsonPStore');
+                    store.clearFilter();
+                    var record = Ext.getStore('MyJsonPStore').findRecord('customerId', customerId, 0, true, false, false);
                     Ext.Viewport.getActiveItem().destroy();
                     var view = Ext.Viewport.add({
                             xtype: 'CreateNewBuzzNoImage'
                         });
                     Ext.Viewport.setActiveItem(view);
+                    view.setRecord(record);
                 },
                 height: '9vh',
                 left: '20%',
