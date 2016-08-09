@@ -70115,10 +70115,25 @@ Ext.define('Ext.picker.Picker', {
                                     Ext.Msg.alert(null, "Business name field is empty", null, null);
                                 }
                             } else {
-                                //Ext.Msg.alert(null,"No Profile pic ",null,null);
-                                form.down('#myfilefield2').setValue('resources/img/localbuzzicon.png');
+                                form.submit({
+                                    url: 'http://services.appsonmobile.com/democreateNewStore',
+                                    cache: false,
+                                    waitMsg: 'Please Wait...',
+                                    success: function(form, action) {
+                                        Ext.Msg.alert('Success', action.msg, function() {
+                                            location.reload();
+                                        }, null);
+                                    },
+                                    //form.destroy();
+                                    failure: function(form, action) {
+                                        Ext.Msg.alert('Failure', action.msg, function() {
+                                            location.reload();
+                                        }, null);
+                                    }
+                                });
                             }
                         },
+                        //form.destroy();
                         docked: 'right',
                         height: '7vh',
                         itemId: 'submit',
