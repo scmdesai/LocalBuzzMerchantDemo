@@ -69129,7 +69129,7 @@ Ext.define('Ext.picker.Picker', {
                                     if (endDate >= date) {
                                         if (document.getElementById('chkbx').checked) {
                                             form.submit({
-                                                url: 'http://services.appsonmobile.com/democreateNewBuzzWithImage/',
+                                                url: 'http://services.appsonmobile.com/democreateNewBuzzWithImage',
                                                 xhr2: true,
                                                 cache: false,
                                                 waitMsg: 'Please Wait...',
@@ -69999,8 +69999,7 @@ Ext.define('Ext.picker.Picker', {
                                 if (endDate >= date) {
                                     if (document.getElementById('chkbx').checked) {
                                         form.submit({
-                                            url: 'http://services.appsonmobile.com/democreateNewBuzzNoImage/',
-                                            xhr2: true,
+                                            url: 'http://services.appsonmobile.com/democreateNewBuzzNoImage',
                                             cache: false,
                                             waitMsg: 'Please Wait...',
                                             success: function(form, action) {
