@@ -68019,11 +68019,12 @@ Ext.define('Ext.picker.Picker', {
                         //navigator.app.exitApp();
                         FacebookInAppBrowser.logout(function() {
                             window.localStorage.setItem('facebookAccessToken', null);
+                            window.close();
+                            var view = Ext.Viewport.add({
+                                    xtype: 'WelcomeScreen'
+                                });
+                            Ext.Viewport.getComponent(view);
                         });
-                        var view = Ext.Viewport.add({
-                                xtype: 'WelcomeScreen'
-                            });
-                        Ext.Viewport.getComponent(view);
                     }
                     var storeUserDetails = Ext.getStore('UserDetails');
                     storeUserDetails.removeAll();
