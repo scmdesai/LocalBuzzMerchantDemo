@@ -66374,17 +66374,15 @@ Ext.define('Ext.picker.Picker', {
         FacebookInAppBrowser.settings.permissions = 'email';
         // Optional
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
-        // Login(accessToken will be stored trough localStorage in 'accessToken');
-        if (FacebookInAppBrowser.login({
-            success: function(access_token) {
+        FacebookInAppBrowser.getInfo(function(response) {
+            if (response) {
+                Ext.Viewport.getActiveItem().destroy();
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
             }
-        })) {
-            Ext.Viewport.getActiveItem().destroy();
-        }
+        });
     }
 }, 0, 0, [
     "component",
