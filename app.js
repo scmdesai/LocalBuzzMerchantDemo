@@ -69907,6 +69907,13 @@ Ext.define('Ext.picker.Picker', {
                 name: 'DealPictureURL'
             },
             {
+                xtype: 'textfield',
+                hidden: true,
+                id: 'DealPictureURL4',
+                itemId: 'DealPictureURL1',
+                name: 'DealImageURL'
+            },
+            {
                 xtype: 'textareafield',
                 cls: 'customfield',
                 height: '100%',
