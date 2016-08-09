@@ -66365,6 +66365,30 @@ Ext.define('Ext.picker.Picker', {
                 top: '65%'
             }
         ]
+    },
+    initialize: function() {
+        Ext.Panel.prototype.initialize.call(this);
+        // Settings.
+        FacebookInAppBrowser.settings.appId = '900651756709444';
+        FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
+        FacebookInAppBrowser.settings.permissions = 'email';
+        // Optional
+        FacebookInAppBrowser.settings.timeoutDuration = 7500;
+        // Login(accessToken will be stored trough localStorage in 'accessToken');
+        if (FacebookInAppBrowser.login({
+            send: function() {
+                console.log('login opened');
+            },
+            success: function(access_token) {
+                console.log('done, access token: ' + access_token);
+            }
+        })) {
+            Ext.Viewport.getActiveItem().destroy();
+            var view = Ext.Viewport.add({
+                    xtype: 'Login'
+                });
+            Ext.Viewport.setActiveItem(view);
+        }
     }
 }, 0, 0, [
     "component",
