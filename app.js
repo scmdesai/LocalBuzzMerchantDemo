@@ -66312,6 +66312,12 @@ Ext.define('Ext.picker.Picker', {
     config: {
         items: [
             {
+                xtype: 'component',
+                docked: 'top',
+                html: '<br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br>Local Buzz For Merchants</h3></div>',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw'
+            },
+            {
                 xtype: 'button',
                 handler: function(button, e) {
                     Ext.Viewport.getActiveItem().destroy();
@@ -66321,12 +66327,19 @@ Ext.define('Ext.picker.Picker', {
                     Ext.Viewport.setActiveItem(view);
                 },
                 height: '9vh',
-                left: '25%',
+                left: '20%',
+                margin: '50 0 0 0',
                 style: 'font-size:5vw;font-family:Arial',
-                top: '30%',
                 ui: 'action',
                 width: '60%',
                 text: 'Login'
+            },
+            {
+                xtype: 'component',
+                html: '<h1 style="color:#00529D;font-size:8vw"><b> OR </b></h1>',
+                left: '45%',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
+                top: '30%'
             },
             {
                 xtype: 'button',
@@ -66337,7 +66350,7 @@ Ext.define('Ext.picker.Picker', {
                     Ext.Viewport.setActiveItem(view);
                 },
                 height: '9vh',
-                left: '25%',
+                left: '20%',
                 style: 'font-size:5vw;font-family:Arial',
                 top: '50%',
                 ui: 'action',
@@ -66356,18 +66369,12 @@ Ext.define('Ext.picker.Picker', {
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         // Login(accessToken will be stored trough localStorage in 'accessToken');
         FacebookInAppBrowser.login({
-            send: function() {
-                Ext.Viewport.setActiveItem(Ext.Viewport.getActiveItem());
-            },
             success: function(access_token) {
                 Ext.Viewport.getActiveItem().destroy();
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
-            },
-            denied: function() {
-                Ext.Viewport.setActiveItem(Ext.Viewport.getActiveItem());
             }
         });
     }
@@ -70069,6 +70076,13 @@ Ext.define('Ext.picker.Picker', {
                         text: 'Submit'
                     }
                 ]
+            },
+            {
+                xtype: 'toolbar',
+                cls: 'toolbarCls',
+                docked: 'top',
+                height: '12vh',
+                html: '<h3 style=" color:#00529D;font-size:5.5vw;text-align:center;padding-top:10px">Local Buzz For Merchants<br>Registration</h3>'
             }
         ],
         listeners: [
