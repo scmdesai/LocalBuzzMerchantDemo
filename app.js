@@ -69979,6 +69979,11 @@ Ext.define('Ext.picker.Picker', {
                 margin: '5 5 0 5',
                 styleHtmlContent: true,
                 width: '97%',
+                component: {
+                    xtype: 'fileinput',
+                    fastFocus: false,
+                    buttonText: 'Browse'
+                },
                 clearIcon: false,
                 label: 'Set Cover Photo',
                 labelWidth: '20%',
@@ -70109,7 +70114,8 @@ Ext.define('Ext.picker.Picker', {
                                     Ext.Msg.alert(null, "Business name field is empty", null, null);
                                 }
                             } else {
-                                Ext.Msg.alert(null, "No Profile pic ", null, null);
+                                //Ext.Msg.alert(null,"No Profile pic ",null,null);
+                                $("fileUpload").setValue('resources/img/localbuzzicon.png');
                             }
                         },
                         docked: 'right',
