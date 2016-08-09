@@ -69975,6 +69975,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'filefield',
                 cls: 'customfield',
                 height: '15vh',
+                id: 'myfilefield2',
                 itemId: 'myfilefield2',
                 margin: '5 5 0 5',
                 styleHtmlContent: true,
@@ -70115,7 +70116,7 @@ Ext.define('Ext.picker.Picker', {
                                 }
                             } else {
                                 //Ext.Msg.alert(null,"No Profile pic ",null,null);
-                                $("fileUpload").setValue('resources/img/localbuzzicon.png');
+                                form.down('#myfilefield2').setValue('resources/img/localbuzzicon.png');
                             }
                         },
                         docked: 'right',
