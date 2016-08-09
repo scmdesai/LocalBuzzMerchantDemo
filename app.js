@@ -66314,7 +66314,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'component',
                 docked: 'top',
-                html: '<br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br>Local Buzz For Merchants</h3></div>',
+                html: '<br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div>',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw'
             },
             {
@@ -66356,6 +66356,13 @@ Ext.define('Ext.picker.Picker', {
                 ui: 'action',
                 width: '60%',
                 text: 'Sign Up'
+            },
+            {
+                xtype: 'component',
+                html: '<h6 style="color:#00529D;font-size:4vw">Free 90 days no obligation trial!</h6>',
+                left: '20%',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
+                top: '65%'
             }
         ]
     },
@@ -67935,6 +67942,7 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('Contact.view.Login', Ext.Container, {
     config: {
+        hidden: false,
         id: 'Login',
         itemId: 'Login',
         maxHeight: '',
@@ -69910,7 +69918,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'address',
-                placeHolder: 'Address 1'
+                placeHolder: 'Street Name and Number'
             },
             {
                 xtype: 'textfield',
@@ -70050,7 +70058,7 @@ Ext.define('Ext.picker.Picker', {
                             var date = new Date();
                             //var dealName = form.getAt(0).getValue();
                             form.submit({
-                                url: 'http://services.appsonmobile.com/democreateNewUser',
+                                url: 'http://services.appsonmobile.com/democreateNewStore',
                                 xhr2: true,
                                 cache: false,
                                 waitMsg: 'Please Wait...',
@@ -70081,8 +70089,8 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'toolbar',
                 cls: 'toolbarCls',
                 docked: 'top',
-                height: '12vh',
-                html: '<h3 style=" color:#00529D;font-size:5.5vw;text-align:center;padding-top:10px">Local Buzz For Merchants<br>Registration</h3>'
+                height: '8vh',
+                html: '<h3 style=" color:#00529D;font-size:5.5vw;text-align:center;padding-top:10px">Local Buzz Merchant Sign-up</h3>'
             }
         ],
         listeners: [
