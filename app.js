@@ -66322,6 +66322,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'button',
                 handler: function(button, e) {
+                    Ext.Viewport.getActiveItem().destroy();
                     var view = Ext.Viewport.add({
                             xtype: 'Login'
                         });
@@ -66377,7 +66378,6 @@ Ext.define('Ext.picker.Picker', {
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.getInfo(function(response) {
             if (response) {
-                Ext.Viewport.getActiveItem().destroy();
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
