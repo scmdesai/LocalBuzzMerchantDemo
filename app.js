@@ -66376,18 +66376,14 @@ Ext.define('Ext.picker.Picker', {
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         // Login(accessToken will be stored trough localStorage in 'accessToken');
         if (FacebookInAppBrowser.login({
-            send: function() {
-                console.log('login opened');
-            },
             success: function(access_token) {
-                console.log('done, access token: ' + access_token);
+                var view = Ext.Viewport.add({
+                        xtype: 'Login'
+                    });
+                Ext.Viewport.setActiveItem(view);
             }
         })) {
             Ext.Viewport.getActiveItem().destroy();
-            var view = Ext.Viewport.add({
-                    xtype: 'Login'
-                });
-            Ext.Viewport.setActiveItem(view);
         }
     }
 }, 0, 0, [
