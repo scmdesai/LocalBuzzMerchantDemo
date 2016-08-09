@@ -66313,8 +66313,19 @@ Ext.define('Ext.picker.Picker', {
         items: [
             {
                 xtype: 'button',
-                left: '40%',
+                handler: function(button, e) {
+                    Ext.Viewport.getActiveItem().destroy();
+                    var view = Ext.Viewport.add({
+                            xtype: 'Login'
+                        });
+                    Ext.Viewport.setActiveItem(view);
+                },
+                height: '9vh',
+                left: '25%',
+                style: 'font-size:5vw;font-family:Arial',
                 top: '30%',
+                ui: 'action',
+                width: '60%',
                 text: 'Login'
             },
             {
@@ -66325,11 +66336,40 @@ Ext.define('Ext.picker.Picker', {
                         });
                     Ext.Viewport.setActiveItem(view);
                 },
-                left: '40%',
+                height: '9vh',
+                left: '25%',
+                style: 'font-size:5vw;font-family:Arial',
                 top: '50%',
+                ui: 'action',
+                width: '60%',
                 text: 'Sign Up'
             }
         ]
+    },
+    initialize: function() {
+        Ext.Panel.prototype.initialize.call(this);
+        // Settings.
+        FacebookInAppBrowser.settings.appId = '900651756709444';
+        FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
+        FacebookInAppBrowser.settings.permissions = 'email';
+        // Optional
+        FacebookInAppBrowser.settings.timeoutDuration = 7500;
+        // Login(accessToken will be stored trough localStorage in 'accessToken');
+        FacebookInAppBrowser.login({
+            send: function() {
+                Ext.Viewport.setActiveItem(Ext.Viewport.getActiveItem());
+            },
+            success: function(access_token) {
+                Ext.Viewport.getActiveItem().destroy();
+                var view = Ext.Viewport.add({
+                        xtype: 'Login'
+                    });
+                Ext.Viewport.setActiveItem(view);
+            },
+            denied: function() {
+                Ext.Viewport.setActiveItem(Ext.Viewport.getActiveItem());
+            }
+        });
     }
 }, 0, 0, [
     "component",
@@ -69961,18 +70001,18 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
-                docked: 'bottom',
-                height: '200px',
                 html: '<div style="font-size:2.5vw;" >* Facebook Email ID will give you access to the Local Buzz For Merchants App </div><div style="font-size:2.5vw;" >** Business Email ID will be displayed on the Local Buzz consumer App</div>',
                 itemId: 'mycontainer6',
-                margin: '5 5 5 10',
                 padding: '5 30 5 0',
                 styleHtmlContent: true,
-                layout: 'hbox'
+                layout: {
+                    type: 'vbox',
+                    pack: 'end'
+                }
             },
             {
                 xtype: 'container',
-                height: 140,
+                height: '30vh',
                 margin: '0 10 50 10',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
@@ -70030,7 +70070,26 @@ Ext.define('Ext.picker.Picker', {
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onPhoneNumberKeyup',
+                event: 'keyup',
+                delegate: '#businessName7'
+            }
         ]
+    },
+    onPhoneNumberKeyup: function(textfield, e, eOpts) {
+        var len = textfield.getValue().length;
+        if (len === 3 || len === 7) {
+            textfield.setValue(textfield.getValue() + '-');
+        }
+        if (len === 4) {
+            textfield.setValue(textfield.getValue().substr(0, 3));
+        }
+        if (len === 8) {
+            textfield.setValue(textfield.getValue().substr(0, 7));
+        }
     }
 }, 0, [
     "CreateUserForm"
