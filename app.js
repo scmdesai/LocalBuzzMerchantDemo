@@ -70075,18 +70075,19 @@ Ext.define('Ext.picker.Picker', {
                                 cache: false,
                                 waitMsg: 'Please Wait...',
                                 success: function(form, action) {
-                                    Ext.Msg.alert('Success', action.msg);
-                                    Ext.getStore('MyDealsStore').load();
-                                    location.reload();
-                                    form.destroy();
+                                    Ext.Msg.alert('Success', action.msg, function() {
+                                        location.reload();
+                                    }, null);
                                 },
+                                //form.destroy();
                                 failure: function(form, action) {
-                                    Ext.Msg.alert('Failure', action.msg);
-                                    Ext.getStore('MyDealsStore').load();
-                                    form.destroy();
+                                    Ext.Msg.alert('Failure', action.msg, function() {
+                                        location.reload();
+                                    }, null);
                                 }
                             });
                         },
+                        //form.destroy();
                         docked: 'right',
                         height: '7vh',
                         itemId: 'submit',
