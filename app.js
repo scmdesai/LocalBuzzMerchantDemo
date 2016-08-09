@@ -70128,7 +70128,6 @@ Ext.application({
         'DealImage',
         'CreateNewStore',
         'WelcomeScreen',
-        'MyPanel',
         'CreateNewBuzzNoImage'
     ],
     controllers: [
