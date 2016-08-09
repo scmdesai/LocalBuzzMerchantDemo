@@ -1,3 +1,8 @@
+var Contact = Contact || {};
+if (!Contact.controller) Contact.controller = {};
+if (!Contact.model) Contact.model = {};
+if (!Contact.store) Contact.store = {};
+if (!Contact.view) Contact.view = {};
 var Ext = Ext || {};
 if (!Ext.Picker) Ext.Picker = {};
 if (!Ext.app) Ext.app = {};
@@ -42,11 +47,6 @@ if (!Ext.util.paintmonitor) Ext.util.paintmonitor = {};
 if (!Ext.util.sizemonitor) Ext.util.sizemonitor = {};
 if (!Ext.util.translatable) Ext.util.translatable = {};
 if (!Ext.viewport) Ext.viewport = {};
-var LocalBuzzMerchantDemoStores = LocalBuzzMerchantDemoStores || {};
-if (!LocalBuzzMerchantDemoStores.controller) LocalBuzzMerchantDemoStores.controller = {};
-if (!LocalBuzzMerchantDemoStores.model) LocalBuzzMerchantDemoStores.model = {};
-if (!LocalBuzzMerchantDemoStores.store) LocalBuzzMerchantDemoStores.store = {};
-if (!LocalBuzzMerchantDemoStores.view) LocalBuzzMerchantDemoStores.view = {};
 /* 
  * Helper code for compiler optimization
  */
@@ -61765,85 +61765,6 @@ Ext.define('Ext.picker.Picker', {
 ], 0));
 
 /**
- * The Email field creates an HTML5 email input and is usually created inside a form. Because it creates an HTML email
- * input field, most browsers will show a specialized virtual keyboard for email address input. Aside from that, the
- * email field is just a normal text field. Here's an example of how to use it in a form:
- *
- *     @example
- *     Ext.create('Ext.form.Panel', {
- *         fullscreen: true,
- *         items: [
- *             {
- *                 xtype: 'fieldset',
- *                 title: 'Register',
- *                 items: [
- *                     {
- *                         xtype: 'emailfield',
- *                         label: 'Email',
- *                         name: 'email'
- *                     },
- *                     {
- *                         xtype: 'passwordfield',
- *                         label: 'Password',
- *                         name: 'password'
- *                     }
- *                 ]
- *             }
- *         ]
- *     });
- *
- * Or on its own, outside of a form:
- *
- *     Ext.create('Ext.field.Email', {
- *         label: 'Email address',
- *         value: 'prefilled@email.com'
- *     });
- *
- * Because email field inherits from {@link Ext.field.Text textfield} it gains all of the functionality that text fields
- * provide, including getting and setting the value at runtime, validations and various events that are fired as the
- * user interacts with the component. Check out the {@link Ext.field.Text} docs to see the additional functionality
- * available.
- *
- * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
- */
-(Ext.cmd.derive('Ext.field.Email', Ext.field.Text, {
-    alternateClassName: 'Ext.form.Email',
-    config: {
-        /**
-         * @cfg
-         * @inheritdoc
-         */
-        component: {
-            type: 'email'
-        },
-        /**
-         * @cfg
-         * @inheritdoc
-         */
-        autoCapitalize: false
-    }
-}, 0, [
-    "emailfield"
-], [
-    "component",
-    "field",
-    "textfield",
-    "emailfield"
-], {
-    "component": true,
-    "field": true,
-    "textfield": true,
-    "emailfield": true
-}, [
-    "widget.emailfield"
-], 0, [
-    Ext.field,
-    'Email',
-    Ext.form,
-    'Email'
-], 0));
-
-/**
  * @private
  */
 (Ext.cmd.derive('Ext.field.FileInput', Ext.field.Input, {
@@ -62088,80 +62009,6 @@ Ext.define('Ext.picker.Picker', {
 ], 0, [
     Ext.field,
     'File'
-], 0));
-
-/**
- * The urlfield creates an HTML5 url input and is usually created inside a form. Because it creates an HTML url input
- * field, most browsers will show a specialized virtual keyboard for web address input. Aside from that, the urlfield
- * is just a normal text field. Here's an example of how to use it in a form:
- *
- *     @example
- *     Ext.create('Ext.form.Panel', {
- *         fullscreen: true,
- *         items: [
- *             {
- *                 xtype: 'fieldset',
- *                 title: 'Add Bookmark',
- *                 items: [
- *                     {
- *                         xtype: 'urlfield',
- *                         label: 'Url',
- *                         name: 'url'
- *                     }
- *                 ]
- *             }
- *         ]
- *     });
- *
- * Or on its own, outside of a form:
- *
- *     Ext.create('Ext.field.Url', {
- *         label: 'Web address',
- *         value: 'http://sencha.com'
- *     });
- *
- * Because url field inherits from {@link Ext.field.Text textfield} it gains all of the functionality that text fields
- * provide, including getting and setting the value at runtime, validations and various events that are fired as the
- * user interacts with the component. Check out the {@link Ext.field.Text} docs to see the additional functionality
- * available.
- *
- * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
- */
-(Ext.cmd.derive('Ext.field.Url', Ext.field.Text, {
-    alternateClassName: 'Ext.form.Url',
-    config: {
-        /**
-         * @cfg
-         * @inheritdoc
-         */
-        autoCapitalize: false,
-        /**
-         * @cfg
-         * @inheritdoc
-         */
-        component: {
-            type: 'url'
-        }
-    }
-}, 0, [
-    "urlfield"
-], [
-    "component",
-    "field",
-    "textfield",
-    "urlfield"
-], {
-    "component": true,
-    "field": true,
-    "textfield": true,
-    "urlfield": true
-}, [
-    "widget.urlfield"
-], 0, [
-    Ext.field,
-    'Url',
-    Ext.form,
-    'Url'
 ], 0));
 
 /**
@@ -66098,7 +65945,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.model.Contact', Ext.data.Model, {
+(Ext.cmd.derive('Contact.model.Contact', Ext.data.Model, {
     config: {
         useCache: false,
         fields: [
@@ -66154,7 +66001,7 @@ Ext.define('Ext.picker.Picker', {
         ]
     }
 }, 0, 0, 0, 0, 0, 0, [
-    LocalBuzzMerchantDemoStores.model,
+    Contact.model,
     'Contact'
 ], 0));
 
@@ -66172,7 +66019,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.model.Deal', Ext.data.Model, {
+(Ext.cmd.derive('Contact.model.Deal', Ext.data.Model, {
     config: {
         useCache: false,
         fields: [
@@ -66183,7 +66030,7 @@ Ext.define('Ext.picker.Picker', {
                 name: 'dealName'
             },
             {
-                name: 'category'
+                name: 'dealStatus'
             },
             {
                 convert: function(v, rec) {
@@ -66231,7 +66078,7 @@ Ext.define('Ext.picker.Picker', {
 }, 0, 0, 0, 0, [
     "model.deal"
 ], 0, [
-    LocalBuzzMerchantDemoStores.model,
+    Contact.model,
     'Deal'
 ], 0));
 
@@ -66249,7 +66096,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.model.UserDetails', Ext.data.Model, {
+(Ext.cmd.derive('Contact.model.UserDetails', Ext.data.Model, {
     config: {
         fields: [
             {
@@ -66279,7 +66126,7 @@ Ext.define('Ext.picker.Picker', {
         ]
     }
 }, 0, 0, 0, 0, 0, 0, [
-    LocalBuzzMerchantDemoStores.model,
+    Contact.model,
     'UserDetails'
 ], 0));
 
@@ -66297,11 +66144,11 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.store.MyJsonPStore', Ext.data.Store, {
+(Ext.cmd.derive('Contact.store.MyJsonPStore', Ext.data.Store, {
     config: {
         autoLoad: true,
         groupField: 'category',
-        model: 'LocalBuzzMerchantDemoStores.model.Contact',
+        model: 'Contact.model.Contact',
         storeId: 'MyJsonPStore',
         grouper: {
             groupFn: function(item) {
@@ -66336,7 +66183,7 @@ Ext.define('Ext.picker.Picker', {
         return record;
     }
 }, 0, 0, 0, 0, 0, 0, [
-    LocalBuzzMerchantDemoStores.store,
+    Contact.store,
     'MyJsonPStore'
 ], 0));
 
@@ -66354,10 +66201,10 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.store.MyDealsStore', Ext.data.Store, {
+(Ext.cmd.derive('Contact.store.MyDealsStore', Ext.data.Store, {
     config: {
         autoLoad: true,
-        model: 'LocalBuzzMerchantDemoStores.model.Deal',
+        model: 'Contact.model.Deal',
         storeId: 'MyDealsStore',
         proxy: {
             type: 'jsonp',
@@ -66389,7 +66236,7 @@ Ext.define('Ext.picker.Picker', {
         store.load();
     }
 }, 0, 0, 0, 0, 0, 0, [
-    LocalBuzzMerchantDemoStores.store,
+    Contact.store,
     'MyDealsStore'
 ], 0));
 
@@ -66407,11 +66254,11 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.store.UserDetails', Ext.data.Store, {
+(Ext.cmd.derive('Contact.store.UserDetails', Ext.data.Store, {
     config: {
         autoLoad: true,
         autoSync: true,
-        model: 'LocalBuzzMerchantDemoStores.model.UserDetails',
+        model: 'Contact.model.UserDetails',
         remoteFilter: true,
         storeId: 'UserDetails',
         proxy: {
@@ -66419,7 +66266,7 @@ Ext.define('Ext.picker.Picker', {
         }
     }
 }, 0, 0, 0, 0, 0, 0, [
-    LocalBuzzMerchantDemoStores.store,
+    Contact.store,
     'UserDetails'
 ], 0));
 
@@ -66437,13 +66284,13 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.store.LocalStore', Ext.data.Store, {
+(Ext.cmd.derive('Contact.store.LocalStore', Ext.data.Store, {
     config: {
-        model: 'LocalBuzzMerchantDemoStores.model.Deal',
+        model: 'Contact.model.Deal',
         storeId: 'LocalStore'
     }
 }, 0, 0, 0, 0, 0, 0, [
-    LocalBuzzMerchantDemoStores.store,
+    Contact.store,
     'LocalStore'
 ], 0));
 
@@ -66461,88 +66308,28 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.Welcome', Ext.Panel, {
+(Ext.cmd.derive('Contact.view.Welcome', Ext.Panel, {
     config: {
-        html: '',
         items: [
             {
-                xtype: 'component',
-                docked: 'top',
-                height: '30vh',
-                html: '<br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3><br><h5 style="color:#00529D"></h3></div>',
-                styleHtmlContent: true
-            },
-            {
                 xtype: 'button',
-                handler: function(button, e) {
-                    Ext.Viewport.getActiveItem().destroy();
-                    var view = Ext.Viewport.add({
-                            xtype: 'Login'
-                        });
-                    Ext.Viewport.setActiveItem(view);
-                },
-                height: '9vh',
-                left: '25%',
-                margin: '5 5 5 5',
-                style: 'font-size:5vw;font-family:Arial',
-                ui: 'action',
-                width: '50%',
+                left: '40%',
+                top: '30%',
                 text: 'Login'
             },
             {
-                xtype: 'component',
-                height: '20vh',
-                html: '<div  style="text-align:center;"><br><h2 style="color:#00529D">OR</h2><br><br><br></div>',
-                left: '40%',
-                styleHtmlContent: true,
-                top: '10%'
-            },
-            {
                 xtype: 'button',
                 handler: function(button, e) {
-                    Ext.Viewport.getActiveItem().destroy();
                     var view = Ext.Viewport.add({
-                            xtype: 'NewCustomerSignUpForm'
+                            xtype: 'CreateUserForm'
                         });
                     Ext.Viewport.setActiveItem(view);
                 },
-                height: '9vh',
-                left: '25%',
-                margin: '5 5 5 5',
-                style: 'font-size:5vw;font-family:Arial',
-                top: '35%',
-                ui: 'action',
-                width: '50%',
+                left: '40%',
+                top: '50%',
                 text: 'Sign Up'
             }
         ]
-    },
-    initialize: function() {
-        Ext.Panel.prototype.initialize.call(this);
-        // Settings.
-        FacebookInAppBrowser.settings.appId = '900651756709444';
-        FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
-        FacebookInAppBrowser.settings.permissions = 'email';
-        // Optional
-        FacebookInAppBrowser.settings.timeoutDuration = 7500;
-        // Login(accessToken will be stored trough localStorage in 'accessToken');
-        FacebookInAppBrowser.login({
-            success: function(access_token) {
-                //console.log('done, access token: ' + access_token);
-                Ext.Viewport.getActiveItem().destroy();
-                var view = Ext.Viewport.add({
-                        xtype: 'Login'
-                    });
-                Ext.Viewport.setActiveItem(view);
-            },
-            denied: function() {
-                Ext.Viewport.getActiveItem().destroy();
-                var view = Ext.Viewport.add({
-                        xtype: 'NewCustomerSignUpForm'
-                    });
-                Ext.Viewport.setActiveItem(view);
-            }
-        });
     }
 }, 0, 0, [
     "component",
@@ -66553,7 +66340,7 @@ Ext.define('Ext.picker.Picker', {
     "container": true,
     "panel": true
 }, 0, 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'Welcome'
 ], 0));
 
@@ -66571,7 +66358,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.contactinfo', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.contactinfo', Ext.form.Panel, {
     config: {
         border: 5,
         id: 'info',
@@ -66945,7 +66732,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.contactinfo"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'contactinfo'
 ], 0));
 
@@ -66963,7 +66750,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.ListOfDeals', Ext.dataview.List, {
+(Ext.cmd.derive('Contact.view.ListOfDeals', Ext.dataview.List, {
     config: {
         cls: 'customlist',
         height: '100%',
@@ -67009,7 +66796,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.listofdeals"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'ListOfDeals'
 ], 0));
 
@@ -67027,7 +66814,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.contactform', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.contactform', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel',
@@ -67354,7 +67141,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.contactform"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'contactform'
 ], 0));
 
@@ -67372,7 +67159,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.controller.Contacts', Ext.app.Controller, {
+(Ext.cmd.derive('Contact.controller.Contacts', Ext.app.Controller, {
     config: {
         stores: [
             'MyJsonPStore',
@@ -67702,7 +67489,7 @@ Ext.define('Ext.picker.Picker', {
         });
     }
 }, 0, 0, 0, 0, 0, 0, [
-    LocalBuzzMerchantDemoStores.controller,
+    Contact.controller,
     'Contacts'
 ], 0));
 
@@ -67720,7 +67507,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.DealPicture', Ext.Panel, {
+(Ext.cmd.derive('Contact.view.DealPicture', Ext.Panel, {
     config: {
         fullscreen: true,
         id: 'dealPicture',
@@ -67986,7 +67773,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.dealPicture"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'DealPicture'
 ], 0));
 
@@ -68004,7 +67791,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.DealsPanel', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.DealsPanel', Ext.form.Panel, {
     config: {
         baseCls: 'x-list',
         id: 'dealsPanel',
@@ -68081,7 +67868,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.DealsPanel"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'DealsPanel'
 ], 0));
 
@@ -68099,7 +67886,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.Login', Ext.Container, {
+(Ext.cmd.derive('Contact.view.Login', Ext.Container, {
     config: {
         id: 'Login',
         itemId: 'Login',
@@ -68204,7 +67991,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.Login"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'Login'
 ], 0));
 
@@ -68222,7 +68009,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.ChangeContactPicForm', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.ChangeContactPicForm', Ext.form.Panel, {
     config: {
         centered: true,
         height: '40%',
@@ -68405,7 +68192,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.ChangeContactPicForm"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'ChangeContactPicForm'
 ], 0));
 
@@ -68423,7 +68210,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.panel', Ext.tab.Panel, {
+(Ext.cmd.derive('Contact.view.panel', Ext.tab.Panel, {
     config: {
         id: 'panel',
         itemId: 'panel',
@@ -68593,7 +68380,7 @@ Ext.define('Ext.picker.Picker', {
                                                     'pieSliceTextStyle': {
                                                         color: 'black'
                                                     },
-                                                    height: '600',
+                                                    height: '550',
                                                     width: '375',
                                                     legend: 'top'
                                                 };
@@ -68639,7 +68426,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.panel"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'panel'
 ], 0));
 
@@ -68657,7 +68444,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.UpdateDealForm', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.UpdateDealForm', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel1',
@@ -68983,7 +68770,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.UpdateDealForm"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'UpdateDealForm'
 ], 0));
 //this.child('contactpic').setData(record.data);
@@ -69004,7 +68791,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.UploadDealNoImageForm', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.UploadDealNoImageForm', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel2',
@@ -69315,7 +69102,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.UploadDealNoImageForm"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'UploadDealNoImageForm'
 ], 0));
 
@@ -69333,7 +69120,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.UploadDealWithImageForm', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.UploadDealWithImageForm', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel3',
@@ -69690,7 +69477,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.UploadDealWithImageForm"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'UploadDealWithImageForm'
 ], 0));
 
@@ -69708,7 +69495,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.CreateBuzzOption', Ext.ActionSheet, {
+(Ext.cmd.derive('Contact.view.CreateBuzzOption', Ext.ActionSheet, {
     config: {
         height: '100%',
         id: 'CreateBuzzOption',
@@ -69803,7 +69590,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.CreateBuzzOption"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'CreateBuzzOption'
 ], 0));
 
@@ -69821,7 +69608,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.DealImage', Ext.Panel, {
+(Ext.cmd.derive('Contact.view.DealImage', Ext.Panel, {
     config: {
         height: '80%',
         id: 'DealImage',
@@ -69897,12 +69684,12 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.DealImage"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
+    Contact.view,
     'DealImage'
 ], 0));
 
 /*
- * File: app/view/NewCustomerSignUpForm.js
+ * File: app/view/CreateUserForm.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
  * http://www.sencha.com/products/architect/
@@ -69915,7 +69702,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('LocalBuzzMerchantDemoStores.view.NewCustomerSignUpForm', Ext.form.Panel, {
+(Ext.cmd.derive('Contact.view.CreateUserForm', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel4',
@@ -69940,7 +69727,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'businessName',
                 margin: '5 5 5 5 ',
                 styleHtmlContent: true,
-                width: '95%',
+                labelWidth: '35%',
                 labelWrap: true,
                 name: 'businessName',
                 placeHolder: 'Business Name'
@@ -69952,8 +69739,9 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealStatus',
                 margin: '5 5 5 5 ',
                 maxHeight: '',
+                style: '',
                 styleHtmlContent: true,
-                width: '95%',
+                labelWidth: '35%',
                 labelWrap: true,
                 name: 'category',
                 value: 'Active',
@@ -69961,20 +69749,20 @@ Ext.define('Ext.picker.Picker', {
                 autoSelect: false,
                 options: [
                     {
-                        text: 'Automotive',
-                        value: 'Automotive'
-                    },
-                    {
                         text: 'Arts',
                         value: 'Arts'
+                    },
+                    {
+                        text: 'Automotive',
+                        value: 'Automotive'
                     },
                     {
                         text: 'Salon & Spa',
                         value: 'Salon & Spa'
                     },
                     {
-                        text: 'Food & Dining',
-                        value: 'Food & Dining'
+                        text: 'Services',
+                        value: 'Services'
                     },
                     {
                         text: 'Education',
@@ -69985,8 +69773,8 @@ Ext.define('Ext.picker.Picker', {
                         value: 'Shopping'
                     },
                     {
-                        text: 'Services',
-                        value: 'Services'
+                        text: 'Food & Dining',
+                        value: 'Food & Dining'
                     },
                     {
                         text: 'Other',
@@ -69996,112 +69784,134 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'textfield',
-                hidden: true,
-                id: 'DealPictureURL3',
-                itemId: 'DealPictureURL',
-                name: 'DealPictureURL'
-            },
-            {
-                xtype: 'textfield',
                 cls: [
                     'customfield',
                     'icon-phone'
                 ],
-                height: '100%',
-                id: 'DealDescription3',
-                itemId: 'DealDescription',
+                hidden: false,
+                id: 'businessName7',
+                itemId: 'businessName1',
                 margin: '5 5 5 5 ',
-                padding: '5 0 0 5',
-                style: 'border:1px solid #C0C0C0!important',
+                padding: '5 5 5 5',
                 styleHtmlContent: true,
-                width: '95%',
                 component: {
                     xtype: 'input',
                     type: 'tel',
                     fastFocus: true
                 },
-                clearIcon: false,
                 labelWidth: '35%',
+                labelWrap: true,
                 name: 'phoneNumber',
                 placeHolder: '555-555-5555'
             },
             {
-                xtype: 'textareafield',
+                xtype: 'textfield',
                 cls: [
                     'customfield',
-                    'icon-location'
-                ],
-                id: 'address2',
-                itemId: 'address1',
-                margin: '5 5 5 5 ',
-                maxHeight: '15vh',
-                minHeight: '10vh',
-                padding: '5 5 5 5',
-                styleHtmlContent: true,
-                width: '95%',
-                name: 'address',
-                required: true,
-                placeHolder: 'Enter Business Postal Address '
-            },
-            {
-                xtype: 'emailfield',
-                cls: [
-                    'icon-key',
-                    'customfield'
+                    'icon-key'
                 ],
                 hidden: false,
-                id: 'customerId4',
-                itemId: 'customerId',
+                id: 'businessName8',
+                itemId: 'businessName2',
                 margin: '5 5 5 5 ',
-                padding: '5 5 5 5',
                 styleHtmlContent: true,
-                width: '95%',
+                labelWidth: '35%',
+                labelWrap: true,
                 name: 'loginEmail',
-                placeHolder: 'Enter your Facebook Login Email ID *'
+                placeHolder: 'Enter your Facebook Email ID*'
             },
             {
-                xtype: 'emailfield',
+                xtype: 'textfield',
                 cls: [
-                    'icon-email',
-                    'customfield'
+                    'customfield',
+                    'icon-email'
                 ],
                 hidden: false,
-                id: 'customerId6',
-                itemId: 'customerId2',
+                id: 'businessName9',
+                itemId: 'businessName3',
                 margin: '5 5 5 5 ',
-                padding: '5 5 5 5',
                 styleHtmlContent: true,
-                width: '95%',
+                labelWidth: '35%',
+                labelWrap: true,
                 name: 'emailAddress',
-                placeHolder: 'Enter an email ID for customers to reach you**'
+                placeHolder: 'Enter your Business Email ID**'
             },
             {
-                xtype: 'urlfield',
+                xtype: 'textfield',
                 cls: [
-                    'icon-globe',
-                    'customfield'
+                    'customfield',
+                    'icon-globe'
                 ],
                 hidden: false,
-                id: 'customerId5',
-                itemId: 'customerId1',
+                id: 'businessName14',
+                itemId: 'businessName8',
                 margin: '5 5 5 5 ',
-                padding: '5 5 5 5',
                 styleHtmlContent: true,
-                width: '95%',
+                labelWidth: '35%',
+                labelWrap: true,
                 name: 'websiteDisplayName',
-                placeHolder: 'http://example.com'
+                placeHolder: 'www.example.com'
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                hidden: false,
+                id: 'businessName10',
+                itemId: 'businessName4',
+                margin: '5 5 5 5 ',
+                styleHtmlContent: true,
+                labelWidth: '35%',
+                labelWrap: true,
+                name: 'address',
+                placeHolder: 'Address 1'
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                hidden: false,
+                id: 'businessName11',
+                itemId: 'businessName5',
+                margin: '5 5 5 5 ',
+                styleHtmlContent: true,
+                labelWidth: '35%',
+                labelWrap: true,
+                name: 'city',
+                placeHolder: 'City'
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                hidden: false,
+                id: 'businessName12',
+                itemId: 'businessName6',
+                margin: '5 5 5 5 ',
+                styleHtmlContent: true,
+                labelWidth: '35%',
+                labelWrap: true,
+                name: 'state',
+                placeHolder: 'State (example: IL)'
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                hidden: false,
+                id: 'businessName13',
+                itemId: 'businessName7',
+                margin: '5 5 5 5 ',
+                styleHtmlContent: true,
+                labelWidth: '35%',
+                labelWrap: true,
+                name: 'zipcode',
+                placeHolder: '5 digit Zipcode'
             },
             {
                 xtype: 'filefield',
                 cls: 'customfield',
+                height: '15vh',
                 itemId: 'myfilefield2',
                 margin: '5 5 0 5',
                 styleHtmlContent: true,
                 width: '97%',
-                component: {
-                    xtype: 'fileinput',
-                    fastFocus: false
-                },
                 clearIcon: false,
                 label: 'Set Cover Photo',
                 labelWidth: '20%',
@@ -70152,8 +69962,8 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'container',
                 docked: 'bottom',
-                height: '100px',
-                html: '<div style="font-size:2.5vw;" >*Facebook Login email will give you access to the Merchant App</div><div style="font-size:2.5vw;" >**Business Email ID will be displayed on the Local Buzz Consumer App<br>Example: info@company.com</div>',
+                height: '200px',
+                html: '<div style="font-size:2.5vw;" >* Facebook Email ID will give you access to the Local Buzz For Merchants App </div><div style="font-size:2.5vw;" >** Business Email ID will be displayed on the Local Buzz consumer App</div>',
                 itemId: 'mycontainer6',
                 margin: '5 5 5 10',
                 padding: '5 30 5 0',
@@ -70189,7 +69999,25 @@ Ext.define('Ext.picker.Picker', {
                     {
                         xtype: 'button',
                         handler: function(button, e) {
-                            var form = this.up('NewCustomerSignUpForm');
+                            var form = this.up('CreateUserForm');
+                            var date = new Date();
+                            //var dealName = form.getAt(0).getValue();
+                            form.submit({
+                                url: 'http://services.appsonmobile.com/democreateNewUser',
+                                xhr2: true,
+                                cache: false,
+                                waitMsg: 'Please Wait...',
+                                success: function(form, action) {
+                                    Ext.Msg.alert('Success', action.msg);
+                                    Ext.getStore('MyDealsStore').load();
+                                    form.destroy();
+                                },
+                                failure: function(form, action) {
+                                    Ext.Msg.alert('Failure', action.msg);
+                                    Ext.getStore('MyDealsStore').load();
+                                    form.destroy();
+                                }
+                            });
                         },
                         docked: 'right',
                         height: '7vh',
@@ -70202,46 +70030,27 @@ Ext.define('Ext.picker.Picker', {
                     }
                 ]
             }
-        ],
-        listeners: [
-            {
-                fn: 'onPhoneNumberKeyUp',
-                event: 'keyup',
-                delegate: '#DealDescription3'
-            }
         ]
-    },
-    onPhoneNumberKeyUp: function(textfield, e, eOpts) {
-        var len = textfield.getValue().length;
-        if (len === 3 || len === 7) {
-            textfield.setValue(textfield.getValue() + '-');
-        }
-        if (len === 4) {
-            textfield.setValue(textfield.getValue().substr(0, 3));
-        }
-        if (len === 8) {
-            textfield.setValue(textfield.getValue().substr(0, 7));
-        }
     }
 }, 0, [
-    "NewCustomerSignUpForm"
+    "CreateUserForm"
 ], [
     "component",
     "container",
     "panel",
     "formpanel",
-    "NewCustomerSignUpForm"
+    "CreateUserForm"
 ], {
     "component": true,
     "container": true,
     "panel": true,
     "formpanel": true,
-    "NewCustomerSignUpForm": true
+    "CreateUserForm": true
 }, [
-    "widget.NewCustomerSignUpForm"
+    "widget.CreateUserForm"
 ], 0, [
-    LocalBuzzMerchantDemoStores.view,
-    'NewCustomerSignUpForm'
+    Contact.view,
+    'CreateUserForm'
 ], 0));
 
 /*
@@ -70286,14 +70095,14 @@ Ext.application({
         'UploadDealWithImageForm',
         'CreateBuzzOption',
         'DealImage',
-        'Welcome',
-        'NewCustomerSignUpForm'
+        'CreateUserForm',
+        'Welcome'
     ],
     controllers: [
         'Contacts'
     ],
     icon: 'icon.png',
-    name: 'LocalBuzzMerchantDemoStores',
+    name: 'Contact',
     startupImage: 'icon.png',
     launch: function() {
         Ext.util.Format.empty = function(value, defaultValue) {
@@ -70434,12 +70243,12 @@ Ext.application({
 
 
 		    }*/
-        Ext.create('LocalBuzzMerchantDemoStores.view.Welcome', {
+        Ext.create('Contact.view.Welcome', {
             fullscreen: true
         });
     }
 });
 
 // @tag full-page
-// @require H:\Apps\Sencha Architect Apps\LocalBuzzMerchantDemoStores\app.js
+// @require H:\Apps\Sencha Architect Apps\LocalBuzzBusinessApp\app.js
 
