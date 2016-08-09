@@ -69956,7 +69956,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'zipcode',
-                placeHolder: '5 digit Zipcode'
+                placeHolder: '5 digit zipcode'
             },
             {
                 xtype: 'filefield',
