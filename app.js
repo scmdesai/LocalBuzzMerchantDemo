@@ -66762,7 +66762,6 @@ Ext.define('Ext.picker.Picker', {
                                     FacebookInAppBrowser.logout(function() {
                                         window.localStorage.setItem('facebookAccessToken', null);
                                         location.reload();
-                                        navigator.app.exitApp();
                                     });
                                 }
                             });
@@ -66770,6 +66769,7 @@ Ext.define('Ext.picker.Picker', {
                     }
                 ]
             });
+        //navigator.app.exitApp();
         Ext.Viewport.setMenu(menu, {
             side: 'right',
             reveal: true
@@ -68018,15 +68018,12 @@ Ext.define('Ext.picker.Picker', {
                     //Ext.Viewport.setActiveItem(view);
                     if (!record) {
                         Ext.Msg.alert('Business not registered', "Register business or contact us at info@appsonmobile.com", null, null);
-                        var view1 = Ext.Viewport.getComponent('WelcomeScreen');
-                        if (!view1) {
-                            view1 = Ext.Viewport.add({
-                                xtype: 'WelcomeScreen'
-                            });
-                        }
-                        Ext.Viewport.setActiveItem(view1);
-                        FacebookInAppBrowser.logout();
+                        FacebookInAppBrowser.logout(function() {
+                            window.localStorage.setItem('facebookAccessToken', null);
+                            location.reload();
+                        });
                     }
+                    //navigator.app.exitApp();
                     var storeUserDetails = Ext.getStore('UserDetails');
                     storeUserDetails.removeAll();
                     storeUserDetails.add({
