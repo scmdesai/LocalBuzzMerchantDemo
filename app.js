@@ -68018,7 +68018,6 @@ Ext.define('Ext.picker.Picker', {
                     //Ext.Viewport.setActiveItem(view);
                     if (!record) {
                         Ext.Msg.alert('Business not registered', "Register business or contact us at info@appsonmobile.com", null, null);
-                        FacebookInAppBrowser.logout();
                         var view1 = Ext.Viewport.getComponent('WelcomeScreen');
                         if (!view1) {
                             view1 = Ext.Viewport.add({
@@ -68026,6 +68025,7 @@ Ext.define('Ext.picker.Picker', {
                             });
                         }
                         Ext.Viewport.setActiveItem(view1);
+                        FacebookInAppBrowser.logout();
                     }
                     var storeUserDetails = Ext.getStore('UserDetails');
                     storeUserDetails.removeAll();
