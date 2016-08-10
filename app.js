@@ -66360,6 +66360,7 @@ Ext.define('Ext.picker.Picker', {
 (Ext.cmd.derive('Contact.view.WelcomeScreen', Ext.Panel, {
     config: {
         hidden: true,
+        hideAnimation: 'fadeout',
         id: 'WelcomeScreen',
         itemId: 'WelcomeScreen',
         items: [
@@ -66432,7 +66433,9 @@ Ext.define('Ext.picker.Picker', {
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
-            } else {}
+            } else {
+                this.show();
+            }
         });
     }
 }, 0, [
@@ -66453,7 +66456,6 @@ Ext.define('Ext.picker.Picker', {
     Contact.view,
     'WelcomeScreen'
 ], 0));
-//this.show();
 
 /*
  * File: app/view/contactinfo.js
