@@ -67962,6 +67962,7 @@ Ext.define('Ext.picker.Picker', {
         var store = Ext.getStore('MyDealsStore');
         store.clearFilter();
         store.filter('customerId', customerId);
+        console.log(store.getCount());
         if (store.getCount() >= 5) {
             Ext.getCmp('UploadDeal').disable();
         }
