@@ -68084,7 +68084,7 @@ Ext.define('Ext.picker.Picker', {
                                 success: function(result, request) {
                                     var jsonData = Ext.util.JSON.decode(result.responseText);
                                     //var resultMessage = jsonData.data.result;
-                                    console.log(result.responseText.signupStatus);
+                                    console.log(result.responseText.get('signupStatus'));
                                     storeUserDetails.add({
                                         'customerId': record.get('customerId'),
                                         'email': email,
