@@ -70342,7 +70342,7 @@ Ext.application({
                     });
                 Ext.Viewport.setActiveItem(view);
             }
-        }), 3000);
+        }), 30000);
         if (Ext.os.is('Android')) {
             var intval = setInterval(function() {
                     exitApp = false;
