@@ -68082,19 +68082,52 @@ Ext.define('Ext.picker.Picker', {
                                 url: 'http://services.appsonmobile.com/demoGetSubscriptionStatus/' + record.get('customerId'),
                                 method: 'GET',
                                 success: function(result, request) {
-                                    console.log(result.responseText);
-                                    storeUserDetails.add({
-                                        'customerId': record.get('customerId'),
-                                        'email': email,
-                                        'businessName': record.get('businessName'),
-                                        'DealPictureURL': record.get('pictureURL')
-                                    });
-                                    var view = Ext.Viewport.add({
-                                            xtype: 'panel'
+                                    if ((result.responseText === "Approved and Free Tier") || (result.responseText === 'Approved and paid tier')) {
+                                        storeUserDetails.add({
+                                            'customerId': record.get('customerId'),
+                                            'email': email,
+                                            'businessName': record.get('businessName'),
+                                            'DealPictureURL': record.get('pictureURL')
                                         });
-                                    //view.getComponent('home').setRecord(record);
-                                    Ext.Viewport.getActiveItem().destroy();
-                                    Ext.Viewport.setActiveItem(view);
+                                        var view = Ext.Viewport.add({
+                                                xtype: 'panel'
+                                            });
+                                        //view.getComponent('home').setRecord(record);
+                                        Ext.Viewport.getActiveItem().destroy();
+                                        Ext.Viewport.setActiveItem(view);
+                                    } else if (result.responseText === 'Free trial period has ended') {
+                                        Ext.Msg.alert('Your trial period has ended', "Please contact us at info@appsonmobile.com for continued access to your account ", function() {
+                                            FacebookInAppBrowser.logout(function() {
+                                                window.localStorage.setItem('facebookAccessToken', null);
+                                                location.reload();
+                                            });
+                                        }, //navigator.app.exitApp();
+                                        null);
+                                    } else if (result.responseText === 'Pending') {
+                                        Ext.Msg.alert('Pending approval', "Please check back later", function() {
+                                            FacebookInAppBrowser.logout(function() {
+                                                window.localStorage.setItem('facebookAccessToken', null);
+                                                location.reload();
+                                            });
+                                        }, //navigator.app.exitApp();
+                                        null);
+                                    } else if (result.responseText === 'Denied') {
+                                        Ext.Msg.alert('Account could not be verified', "Please contact us at info@appsonmobile.com", function() {
+                                            FacebookInAppBrowser.logout(function() {
+                                                window.localStorage.setItem('facebookAccessToken', null);
+                                                location.reload();
+                                            });
+                                        }, //navigator.app.exitApp();
+                                        null);
+                                    } else {
+                                        Ext.Msg.alert('Cannot find your account', "Please contact us at info@appsonmobile.com", function() {
+                                            FacebookInAppBrowser.logout(function() {
+                                                window.localStorage.setItem('facebookAccessToken', null);
+                                                location.reload();
+                                            });
+                                        }, //navigator.app.exitApp();
+                                        null);
+                                    }
                                 },
                                 failure: function() {}
                             });
