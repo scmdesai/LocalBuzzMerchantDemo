@@ -70343,10 +70343,7 @@ Ext.application({
                 Ext.Viewport.setActiveItem(view);
             },
             timeout: function() {
-                var view1 = Ext.Viewport.add({
-                        xtype: 'WelcomeScreen'
-                    });
-                Ext.Viewport.setActiveItem(view1);
+                console.log('Timeout');
             }
         });
         if (Ext.os.is('Android')) {
