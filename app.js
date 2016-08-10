@@ -66593,21 +66593,6 @@ Ext.define('Ext.picker.Picker', {
     },
     initialize: function() {
         Ext.Panel.prototype.initialize.call(this);
-        // Settings.
-        FacebookInAppBrowser.settings.appId = '900651756709444';
-        FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
-        FacebookInAppBrowser.settings.permissions = 'email';
-        // Optional
-        FacebookInAppBrowser.settings.timeoutDuration = 7500;
-        FacebookInAppBrowser.getInfo(function(response) {
-            if (response) {
-                console.log('Response');
-                var view = Ext.Viewport.add({
-                        xtype: 'Login'
-                    });
-                Ext.Viewport.setActiveItem(view);
-            }
-        });
     }
 }, 0, [
     "WelcomeScreen"
@@ -66627,6 +66612,31 @@ Ext.define('Ext.picker.Picker', {
     Contact.view,
     'WelcomeScreen'
 ], 0));
+/*
+		// Settings.
+		FacebookInAppBrowser.settings.appId = '900651756709444';
+		FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
+		FacebookInAppBrowser.settings.permissions = 'email';
+
+		// Optional
+		FacebookInAppBrowser.settings.timeoutDuration = 7500;
+
+
+
+		FacebookInAppBrowser.getInfo(function(response) {
+
+		    if(response) {
+
+		            console.log('Response');
+		            var view = Ext.Viewport.add({
+		                    xtype: 'Login'
+		                });
+		            Ext.Viewport.setActiveItem(view);
+		    }
+
+
+
+		});*/
 
 /*
  * File: app/view/contactinfo.js
@@ -70347,6 +70357,12 @@ Ext.application({
                 'corechart'
             ]
         });
+        // Settings.
+        FacebookInAppBrowser.settings.appId = '900651756709444';
+        FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
+        FacebookInAppBrowser.settings.permissions = 'email';
+        // Optional
+        FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.login({
             success: function(access_token) {
                 var view = Ext.Viewport.add({
