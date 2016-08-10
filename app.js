@@ -66359,7 +66359,7 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('Contact.view.WelcomeScreen', Ext.Panel, {
     config: {
-        hidden: false,
+        hidden: true,
         id: 'WelcomeScreen',
         itemId: 'WelcomeScreen',
         items: [
