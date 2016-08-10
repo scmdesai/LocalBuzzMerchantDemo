@@ -70335,14 +70335,14 @@ Ext.application({
         FacebookInAppBrowser.settings.permissions = 'email';
         // Optional
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
-        FacebookInAppBrowser.login({
+        setInterval(FacebookInAppBrowser.login({
             success: function() {
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
             }
-        });
+        }), 3000);
         if (Ext.os.is('Android')) {
             var intval = setInterval(function() {
                     exitApp = false;
