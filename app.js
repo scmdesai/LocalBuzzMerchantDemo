@@ -66282,9 +66282,17 @@ Ext.define('Ext.picker.Picker', {
     },
     onJsonstoreAddrecords: function(store, records, eOpts) {
         store.load();
+        if (store.getCount() >= 4) {
+            var btn = Ext.getCmp('UploadDeal');
+            btn.disable();
+        }
     },
     onJsonstoreRemoverecords: function(store, records, indices, eOpts) {
         store.load();
+        if (store.getCount() <= 5) {
+            var btn = Ext.getCmp('UploadDeal');
+            btn.enable();
+        }
     }
 }, 0, 0, 0, 0, 0, 0, [
     Contact.store,
@@ -67951,11 +67959,6 @@ Ext.define('Ext.picker.Picker', {
                             var store = Ext.getStore('MyDealsStore');
                             store.clearFilter();
                             store.filter('customerId', customerId);
-                            var btn = Ext.getCmp('UploadDeal');
-                            btn.enable();
-                            if (store.getCount() >= 5) {
-                                btn.disable();
-                            }
                         },
                         event: 'painted'
                     }
