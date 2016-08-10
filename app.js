@@ -68082,6 +68082,7 @@ Ext.define('Ext.picker.Picker', {
                                 url: 'http://services.appsonmobile.com/demoGetSubscriptionStatus/' + record.get('customerId'),
                                 method: 'GET',
                                 success: function(result, request) {
+                                    console.log(result.responseText);
                                     if ((result.responseText === "Approved and Free Tier") || (result.responseText === 'Approved and paid tier')) {
                                         storeUserDetails.add({
                                             'customerId': record.get('customerId'),
