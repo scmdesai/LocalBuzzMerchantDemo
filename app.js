@@ -67963,10 +67963,6 @@ Ext.define('Ext.picker.Picker', {
         store.clearFilter();
         store.filter('customerId', customerId);
         console.log(store.getCount());
-        if (store.getCount() >= 5) {
-            var btn = Ext.getCmp('UploadDeal');
-            btn.enable();
-        }
     },
     onDealsPanelPainted: function(element, eOpts) {
         var btn = Ext.getCmp('UploadDeal');
