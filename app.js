@@ -67974,21 +67974,10 @@ Ext.define('Ext.picker.Picker', {
         var store = Ext.getStore('MyDealsStore');
         store.clearFilter();
         store.filter('customerId', customerId);
-        console.log(store.getCount());
-        if (store.getCount() >= 5) {
-            Ext.getCmp('UploadDeal').disable();
-        } else {
-            Ext.getCmp('UploadDeal').enable();
-        }
     },
     onDealsPanelPainted: function(element, eOpts) {
         var store = Ext.getStore('MyDealsStore');
         store.load();
-        if (store.getCount() >= 5) {
-            Ext.getCmp('UploadDeal').disable();
-        } else {
-            Ext.getCmp('UploadDeal').enable();
-        }
     }
 }, 0, [
     "DealsPanel"
@@ -69268,7 +69257,7 @@ Ext.define('Ext.picker.Picker', {
                                                     store.load();
                                                     var count = store.getCount() + 1;
                                                     console.log('Count is:' + count);
-                                                    if (count > 4) {
+                                                    if (count >= 4) {
                                                         Ext.getCmp('UploadDeal').disable();
                                                     } else {
                                                         Ext.getCmp('UploadDeal').enable();
@@ -70165,7 +70154,8 @@ Ext.define('Ext.picker.Picker', {
                                                 store.load();
                                                 var count = store.getCount() + 1;
                                                 console.log('Count is:' + count);
-                                                if (count > 4) {
+                                                if (count >= 4) {
+                                                    console.log('Disabling btn');
                                                     Ext.getCmp('UploadDeal').disable();
                                                 } else {
                                                     Ext.getCmp('UploadDeal').enable();
