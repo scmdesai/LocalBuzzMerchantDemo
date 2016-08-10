@@ -67935,7 +67935,31 @@ Ext.define('Ext.picker.Picker', {
                 style: 'font-size:5vw',
                 ui: 'confirm',
                 width: '',
-                text: 'Create Buzz'
+                text: 'Create Buzz',
+                listeners: [
+                    {
+                        fn: function(element, eOpts) {
+                            var storeUserDetails = Ext.getStore('UserDetails');
+                            storeUserDetails.load();
+                            var customerId;
+                            var businessName;
+                            storeUserDetails.each(function(record) {
+                                //console.log('StoreUserDetails : ' +record.get('customerId'));
+                                customerId = record.get('customerId');
+                                businessName = record.get('businessName');
+                            });
+                            var store = Ext.getStore('MyDealsStore');
+                            store.clearFilter();
+                            store.filter('customerId', customerId);
+                            var btn = Ext.getCmp('UploadDeal');
+                            btn.enable();
+                            if (store.getCount() >= 5) {
+                                btn.disable();
+                            }
+                        },
+                        event: 'painted'
+                    }
+                ]
             }
         ],
         listeners: [
@@ -67965,13 +67989,8 @@ Ext.define('Ext.picker.Picker', {
         console.log(store.getCount());
     },
     onDealsPanelPainted: function(element, eOpts) {
-        var btn = Ext.getCmp('UploadDeal');
-        btn.enable();
         var store = Ext.getStore('MyDealsStore');
         store.load();
-        if (store.getCount() >= 5) {
-            btn.disable();
-        }
     }
 }, 0, [
     "DealsPanel"
