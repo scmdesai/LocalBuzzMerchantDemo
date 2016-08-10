@@ -66390,8 +66390,8 @@ Ext.define('Ext.picker.Picker', {
             },
             success: function(access_token) {
                 console.log('done, access token: ' + access_token);
-                Ext.Viewport.getComponent('WelcomeScreen').destroy();
             },
+            //Ext.Viewport.getComponent('WelcomeScreen').destroy();
             denied: function() {
                 console.log('user denied');
             },
