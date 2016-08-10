@@ -66432,9 +66432,7 @@ Ext.define('Ext.picker.Picker', {
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
-            } else {
-                this.show();
-            }
+            } else {}
         });
     }
 }, 0, [
@@ -66455,6 +66453,7 @@ Ext.define('Ext.picker.Picker', {
     Contact.view,
     'WelcomeScreen'
 ], 0));
+//this.show();
 
 /*
  * File: app/view/contactinfo.js
