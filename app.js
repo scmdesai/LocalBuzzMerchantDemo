@@ -70383,10 +70383,8 @@ Ext.application({
         }
         document.addEventListener("resume", Ext.bind(onResume, this), false);
         function onResume(e) {}
-    }
-});
-//Ext.Msg.alert('Resume',null,null,null);
-/* var store = Ext.getStore('MyDealsStore');
+        //Ext.Msg.alert('Resume',null,null,null);
+        /* var store = Ext.getStore('MyDealsStore');
 		    store.load();
 		    navigator.geolocation.getCurrentPosition(function showPosition(position) {
 		        Ext.getCmp('mymap').show();
@@ -70463,6 +70461,11 @@ Ext.application({
 
 
 		    }*/
+        Ext.create('Contact.view.WelcomeScreen', {
+            fullscreen: true
+        });
+    }
+});
 
 /*
  * File: app/view/CreateNewBuzzOption.js
