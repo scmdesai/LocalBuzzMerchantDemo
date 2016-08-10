@@ -70336,7 +70336,7 @@ Ext.application({
         // Optional
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.login({
-            send: function() {
+            success: function() {
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
