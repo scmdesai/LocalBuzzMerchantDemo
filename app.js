@@ -67981,8 +67981,18 @@ Ext.define('Ext.picker.Picker', {
     },
     initialize: function() {
         Ext.form.Panel.prototype.initialize.call(this);
+        var storeUserDetails = Ext.getStore('UserDetails');
+        storeUserDetails.load();
+        var customerId;
+        var businessName;
+        storeUserDetails.each(function(record) {
+            //console.log('StoreUserDetails : ' +record.get('customerId'));
+            customerId = record.get('customerId');
+            businessName = record.get('businessName');
+        });
         var store = Ext.getStore('MyDealsStore');
-        store.load();
+        store.clearFilter();
+        store.filter('customerId', customerId);
         if (store.getCount() >= 5) {
             Ext.getCmp('UploadDeal').disable();
         } else {
