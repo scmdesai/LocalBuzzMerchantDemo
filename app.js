@@ -70338,11 +70338,13 @@ Ext.application({
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.getInfo(function(response) {
             if (response) {
+                console.log('Response');
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
             } else {
+                console.log('No Response');
                 var view1 = Ext.Viewport.add({
                         xtype: 'WelcomeScreen'
                     });
