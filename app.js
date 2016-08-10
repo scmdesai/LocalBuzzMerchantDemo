@@ -70336,14 +70336,11 @@ Ext.application({
         // Optional
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.login({
-            success: function(access_token) {
+            send: function() {
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
-            },
-            timeout: function() {
-                console.log('Timeout');
             }
         });
         if (Ext.os.is('Android')) {
