@@ -66468,6 +66468,7 @@ Ext.define('Ext.picker.Picker', {
         // Optional
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.getInfo(function(response) {
+            Ext.Viewport.getComponent('LoadingMask').destroy();
             if (response) {
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
