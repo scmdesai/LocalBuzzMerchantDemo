@@ -67921,12 +67921,17 @@ Ext.define('Ext.picker.Picker', {
                 width: '100%'
             },
             {
+                xtype: 'component',
+                docked: 'bottom',
+                html: '<p style="font-size:2.5vw;text-align:center" > As per our Fair Use Policy,there cannot be more than 5 Active Buzz per account </p>'
+            },
+            {
                 xtype: 'button',
                 docked: 'bottom',
-                height: '7%',
+                height: '7vh',
                 id: 'UploadDeal',
                 itemId: 'UploadDeal',
-                margin: '5 5 5 5',
+                margin: '0 5 0 5',
                 style: 'font-size:5vw',
                 ui: 'confirm',
                 width: '',
@@ -67957,8 +67962,12 @@ Ext.define('Ext.picker.Picker', {
         var store = Ext.getStore('MyDealsStore');
         store.clearFilter();
         store.filter('customerId', customerId);
+        if (store.getCount() >= 5) {
+            Ext.getCmp('UploadDeal').disable();
+        }
     },
     onDealsPanelPainted: function(element, eOpts) {
+        Ext.getCmp('UploadDeal').enable();
         var store = Ext.getStore('MyDealsStore');
         store.load();
     }
@@ -68113,7 +68122,7 @@ Ext.define('Ext.picker.Picker', {
                                         }, //navigator.app.exitApp();
                                         null);
                                     } else if (result.responseText === 'Denied') {
-                                        Ext.Msg.alert('Account could not be verified', "Please contact us at info@appsonmobile.com", function() {
+                                        Ext.Msg.alert('Business could not be verified', "Please contact us at info@appsonmobile.com", function() {
                                             FacebookInAppBrowser.logout(function() {
                                                 window.localStorage.setItem('facebookAccessToken', null);
                                                 location.reload();
