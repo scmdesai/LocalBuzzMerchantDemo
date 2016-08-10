@@ -66426,10 +66426,6 @@ Ext.define('Ext.picker.Picker', {
                 fn: 'onWelcomeScreenInitialize',
                 event: 'initialize',
                 order: 'before'
-            },
-            {
-                fn: 'onWelcomeScreenDeactivate',
-                event: 'deactivate'
             }
         ]
     },
@@ -66449,16 +66445,14 @@ Ext.define('Ext.picker.Picker', {
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
+                Ext.getCmp('Login').show();
+                Ext.getCmp('SignUp').show();
+                Ext.getCmp('text1').show();
+                Ext.getCmp('text2').show();
+                Ext.getCmp('text3').show();
                 Ext.Viewport.setActiveItem(view);
             }
         });
-    },
-    onWelcomeScreenDeactivate: function(oldActiveItem, container, newActiveItem, eOpts) {
-        Ext.getCmp('Login').show();
-        Ext.getCmp('SignUp').show();
-        Ext.getCmp('text1').show();
-        Ext.getCmp('text2').show();
-        Ext.getCmp('text3').show();
     }
 }, 0, [
     "WelcomeScreen"
