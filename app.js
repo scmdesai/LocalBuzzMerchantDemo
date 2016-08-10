@@ -70387,17 +70387,31 @@ Ext.application({
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.getInfo(function(response) {
             if (response) {
-                console.log('Response');
-                var view = Ext.Viewport.add({
-                        xtype: 'Login'
-                    });
-                Ext.Viewport.setActiveItem(view);
+                if (!Ext.Viewport.getComponent('Login')) {
+                    var view = Ext.Viewport.add({
+                            xtype: 'Login'
+                        });
+                    Ext.Viewport.setActiveItem(view);
+                } else {
+                    Ext.Viewport.setActiveItem(Ext.Viewport.getComponent('Login'));
+                }
+            } else {
+                if (!Ext.Viewport.getComponent('WelcomeScreen')) {
+                    var view = Ext.Viewport.add({
+                            xtype: 'WelcomeScreen'
+                        });
+                    Ext.Viewport.setActiveItem(view);
+                } else {
+                    Ext.Viewport.setActiveItem(Ext.Viewport.getComponent('WelcomeScreen'));
+                }
             }
         });
         document.addEventListener("resume", Ext.bind(onResume, this), false);
         function onResume(e) {}
-        //Ext.Msg.alert('Resume',null,null,null);
-        /* var store = Ext.getStore('MyDealsStore');
+    }
+});
+//Ext.Msg.alert('Resume',null,null,null);
+/* var store = Ext.getStore('MyDealsStore');
 		    store.load();
 		    navigator.geolocation.getCurrentPosition(function showPosition(position) {
 		        Ext.getCmp('mymap').show();
@@ -70474,11 +70488,6 @@ Ext.application({
 
 
 		    }*/
-        Ext.create('Contact.view.WelcomeScreen', {
-            fullscreen: true
-        });
-    }
-});
 
 /*
  * File: app/view/CreateNewBuzzOption.js
