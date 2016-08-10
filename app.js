@@ -70329,7 +70329,6 @@ Ext.application({
                 'corechart'
             ]
         });
-        this.callParent();
         // Settings.
         FacebookInAppBrowser.settings.appId = '900651756709444';
         FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
