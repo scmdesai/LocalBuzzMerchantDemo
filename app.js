@@ -67964,15 +67964,17 @@ Ext.define('Ext.picker.Picker', {
         store.filter('customerId', customerId);
         console.log(store.getCount());
         if (store.getCount() >= 5) {
-            Ext.get('UploadDeal').mask();
+            var btn = Ext.getCmp('UploadDeal');
+            btn.enable();
         }
     },
     onDealsPanelPainted: function(element, eOpts) {
-        Ext.get('UploadDeal').unmask();
+        var btn = Ext.getCmp('UploadDeal');
+        btn.enable();
         var store = Ext.getStore('MyDealsStore');
         store.load();
         if (store.getCount() >= 5) {
-            Ext.get('UploadDeal').mask();
+            btn.disable();
         }
     }
 }, 0, [
