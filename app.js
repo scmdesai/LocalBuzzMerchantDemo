@@ -66280,19 +66280,9 @@ Ext.define('Ext.picker.Picker', {
             }
         ]
     },
-    onJsonstoreAddrecords: function(store, records, eOpts) {
-        store.load();
-        if (store.getCount() >= 4) {
-            var btn = Ext.getCmp('UploadDeal');
-            btn.disable();
-        }
-    },
+    onJsonstoreAddrecords: function(store, records, eOpts) {},
     onJsonstoreRemoverecords: function(store, records, indices, eOpts) {
         store.load();
-        if (store.getCount() <= 5) {
-            var btn = Ext.getCmp('UploadDeal');
-            btn.enable();
-        }
     }
 }, 0, 0, 0, 0, 0, 0, [
     Contact.store,
@@ -67587,6 +67577,11 @@ Ext.define('Ext.picker.Picker', {
         store.clearFilter();
         //console.log('Fitering for customerId: ' + customerId);
         store.filter('customerId', customerId);
+        if (store.getCount() >= 5) {
+            Ext.getCmp('UploadDeal').setDisabled(true);
+        } else {
+            Ext.getCmp('UploadDeal').setDisabled(false);
+        }
         var view;
         view = Ext.Viewport.add({
             xtype: 'DealsPanel'
