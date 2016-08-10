@@ -67578,9 +67578,9 @@ Ext.define('Ext.picker.Picker', {
         //console.log('Fitering for customerId: ' + customerId);
         store.filter('customerId', customerId);
         if (store.getCount() >= 5) {
-            Ext.getCmp('UploadDeal').setDisabled(true);
+            Ext.getCmp('UploadDeal').disable();
         } else {
-            Ext.getCmp('UploadDeal').setDisabled(false);
+            Ext.getCmp('UploadDeal').enable();
         }
         var view;
         view = Ext.Viewport.add({
