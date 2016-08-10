@@ -67964,13 +67964,16 @@ Ext.define('Ext.picker.Picker', {
         store.filter('customerId', customerId);
         console.log(store.getCount());
         if (store.getCount() >= 5) {
-            Ext.getCmp('UploadDeal').disable();
+            Ext.get('UploadDeal').mask();
         }
     },
     onDealsPanelPainted: function(element, eOpts) {
-        Ext.getCmp('UploadDeal').enable();
+        Ext.get('UploadDeal').unmask();
         var store = Ext.getStore('MyDealsStore');
         store.load();
+        if (store.getCount() >= 5) {
+            Ext.get('UploadDeal').mask();
+        }
     }
 }, 0, [
     "DealsPanel"
