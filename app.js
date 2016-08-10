@@ -66366,7 +66366,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'component',
                 docked: 'top',
-                hidden: true,
+                hidden: false,
                 html: '<br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div>',
                 id: 'text1',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw'
@@ -66381,7 +66381,7 @@ Ext.define('Ext.picker.Picker', {
                     Ext.Viewport.setActiveItem(view);
                 },
                 height: '9vh',
-                hidden: true,
+                hidden: false,
                 left: '20%',
                 margin: '50 0 0 0',
                 style: 'font-size:5vw;font-family:Arial',
@@ -66391,7 +66391,7 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'component',
-                hidden: true,
+                hidden: false,
                 html: '<h1 style="color:#00529D;font-size:8vw"><b> OR </b></h1>',
                 id: 'text2',
                 left: '45%',
@@ -66407,7 +66407,7 @@ Ext.define('Ext.picker.Picker', {
                     Ext.Viewport.setActiveItem(view);
                 },
                 height: '9vh',
-                hidden: true,
+                hidden: false,
                 id: 'SignUp',
                 left: '20%',
                 style: 'font-size:5vw;font-family:Arial',
@@ -66418,7 +66418,7 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'component',
-                hidden: true,
+                hidden: false,
                 html: '<h6 style="color:#00529D;font-size:4vw">Free 90 days no obligation trial!</h6>',
                 id: 'text3',
                 left: '20%',
@@ -66441,7 +66441,6 @@ Ext.define('Ext.picker.Picker', {
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
         FacebookInAppBrowser.getInfo(function(response) {
             if (response) {
-                Ext.get('Login').show();
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
                     });
