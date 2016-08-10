@@ -70365,6 +70365,11 @@ Ext.application({
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
+            } else {
+                var view = Ext.Viewport.add({
+                        xtype: 'WelcomeScreen'
+                    });
+                Ext.Viewport.setActiveItem(view);
             }
         });
         if (Ext.os.is('Android')) {
@@ -70401,8 +70406,10 @@ Ext.application({
         }
         document.addEventListener("resume", Ext.bind(onResume, this), false);
         function onResume(e) {}
-        //Ext.Msg.alert('Resume',null,null,null);
-        /* var store = Ext.getStore('MyDealsStore');
+    }
+});
+//Ext.Msg.alert('Resume',null,null,null);
+/* var store = Ext.getStore('MyDealsStore');
 		    store.load();
 		    navigator.geolocation.getCurrentPosition(function showPosition(position) {
 		        Ext.getCmp('mymap').show();
@@ -70479,11 +70486,6 @@ Ext.application({
 
 
 		    }*/
-        Ext.create('Contact.view.WelcomeScreen', {
-            fullscreen: true
-        });
-    }
-});
 
 /*
  * File: app/view/CreateNewBuzzOption.js
