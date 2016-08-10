@@ -67577,11 +67577,6 @@ Ext.define('Ext.picker.Picker', {
         store.clearFilter();
         //console.log('Fitering for customerId: ' + customerId);
         store.filter('customerId', customerId);
-        if (store.getCount() >= 5) {
-            Ext.getCmp('UploadDeal').disable();
-        } else {
-            Ext.getCmp('UploadDeal').enable();
-        }
         var view;
         view = Ext.Viewport.add({
             xtype: 'DealsPanel'
@@ -67938,26 +67933,7 @@ Ext.define('Ext.picker.Picker', {
                 style: 'font-size:5vw',
                 ui: 'confirm',
                 width: '',
-                text: 'Create Buzz',
-                listeners: [
-                    {
-                        fn: function(element, eOpts) {
-                            var storeUserDetails = Ext.getStore('UserDetails');
-                            storeUserDetails.load();
-                            var customerId;
-                            var businessName;
-                            storeUserDetails.each(function(record) {
-                                //console.log('StoreUserDetails : ' +record.get('customerId'));
-                                customerId = record.get('customerId');
-                                businessName = record.get('businessName');
-                            });
-                            var store = Ext.getStore('MyDealsStore');
-                            store.clearFilter();
-                            store.filter('customerId', customerId);
-                        },
-                        event: 'painted'
-                    }
-                ]
+                text: 'Create Buzz'
             }
         ],
         listeners: [
@@ -67985,10 +67961,20 @@ Ext.define('Ext.picker.Picker', {
         store.clearFilter();
         store.filter('customerId', customerId);
         console.log(store.getCount());
+        if (store.getCount() >= 5) {
+            Ext.getCmp('UploadDeal').disable();
+        } else {
+            Ext.getCmp('UploadDeal').enable();
+        }
     },
     onDealsPanelPainted: function(element, eOpts) {
         var store = Ext.getStore('MyDealsStore');
         store.load();
+        if (store.getCount() >= 5) {
+            Ext.getCmp('UploadDeal').disable();
+        } else {
+            Ext.getCmp('UploadDeal').enable();
+        }
     }
 }, 0, [
     "DealsPanel"
