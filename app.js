@@ -68084,15 +68084,14 @@ Ext.define('Ext.picker.Picker', {
                                 success: function(result, request) {
                                     var jsonData = Ext.util.JSON.decode(result.responseText);
                                     //var resultMessage = jsonData.data.result;
+                                    console.log(result.responseText);
+                                    var data = JSON.parse(result.responseText);
+                                    console.log(data);
                                     storeUserDetails.add({
                                         'customerId': record.get('customerId'),
                                         'email': email,
                                         'businessName': record.get('businessName'),
-                                        'DealPictureURL': record.get('pictureURL'),
-                                        'signupStatus': response.signupStatus,
-                                        'startDate': response.startDate,
-                                        'endDate': response.endDate,
-                                        'planType': response.planType
+                                        'DealPictureURL': record.get('pictureURL')
                                     });
                                     var view = Ext.Viewport.add({
                                             xtype: 'panel'
