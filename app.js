@@ -66590,9 +66590,6 @@ Ext.define('Ext.picker.Picker', {
                 top: '65%'
             }
         ]
-    },
-    initialize: function() {
-        Ext.Panel.prototype.initialize.call(this);
     }
 }, 0, [
     "WelcomeScreen"
@@ -66612,31 +66609,6 @@ Ext.define('Ext.picker.Picker', {
     Contact.view,
     'WelcomeScreen'
 ], 0));
-/*
-		// Settings.
-		FacebookInAppBrowser.settings.appId = '900651756709444';
-		FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
-		FacebookInAppBrowser.settings.permissions = 'email';
-
-		// Optional
-		FacebookInAppBrowser.settings.timeoutDuration = 7500;
-
-
-
-		FacebookInAppBrowser.getInfo(function(response) {
-
-		    if(response) {
-
-		            console.log('Response');
-		            var view = Ext.Viewport.add({
-		                    xtype: 'Login'
-		                });
-		            Ext.Viewport.setActiveItem(view);
-		    }
-
-
-
-		});*/
 
 /*
  * File: app/view/contactinfo.js
@@ -70369,6 +70341,12 @@ Ext.application({
                         xtype: 'Login'
                     });
                 Ext.Viewport.setActiveItem(view);
+            },
+            timeout: function() {
+                var view1 = Ext.Viewport.add({
+                        xtype: 'WelcomeScreen'
+                    });
+                Ext.Viewport.setActiveItem(view1);
             }
         });
         if (Ext.os.is('Android')) {
@@ -70405,8 +70383,10 @@ Ext.application({
         }
         document.addEventListener("resume", Ext.bind(onResume, this), false);
         function onResume(e) {}
-        //Ext.Msg.alert('Resume',null,null,null);
-        /* var store = Ext.getStore('MyDealsStore');
+    }
+});
+//Ext.Msg.alert('Resume',null,null,null);
+/* var store = Ext.getStore('MyDealsStore');
 		    store.load();
 		    navigator.geolocation.getCurrentPosition(function showPosition(position) {
 		        Ext.getCmp('mymap').show();
@@ -70483,11 +70463,6 @@ Ext.application({
 
 
 		    }*/
-        Ext.create('Contact.view.WelcomeScreen', {
-            fullscreen: true
-        });
-    }
-});
 
 /*
  * File: app/view/CreateNewBuzzOption.js
