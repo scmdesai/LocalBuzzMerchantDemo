@@ -68083,7 +68083,7 @@ Ext.define('Ext.picker.Picker', {
                                 method: 'GET',
                                 success: function(result, request) {
                                     console.log(result.responseText);
-                                    if ((result.responseText === "Approved and Free Tier") || (result.responseText === 'Approved and paid tier')) {
+                                    if ((result.responseText === "Approved and free tier") || (result.responseText === 'Approved and paid tier')) {
                                         storeUserDetails.add({
                                             'customerId': record.get('customerId'),
                                             'email': email,
