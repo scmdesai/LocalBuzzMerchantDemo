@@ -66590,8 +66590,7 @@ Ext.define('Ext.picker.Picker', {
                 top: '65%'
             }
         ]
-    },
-    initialize: function() {}
+    }
 }, 0, [
     "WelcomeScreen"
 ], [
@@ -66610,28 +66609,6 @@ Ext.define('Ext.picker.Picker', {
     Contact.view,
     'WelcomeScreen'
 ], 0));
-/*this.callParent();
-
-		// Settings.
-		FacebookInAppBrowser.settings.appId = '900651756709444';
-		FacebookInAppBrowser.settings.redirectUrl = 'http://www.appsonmobile.com';
-		FacebookInAppBrowser.settings.permissions = 'email';
-
-		// Optional
-		FacebookInAppBrowser.settings.timeoutDuration = 7500;
-
-
-
-		FacebookInAppBrowser.getInfo(function(response) {
-		    if(response) {
-
-		            var view = Ext.Viewport.add({
-		                    xtype: 'Login'
-		                });
-		            Ext.Viewport.setActiveItem(view);
-		    }
-
-		*/
 
 /*
  * File: app/view/contactinfo.js
@@ -70366,10 +70343,10 @@ Ext.application({
                     });
                 Ext.Viewport.setActiveItem(view);
             } else {
-                var view = Ext.Viewport.add({
+                var view1 = Ext.Viewport.add({
                         xtype: 'WelcomeScreen'
                     });
-                Ext.Viewport.setActiveItem(view);
+                Ext.Viewport.setActiveItem(view1);
             }
         });
         if (Ext.os.is('Android')) {
