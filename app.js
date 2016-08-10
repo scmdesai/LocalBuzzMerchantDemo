@@ -69268,7 +69268,7 @@ Ext.define('Ext.picker.Picker', {
                                                     store.load();
                                                     var count = store.getCount() + 1;
                                                     console.log('Count is:' + count);
-                                                    if (count >= 5) {
+                                                    if (count > 4) {
                                                         Ext.getCmp('UploadDeal').disable();
                                                     } else {
                                                         Ext.getCmp('UploadDeal').enable();
@@ -70165,7 +70165,7 @@ Ext.define('Ext.picker.Picker', {
                                                 store.load();
                                                 var count = store.getCount() + 1;
                                                 console.log('Count is:' + count);
-                                                if (count >= 5) {
+                                                if (count > 4) {
                                                     Ext.getCmp('UploadDeal').disable();
                                                 } else {
                                                     Ext.getCmp('UploadDeal').enable();
