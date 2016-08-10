@@ -66416,20 +66416,7 @@ Ext.define('Ext.picker.Picker', {
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
                 top: '65%'
             }
-        ],
-        listeners: [
-            {
-                fn: 'onWelcomeScreenPainted',
-                event: 'painted'
-            }
         ]
-    },
-    onWelcomeScreenPainted: function(element, eOpts) {
-        element.show();
-    },
-    initialize: function() {
-        Ext.Panel.prototype.initialize.call(this);
-        this.hide();
     }
 }, 0, [
     "WelcomeScreen"
@@ -70390,8 +70377,10 @@ Ext.application({
         }
         document.addEventListener("resume", Ext.bind(onResume, this), false);
         function onResume(e) {}
-        //Ext.Msg.alert('Resume',null,null,null);
-        /* var store = Ext.getStore('MyDealsStore');
+    }
+});
+//Ext.Msg.alert('Resume',null,null,null);
+/* var store = Ext.getStore('MyDealsStore');
 		    store.load();
 		    navigator.geolocation.getCurrentPosition(function showPosition(position) {
 		        Ext.getCmp('mymap').show();
@@ -70468,11 +70457,6 @@ Ext.application({
 
 
 		    }*/
-        Ext.create('Contact.view.WelcomeScreen', {
-            fullscreen: true
-        });
-    }
-});
 
 /*
  * File: app/view/CreateNewBuzzOption.js
