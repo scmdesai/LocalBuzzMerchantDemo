@@ -68082,11 +68082,7 @@ Ext.define('Ext.picker.Picker', {
                                 url: 'http://services.appsonmobile.com/demoGetSubscriptionStatus/' + record.get('customerId'),
                                 method: 'GET',
                                 success: function(result, request) {
-                                    var jsonData = Ext.util.JSON.decode(result.responseText);
-                                    //var resultMessage = jsonData.data.result;
                                     console.log(result.responseText);
-                                    var data = JSON.parse(result.responseText);
-                                    console.log(data["customerId"]);
                                     storeUserDetails.add({
                                         'customerId': record.get('customerId'),
                                         'email': email,
