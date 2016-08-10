@@ -67392,16 +67392,29 @@ Ext.define('Ext.picker.Picker', {
                                 success: function(form, action) {
                                     Ext.Msg.alert('Success', action.msg);
                                     //console.log(action.msg);
-                                    var dealsStore = Ext.getStore('MyDealsStore');
+                                    var store = Ext.getStore('MyDealsStore');
+                                    store.load();
+                                    if (store.getCount() >= 5) {
+                                        Ext.getCmp('UploadDeal').disable();
+                                    } else {
+                                        Ext.getCmp('UploadDeal').enable();
+                                    }
                                     dealsStore.load();
                                 },
                                 failure: function(form, action) {
                                     Ext.Msg.alert('Failure', action.msg);
+                                    //console.log(action.msg);
+                                    var store = Ext.getStore('MyDealsStore');
+                                    store.load();
+                                    if (store.getCount() >= 5) {
+                                        Ext.getCmp('UploadDeal').disable();
+                                    } else {
+                                        Ext.getCmp('UploadDeal').enable();
+                                    }
                                 }
                             });
                     }
-                }, //console.log(action.msg);
-                this);
+                }, this);
             } else {
                 var store = Ext.getStore('MyDealsStore');
                 var record = store.getAt(index);
@@ -69214,6 +69227,13 @@ Ext.define('Ext.picker.Picker', {
                         xtype: 'button',
                         handler: function(button, e) {
                             Ext.Viewport.getActiveItem().destroy();
+                            var store = Ext.getStore('MyDealsStore');
+                            store.load();
+                            if (store.getCount() >= 5) {
+                                Ext.getCmp('UploadDeal').disable();
+                            } else {
+                                Ext.getCmp('UploadDeal').enable();
+                            }
                         },
                         height: '7vh',
                         margin: '0 0 5 0',
@@ -69243,12 +69263,24 @@ Ext.define('Ext.picker.Picker', {
                                                 waitMsg: 'Please Wait...',
                                                 success: function(form, action) {
                                                     Ext.Msg.alert('Success', action.msg);
-                                                    Ext.getStore('MyDealsStore').load();
+                                                    var store = Ext.getStore('MyDealsStore');
+                                                    store.load();
+                                                    if (store.getCount() >= 5) {
+                                                        Ext.getCmp('UploadDeal').disable();
+                                                    } else {
+                                                        Ext.getCmp('UploadDeal').enable();
+                                                    }
                                                     form.destroy();
                                                 },
                                                 failure: function(form, action) {
                                                     Ext.Msg.alert('Failure', action.msg);
-                                                    Ext.getStore('MyDealsStore').load();
+                                                    var store = Ext.getStore('MyDealsStore');
+                                                    store.load();
+                                                    if (store.getCount() >= 5) {
+                                                        Ext.getCmp('UploadDeal').disable();
+                                                    } else {
+                                                        Ext.getCmp('UploadDeal').enable();
+                                                    }
                                                     form.destroy();
                                                 }
                                             });
@@ -70093,6 +70125,13 @@ Ext.define('Ext.picker.Picker', {
                         xtype: 'button',
                         handler: function(button, e) {
                             Ext.Viewport.getActiveItem().destroy();
+                            var store = Ext.getStore('MyDealsStore');
+                            store.load();
+                            if (store.getCount() >= 5) {
+                                Ext.getCmp('UploadDeal').disable();
+                            } else {
+                                Ext.getCmp('UploadDeal').enable();
+                            }
                         },
                         height: '7vh',
                         margin: '0 0 5 0',
@@ -70119,12 +70158,24 @@ Ext.define('Ext.picker.Picker', {
                                             waitMsg: 'Please Wait...',
                                             success: function(form, action) {
                                                 Ext.Msg.alert('Success', action.msg);
-                                                Ext.getStore('MyDealsStore').load();
+                                                var store = Ext.getStore('MyDealsStore');
+                                                store.load();
+                                                if (store.getCount() >= 5) {
+                                                    Ext.getCmp('UploadDeal').disable();
+                                                } else {
+                                                    Ext.getCmp('UploadDeal').enable();
+                                                }
                                                 form.destroy();
                                             },
                                             failure: function(form, action) {
                                                 Ext.Msg.alert('Failure', action.msg);
-                                                Ext.getStore('MyDealsStore').load();
+                                                var store = Ext.getStore('MyDealsStore');
+                                                store.load();
+                                                if (store.getCount() >= 5) {
+                                                    Ext.getCmp('UploadDeal').disable();
+                                                } else {
+                                                    Ext.getCmp('UploadDeal').enable();
+                                                }
                                                 form.destroy();
                                             }
                                         });
