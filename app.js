@@ -70335,7 +70335,7 @@ Ext.application({
         FacebookInAppBrowser.settings.permissions = 'email';
         // Optional
         FacebookInAppBrowser.settings.timeoutDuration = 7500;
-        setInterval(FacebookInAppBrowser.login({
+        setTimeout(FacebookInAppBrowser.login({
             success: function() {
                 var view = Ext.Viewport.add({
                         xtype: 'Login'
