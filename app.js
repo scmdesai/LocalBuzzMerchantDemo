@@ -68915,6 +68915,11 @@ Ext.define('Ext.picker.Picker', {
             this.down('#DealStatus').setValue(record.data.dealStatus);
             this.down('#DealDescription').setValue(record.data.dealDescription);
             this.down('#DealImageURL').setValue(record.data.dealImageURL);
+            //this.child('contactpic').setData(record.data);
+            //this.down('#DealStartDate').setValue(record.data.dealStartDate);
+            //this.down('#DealEndDate').setValue(record.data.dealEndDate);
+            var endDate = new Date(record.data.dealEndDate);
+            this.down('#DealEndDate').setValue(Ext.Date.format(endDate, 'n/j/Y'));
         }
     }
 }, 0, [
@@ -68937,9 +68942,6 @@ Ext.define('Ext.picker.Picker', {
     Contact.view,
     'UpdateDealForm'
 ], 0));
-//this.child('contactpic').setData(record.data);
-//this.down('#DealStartDate').setValue(record.data.dealStartDate);
-//this.down('#DealEndDate').setValue(record.data.dealEndDate);
 
 /*
  * File: app/view/CreateNewBuzzWithImage.js
@@ -69791,19 +69793,19 @@ Ext.define('Ext.picker.Picker', {
                                                             Ext.Msg.alert(null, 'You must agree to Terms & Conditions', null, null);
                                                         }
                                                     } else {
-                                                        Ext.Msg.alert(null, 'Zipcode field is empty', null, null);
+                                                        Ext.Msg.alert(null, "Facebook email ID is required to create the merchant account ", null, null);
                                                     }
                                                 } else {
-                                                    Ext.Msg.alert(null, 'State field is empty', null, null);
+                                                    Ext.Msg.alert(null, 'Zipcode field is empty', null, null);
                                                 }
                                             } else {
-                                                Ext.Msg.alert(null, 'City field is empty', null, null);
+                                                Ext.Msg.alert(null, 'State field is empty', null, null);
                                             }
                                         } else {
-                                            Ext.Msg.alert(null, 'Street address field is empty', null, null);
+                                            Ext.Msg.alert(null, 'City field is empty', null, null);
                                         }
                                     } else {
-                                        Ext.Msg.alert(null, "Facebook email ID is required to create the merchant account ", null, null);
+                                        Ext.Msg.alert(null, 'Street address field is empty', null, null);
                                     }
                                 } else {
                                     Ext.Msg.alert(null, "Please choose a category", null, null);
