@@ -68092,6 +68092,7 @@ Ext.define('Ext.picker.Picker', {
                             });
                         }, null);
                     } else {
+                        console.log(record.get('signupStatus'));
                         var storeUserDetails = Ext.getStore('UserDetails');
                         storeUserDetails.removeAll();
                         if (record.get('signupStatus') === "Approved") {
