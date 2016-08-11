@@ -68918,8 +68918,8 @@ Ext.define('Ext.picker.Picker', {
             //this.child('contactpic').setData(record.data);
             //this.down('#DealStartDate').setValue(record.data.dealStartDate);
             //this.down('#DealEndDate').setValue(record.data.dealEndDate);
-            var endDate = new Date(record.data.dealEndDate);
-            this.down('#DealEndDate').setValue(Ext.Date.format(endDate, 'n/j/Y'));
+            var endDate = Ext.Date.parse(record.data.dealEndDate, 'n/j/Y');
+            this.down('#DealEndDate').setValue(endDate);
         }
     }
 }, 0, [
