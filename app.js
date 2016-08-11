@@ -68107,7 +68107,7 @@ Ext.define('Ext.picker.Picker', {
                                 var view = Ext.Viewport.add({
                                         xtype: 'panel'
                                     });
-                                Ext.Viewport.getActiveItem().destroy();
+                                //Ext.Viewport.getActiveItem().destroy();
                                 Ext.Viewport.setActiveItem(view);
                             } else {
                                 Ext.Msg.alert('Your trial period has ended', "Please contact us at info@appsonmobile.com for continued access to your account ", function() {
