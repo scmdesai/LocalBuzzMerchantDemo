@@ -66755,6 +66755,7 @@ Ext.define('Ext.picker.Picker', {
     },
     setRecord: function(record) {
         (arguments.callee.$previous || Ext.form.Panel.prototype.setRecord).apply(this, arguments);
+        console.log('Set Record of info page');
         if (record) {
             var name = record.get('businessName');
             var customerId = record.get('customerId');
@@ -69648,10 +69649,13 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textfield',
                 cls: 'customfield',
                 hidden: false,
-                id: 'businessName13',
-                itemId: 'businessName7',
                 margin: '5 5 5 5 ',
                 styleHtmlContent: true,
+                component: {
+                    xtype: 'input',
+                    type: 'number',
+                    fastFocus: true
+                },
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'zipcode',
@@ -69764,30 +69768,50 @@ Ext.define('Ext.picker.Picker', {
                             var businessName = form.getAt(0).getValue();
                             var category = form.getAt(1).getValue();
                             var loginEmail = form.getAt(3).getValue();
+                            var address1 = form.getAt(6).getValue();
+                            var city = form.getAt(7).getValue();
+                            var state = form.getAt(8).getValue();
+                            var zipcode = form.getAt(9).getValue();
                             if (businessName) {
                                 if (category) {
-                                    if (loginEmail) {
-                                        if (document.getElementById('chkbx').checked) {
-                                            form.submit({
-                                                url: 'http://services.appsonmobile.com/democreateNewStore',
-                                                xhr2: true,
-                                                cache: false,
-                                                waitMsg: 'Please Wait...',
-                                                success: function(form, action) {
-                                                    Ext.Msg.alert('Thank you for registering with us!', 'Please give us 2 business days to verify and validate your account.Your free trial period starts after activation', function() {
-                                                        location.reload();
-                                                    }, null);
-                                                },
-                                                //form.destroy();
-                                                failure: function(form, action) {
-                                                    Ext.Msg.alert('Failure', action.msg, function() {
-                                                        location.reload();
-                                                    }, null);
+                                    if (address1) {
+                                        if (city) {
+                                            if (state) {
+                                                if (zipcode) {
+                                                    if (loginEmail) {
+                                                        if (document.getElementById('chkbx').checked) {
+                                                            form.submit({
+                                                                url: 'http://services.appsonmobile.com/democreateNewStore',
+                                                                xhr2: true,
+                                                                cache: false,
+                                                                waitMsg: 'Please Wait...',
+                                                                success: function(form, action) {
+                                                                    Ext.Msg.alert('Thank you for registering with us!', 'Please give us 2 business days to verify and validate your account.Your free trial period starts after activation', function() {
+                                                                        location.reload();
+                                                                    }, null);
+                                                                },
+                                                                //form.destroy();
+                                                                failure: function(form, action) {
+                                                                    Ext.Msg.alert('Failure', action.msg, function() {
+                                                                        location.reload();
+                                                                    }, null);
+                                                                }
+                                                            });
+                                                        } else //form.destroy();
+                                                        {
+                                                            Ext.Msg.alert(null, 'You must agree to Terms & Conditions', null, null);
+                                                        }
+                                                    } else {
+                                                        Ext.Msg.alert(null, 'Zipcode field is empty', null, null);
+                                                    }
+                                                } else {
+                                                    Ext.Msg.alert(null, 'State field is empty', null, null);
                                                 }
-                                            });
-                                        } else //form.destroy();
-                                        {
-                                            Ext.Msg.alert(null, 'You must agree to Terms & Conditions', null, null);
+                                            } else {
+                                                Ext.Msg.alert(null, 'City field is empty', null, null);
+                                            }
+                                        } else {
+                                            Ext.Msg.alert(null, 'Street address field is empty', null, null);
                                         }
                                     } else {
                                         Ext.Msg.alert(null, "Facebook email ID is required to create the merchant account ", null, null);
