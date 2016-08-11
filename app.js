@@ -61765,6 +61765,85 @@ Ext.define('Ext.picker.Picker', {
 ], 0));
 
 /**
+ * The Email field creates an HTML5 email input and is usually created inside a form. Because it creates an HTML email
+ * input field, most browsers will show a specialized virtual keyboard for email address input. Aside from that, the
+ * email field is just a normal text field. Here's an example of how to use it in a form:
+ *
+ *     @example
+ *     Ext.create('Ext.form.Panel', {
+ *         fullscreen: true,
+ *         items: [
+ *             {
+ *                 xtype: 'fieldset',
+ *                 title: 'Register',
+ *                 items: [
+ *                     {
+ *                         xtype: 'emailfield',
+ *                         label: 'Email',
+ *                         name: 'email'
+ *                     },
+ *                     {
+ *                         xtype: 'passwordfield',
+ *                         label: 'Password',
+ *                         name: 'password'
+ *                     }
+ *                 ]
+ *             }
+ *         ]
+ *     });
+ *
+ * Or on its own, outside of a form:
+ *
+ *     Ext.create('Ext.field.Email', {
+ *         label: 'Email address',
+ *         value: 'prefilled@email.com'
+ *     });
+ *
+ * Because email field inherits from {@link Ext.field.Text textfield} it gains all of the functionality that text fields
+ * provide, including getting and setting the value at runtime, validations and various events that are fired as the
+ * user interacts with the component. Check out the {@link Ext.field.Text} docs to see the additional functionality
+ * available.
+ *
+ * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
+ */
+(Ext.cmd.derive('Ext.field.Email', Ext.field.Text, {
+    alternateClassName: 'Ext.form.Email',
+    config: {
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        component: {
+            type: 'email'
+        },
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        autoCapitalize: false
+    }
+}, 0, [
+    "emailfield"
+], [
+    "component",
+    "field",
+    "textfield",
+    "emailfield"
+], {
+    "component": true,
+    "field": true,
+    "textfield": true,
+    "emailfield": true
+}, [
+    "widget.emailfield"
+], 0, [
+    Ext.field,
+    'Email',
+    Ext.form,
+    'Email'
+], 0));
+
+/**
  * @private
  */
 (Ext.cmd.derive('Ext.field.FileInput', Ext.field.Input, {
@@ -62009,6 +62088,80 @@ Ext.define('Ext.picker.Picker', {
 ], 0, [
     Ext.field,
     'File'
+], 0));
+
+/**
+ * The urlfield creates an HTML5 url input and is usually created inside a form. Because it creates an HTML url input
+ * field, most browsers will show a specialized virtual keyboard for web address input. Aside from that, the urlfield
+ * is just a normal text field. Here's an example of how to use it in a form:
+ *
+ *     @example
+ *     Ext.create('Ext.form.Panel', {
+ *         fullscreen: true,
+ *         items: [
+ *             {
+ *                 xtype: 'fieldset',
+ *                 title: 'Add Bookmark',
+ *                 items: [
+ *                     {
+ *                         xtype: 'urlfield',
+ *                         label: 'Url',
+ *                         name: 'url'
+ *                     }
+ *                 ]
+ *             }
+ *         ]
+ *     });
+ *
+ * Or on its own, outside of a form:
+ *
+ *     Ext.create('Ext.field.Url', {
+ *         label: 'Web address',
+ *         value: 'http://sencha.com'
+ *     });
+ *
+ * Because url field inherits from {@link Ext.field.Text textfield} it gains all of the functionality that text fields
+ * provide, including getting and setting the value at runtime, validations and various events that are fired as the
+ * user interacts with the component. Check out the {@link Ext.field.Text} docs to see the additional functionality
+ * available.
+ *
+ * For more information regarding forms and fields, please review [Using Forms in Sencha Touch Guide](../../../components/forms.html)
+ */
+(Ext.cmd.derive('Ext.field.Url', Ext.field.Text, {
+    alternateClassName: 'Ext.form.Url',
+    config: {
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        autoCapitalize: false,
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        component: {
+            type: 'url'
+        }
+    }
+}, 0, [
+    "urlfield"
+], [
+    "component",
+    "field",
+    "textfield",
+    "urlfield"
+], {
+    "component": true,
+    "field": true,
+    "textfield": true,
+    "urlfield": true
+}, [
+    "widget.urlfield"
+], 0, [
+    Ext.field,
+    'Url',
+    Ext.form,
+    'Url'
 ], 0));
 
 /**
@@ -69578,7 +69731,7 @@ Ext.define('Ext.picker.Picker', {
                 placeHolder: 'Enter your Facebook Email ID*'
             },
             {
-                xtype: 'textfield',
+                xtype: 'emailfield',
                 cls: [
                     'customfield',
                     'icon-email'
@@ -69591,10 +69744,10 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'emailAddress',
-                placeHolder: 'Enter your Business Email ID**'
+                placeHolder: 'email@example.com'
             },
             {
-                xtype: 'textfield',
+                xtype: 'urlfield',
                 cls: [
                     'customfield',
                     'icon-globe'
@@ -69604,10 +69757,15 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'businessName8',
                 margin: '5 5 5 5 ',
                 styleHtmlContent: true,
+                component: {
+                    xtype: 'input',
+                    type: 'url',
+                    fastFocus: true
+                },
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'websiteDisplayName',
-                placeHolder: 'www.example.com'
+                placeHolder: 'http://example.com'
             },
             {
                 xtype: 'textfield',
@@ -69633,10 +69791,13 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'city',
+                autoCapitalize: true,
+                autoComplete: true,
+                autoCorrect: true,
                 placeHolder: 'City'
             },
             {
-                xtype: 'textfield',
+                xtype: 'selectfield',
                 cls: 'customfield',
                 hidden: false,
                 id: 'businessName12',
@@ -69646,7 +69807,213 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'state',
-                placeHolder: 'State (example: IL)'
+                placeHolder: 'Choose State',
+                options: [
+                    {
+                        text: 'AL',
+                        value: 'AL'
+                    },
+                    {
+                        text: 'AK',
+                        value: 'AK'
+                    },
+                    {
+                        text: 'AZ',
+                        value: 'AZ'
+                    },
+                    {
+                        text: 'AR',
+                        value: 'AR'
+                    },
+                    {
+                        text: 'CA',
+                        value: 'CA'
+                    },
+                    {
+                        text: 'CO',
+                        value: 'CO'
+                    },
+                    {
+                        text: 'CT',
+                        value: 'CT'
+                    },
+                    {
+                        text: 'DE',
+                        value: 'DE'
+                    },
+                    {
+                        text: 'FL',
+                        value: 'FL'
+                    },
+                    {
+                        text: 'AL',
+                        value: 'AL'
+                    },
+                    {
+                        text: 'GA',
+                        value: 'GA'
+                    },
+                    {
+                        text: 'HI',
+                        value: 'HI'
+                    },
+                    {
+                        text: 'ID',
+                        value: 'ID'
+                    },
+                    {
+                        text: 'IL',
+                        value: 'IL'
+                    },
+                    {
+                        text: 'IN',
+                        value: 'IN'
+                    },
+                    {
+                        text: 'IA',
+                        value: 'IA'
+                    },
+                    {
+                        text: 'KS',
+                        value: 'KS'
+                    },
+                    {
+                        text: 'KY',
+                        value: 'KY'
+                    },
+                    {
+                        text: 'LA',
+                        value: 'LA'
+                    },
+                    {
+                        text: 'ME',
+                        value: 'ME'
+                    },
+                    {
+                        text: 'MD',
+                        value: 'MD'
+                    },
+                    {
+                        text: 'MA',
+                        value: 'MA'
+                    },
+                    {
+                        text: 'MI',
+                        value: 'MI'
+                    },
+                    {
+                        text: 'MN',
+                        value: 'MN'
+                    },
+                    {
+                        text: 'MS',
+                        value: 'MS'
+                    },
+                    {
+                        text: 'MO',
+                        value: 'MO'
+                    },
+                    {
+                        text: 'MT',
+                        value: 'MT'
+                    },
+                    {
+                        text: 'NE',
+                        value: 'NE'
+                    },
+                    {
+                        text: 'NV',
+                        value: 'NV'
+                    },
+                    {
+                        text: 'NH',
+                        value: 'NH'
+                    },
+                    {
+                        text: 'NM',
+                        value: 'NM'
+                    },
+                    {
+                        text: 'NJ',
+                        value: 'NJ'
+                    },
+                    {
+                        text: 'NY',
+                        value: 'NY'
+                    },
+                    {
+                        text: 'NC',
+                        value: 'NC'
+                    },
+                    {
+                        text: 'ND',
+                        value: 'ND'
+                    },
+                    {
+                        text: 'OH',
+                        value: 'OH'
+                    },
+                    {
+                        text: 'OK',
+                        value: 'OK'
+                    },
+                    {
+                        text: 'OR',
+                        value: 'OR'
+                    },
+                    {
+                        text: 'PA',
+                        value: 'PA'
+                    },
+                    {
+                        text: 'RI',
+                        value: 'RI'
+                    },
+                    {
+                        text: 'SC',
+                        value: 'SC'
+                    },
+                    {
+                        text: 'SD',
+                        value: 'SD'
+                    },
+                    {
+                        text: 'TN',
+                        value: 'TN'
+                    },
+                    {
+                        text: 'TX',
+                        value: 'TX'
+                    },
+                    {
+                        text: 'UT',
+                        value: 'UT'
+                    },
+                    {
+                        text: 'VT',
+                        value: 'VT'
+                    },
+                    {
+                        text: 'VA',
+                        value: 'VA'
+                    },
+                    {
+                        text: 'WA',
+                        value: 'WA'
+                    },
+                    {
+                        text: 'WV',
+                        value: 'WV'
+                    },
+                    {
+                        text: 'WI',
+                        value: 'WI'
+                    },
+                    {
+                        text: 'WY',
+                        value: 'WY'
+                    }
+                ]
             },
             {
                 xtype: 'textfield',
