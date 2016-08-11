@@ -68857,6 +68857,7 @@ Ext.define('Ext.picker.Picker', {
                             var endDate = form.getAt(5).getValue();
                             var dealName = form.getAt(0).getValue();
                             var date = new Date();
+                            console.log(startDate);
                             if (dealName) {
                                 if ((endDate >= date) || (endDate >= startDate)) {
                                     if (document.getElementById('chkbx').checked) {
