@@ -68858,7 +68858,7 @@ Ext.define('Ext.picker.Picker', {
                             var dealName = form.getAt(0).getValue();
                             var date = new Date();
                             if (dealName) {
-                                if (endDate >= date || endDate >= startDate) {
+                                if ((endDate >= date) || (endDate >= startDate)) {
                                     if (document.getElementById('chkbx').checked) {
                                         form.submit({
                                             url: 'http://services.appsonmobile.com/demoDeals/editDeal/' + itemName,
@@ -69235,7 +69235,7 @@ Ext.define('Ext.picker.Picker', {
                             var dealName = form.getAt(0).getValue();
                             if (dealName) {
                                 if (file) {
-                                    if (endDate >= date || endDate >= startDate) {
+                                    if ((endDate >= date) || (endDate >= startDate)) {
                                         if (document.getElementById('chkbx').checked) {
                                             form.submit({
                                                 url: 'http://services.appsonmobile.com/democreateNewBuzzWithImage',
@@ -70156,7 +70156,7 @@ Ext.define('Ext.picker.Picker', {
                             var endDate = form.getAt(5).getValue();
                             var dealName = form.getAt(0).getValue();
                             if (dealName) {
-                                if (endDate >= date || endDate >= startDate) {
+                                if ((endDate >= date) || (endDate >= startDate)) {
                                     if (document.getElementById('chkbx').checked) {
                                         form.submit({
                                             url: 'http://services.appsonmobile.com/democreateNewBuzzNoImage',
