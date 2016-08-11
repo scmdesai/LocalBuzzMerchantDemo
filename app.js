@@ -66134,18 +66134,6 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 name: 'DealPictureURL'
-            },
-            {
-                name: 'signupStatus'
-            },
-            {
-                name: 'startDate'
-            },
-            {
-                name: 'endDate'
-            },
-            {
-                name: 'planType'
             }
         ]
     }
@@ -68093,7 +68081,8 @@ Ext.define('Ext.picker.Picker', {
                             });
                         }, null);
                     } else {
-                        console.log(record.get('signupStatus'));
+                        var endDate = new Date(record.get('endDate'));
+                        var today = new Date();
                         var storeUserDetails = Ext.getStore('UserDetails');
                         storeUserDetails.removeAll();
                         if (record.get('signupStatus') === "Approved") {
@@ -68107,7 +68096,7 @@ Ext.define('Ext.picker.Picker', {
                                 var view = Ext.Viewport.add({
                                         xtype: 'panel'
                                     });
-                                //Ext.Viewport.getActiveItem().destroy();
+                                Ext.Viewport.getActiveItem().destroy();
                                 Ext.Viewport.setActiveItem(view);
                             } else {
                                 Ext.Msg.alert('Your trial period has ended', "Please contact us at info@appsonmobile.com for continued access to your account ", function() {
