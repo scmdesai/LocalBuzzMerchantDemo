@@ -68645,7 +68645,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: 'customfield',
-                disabled: false,
+                disabled: true,
                 id: 'DealName',
                 itemId: 'DealName',
                 margin: '5 5 5 5 ',
@@ -68918,7 +68918,9 @@ Ext.define('Ext.picker.Picker', {
             //this.child('contactpic').setData(record.data);
             //this.down('#DealStartDate').setValue(record.data.dealStartDate);
             //this.down('#DealEndDate').setValue(record.data.dealEndDate);
+            var startDate = Ext.Date.parse(record.data.dealStartDate, 'n/j/Y');
             var endDate = Ext.Date.parse(record.data.dealEndDate, 'n/j/Y');
+            this.down('#DealStartDate').setValue(startDate);
             this.down('#DealEndDate').setValue(endDate);
         }
     }
