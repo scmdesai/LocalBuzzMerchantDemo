@@ -69633,6 +69633,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: 'customfield',
+                height: '10vh',
                 hidden: false,
                 id: 'businessName6',
                 itemId: 'businessName',
@@ -69647,6 +69648,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'selectfield',
                 cls: 'customfield',
+                height: '10vh',
                 id: 'DealStatus3',
                 itemId: 'DealStatus',
                 margin: '5 5 5 5 ',
@@ -69812,244 +69814,252 @@ Ext.define('Ext.picker.Picker', {
                 placeHolder: 'City'
             },
             {
-                xtype: 'selectfield',
-                cls: 'customfield',
-                height: '10vh',
-                hidden: false,
-                id: 'businessName12',
-                itemId: 'businessName6',
-                margin: '5 5 5 5 ',
-                padding: '0 0 5 5',
-                styleHtmlContent: true,
-                labelWidth: '35%',
-                labelWrap: true,
-                name: 'state',
-                placeHolder: 'Choose State',
-                autoSelect: false,
-                options: [
+                xtype: 'container',
+                margin: '5 5 5 5',
+                layout: 'hbox',
+                items: [
                     {
-                        text: 'AL',
-                        value: 'AL'
+                        xtype: 'selectfield',
+                        cls: 'customfield',
+                        height: '10vh',
+                        hidden: false,
+                        id: 'businessName12',
+                        itemId: 'businessName6',
+                        padding: '0 0 5 5',
+                        styleHtmlContent: true,
+                        width: '45%',
+                        labelWidth: '35%',
+                        labelWrap: true,
+                        name: 'state',
+                        placeHolder: 'Choose State',
+                        autoSelect: false,
+                        options: [
+                            {
+                                text: 'AL',
+                                value: 'AL'
+                            },
+                            {
+                                text: 'AK',
+                                value: 'AK'
+                            },
+                            {
+                                text: 'AZ',
+                                value: 'AZ'
+                            },
+                            {
+                                text: 'AR',
+                                value: 'AR'
+                            },
+                            {
+                                text: 'CA',
+                                value: 'CA'
+                            },
+                            {
+                                text: 'CO',
+                                value: 'CO'
+                            },
+                            {
+                                text: 'CT',
+                                value: 'CT'
+                            },
+                            {
+                                text: 'DE',
+                                value: 'DE'
+                            },
+                            {
+                                text: 'FL',
+                                value: 'FL'
+                            },
+                            {
+                                text: 'AL',
+                                value: 'AL'
+                            },
+                            {
+                                text: 'GA',
+                                value: 'GA'
+                            },
+                            {
+                                text: 'HI',
+                                value: 'HI'
+                            },
+                            {
+                                text: 'ID',
+                                value: 'ID'
+                            },
+                            {
+                                text: 'IL',
+                                value: 'IL'
+                            },
+                            {
+                                text: 'IN',
+                                value: 'IN'
+                            },
+                            {
+                                text: 'IA',
+                                value: 'IA'
+                            },
+                            {
+                                text: 'KS',
+                                value: 'KS'
+                            },
+                            {
+                                text: 'KY',
+                                value: 'KY'
+                            },
+                            {
+                                text: 'LA',
+                                value: 'LA'
+                            },
+                            {
+                                text: 'ME',
+                                value: 'ME'
+                            },
+                            {
+                                text: 'MD',
+                                value: 'MD'
+                            },
+                            {
+                                text: 'MA',
+                                value: 'MA'
+                            },
+                            {
+                                text: 'MI',
+                                value: 'MI'
+                            },
+                            {
+                                text: 'MN',
+                                value: 'MN'
+                            },
+                            {
+                                text: 'MS',
+                                value: 'MS'
+                            },
+                            {
+                                text: 'MO',
+                                value: 'MO'
+                            },
+                            {
+                                text: 'MT',
+                                value: 'MT'
+                            },
+                            {
+                                text: 'NE',
+                                value: 'NE'
+                            },
+                            {
+                                text: 'NV',
+                                value: 'NV'
+                            },
+                            {
+                                text: 'NH',
+                                value: 'NH'
+                            },
+                            {
+                                text: 'NM',
+                                value: 'NM'
+                            },
+                            {
+                                text: 'NJ',
+                                value: 'NJ'
+                            },
+                            {
+                                text: 'NY',
+                                value: 'NY'
+                            },
+                            {
+                                text: 'NC',
+                                value: 'NC'
+                            },
+                            {
+                                text: 'ND',
+                                value: 'ND'
+                            },
+                            {
+                                text: 'OH',
+                                value: 'OH'
+                            },
+                            {
+                                text: 'OK',
+                                value: 'OK'
+                            },
+                            {
+                                text: 'OR',
+                                value: 'OR'
+                            },
+                            {
+                                text: 'PA',
+                                value: 'PA'
+                            },
+                            {
+                                text: 'RI',
+                                value: 'RI'
+                            },
+                            {
+                                text: 'SC',
+                                value: 'SC'
+                            },
+                            {
+                                text: 'SD',
+                                value: 'SD'
+                            },
+                            {
+                                text: 'TN',
+                                value: 'TN'
+                            },
+                            {
+                                text: 'TX',
+                                value: 'TX'
+                            },
+                            {
+                                text: 'UT',
+                                value: 'UT'
+                            },
+                            {
+                                text: 'VT',
+                                value: 'VT'
+                            },
+                            {
+                                text: 'VA',
+                                value: 'VA'
+                            },
+                            {
+                                text: 'WA',
+                                value: 'WA'
+                            },
+                            {
+                                text: 'WV',
+                                value: 'WV'
+                            },
+                            {
+                                text: 'WI',
+                                value: 'WI'
+                            },
+                            {
+                                text: 'WY',
+                                value: 'WY'
+                            }
+                        ]
                     },
                     {
-                        text: 'AK',
-                        value: 'AK'
-                    },
-                    {
-                        text: 'AZ',
-                        value: 'AZ'
-                    },
-                    {
-                        text: 'AR',
-                        value: 'AR'
-                    },
-                    {
-                        text: 'CA',
-                        value: 'CA'
-                    },
-                    {
-                        text: 'CO',
-                        value: 'CO'
-                    },
-                    {
-                        text: 'CT',
-                        value: 'CT'
-                    },
-                    {
-                        text: 'DE',
-                        value: 'DE'
-                    },
-                    {
-                        text: 'FL',
-                        value: 'FL'
-                    },
-                    {
-                        text: 'AL',
-                        value: 'AL'
-                    },
-                    {
-                        text: 'GA',
-                        value: 'GA'
-                    },
-                    {
-                        text: 'HI',
-                        value: 'HI'
-                    },
-                    {
-                        text: 'ID',
-                        value: 'ID'
-                    },
-                    {
-                        text: 'IL',
-                        value: 'IL'
-                    },
-                    {
-                        text: 'IN',
-                        value: 'IN'
-                    },
-                    {
-                        text: 'IA',
-                        value: 'IA'
-                    },
-                    {
-                        text: 'KS',
-                        value: 'KS'
-                    },
-                    {
-                        text: 'KY',
-                        value: 'KY'
-                    },
-                    {
-                        text: 'LA',
-                        value: 'LA'
-                    },
-                    {
-                        text: 'ME',
-                        value: 'ME'
-                    },
-                    {
-                        text: 'MD',
-                        value: 'MD'
-                    },
-                    {
-                        text: 'MA',
-                        value: 'MA'
-                    },
-                    {
-                        text: 'MI',
-                        value: 'MI'
-                    },
-                    {
-                        text: 'MN',
-                        value: 'MN'
-                    },
-                    {
-                        text: 'MS',
-                        value: 'MS'
-                    },
-                    {
-                        text: 'MO',
-                        value: 'MO'
-                    },
-                    {
-                        text: 'MT',
-                        value: 'MT'
-                    },
-                    {
-                        text: 'NE',
-                        value: 'NE'
-                    },
-                    {
-                        text: 'NV',
-                        value: 'NV'
-                    },
-                    {
-                        text: 'NH',
-                        value: 'NH'
-                    },
-                    {
-                        text: 'NM',
-                        value: 'NM'
-                    },
-                    {
-                        text: 'NJ',
-                        value: 'NJ'
-                    },
-                    {
-                        text: 'NY',
-                        value: 'NY'
-                    },
-                    {
-                        text: 'NC',
-                        value: 'NC'
-                    },
-                    {
-                        text: 'ND',
-                        value: 'ND'
-                    },
-                    {
-                        text: 'OH',
-                        value: 'OH'
-                    },
-                    {
-                        text: 'OK',
-                        value: 'OK'
-                    },
-                    {
-                        text: 'OR',
-                        value: 'OR'
-                    },
-                    {
-                        text: 'PA',
-                        value: 'PA'
-                    },
-                    {
-                        text: 'RI',
-                        value: 'RI'
-                    },
-                    {
-                        text: 'SC',
-                        value: 'SC'
-                    },
-                    {
-                        text: 'SD',
-                        value: 'SD'
-                    },
-                    {
-                        text: 'TN',
-                        value: 'TN'
-                    },
-                    {
-                        text: 'TX',
-                        value: 'TX'
-                    },
-                    {
-                        text: 'UT',
-                        value: 'UT'
-                    },
-                    {
-                        text: 'VT',
-                        value: 'VT'
-                    },
-                    {
-                        text: 'VA',
-                        value: 'VA'
-                    },
-                    {
-                        text: 'WA',
-                        value: 'WA'
-                    },
-                    {
-                        text: 'WV',
-                        value: 'WV'
-                    },
-                    {
-                        text: 'WI',
-                        value: 'WI'
-                    },
-                    {
-                        text: 'WY',
-                        value: 'WY'
+                        xtype: 'textfield',
+                        cls: 'customfield',
+                        height: '10vh',
+                        hidden: false,
+                        margin: '0 0 0 5',
+                        padding: '0 0 5 5',
+                        styleHtmlContent: true,
+                        width: '53%',
+                        component: {
+                            xtype: 'input',
+                            type: 'tel',
+                            fastFocus: true
+                        },
+                        labelWidth: '35%',
+                        labelWrap: true,
+                        name: 'zipcode',
+                        placeHolder: '5 digit zipcode'
                     }
                 ]
-            },
-            {
-                xtype: 'textfield',
-                cls: 'customfield',
-                height: '10vh',
-                hidden: false,
-                margin: '5 5 5 5 ',
-                padding: '0 0 5 5',
-                styleHtmlContent: true,
-                component: {
-                    xtype: 'input',
-                    type: 'tel',
-                    fastFocus: true
-                },
-                labelWidth: '35%',
-                labelWrap: true,
-                name: 'zipcode',
-                placeHolder: '5 digit zipcode'
             },
             {
                 xtype: 'filefield',
