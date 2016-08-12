@@ -69744,7 +69744,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'emailAddress',
-                placeHolder: 'email@example.com'
+                placeHolder: 'Enter Business Email ID'
             },
             {
                 xtype: 'urlfield',
@@ -69808,6 +69808,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWrap: true,
                 name: 'state',
                 placeHolder: 'Choose State',
+                autoSelect: false,
                 options: [
                     {
                         text: 'AL',
