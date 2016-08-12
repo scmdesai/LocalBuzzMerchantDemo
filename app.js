@@ -69715,7 +69715,7 @@ Ext.define('Ext.picker.Picker', {
                 placeHolder: '555-555-5555'
             },
             {
-                xtype: 'textfield',
+                xtype: 'emailfield',
                 cls: [
                     'customfield',
                     'icon-key'
@@ -69744,7 +69744,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'emailAddress',
-                placeHolder: 'Enter Business Email ID'
+                placeHolder: 'Enter Business Email ID**'
             },
             {
                 xtype: 'urlfield',
@@ -70024,7 +70024,7 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 component: {
                     xtype: 'input',
-                    type: 'number',
+                    type: 'tel',
                     fastFocus: true
                 },
                 labelWidth: '35%',
