@@ -66533,7 +66533,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'component',
                 hidden: false,
-                html: '<h6 style="color:#00529D;font-size:4vw">Free 90 days no obligation trial!</h6>',
+                html: '<h6 style="color:#00529D;font-size:4vw">Free 90 days, No obligation trial!</h6>',
                 id: 'text3',
                 left: '20%',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
@@ -69277,7 +69277,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: true,
                 id: 'DealPictureURL2',
                 itemId: 'DealPictureURL',
-                name: 'pictureURL'
+                name: 'dealPictureURL'
             },
             {
                 xtype: 'textareafield',
@@ -70437,7 +70437,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: true,
                 id: 'DealPictureURL3',
                 itemId: 'DealPictureURL',
-                name: 'pictureURL'
+                name: 'dealPictureURL'
             },
             {
                 xtype: 'textfield',
