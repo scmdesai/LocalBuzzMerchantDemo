@@ -69277,7 +69277,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: true,
                 id: 'DealPictureURL2',
                 itemId: 'DealPictureURL',
-                name: 'dealPictureURL'
+                name: 'DealPictureURL'
             },
             {
                 xtype: 'textareafield',
@@ -70437,7 +70437,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: true,
                 id: 'DealPictureURL3',
                 itemId: 'DealPictureURL',
-                name: 'dealPictureURL'
+                name: 'DealPictureURL'
             },
             {
                 xtype: 'textfield',
