@@ -69391,6 +69391,7 @@ Ext.define('Ext.picker.Picker', {
                             var endDate = form.getAt(5).getValue();
                             var file = form.getAt(8).getValue();
                             var dealName = form.getAt(0).getValue();
+                            console.log('Picture URL is : ' + form.getAt(6).getValue());
                             if (dealName) {
                                 if (file) {
                                     if (endDate >= date) {
