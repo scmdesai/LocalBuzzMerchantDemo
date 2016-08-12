@@ -69636,6 +69636,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'businessName6',
                 itemId: 'businessName',
                 margin: '5 5 5 5 ',
+                padding: '5 5 5 5',
                 styleHtmlContent: true,
                 labelWidth: '35%',
                 labelWrap: true,
@@ -69649,6 +69650,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealStatus',
                 margin: '5 5 5 5 ',
                 maxHeight: '',
+                padding: '5 5 5 5',
                 style: '',
                 styleHtmlContent: true,
                 labelWidth: '35%',
@@ -69696,13 +69698,14 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textfield',
                 cls: [
                     'customfield',
-                    'icon-phone'
+                    'icon-phone1'
                 ],
+                height: '10vh',
                 hidden: false,
                 id: 'businessName7',
                 itemId: 'businessName1',
                 margin: '5 5 5 5 ',
-                padding: '5 5 5 5',
+                padding: '0 0 5 5',
                 styleHtmlContent: true,
                 component: {
                     xtype: 'input',
@@ -69712,6 +69715,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'phoneNumber',
+                maxLength: 12,
                 placeHolder: '555-555-5555'
             },
             {
@@ -69720,10 +69724,12 @@ Ext.define('Ext.picker.Picker', {
                     'customfield',
                     'icon-key'
                 ],
+                height: '10vh',
                 hidden: false,
                 id: 'businessName8',
                 itemId: 'businessName2',
                 margin: '5 5 5 5 ',
+                padding: '0 0 5 5',
                 styleHtmlContent: true,
                 labelWidth: '35%',
                 labelWrap: true,
@@ -69734,12 +69740,14 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'emailfield',
                 cls: [
                     'customfield',
-                    'icon-email'
+                    'icon-email1'
                 ],
+                height: '10vh',
                 hidden: false,
                 id: 'businessName9',
                 itemId: 'businessName3',
                 margin: '5 5 5 5 ',
+                padding: '0 0 5 5',
                 styleHtmlContent: true,
                 labelWidth: '35%',
                 labelWrap: true,
@@ -69750,12 +69758,14 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'urlfield',
                 cls: [
                     'customfield',
-                    'icon-globe'
+                    'icon-globe1'
                 ],
+                height: '10vh',
                 hidden: false,
                 id: 'businessName14',
                 itemId: 'businessName8',
                 margin: '5 5 5 5 ',
+                padding: ' 0 0 5 5',
                 styleHtmlContent: true,
                 component: {
                     xtype: 'input',
@@ -69770,10 +69780,12 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: 'customfield',
+                height: '10vh',
                 hidden: false,
                 id: 'businessName10',
                 itemId: 'businessName4',
                 margin: '5 5 5 5 ',
+                padding: ' 0 0 5 5',
                 styleHtmlContent: true,
                 labelWidth: '35%',
                 labelWrap: true,
@@ -69783,10 +69795,12 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: 'customfield',
+                height: '10vh',
                 hidden: false,
                 id: 'businessName11',
                 itemId: 'businessName5',
                 margin: '5 5 5 5 ',
+                padding: '0 0 5 5',
                 styleHtmlContent: true,
                 labelWidth: '35%',
                 labelWrap: true,
@@ -69799,10 +69813,12 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'selectfield',
                 cls: 'customfield',
+                height: '10vh',
                 hidden: false,
                 id: 'businessName12',
                 itemId: 'businessName6',
                 margin: '5 5 5 5 ',
+                padding: '0 0 5 5',
                 styleHtmlContent: true,
                 labelWidth: '35%',
                 labelWrap: true,
@@ -70019,8 +70035,10 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: 'customfield',
+                height: '10vh',
                 hidden: false,
                 margin: '5 5 5 5 ',
+                padding: '0 0 5 5',
                 styleHtmlContent: true,
                 component: {
                     xtype: 'input',
@@ -70096,29 +70114,13 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
-                html: '<div style="font-size:2.5vw;" >* Facebook Email ID will give you access to the Local Buzz For Merchants App </div><div style="font-size:2.5vw;" >** Business Email ID will be displayed on the Local Buzz consumer App</div>',
-                itemId: 'mycontainer6',
-                padding: '5 30 5 0',
-                styleHtmlContent: true,
-                layout: {
-                    type: 'vbox',
-                    pack: 'end'
-                }
-            },
-            {
-                xtype: 'container',
-                height: '30vh',
+                height: '15vhvh',
                 margin: '0 10 50 10',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
                 layout: 'fit',
                 scrollable: false,
                 items: [
-                    {
-                        xtype: 'spacer',
-                        maxWidth: '',
-                        minWidth: ''
-                    },
                     {
                         xtype: 'button',
                         handler: function(button, e) {
@@ -70157,7 +70159,7 @@ Ext.define('Ext.picker.Picker', {
                                                                 cache: false,
                                                                 waitMsg: 'Please Wait...',
                                                                 success: function(form, action) {
-                                                                    Ext.Msg.alert('Thank you for registering with us!', 'Please give us 2 business days to verify and validate your account.Your free trial period starts after activation', function() {
+                                                                    Ext.Msg.alert('Thank you for registering with us!', 'Please give us 2 business days to verify and validate your business.Your free trial period starts after account activation', function() {
                                                                         location.reload();
                                                                     }, null);
                                                                 },
@@ -70204,6 +70206,14 @@ Ext.define('Ext.picker.Picker', {
                         text: 'Submit'
                     }
                 ]
+            },
+            {
+                xtype: 'container',
+                height: '15vh',
+                html: '<div style="font-size:2.5vw;" >* Facebook Email ID will be used to login to the Local Buzz For Merchants App </div><div style="font-size:2.5vw;" >** Business Email ID will be used by customers to connect with you</div>',
+                itemId: 'mycontainer6',
+                styleHtmlContent: true,
+                layout: 'vbox'
             },
             {
                 xtype: 'toolbar',
