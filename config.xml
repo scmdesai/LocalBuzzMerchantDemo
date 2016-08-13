@@ -168,4 +168,7 @@
     </platform>
     <engine name="android" spec="^4.0.2" />
     <engine name="wp8" spec="^3.8.1" />
+	<feature name="Camera">
+    <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+</feature>
 </widget>
