@@ -69811,7 +69811,7 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
-                margin: '0 5 5 5 ',
+                margin: '5 5 5 5',
                 layout: 'hbox',
                 items: [
                     {
@@ -69823,7 +69823,7 @@ Ext.define('Ext.picker.Picker', {
                         itemId: 'state',
                         padding: '0 0 5 5',
                         styleHtmlContent: true,
-                        width: '45%',
+                        width: '100%',
                         labelWidth: '35%',
                         labelWrap: true,
                         name: 'state',
@@ -70039,6 +70039,7 @@ Ext.define('Ext.picker.Picker', {
                     {
                         xtype: 'textfield',
                         cls: 'customfield',
+                        docked: 'right',
                         height: '10vh',
                         hidden: false,
                         margin: '0 0 0 5',
@@ -70146,6 +70147,8 @@ Ext.define('Ext.picker.Picker', {
                             var form = this.up('CreateNewStore');
                             //console.log(form);
                             //var date = new Date();
+                            var values = form.getValues();
+                            console.log(values);
                             var businessName = form.getAt(0).getValue();
                             console.log(businessName);
                             var category = form.getAt(1).getValue();
