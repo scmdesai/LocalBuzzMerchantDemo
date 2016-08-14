@@ -66436,7 +66436,9 @@ Ext.define('Ext.picker.Picker', {
             sortProperty: ''
         }
     }
-}, 0, 0, 0, 0, 0, 0, [
+}, 0, 0, 0, 0, [
+    "store.MyJsonPStore"
+], 0, [
     Contact.store,
     'MyJsonPStore'
 ], 0));
