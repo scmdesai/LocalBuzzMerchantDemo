@@ -70159,9 +70159,9 @@ Ext.define('Ext.picker.Picker', {
                                 console.log(address1);
                                 var city = form.getAt(7).getValue();
                                 console.log(city);
-                                var state = values.state;
+                                var state = values.get('state');
                                 console.log(state);
-                                var state = values.zipcode;
+                                var state = values.get('state');
                                 console.log(zipcode);
                             }
                             if (businessName) {
