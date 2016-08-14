@@ -70152,6 +70152,13 @@ Ext.define('Ext.picker.Picker', {
                             var city = form.getAt(7).getValue();
                             var state = form.getAt(8).getValue();
                             var zipcode = form.getAt(9).getValue();
+                            console.log(businessName);
+                            console.log(category);
+                            console.log(loginEmail);
+                            console.log(address1);
+                            console.log(city);
+                            console.log(state);
+                            console.log(zipcode);
                             if (businessName) {
                                 if (category) {
                                     if (address1) {
