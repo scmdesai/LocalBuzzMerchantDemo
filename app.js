@@ -70100,7 +70100,7 @@ Ext.define('Ext.picker.Picker', {
                         docked: 'left',
                         html: '<input type="checkbox" name="chkbx" id="chkbx">',
                         left: '40%',
-                        margin: '5 5 5 15',
+                        margin: '5 5 5 10',
                         top: '50%'
                     },
                     {
@@ -70109,7 +70109,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '40px',
                         html: '<a id="terms" style="font-size:2.5vw;" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
                         itemId: 'mycontainer5',
-                        margin: '5 5 5 10',
+                        margin: '10 5 5 15',
                         padding: '5 30 5 0',
                         styleHtmlContent: true,
                         layout: 'hbox',
