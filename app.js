@@ -69819,8 +69819,8 @@ Ext.define('Ext.picker.Picker', {
                         cls: 'customfield',
                         height: '10vh',
                         hidden: false,
-                        id: 'businessName12',
-                        itemId: 'businessName6',
+                        id: 'state',
+                        itemId: 'state',
                         padding: '0 0 5 5',
                         styleHtmlContent: true,
                         width: '45%',
@@ -70156,7 +70156,7 @@ Ext.define('Ext.picker.Picker', {
                             console.log(address1);
                             var city = form.getAt(7).getValue();
                             console.log(city);
-                            var state = form.getAt(8).getValue();
+                            var state = form.query('state').getValue();
                             console.log(state);
                             var zipcode = form.getAt(9).getValue();
                             console.log(zipcode);
