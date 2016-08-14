@@ -70168,9 +70168,9 @@ Ext.define('Ext.picker.Picker', {
                                 console.log(address1);
                                 var city = form.getAt(7).getValue();
                                 console.log(city);
-                                var state = Ext.getCmp('state').getValue();
+                                var state = Ext.getCmp('state').getEl().getValue();
                                 console.log(state);
-                                var state = Ext.getCmp('zipcode').getValue();
+                                var zipcode = Ext.getCmp('zipcode').getEl().getValue();
                                 console.log(zipcode);
                             }
                             if (businessName) {
