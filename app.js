@@ -67384,7 +67384,7 @@ Ext.define('Ext.picker.Picker', {
 (Ext.cmd.derive('Contact.controller.Contacts', Ext.app.Controller, {
     config: {
         stores: [
-            null,
+            'MyJsonPStore',
             'MyDealsStore',
             'UserDetails',
             'LocalStore'
