@@ -70042,6 +70042,8 @@ Ext.define('Ext.picker.Picker', {
                         docked: 'right',
                         height: '10vh',
                         hidden: false,
+                        id: 'zipcode',
+                        itemId: 'zipcode',
                         margin: '0 0 0 5',
                         padding: '0 0 5 5',
                         styleHtmlContent: true,
@@ -70079,6 +70081,13 @@ Ext.define('Ext.picker.Picker', {
                 name: 'fileUpload',
                 accept: 'image',
                 capture: 'camera'
+            },
+            {
+                xtype: 'toolbar',
+                cls: 'toolbarCls',
+                docked: 'top',
+                height: '8vh',
+                html: '<h3 style=" color:#00529D;font-size:5.5vw;text-align:center;padding-top:10px">Local Buzz Merchant Sign-up</h3>'
             },
             {
                 xtype: 'container',
@@ -70150,7 +70159,7 @@ Ext.define('Ext.picker.Picker', {
                             //var date = new Date();
                             for (var i = 0; i < 10; i++) {
                                 var businessName = form.getAt(0).getValue();
-                                console.log(businessName);
+                                //console.log(businessName);
                                 var category = form.getAt(1).getValue();
                                 console.log(category);
                                 var loginEmail = form.getAt(3).getValue();
@@ -70159,9 +70168,9 @@ Ext.define('Ext.picker.Picker', {
                                 console.log(address1);
                                 var city = form.getAt(7).getValue();
                                 console.log(city);
-                                var state = values['state'];
+                                var state = Ext.getCmp('state').getValue();
                                 console.log(state);
-                                var state = values.get('zipcode').getValue();
+                                var state = Ext.getCmp('zipcode').getValue();
                                 console.log(zipcode);
                             }
                             if (businessName) {
@@ -70233,13 +70242,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'mycontainer6',
                 styleHtmlContent: true,
                 layout: 'vbox'
-            },
-            {
-                xtype: 'toolbar',
-                cls: 'toolbarCls',
-                docked: 'top',
-                height: '8vh',
-                html: '<h3 style=" color:#00529D;font-size:5.5vw;text-align:center;padding-top:10px">Local Buzz Merchant Sign-up</h3>'
             }
         ],
         listeners: [
