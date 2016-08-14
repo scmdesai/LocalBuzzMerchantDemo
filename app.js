@@ -70156,17 +70156,12 @@ Ext.define('Ext.picker.Picker', {
                             var form = this.up('CreateNewStore');
                             var values = form.getValues();
                             var businessName = form.getAt(0).getValue();
-                            //console.log(businessName);
                             var category = form.getAt(1).getValue();
-                            console.log(category);
                             var loginEmail = form.getAt(3).getValue();
-                            console.log(loginEmail);
                             var address1 = form.getAt(6).getValue();
-                            console.log(address1);
                             var city = form.getAt(7).getValue();
-                            console.log(city);
                             var state = Ext.getCmp('state').getValue();
-                            console.log(state);
+                            var zipcode = Ext.getCmp('zipcode').getValue();
                             if (businessName) {
                                 if (category) {
                                     if (address1) {
