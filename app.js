@@ -70143,7 +70143,9 @@ Ext.define('Ext.picker.Picker', {
                     {
                         xtype: 'button',
                         handler: function(button, e) {
+                            console.log('Creating store');
                             var form = this.up('CreateNewStore');
+                            console.log(form);
                             var date = new Date();
                             var businessName = form.getAt(0).getValue();
                             var category = form.getAt(1).getValue();
