@@ -70159,7 +70159,7 @@ Ext.define('Ext.picker.Picker', {
                                 console.log(address1);
                                 var city = form.getAt(7).getValue();
                                 console.log(city);
-                                var state = values.get('state').getValue();
+                                var state = values['state'];
                                 console.log(state);
                                 var state = values.get('zipcode').getValue();
                                 console.log(zipcode);
