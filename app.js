@@ -70076,7 +70076,6 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '20%',
                 labelWrap: true,
                 name: 'fileUpload',
-                value: 'resources/img/localbuzzicon.png',
                 accept: 'image',
                 capture: 'camera'
             },
@@ -70145,21 +70144,21 @@ Ext.define('Ext.picker.Picker', {
                         handler: function(button, e) {
                             console.log('Creating store');
                             var form = this.up('CreateNewStore');
-                            console.log(form);
-                            var date = new Date();
+                            //console.log(form);
+                            //var date = new Date();
                             var businessName = form.getAt(0).getValue();
-                            var category = form.getAt(1).getValue();
-                            var loginEmail = form.getAt(3).getValue();
-                            var address1 = form.getAt(6).getValue();
-                            var city = form.getAt(7).getValue();
-                            var state = form.getAt(8).getValue();
-                            var zipcode = form.getAt(9).getValue();
                             console.log(businessName);
+                            var category = form.getAt(1).getValue();
                             console.log(category);
+                            var loginEmail = form.getAt(3).getValue();
                             console.log(loginEmail);
+                            var address1 = form.getAt(6).getValue();
                             console.log(address1);
+                            var city = form.getAt(7).getValue();
                             console.log(city);
+                            var state = form.getAt(8).getValue();
                             console.log(state);
+                            var zipcode = form.getAt(9).getValue();
                             console.log(zipcode);
                             if (businessName) {
                                 if (category) {
