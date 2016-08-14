@@ -70145,23 +70145,25 @@ Ext.define('Ext.picker.Picker', {
                         handler: function(button, e) {
                             console.log('Creating store');
                             var form = this.up('CreateNewStore');
-                            var record = form.getRecord();
-                            console.log(form.getRecord().get('state'));
+                            var values = form.getValues();
+                            console.log(form.getValues());
                             //var date = new Date();
-                            var businessName = form.getAt(0).getValue();
-                            console.log(businessName);
-                            var category = form.getAt(1).getValue();
-                            console.log(category);
-                            var loginEmail = form.getAt(3).getValue();
-                            console.log(loginEmail);
-                            var address1 = form.getAt(6).getValue();
-                            console.log(address1);
-                            var city = form.getAt(7).getValue();
-                            console.log(city);
-                            var state = record.get('state');
-                            console.log(state);
-                            var zipcode = record.get('zipcode');
-                            console.log(zipcode);
+                            for (var i = 0; i < 10; i++) {
+                                var businessName = form.getAt(0).getValue();
+                                console.log(businessName);
+                                var category = form.getAt(1).getValue();
+                                console.log(category);
+                                var loginEmail = form.getAt(3).getValue();
+                                console.log(loginEmail);
+                                var address1 = form.getAt(6).getValue();
+                                console.log(address1);
+                                var city = form.getAt(7).getValue();
+                                console.log(city);
+                                var state = values.state;
+                                console.log(state);
+                                var state = values.zipcode;
+                                console.log(zipcode);
+                            }
                             if (businessName) {
                                 if (category) {
                                     if (address1) {
