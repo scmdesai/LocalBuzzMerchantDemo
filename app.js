@@ -70145,7 +70145,8 @@ Ext.define('Ext.picker.Picker', {
                         handler: function(button, e) {
                             console.log('Creating store');
                             var form = this.up('CreateNewStore');
-                            console.log(form.items.items[8]);
+                            var record = form.getRecord();
+                            console.log(form.getRecord().get('state'));
                             //var date = new Date();
                             var businessName = form.getAt(0).getValue();
                             console.log(businessName);
@@ -70157,9 +70158,9 @@ Ext.define('Ext.picker.Picker', {
                             console.log(address1);
                             var city = form.getAt(7).getValue();
                             console.log(city);
-                            var state = form.items.items[8];
+                            var state = record.get('state');
                             console.log(state);
-                            var zipcode = form.items.items[9];
+                            var zipcode = record.get('zipcode');
                             console.log(zipcode);
                             if (businessName) {
                                 if (category) {
