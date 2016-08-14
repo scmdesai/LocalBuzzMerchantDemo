@@ -70113,6 +70113,7 @@ Ext.define('Ext.picker.Picker', {
                         html: '<a id="terms" style="font-size:2.5vw;" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
                         itemId: 'mycontainer5',
                         margin: '10 5 5 15',
+                        padding: '5 15 5 5',
                         styleHtmlContent: true,
                         layout: 'hbox',
                         listeners: [
