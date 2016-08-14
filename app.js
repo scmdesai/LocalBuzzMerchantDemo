@@ -70091,17 +70091,20 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
+                height: '15vh',
                 left: '',
                 margin: '0 5 5 5 ',
+                padding: '10 10 10 10',
                 layout: 'hbox',
                 items: [
                     {
                         xtype: 'container',
                         docked: 'left',
+                        height: '100%',
                         html: '<input type="checkbox" name="chkbx" id="chkbx">',
                         left: '40%',
-                        margin: '5 5 5 10',
-                        top: '50%'
+                        top: '50%',
+                        width: '100%'
                     },
                     {
                         xtype: 'container',
@@ -70110,7 +70113,6 @@ Ext.define('Ext.picker.Picker', {
                         html: '<a id="terms" style="font-size:2.5vw;" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
                         itemId: 'mycontainer5',
                         margin: '10 5 5 15',
-                        padding: '5 30 5 0',
                         styleHtmlContent: true,
                         layout: 'hbox',
                         listeners: [
@@ -70130,7 +70132,7 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
-                height: '15vhvh',
+                height: '15vh',
                 margin: '0 10 50 10',
                 padding: '5 5 5 5',
                 styleHtmlContent: true,
