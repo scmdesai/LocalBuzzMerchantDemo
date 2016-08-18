@@ -1,8 +1,3 @@
-var Contact = Contact || {};
-if (!Contact.controller) Contact.controller = {};
-if (!Contact.model) Contact.model = {};
-if (!Contact.store) Contact.store = {};
-if (!Contact.view) Contact.view = {};
 var Ext = Ext || {};
 if (!Ext.Picker) Ext.Picker = {};
 if (!Ext.app) Ext.app = {};
@@ -47,6 +42,11 @@ if (!Ext.util.paintmonitor) Ext.util.paintmonitor = {};
 if (!Ext.util.sizemonitor) Ext.util.sizemonitor = {};
 if (!Ext.util.translatable) Ext.util.translatable = {};
 if (!Ext.viewport) Ext.viewport = {};
+var LocalBuzzMerchantDemo = LocalBuzzMerchantDemo || {};
+if (!LocalBuzzMerchantDemo.controller) LocalBuzzMerchantDemo.controller = {};
+if (!LocalBuzzMerchantDemo.model) LocalBuzzMerchantDemo.model = {};
+if (!LocalBuzzMerchantDemo.store) LocalBuzzMerchantDemo.store = {};
+if (!LocalBuzzMerchantDemo.view) LocalBuzzMerchantDemo.view = {};
 /* 
  * Helper code for compiler optimization
  */
@@ -66098,7 +66098,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.model.Contact', Ext.data.Model, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.model.Contact', Ext.data.Model, {
     config: {
         useCache: false,
         fields: [
@@ -66166,7 +66166,7 @@ Ext.define('Ext.picker.Picker', {
         ]
     }
 }, 0, 0, 0, 0, 0, 0, [
-    Contact.model,
+    LocalBuzzMerchantDemo.model,
     'Contact'
 ], 0));
 
@@ -66184,7 +66184,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.model.Deal', Ext.data.Model, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.model.Deal', Ext.data.Model, {
     config: {
         useCache: false,
         fields: [
@@ -66243,7 +66243,7 @@ Ext.define('Ext.picker.Picker', {
 }, 0, 0, 0, 0, [
     "model.deal"
 ], 0, [
-    Contact.model,
+    LocalBuzzMerchantDemo.model,
     'Deal'
 ], 0));
 
@@ -66261,7 +66261,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.model.UserDetails', Ext.data.Model, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.model.UserDetails', Ext.data.Model, {
     config: {
         fields: [
             {
@@ -66291,7 +66291,7 @@ Ext.define('Ext.picker.Picker', {
         ]
     }
 }, 0, 0, 0, 0, 0, 0, [
-    Contact.model,
+    LocalBuzzMerchantDemo.model,
     'UserDetails'
 ], 0));
 
@@ -66309,10 +66309,10 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.store.MyDealsStore', Ext.data.Store, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.store.MyDealsStore', Ext.data.Store, {
     config: {
         autoLoad: true,
-        model: 'Contact.model.Deal',
+        model: 'LocalBuzzMerchantDemo.model.Deal',
         storeId: 'MyDealsStore',
         proxy: {
             type: 'jsonp',
@@ -66342,7 +66342,7 @@ Ext.define('Ext.picker.Picker', {
         store.load();
     }
 }, 0, 0, 0, 0, 0, 0, [
-    Contact.store,
+    LocalBuzzMerchantDemo.store,
     'MyDealsStore'
 ], 0));
 
@@ -66360,11 +66360,11 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.store.UserDetails', Ext.data.Store, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.store.UserDetails', Ext.data.Store, {
     config: {
         autoLoad: true,
         autoSync: true,
-        model: 'Contact.model.UserDetails',
+        model: 'LocalBuzzMerchantDemo.model.UserDetails',
         remoteFilter: true,
         storeId: 'UserDetails',
         proxy: {
@@ -66372,7 +66372,7 @@ Ext.define('Ext.picker.Picker', {
         }
     }
 }, 0, 0, 0, 0, 0, 0, [
-    Contact.store,
+    LocalBuzzMerchantDemo.store,
     'UserDetails'
 ], 0));
 
@@ -66390,13 +66390,13 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.store.LocalStore', Ext.data.Store, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.store.LocalStore', Ext.data.Store, {
     config: {
-        model: 'Contact.model.Deal',
+        model: 'LocalBuzzMerchantDemo.model.Deal',
         storeId: 'LocalStore'
     }
 }, 0, 0, 0, 0, 0, 0, [
-    Contact.store,
+    LocalBuzzMerchantDemo.store,
     'LocalStore'
 ], 0));
 
@@ -66414,10 +66414,10 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.store.MyJsonPStore', Ext.data.Store, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.store.MyJsonPStore', Ext.data.Store, {
     config: {
         autoLoad: true,
-        model: 'Contact.model.Contact',
+        model: 'LocalBuzzMerchantDemo.model.Contact',
         storeId: 'MyJsonPStore',
         proxy: {
             type: 'jsonp',
@@ -66439,7 +66439,7 @@ Ext.define('Ext.picker.Picker', {
 }, 0, 0, 0, 0, [
     "store.MyJsonPStore"
 ], 0, [
-    Contact.store,
+    LocalBuzzMerchantDemo.store,
     'MyJsonPStore'
 ], 0));
 
@@ -66457,7 +66457,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.WelcomeScreen', Ext.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.WelcomeScreen', Ext.Panel, {
     config: {
         hidden: false,
         id: 'WelcomeScreen',
@@ -66563,7 +66563,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.WelcomeScreen"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'WelcomeScreen'
 ], 0));
 
@@ -66581,7 +66581,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.contactinfo', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.contactinfo', Ext.form.Panel, {
     config: {
         border: 5,
         id: 'info',
@@ -66956,7 +66956,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.contactinfo"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'contactinfo'
 ], 0));
 
@@ -66974,7 +66974,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.ListOfDeals', Ext.dataview.List, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.ListOfDeals', Ext.dataview.List, {
     config: {
         cls: 'customlist',
         height: '100%',
@@ -67020,7 +67020,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.listofdeals"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'ListOfDeals'
 ], 0));
 
@@ -67038,7 +67038,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.contactform', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.contactform', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel',
@@ -67365,12 +67365,12 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.contactform"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'contactform'
 ], 0));
 
 /*
- * File: app/controller/Contacts.js
+ * File: app/controller/LocalBuzzMerchantDemo.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
  * http://www.sencha.com/products/architect/
@@ -67383,7 +67383,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.controller.Contacts', Ext.app.Controller, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.controller.LocalBuzzMerchantDemo', Ext.app.Controller, {
     config: {
         stores: [
             'MyJsonPStore',
@@ -67727,8 +67727,8 @@ Ext.define('Ext.picker.Picker', {
         });
     }
 }, 0, 0, 0, 0, 0, 0, [
-    Contact.controller,
-    'Contacts'
+    LocalBuzzMerchantDemo.controller,
+    'LocalBuzzMerchantDemo'
 ], 0));
 
 /*
@@ -67745,7 +67745,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.DealPicture', Ext.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.DealPicture', Ext.Panel, {
     config: {
         fullscreen: true,
         id: 'dealPicture',
@@ -68011,7 +68011,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.dealPicture"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'DealPicture'
 ], 0));
 
@@ -68029,7 +68029,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.DealsPanel', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.DealsPanel', Ext.form.Panel, {
     config: {
         baseCls: 'x-list',
         id: 'dealsPanel',
@@ -68131,7 +68131,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.DealsPanel"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'DealsPanel'
 ], 0));
 
@@ -68149,7 +68149,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.Login', Ext.Container, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.Login', Ext.Container, {
     config: {
         hidden: false,
         id: 'Login',
@@ -68294,7 +68294,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.Login"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'Login'
 ], 0));
 
@@ -68312,7 +68312,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.ChangeContactPicForm', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.ChangeContactPicForm', Ext.form.Panel, {
     config: {
         centered: true,
         height: '40%',
@@ -68495,7 +68495,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.ChangeContactPicForm"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'ChangeContactPicForm'
 ], 0));
 
@@ -68513,7 +68513,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.panel', Ext.tab.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.panel', Ext.tab.Panel, {
     config: {
         id: 'panel',
         itemId: 'panel',
@@ -68729,7 +68729,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.panel"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'panel'
 ], 0));
 
@@ -68747,7 +68747,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.UpdateDealForm', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.UpdateDealForm', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel1',
@@ -69086,7 +69086,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.UpdateDealForm"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'UpdateDealForm'
 ], 0));
 
@@ -69104,7 +69104,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.CreateNewBuzzWithImage', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.CreateNewBuzzWithImage', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel3',
@@ -69497,7 +69497,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.CreateNewBuzzWithImage"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'CreateNewBuzzWithImage'
 ], 0));
 
@@ -69515,7 +69515,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.DealImage', Ext.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.DealImage', Ext.Panel, {
     config: {
         height: '80%',
         id: 'DealImage',
@@ -69591,7 +69591,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.DealImage"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'DealImage'
 ], 0));
 
@@ -69609,7 +69609,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.CreateNewStore', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.CreateNewStore', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel4',
@@ -70270,7 +70270,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.CreateNewStore"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'CreateNewStore'
 ], 0));
 
@@ -70288,7 +70288,7 @@ Ext.define('Ext.picker.Picker', {
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.CreateNewBuzzNoImage', Ext.form.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.CreateNewBuzzNoImage', Ext.form.Panel, {
     config: {
         html: '',
         id: 'formpanel5',
@@ -70666,7 +70666,7 @@ Ext.define('Ext.picker.Picker', {
 }, [
     "widget.CreateNewBuzzNoImage"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'CreateNewBuzzNoImage'
 ], 0));
 
@@ -70715,10 +70715,10 @@ Ext.application({
         'CreateNewBuzzNoImage'
     ],
     controllers: [
-        'Contacts'
+        'LocalBuzzMerchantDemo'
     ],
     icon: 'icon.png',
-    name: 'Contact',
+    name: 'LocalBuzzMerchantDemo',
     startupImage: 'icon.png',
     launch: function() {
         Ext.util.Format.empty = function(value, defaultValue) {
@@ -70859,7 +70859,7 @@ Ext.application({
 
 
 		    }*/
-        Ext.create('Contact.view.WelcomeScreen', {
+        Ext.create('LocalBuzzMerchantDemo.view.WelcomeScreen', {
             fullscreen: true
         });
     }
@@ -70879,7 +70879,7 @@ Ext.application({
  *
  * Do NOT hand edit this file.
  */
-(Ext.cmd.derive('Contact.view.CreateNewBuzzOption', Ext.Panel, {
+(Ext.cmd.derive('LocalBuzzMerchantDemo.view.CreateNewBuzzOption', Ext.Panel, {
     config: {
         id: 'CreateNewBuzzOption',
         itemId: 'CreateNewBuzzOption',
@@ -70959,10 +70959,10 @@ Ext.application({
 }, [
     "widget.CreateNewBuzzOption"
 ], 0, [
-    Contact.view,
+    LocalBuzzMerchantDemo.view,
     'CreateNewBuzzOption'
 ], 0));
 
 // @tag full-page
-// @require H:\Apps\Sencha Architect Apps\LocalBuzzBusinessApp\app.js
+// @require H:\Apps\Sencha Architect Apps\LocalBuzzMerchantDemo\app.js
 
