@@ -66460,6 +66460,7 @@ Ext.define('Ext.picker.Picker', {
 (Ext.cmd.derive('LocalBuzzMerchantDemo.view.WelcomeScreen', Ext.Panel, {
     config: {
         hidden: false,
+        hideAnimation: 'flip',
         id: 'WelcomeScreen',
         itemId: 'WelcomeScreen',
         items: [
@@ -68517,6 +68518,10 @@ Ext.define('Ext.picker.Picker', {
     config: {
         id: 'panel',
         itemId: 'panel',
+        layout: {
+            type: 'card',
+            animation: false
+        },
         items: [
             {
                 xtype: 'container',
