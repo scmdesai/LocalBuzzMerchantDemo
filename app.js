@@ -66240,6 +66240,12 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 name: 'city'
+            },
+            {
+                name: 'TopicArn'
+            },
+            {
+                name: 'TopicName'
             }
         ]
     }
@@ -66293,6 +66299,9 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 name: 'city'
+            },
+            {
+                name: 'TopicArn'
             }
         ]
     }
@@ -69472,6 +69481,28 @@ Ext.define('Ext.picker.Picker', {
                 margin: '30 15 2 15',
                 styleHtmlContent: true,
                 name: 'city'
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                height: '15%',
+                hidden: true,
+                id: 'businessName20',
+                itemId: 'businessName4',
+                margin: '30 15 2 15',
+                styleHtmlContent: true,
+                name: 'TopicArn'
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                height: '15%',
+                hidden: true,
+                id: 'businessName22',
+                itemId: 'businessName5',
+                margin: '30 15 2 15',
+                styleHtmlContent: true,
+                name: 'TopicName'
             }
         ],
         listeners: [
@@ -70514,6 +70545,28 @@ Ext.define('Ext.picker.Picker', {
                 name: 'city'
             },
             {
+                xtype: 'textfield',
+                cls: 'customfield',
+                height: '15%',
+                hidden: true,
+                id: 'businessName19',
+                itemId: 'businessName3',
+                margin: '30 15 2 15',
+                styleHtmlContent: true,
+                name: 'TopicArn'
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                height: '15%',
+                hidden: true,
+                id: 'businessName21',
+                itemId: 'businessName4',
+                margin: '30 15 2 15',
+                styleHtmlContent: true,
+                name: 'TopicName'
+            },
+            {
                 xtype: 'container',
                 left: '',
                 margin: '0 5 5 5 ',
@@ -70732,6 +70785,7 @@ Ext.define('Ext.picker.Picker', {
                     var businessName;
                     var DealPictureURL;
                     var city;
+                    var topicArn;
                     Ext.Viewport.getActiveItem().destroy();
                     var view = Ext.Viewport.add({
                             xtype: 'CreateNewBuzzWithImage'
@@ -70742,6 +70796,7 @@ Ext.define('Ext.picker.Picker', {
                         businessName = record.get('businessName');
                         DealPictureURL = record.get('DealPictureURL');
                         city = record.get('city');
+                        topicArn = record.get('TopicArn');
                         view.setRecord(record);
                     });
                     Ext.Viewport.setActiveItem(view);
