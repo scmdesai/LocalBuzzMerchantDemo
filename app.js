@@ -66287,6 +66287,9 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 name: 'DealPictureURL'
+            },
+            {
+                name: 'city'
             }
         ]
     }
@@ -68231,7 +68234,8 @@ Ext.define('Ext.picker.Picker', {
                                     'customerId': record.get('customerId'),
                                     'email': email,
                                     'businessName': record.get('businessName'),
-                                    'DealPictureURL': record.get('pictureURL')
+                                    'DealPictureURL': record.get('pictureURL'),
+                                    'city': record.get('city')
                                 });
                                 var view = Ext.Viewport.add({
                                         xtype: 'panel'
@@ -69454,6 +69458,17 @@ Ext.define('Ext.picker.Picker', {
                         text: 'Submit'
                     }
                 ]
+            },
+            {
+                xtype: 'textfield',
+                cls: 'customfield',
+                height: '15%',
+                hidden: true,
+                id: 'businessName18',
+                itemId: 'businessName3',
+                margin: '30 15 2 15',
+                styleHtmlContent: true,
+                name: 'city'
             }
         ],
         listeners: [
@@ -70338,6 +70353,17 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'textfield',
+                cls: 'customfield',
+                height: '15%',
+                hidden: true,
+                id: 'businessName17',
+                itemId: 'businessName2',
+                margin: '30 15 2 15',
+                styleHtmlContent: true,
+                name: 'city'
+            },
+            {
+                xtype: 'textfield',
                 hidden: true,
                 id: 'customerId4',
                 itemId: 'customerId',
@@ -70897,6 +70923,7 @@ Ext.application({
                     var customerId;
                     var businessName;
                     var DealPictureURL;
+                    var city;
                     Ext.Viewport.getActiveItem().destroy();
                     var view = Ext.Viewport.add({
                             xtype: 'CreateNewBuzzWithImage'
@@ -70906,6 +70933,7 @@ Ext.application({
                         customerId = record.get('customerId');
                         businessName = record.get('businessName');
                         DealPictureURL = record.get('DealPictureURL');
+                        city = record.get('city');
                         view.setRecord(record);
                     });
                     Ext.Viewport.setActiveItem(view);
@@ -70926,6 +70954,7 @@ Ext.application({
                     var customerId;
                     var businessName;
                     var DealPictureURL;
+                    var city;
                     Ext.Viewport.getActiveItem().destroy();
                     var view = Ext.Viewport.add({
                             xtype: 'CreateNewBuzzNoImage'
@@ -70935,6 +70964,7 @@ Ext.application({
                         customerId = record.get('customerId');
                         businessName = record.get('businessName');
                         DealPictureURL = record.get('DealPictureURL');
+                        city = record.get('city');
                         view.setRecord(record);
                     });
                     Ext.Viewport.setActiveItem(view);
