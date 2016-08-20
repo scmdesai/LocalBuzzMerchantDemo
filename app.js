@@ -69842,8 +69842,6 @@ Ext.define('Ext.picker.Picker', {
                 labelWrap: true,
                 name: 'city',
                 autoCapitalize: true,
-                autoComplete: true,
-                autoCorrect: true,
                 placeHolder: 'City'
             },
             {
