@@ -70205,6 +70205,7 @@ Ext.define('Ext.picker.Picker', {
                             var city = form.getAt(7).getValue();
                             var state = Ext.getCmp('state').getValue();
                             var zipcode = Ext.getCmp('zipcode').getValue();
+                            Ext.getCmp('city').setValue(city.trim());
                             if (businessName) {
                                 if (category) {
                                     if (address1) {
