@@ -67108,7 +67108,7 @@ Ext.define('Ext.picker.Picker', {
                                 },
                                 failure: function(form, action) {
                                     store.load();
-                                    Ext.Msg.alert('Failure', action.msg);
+                                    Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', null, null);
                                     form.destroy();
                                 }
                             });
@@ -67528,7 +67528,7 @@ Ext.define('Ext.picker.Picker', {
                                     dealsStore.load();
                                 },
                                 failure: function(form, action) {
-                                    Ext.Msg.alert('Failure', action.msg);
+                                    Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', null, null);
                                     //console.log(action.msg);
                                     var store = Ext.getStore('MyDealsStore');
                                     store.load();
@@ -67732,7 +67732,7 @@ Ext.define('Ext.picker.Picker', {
                 console.log('Success');
             },
             failure: function(form, action) {
-                console.log('Failure');
+                Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', null, null);
             }
         });
     }
@@ -68391,7 +68391,7 @@ Ext.define('Ext.picker.Picker', {
                             //view.setRecord(record);
                             failure: function(form, action) {
                                 store.load();
-                                Ext.Msg.alert('Failure', action.msg);
+                                Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', null, null);
                                 form.destroy();
                             }
                         });
@@ -69025,7 +69025,7 @@ Ext.define('Ext.picker.Picker', {
                                                 },
                                                 failure: function(form, action) {
                                                     store.load();
-                                                    Ext.Msg.alert('Failure', action.msg);
+                                                    Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', null, null);
                                                     form.destroy();
                                                 }
                                             });
@@ -69131,7 +69131,6 @@ Ext.define('Ext.picker.Picker', {
         autoDestroy: false,
         modal: true,
         scrollable: true,
-        multipartDetection: false,
         layout: {
             type: 'vbox',
             align: 'stretchmax'
@@ -69428,7 +69427,7 @@ Ext.define('Ext.picker.Picker', {
                                                         form.destroy();
                                                     },
                                                     failure: function(form, action) {
-                                                        Ext.Msg.alert('Failure', action.msg);
+                                                        Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', null, null);
                                                         var store = Ext.getStore('MyDealsStore');
                                                         store.load();
                                                         if (store.getCount() >= 5) {
@@ -70228,7 +70227,8 @@ Ext.define('Ext.picker.Picker', {
                                                                 },
                                                                 //form.destroy();
                                                                 failure: function(form, action) {
-                                                                    Ext.Msg.alert('Failure', action.msg, function() {
+                                                                    //Ext.Msg.alert('Failure',action.msg,function(){location.reload();},null);
+                                                                    Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', function() {
                                                                         location.reload();
                                                                     }, null);
                                                                 }
@@ -70643,7 +70643,7 @@ Ext.define('Ext.picker.Picker', {
                                                     form.destroy();
                                                 },
                                                 failure: function(form, action) {
-                                                    Ext.Msg.alert('Failure', action.msg);
+                                                    Ext.Msg.alert('Oops.....!Something went wrong', 'Please check your internet connection or try again later', null, null);
                                                     var store = Ext.getStore('MyDealsStore');
                                                     store.load();
                                                     console.log('Count is:' + count);
