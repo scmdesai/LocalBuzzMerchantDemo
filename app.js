@@ -68969,7 +68969,7 @@ Ext.define('Ext.picker.Picker', {
                                 fn: function(element, eOpts) {
                                     element.addListener('tap', function() {
                                         //Ext.Viewport.add({xtype:'Terms'}).show();
-                                        var url = "http://www.appsonmobile.com/index.php/terms-and-conditions/";
+                                        var url = "http://www.appsonmobile.com/terms-and-conditions/";
                                         window.open(url, '_system', 'location=yes');
                                     });
                                 },
@@ -69349,7 +69349,7 @@ Ext.define('Ext.picker.Picker', {
                                 fn: function(element, eOpts) {
                                     element.addListener('tap', function() {
                                         //Ext.Viewport.add({xtype:'Terms'}).show();
-                                        var url = "http://www.appsonmobile.com/index.php/terms-and-conditions/";
+                                        var url = "http://www.appsonmobile.com/terms-and-conditions/";
                                         window.open(url, '_system', 'location=yes');
                                     });
                                 },
@@ -70153,7 +70153,7 @@ Ext.define('Ext.picker.Picker', {
                                 fn: function(element, eOpts) {
                                     element.addListener('tap', function() {
                                         //Ext.Viewport.add({xtype:'Terms'}).show();
-                                        var url = "http://www.appsonmobile.com/index.php/terms-and-conditions/";
+                                        var url = "http://www.appsonmobile.com/terms-and-conditions/";
                                         window.open(url, '_system', 'location=yes');
                                     });
                                 },
