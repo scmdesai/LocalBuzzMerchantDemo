@@ -66475,11 +66475,12 @@ Ext.define('Ext.picker.Picker', {
         items: [
             {
                 xtype: 'component',
-                docked: 'top',
                 hidden: false,
                 html: '<br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div>',
                 id: 'text1',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw'
+                left: '12%',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
+                top: '15%'
             },
             {
                 xtype: 'button',
@@ -66495,45 +66496,10 @@ Ext.define('Ext.picker.Picker', {
                 left: '20%',
                 margin: '50 0 0 0',
                 style: 'font-size:5vw;font-family:Arial',
+                top: '35%',
                 ui: 'action',
                 width: '60%',
                 text: 'Login'
-            },
-            {
-                xtype: 'component',
-                hidden: false,
-                html: '<h1 style="color:#00529D;font-size:8vw"><b> OR </b></h1>',
-                id: 'text2',
-                left: '45%',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '30%'
-            },
-            {
-                xtype: 'button',
-                handler: function(button, e) {
-                    var view = Ext.Viewport.add({
-                            xtype: 'CreateNewStore'
-                        });
-                    Ext.Viewport.setActiveItem(view);
-                },
-                height: '9vh',
-                hidden: false,
-                id: 'SignUp',
-                left: '20%',
-                style: 'font-size:5vw;font-family:Arial',
-                top: '50%',
-                ui: 'action',
-                width: '60%',
-                text: 'Sign Up'
-            },
-            {
-                xtype: 'component',
-                hidden: false,
-                html: '<h6 style="color:#00529D;font-size:4vw">Free 90 days, No obligation trial!</h6>',
-                id: 'text3',
-                left: '20%',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '65%'
             }
         ],
         listeners: [
