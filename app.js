@@ -66564,6 +66564,7 @@ Ext.define('Ext.picker.Picker', {
                 width: '95%',
                 clearIcon: false,
                 name: 'phoneNumber',
+                placeHolder: 'Not Listed',
                 readOnly: true
             },
             {
