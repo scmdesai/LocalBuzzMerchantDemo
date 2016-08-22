@@ -68216,7 +68216,7 @@ Ext.define('Ext.picker.Picker', {
                                 Ext.Viewport.getActiveItem().destroy();
                                 Ext.Viewport.setActiveItem(view);
                             } else {
-                                Ext.Msg.alert('Your trial period has ended', "Please contact us at info@appsonmobile.com for continued access to your account ", function() {
+                                Ext.Msg.alert('Business could not be verified', "Please contact us at info@appsonmobile.com", function() {
                                     FacebookInAppBrowser.logout(function() {
                                         window.localStorage.setItem('facebookAccessToken', null);
                                         location.reload();
@@ -68224,7 +68224,7 @@ Ext.define('Ext.picker.Picker', {
                                 }, null);
                             }
                         } else if (record.get('signupStatus') === 'Pending') {
-                            Ext.Msg.alert('Pending approval', "Please check back later", function() {
+                            Ext.Msg.alert('Business could not be verified', "Please contact us at info@appsonmobile.com", function() {
                                 FacebookInAppBrowser.logout(function() {
                                     window.localStorage.setItem('facebookAccessToken', null);
                                     location.reload();
@@ -68238,7 +68238,7 @@ Ext.define('Ext.picker.Picker', {
                                 });
                             }, null);
                         } else if (record.get('signupStatus') === 'Cancelled') {
-                            Ext.Msg.alert('Our records show that you have cancelled your subscription', "Please contact us at info@appsonmobile.com if you would like to activate your account", function() {
+                            Ext.Msg.alert('Our records show that you have cancelled your account', "Please contact us at info@appsonmobile.com if you would like to activate your account", function() {
                                 FacebookInAppBrowser.logout(function() {
                                     window.localStorage.setItem('facebookAccessToken', null);
                                     location.reload();
