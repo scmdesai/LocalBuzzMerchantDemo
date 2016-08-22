@@ -68037,7 +68037,7 @@ Ext.define('Ext.picker.Picker', {
                     var userId = tmp[1];
                     var record = Ext.getStore('MyJsonPStore').findRecord('loginEmail', email, 0, true, false, false);
                     if (!record) {
-                        Ext.Msg.alert('Business not registered', "Register business or contact us at info@appsonmobile.com", function() {
+                        Ext.Msg.alert('Business could not be verified', "Please contact us at info@appsonmobile.com", function() {
                             FacebookInAppBrowser.logout(function() {
                                 window.localStorage.setItem('facebookAccessToken', null);
                                 location.reload();
