@@ -66809,7 +66809,7 @@ Ext.define('Ext.picker.Picker', {
         deselectOnContainerClick: false,
         mode: 'MULTI',
         deferEmptyText: false,
-        emptyText: 'Create Buzz!',
+        emptyText: 'Create a Buzz!',
         itemCls: 'list-item',
         store: 'MyDealsStore',
         pinHeaders: false,
@@ -68086,7 +68086,7 @@ Ext.define('Ext.picker.Picker', {
                                 });
                             }, null);
                         } else if (record.get('signupStatus') === 'Cancelled') {
-                            Ext.Msg.alert('Our records show that you have cancelled your account', "Please contact us at info@appsonmobile.com if you would like to activate your account", function() {
+                            Ext.Msg.alert('Our records show that your account is not active', "Please contact us at info@appsonmobile.com if you would like to activate your account", function() {
                                 FacebookInAppBrowser.logout(function() {
                                     window.localStorage.setItem('facebookAccessToken', null);
                                     location.reload();
@@ -68502,6 +68502,9 @@ Ext.define('Ext.picker.Picker', {
                                                 numberOfHits[j] = parseInt(tmp[1], 10);
                                             }
                                             for (j = 0; j < zipcode.length; j++) {
+                                                if (zipcode[j] === '(not set)') {
+                                                    zipcode[j] = "Unknown";
+                                                }
                                                 data.addRow([
                                                     zipcode[j],
                                                     numberOfHits[j]
