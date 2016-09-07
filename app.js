@@ -68808,7 +68808,7 @@ Ext.define('Ext.picker.Picker', {
                         docked: 'left',
                         html: '<input  type="checkbox" name="chkbx" id="chkbx">',
                         left: '40%',
-                        margin: '5 5 5 15',
+                        margin: '5 5 5 0',
                         top: '30%'
                     },
                     {
@@ -68817,8 +68817,6 @@ Ext.define('Ext.picker.Picker', {
                         height: '11vh',
                         html: '<a id="terms" style="font-size:3vw;" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
                         itemId: 'mycontainer5',
-                        margin: '5 5 5 0',
-                        padding: '5 18 5 0',
                         styleHtmlContent: true,
                         layout: 'hbox',
                         listeners: [
@@ -69202,7 +69200,7 @@ Ext.define('Ext.picker.Picker', {
                         docked: 'left',
                         html: '<input type="checkbox" name="chkbx" id="chkbx">',
                         left: '40%',
-                        margin: '5 5 5 15',
+                        margin: '5 5 5 0',
                         top: '30%'
                     },
                     {
@@ -69212,7 +69210,6 @@ Ext.define('Ext.picker.Picker', {
                         html: '<a id="terms" style="font-size:3vw;text-align:top" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
                         itemId: 'mycontainer5',
                         margin: '5 5 5 0',
-                        padding: '5 18 5 0',
                         styleHtmlContent: true,
                         layout: 'hbox',
                         listeners: [
@@ -69755,7 +69752,7 @@ Ext.define('Ext.picker.Picker', {
                         docked: 'left',
                         html: '<input  type="checkbox" name="chkbx" id="chkbx">',
                         left: '40%',
-                        margin: '5 5 5 15',
+                        margin: '5 5 5 0',
                         top: '30%'
                     },
                     {
@@ -69765,7 +69762,6 @@ Ext.define('Ext.picker.Picker', {
                         html: '<a id="terms" style="text-align:top;font-size:3vw;" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
                         itemId: 'mycontainer5',
                         margin: '5 5 5 0',
-                        padding: '5 18 5 0',
                         styleHtmlContent: true,
                         layout: 'hbox',
                         listeners: [
