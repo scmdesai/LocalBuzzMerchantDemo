@@ -68049,7 +68049,7 @@ Ext.define('Ext.picker.Picker', {
                     tmp = info[3].split("\":\"");
                     var userId = tmp[1];
                     //var record = Ext.getStore('MyJsonPStore').findRecord('loginEmail', email, 0, true, false, false);
-                    $.getJSON(" https://g0k1nw6p8h.execute-api.us-west-2.amazonaws.com/PROD/stores/" + email, function(record) {
+                    $.getJSON(" http://services.appsonmobile.com/demoStores/" + email, function(record) {
                         var endDate = new Date(record.endDate);
                         var today = new Date();
                         var customerId = record.customerId;
