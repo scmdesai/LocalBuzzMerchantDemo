@@ -69752,13 +69752,10 @@ Ext.define('Ext.picker.Picker', {
                 listeners: [
                     {
                         fn: function(element, eOpts) {
-                            element.addListener('tap', function() {
+                            document.getElementById('chkboxLabel').addListener('tap', function() {
                                 //Ext.Viewport.add({xtype:'Terms'}).show();
-                                console.log(element.target.id);
-                                if (element.target.id === 'chkboxLabel') {
-                                    var url = "http://www.appsonmobile.com/terms-and-conditions/";
-                                    window.open(url, '_system', 'location=yes');
-                                }
+                                var url = "http://www.appsonmobile.com/terms-and-conditions/";
+                                window.open(url, '_system', 'location=yes');
                             });
                         },
                         event: 'painted'
