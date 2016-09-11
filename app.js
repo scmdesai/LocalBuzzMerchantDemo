@@ -69752,7 +69752,7 @@ Ext.define('Ext.picker.Picker', {
                 listeners: [
                     {
                         fn: function(element, eOpts) {
-                            document.getElementById('chkboxLabel').addListener('tap', function() {
+                            element.addListener('tap', function() {
                                 //Ext.Viewport.add({xtype:'Terms'}).show();
                                 var url = "http://www.appsonmobile.com/terms-and-conditions/";
                                 window.open(url, '_system', 'location=yes');
