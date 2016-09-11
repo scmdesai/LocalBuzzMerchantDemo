@@ -69743,7 +69743,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'container',
                 height: '15vh',
-                html: '<label style="font-size:3vw;"><input  type="checkbox" name="chkbx" id="chkbx"> <a href="http://www.appsonmobile.com/terms-and-conditions/">&nbsp;  I agree to Apps On Mobile LLC\'s Terms & Conditions</label>',
+                html: '<label style="font-size:3vw;"><input  type="checkbox" name="chkbx" id="chkbx"> <a href="http://www.appsonmobile.com/terms-and-conditions/" target="_system">&nbsp;  I agree to Apps On Mobile LLC\'s Terms & Conditions</label>',
                 left: '',
                 margin: '0 5 15 5 ',
                 padding: '5 5 5 5',
