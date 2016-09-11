@@ -69743,11 +69743,26 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'container',
                 height: '15vh',
-                html: '<input  type="checkbox" name="chkbx"> <label id="chkbx" style="font-size:3vw;">&nbsp;  I agree to Apps On Mobile LLC\'s Terms & Conditions</label> <script type="text/javascript">       $(document).ready(function(){           $(\'#chkbox\').click(function(){           window.location=\'http://www.yahoo.com\'; // link of your desired page.             });       });   </script>',
+                html: '<input id="chkbx" type="checkbox" name="chkbx"> <label id="chkboxLabel" style="font-size:3vw;">&nbsp;  I agree to Apps On Mobile LLC\'s Terms & Conditions</label> ',
+                itemId: 'mycontainer13',
                 left: '',
                 margin: '0 5 15 5 ',
                 padding: '5 5 5 5',
-                layout: 'hbox'
+                layout: 'hbox',
+                listeners: [
+                    {
+                        fn: function(element, eOpts) {
+                            element.addListener('tap', function() {
+                                //Ext.Viewport.add({xtype:'Terms'}).show();
+                                if (element.id === 'chkboxLabel') {
+                                    var url = "http://www.appsonmobile.com/terms-and-conditions/";
+                                    window.open(url, '_system', 'location=yes');
+                                }
+                            });
+                        },
+                        event: 'painted'
+                    }
+                ]
             },
             {
                 xtype: 'container',
