@@ -27,7 +27,7 @@
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="14" />
-    <preference name="android-installLocation" value="auto" />
+    <!--<preference name="android-installLocation" value="auto" />-->
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#00529D" />
     <preference name="StatusBarStyle" value="lightcontent" />
@@ -42,15 +42,15 @@
     <!--<gap:plugin name="cordova-plugin-media-capture" source="npm"  />-->
 	<!-- Comment out the console plugin as it is causing issues on Android -->
     <!-- <gap:plugin name="cordova-plugin-console" source="npm" version="1.0.1" /> -->
-    <!--<gap:plugin name="cordova-plugin-contacts" source="npm" version="1.1.0" />
-    <gap:plugin name="cordova-plugin-device" source="npm" version="1.0.1" />
-    <gap:plugin name="cordova-plugin-device-motion" source="npm" version="1.1.1" />
-    <gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.1" />
-    <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.1.1" />
-    <gap:plugin name="cordova-plugin-file" source="npm" version="3.0.0" />
-    <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.3.0" />
-    <gap:plugin name="cordova-plugin-geolocation" source="npm" version="1.0.1" />
-    <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.1" />-->
+    <!--<gap:plugin name="cordova-plugin-contacts" source="npm" version="1.1.0" />/>-->
+    <!--<gap:plugin name="cordova-plugin-device" source="npm" version="1.0.1" />/>-->
+    <!--<gap:plugin name="cordova-plugin-device-motion" source="npm" version="1.1.1" />/>-->
+    <!--<gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.1" />/>-->
+    <!--<gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.1.1" />/>-->
+    <!--<gap:plugin name="cordova-plugin-file" source="npm" version="3.0.0" />/>-->
+    <!--<gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.3.0" />/>-->
+    <!--<gap:plugin name="cordova-plugin-geolocation" source="npm" version="1.0.1" />/>-->
+    <!--<gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.1" />-->
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.0.1" />
     <!--<gap:plugin name="cordova-plugin-media" source="npm" version="1.0.1" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.0.1" />-->
