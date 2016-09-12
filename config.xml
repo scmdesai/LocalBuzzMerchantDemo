@@ -39,10 +39,10 @@
 	<!-- New PhoneGap Plugins -->
 	<gap:plugin name="cordova-plugin-battery-status" source="npm" version="1.1.0" />
     <gap:plugin name="cordova-plugin-camera" source="npm" />
-    <gap:plugin name="cordova-plugin-media-capture" source="npm"  />
+    <!--<gap:plugin name="cordova-plugin-media-capture" source="npm"  />-->
 	<!-- Comment out the console plugin as it is causing issues on Android -->
     <!-- <gap:plugin name="cordova-plugin-console" source="npm" version="1.0.1" /> -->
-    <gap:plugin name="cordova-plugin-contacts" source="npm" version="1.1.0" />
+    <!--<gap:plugin name="cordova-plugin-contacts" source="npm" version="1.1.0" />
     <gap:plugin name="cordova-plugin-device" source="npm" version="1.0.1" />
     <gap:plugin name="cordova-plugin-device-motion" source="npm" version="1.1.1" />
     <gap:plugin name="cordova-plugin-device-orientation" source="npm" version="1.0.1" />
@@ -57,17 +57,17 @@
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" version="2.1.0" />
     <gap:plugin name="cordova-plugin-vibration" source="npm" version="1.2.0" />
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.1.0" />
-	<gap:plugin name="cordova-plugin-statusbar" source="npm" />
+	<gap:plugin name="cordova-plugin-statusbar" source="npm" />-->
 	
 	
 	<!-- Plugin Added for Push Notification -->
-	<gap:plugin name="phonegap-plugin-push" source="npm" version="1.5.3" />
+	<!--<gap:plugin name="phonegap-plugin-push" source="npm" version="1.5.3" />-->
 	<!-- Plugin Added for Google Analytics -->
 	<gap:plugin name="cordova-plugin-google-analytics"  source="npm" version="0.8.1"/>
 	<!-- End Google Analytics -->
 	
 	<!-- Plugin Added for Geolocation -->
-	<gap:plugin name="cordova-plugin-geolocation"  source="npm" version="1.0.1"/>
+	<!--<gap:plugin name="cordova-plugin-geolocation"  source="npm" version="1.0.1"/>-->
 	<!-- End Geolocation -->
 	<!--social sharing -->
 	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
