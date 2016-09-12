@@ -52,8 +52,8 @@
     <!--<gap:plugin name="cordova-plugin-geolocation" source="npm" version="1.0.1" />/>-->
     <!--<gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.1" />-->
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.0.1" />
-    <!--<gap:plugin name="cordova-plugin-media" source="npm" version="1.0.1" />-->
-    <!--<gap:plugin name="cordova-plugin-network-information" source="npm" version="1.0.1" />-->
+    <!--<gap:plugin name="cordova-plugin-media" source="npm" version="1.0.1" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.0.1" />-->
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" version="2.1.0" />
     <!--<gap:plugin name="cordova-plugin-vibration" source="npm" version="1.2.0" />-->
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.1.0" />
@@ -67,13 +67,13 @@
 	<!-- End Google Analytics -->
 	
 	<!-- Plugin Added for Geolocation -->
-	<gap:plugin name="cordova-plugin-geolocation"  source="npm" version="1.0.1"/>
+	<!--<gap:plugin name="cordova-plugin-geolocation"  source="npm" version="1.0.1"/>-->
 	<!-- End Geolocation -->
 	<!--social sharing -->
 	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 	
 	<!--email-->
-	<gap:plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm" /> 
+	<!--<gap:plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm" /> -->
 	
 	
 	<!--screenshot-->
