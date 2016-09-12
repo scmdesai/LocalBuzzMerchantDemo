@@ -68231,7 +68231,7 @@ Ext.define('Ext.picker.Picker', {
 								record.commit();*/
                                 //store.sync();
                                 //store.load();
-                                Ext.Msg.alert('Record updated', "Please login again to see the changes", null, null);
+                                Ext.Msg.alert('Record updated', "Please login again to see the changes", function() {}, null);
                                 Ext.Viewport.getComponent('formpanel').setRecord(record);
                                 form.destroy();
                             },
@@ -68798,39 +68798,25 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
-                height: '15vh',
+                height: '11vh',
+                html: '<input id="chkbx" type="checkbox" name="chkbx"> <label id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp;  <u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
+                itemId: 'mycontainer15',
                 left: '',
-                margin: '0 5 15 5 ',
+                margin: '10 10 10 10',
+                padding: '5 5 5 5',
                 layout: 'hbox',
-                items: [
+                listeners: [
                     {
-                        xtype: 'container',
-                        docked: 'left',
-                        html: '<input  type="checkbox" name="chkbx" id="chkbx">',
-                        left: '40%',
-                        margin: '5 5 5 0',
-                        top: '30%'
-                    },
-                    {
-                        xtype: 'container',
-                        docked: 'right',
-                        height: '11vh',
-                        html: '<a id="terms" style="font-size:3vw;" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
-                        itemId: 'mycontainer5',
-                        styleHtmlContent: true,
-                        layout: 'hbox',
-                        listeners: [
-                            {
-                                fn: function(element, eOpts) {
-                                    element.addListener('tap', function() {
-                                        //Ext.Viewport.add({xtype:'Terms'}).show();
-                                        var url = "http://www.appsonmobile.com/terms-and-conditions/";
-                                        window.open(url, '_system', 'location=yes');
-                                    });
-                                },
-                                event: 'painted'
-                            }
-                        ]
+                        fn: function(element, eOpts) {},
+                        /*element.addListener('tap',function(){
+							//Ext.Viewport.add({xtype:'Terms'}).show();
+
+
+							var url = "http://www.appsonmobile.com/terms-and-conditions/";
+							window.open(url, '_system', 'location=yes');
+
+						});*/
+                        event: 'painted'
                     }
                 ]
             },
@@ -69190,40 +69176,25 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
-                height: '15vh',
+                height: '11vh',
+                html: '<input id="chkbx" type="checkbox" name="chkbx"> <label for="chkbx" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp;  <u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
+                itemId: 'mycontainer14',
                 left: '',
-                margin: '0 5 15 5 ',
+                margin: '10 10 10 10',
+                padding: '5 5 5 5',
                 layout: 'hbox',
-                items: [
+                listeners: [
                     {
-                        xtype: 'container',
-                        docked: 'left',
-                        html: '<input type="checkbox" name="chkbx" id="chkbx">',
-                        left: '40%',
-                        margin: '5 5 5 0',
-                        top: '30%'
-                    },
-                    {
-                        xtype: 'container',
-                        docked: 'right',
-                        height: '11vh',
-                        html: '<a id="terms" style="font-size:3vw;text-align:top" > I agree to Apps On Mobile LLC\'s Terms & Conditions</a>',
-                        itemId: 'mycontainer5',
-                        margin: '5 5 5 0',
-                        styleHtmlContent: true,
-                        layout: 'hbox',
-                        listeners: [
-                            {
-                                fn: function(element, eOpts) {
-                                    element.addListener('tap', function() {
-                                        //Ext.Viewport.add({xtype:'Terms'}).show();
-                                        var url = "http://www.appsonmobile.com/terms-and-conditions/";
-                                        window.open(url, '_system', 'location=yes');
-                                    });
-                                },
-                                event: 'painted'
-                            }
-                        ]
+                        fn: function(element, eOpts) {},
+                        /*element.addListener('tap',function(){
+							//Ext.Viewport.add({xtype:'Terms'}).show();
+
+
+							var url = "http://www.appsonmobile.com/terms-and-conditions/";
+							window.open(url, '_system', 'location=yes');
+
+						});*/
+                        event: 'painted'
                     }
                 ]
             },
@@ -69743,7 +69714,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'container',
                 height: '11vh',
-                html: ' <input id="chkbx" type="checkbox" name="chkbx"> <label id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp;  I agree to Apps On Mobile LLC\'s Terms & Conditions</label>',
+                html: '<input id="chkbx" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp;  <u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
                 itemId: 'mycontainer13',
                 left: '',
                 margin: '10 10 10 10',
