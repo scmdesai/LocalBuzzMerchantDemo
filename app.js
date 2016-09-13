@@ -67808,7 +67808,7 @@ Ext.define('Ext.picker.Picker', {
     onDealPictureShow: function(component, eOpts) {
         var record = Ext.getStore('LocalStore').getAt(0);
         if (record.get('dealImageURL')) {
-            this.down('#dealimage').setHtml('<img src="' + record.get('dealImageURL') + '" style="margin: 0px 5px 5px 0px;height:38vh;width:98%;border:none;"/><br><br><div style="font-size:4vw;">' + record.get('dealDescription') + '</div>');
+            this.down('#dealimage').setHtml('<img src="' + record.get('dealImageURL') + '" style="margin: 0px 5px 5px 0px;height:38vh;width:98%;border:none;"/>');
             this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
         } else {
