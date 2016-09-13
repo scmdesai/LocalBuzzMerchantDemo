@@ -67688,8 +67688,7 @@ Ext.define('Ext.picker.Picker', {
                                 var record = Ext.getStore('LocalStore').getAt(0);
                                 var dealDescription = record.get('dealDescription').toString();
                                 console.log('dealDescription is : ' + dealDescription);
-                                var expression = '[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}.[a-z]{2,4}\b(/[-a-zA-Z0-9@:%_+.~#?&//=]*)?';
-                                var regex = new RegExp(expression);
+                                var regex = new RegExp("[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}.[a-z]{2,4}\b(/[-a-zA-Z0-9@:%_+.~#?&//=]*)?/");
                                 var url = regex.exec(dealDescription);
                             });
                         },
