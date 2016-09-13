@@ -67688,7 +67688,7 @@ Ext.define('Ext.picker.Picker', {
                                 var record = Ext.getStore('LocalStore').getAt(0);
                                 var dealDescription = record.get('dealDescription').toString();
                                 console.log('dealDescription is : ' + dealDescription);
-                                var regex = "(w+)://([w.]+)/(S*)";
+                                var regex = new RegExp("(w+)://([w.]+)/(S*)");
                                 var url = regex.exec(dealDescription);
                                 console.log('url is ' + url);
                             });
