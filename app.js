@@ -68770,7 +68770,9 @@ Ext.define('Ext.picker.Picker', {
                 label: 'Description',
                 labelWidth: '35%',
                 name: 'DealDescription',
-                autoCapitalize: true
+                autoCapitalize: true,
+                maxLength: 140,
+                maxRows: 3
             },
             {
                 xtype: 'textfield',
@@ -69156,6 +69158,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 name: 'DealDescription',
                 autoCapitalize: true,
+                maxLength: 140,
                 maxRows: 3
             },
             {
@@ -69689,6 +69692,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 name: 'DealDescription',
                 autoCapitalize: true,
+                maxLength: 140,
                 maxRows: 3
             },
             {
