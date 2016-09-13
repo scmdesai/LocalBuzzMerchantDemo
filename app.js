@@ -67480,6 +67480,7 @@ Ext.define('Ext.picker.Picker', {
         //var record = Ext.getStore('MyDealsStore').findRecord('customerId',customerId,0,true,false,false);
         //window.plugins.socialsharing.share(null, null,record.get('dealPictureURL'),null);
         Ext.getCmp('dealBackBtn').hide();
+        Ext.getCmp('nameTxt3').hide();
         Ext.get('share').hide();
         if (Ext.os.is('Android')) {
             navigator.screenshot.URI(function(error, res) {
@@ -67492,6 +67493,7 @@ Ext.define('Ext.picker.Picker', {
                 }
             }, 50);
             Ext.get('share').show();
+            Ext.getCmp('nameTxt3').show();
             var view = Ext.Viewport.getComponent('dealPicture');
             view.setRecord(record);
             Ext.Viewport.setActiveItem(view);
@@ -67504,6 +67506,7 @@ Ext.define('Ext.picker.Picker', {
                     window.plugins.socialsharing.share(null, 'Hi! Check out this latest Buzz from Local Buzz', res.filePath, null);
                     Ext.getCmp('dealBackBtn').show();
                     Ext.get('share').show();
+                    Ext.getCmp('nameTxt3').show();
                 }
             }, 'jpg', 50, 'myScreenShot');
         }
@@ -67796,7 +67799,7 @@ Ext.define('Ext.picker.Picker', {
     onDealPictureShow: function(component, eOpts) {
         var record = Ext.getStore('LocalStore').getAt(0);
         if (record.get('dealImageURL')) {
-            this.down('#dealimage').setHtml('<img src="' + record.get('dealImageURL') + '" style="margin: 0px 5px 0px 0px;height:40vh;width:98%;border:none;"/><div style="font-size:4vw;">' + record.get('dealDescription') + '</div>');
+            this.down('#dealimage').setHtml('<img src="' + record.get('dealImageURL') + '" style="margin: 0px 5px 0px 0px;height:39vh;width:98%;border:none;"/><div style="font-size:4vw;">' + record.get('dealDescription') + '</div>');
             this.down('#nameTxt3').show();
         } else {
             this.down('#dealimage').setHtml('<img src="resources/img/localbuzzicon.png" align="right" style="margin: 5px 5px 5px 5px"/><br><div style="font-size:6vw;">' + record.get('dealName') + '</div><br><br><div style="font-size:4vw;">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div>');
