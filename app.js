@@ -70115,6 +70115,7 @@ Ext.application({
         }
         Ext.override(Ext.MessageBox, {
             hide: function() {
+                console.log('Hiding messagebox');
                 if (this.activeAnimation && this.activeAnimation._onEnd) {
                     this.activeAnimation._onEnd();
                 }
