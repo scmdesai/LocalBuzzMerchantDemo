@@ -67490,10 +67490,10 @@ Ext.define('Ext.picker.Picker', {
                     //html = '<img style="width:100%;" src="'+res.URI+'">';
                     //document.body.innerHTML = html;
                     window.plugins.socialsharing.share(null, 'Hi! Check out this latest buzz from Local Buzz!', res.URI, null);
+                    Ext.get('share').show();
+                    Ext.getCmp('nameTxt3').show();
                 }
             }, 50);
-            Ext.get('share').show();
-            Ext.getCmp('nameTxt3').show();
             var view = Ext.Viewport.getComponent('dealPicture');
             view.setRecord(record);
             Ext.Viewport.setActiveItem(view);
@@ -67687,7 +67687,7 @@ Ext.define('Ext.picker.Picker', {
                 left: '40%',
                 margin: '10 5 5 5',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '44%',
+                top: '50%',
                 width: '65%'
             },
             {
