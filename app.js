@@ -69421,7 +69421,8 @@ Ext.define('Ext.picker.Picker', {
             '                            ',
             '\t\t</tpl>',
             '\t\t',
-            '\t</div>'
+            '\t</div>',
+            '<div>{dealDescription}</div>'
         ],
         layout: {
             type: 'vbox',
@@ -69530,7 +69531,8 @@ Ext.define('Ext.picker.Picker', {
                 label: 'Name',
                 labelWidth: '35%',
                 labelWrap: true,
-                name: 'DealName'
+                name: 'DealName',
+                autoCapitalize: true
             },
             {
                 xtype: 'textfield',
