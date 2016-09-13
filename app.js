@@ -67689,8 +67689,8 @@ Ext.define('Ext.picker.Picker', {
                                 var dealDescription = record.get('dealDescription').toString();
                                 console.log('dealDescription is : ' + dealDescription);
                                 var regex = "(w+)://([w.]+)/(S*)";
-                                var url = dealDescription.match(regex);
-                                console.log('url is ' + url[0]);
+                                var url = regex.exec(dealDescription);
+                                console.log('url is ' + url);
                             });
                         },
                         event: 'painted'
