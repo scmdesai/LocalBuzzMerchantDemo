@@ -67152,7 +67152,6 @@ Ext.define('Ext.picker.Picker', {
             this.down('#phoneNumber').setValue(record.data.phoneNumber);
             this.down('#address').setValue(record.data.address);
             //this.child('contactpic').setData(record.data);
-            this.down('#category').setValue(record.data.category);
             this.down('#storeImage1').setHtml('<img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/>');
         }
     }
