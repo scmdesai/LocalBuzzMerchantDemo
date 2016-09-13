@@ -67636,7 +67636,10 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'component',
-                cls: 'contact-name',
+                cls: [
+                    'contact-name',
+                    'dealimage'
+                ],
                 disabled: true,
                 height: '40vh',
                 id: 'dealimage',
