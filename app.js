@@ -67673,7 +67673,7 @@ Ext.define('Ext.picker.Picker', {
                 left: '40%',
                 margin: '10 5 5 5',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '51%',
+                top: '52%',
                 width: '65%'
             },
             {
@@ -67684,7 +67684,7 @@ Ext.define('Ext.picker.Picker', {
                 html: '<p style="font-size:2.3vw;"> Click on picture to enlarge</p>',
                 id: 'nameTxt3',
                 itemId: 'nameTxt3',
-                left: '40%',
+                left: '25%',
                 margin: '10 5 5 5',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
                 top: '50%',
