@@ -67690,20 +67690,6 @@ Ext.define('Ext.picker.Picker', {
                 width: '65%'
             },
             {
-                xtype: 'container',
-                cls: 'contact-name',
-                disabled: true,
-                hidden: false,
-                html: '<p style="font-size:2.3vw;"> Click on picture to enlarge</p>',
-                id: 'nameTxt3',
-                itemId: 'nameTxt3',
-                left: '25%',
-                margin: '10 5 5 5',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '37vh',
-                width: '65%'
-            },
-            {
                 xtype: 'textfield',
                 cls: 'icon-phone1',
                 height: '8vh',
@@ -67808,7 +67794,7 @@ Ext.define('Ext.picker.Picker', {
     onDealPictureShow: function(component, eOpts) {
         var record = Ext.getStore('LocalStore').getAt(0);
         if (record.get('dealImageURL')) {
-            this.down('#dealimage').setHtml('<img src="' + record.get('dealImageURL') + '" style="margin: 0px 5px 5px 0px;height:38vh;width:98%;border:none;"/>');
+            this.down('#dealimage').setHtml('<img src="' + record.get('dealImageURL') + '" style="margin: 0px 5px 5px 0px;height:39vh;width:98%;border:none;"/><button type="button" class="icon-enlarge" style="float:right">f0b2</button>');
             this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
         } else {
