@@ -67672,7 +67672,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'nameTxt4',
                 margin: '10 5 5 5',
                 minHeight: '8vh',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:3vw',
+                style: 'font-family:Arial;font-size:4vw',
                 top: '39vh',
                 width: '98%'
             },
