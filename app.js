@@ -67480,7 +67480,7 @@ Ext.define('Ext.picker.Picker', {
         //var record = Ext.getStore('MyDealsStore').findRecord('customerId',customerId,0,true,false,false);
         //window.plugins.socialsharing.share(null, null,record.get('dealPictureURL'),null);
         Ext.getCmp('dealBackBtn').hide();
-        Ext.getCmp('nameTxt3').hide();
+        //Ext.getCmp('nameTxt3').hide();
         Ext.get('share').hide();
         if (Ext.os.is('Android')) {
             navigator.screenshot.URI(function(error, res) {
@@ -67506,9 +67506,9 @@ Ext.define('Ext.picker.Picker', {
                     window.plugins.socialsharing.share(null, 'Hi! Check out this latest Buzz from Local Buzz', res.filePath, null);
                     Ext.getCmp('dealBackBtn').show();
                     Ext.get('share').show();
-                    Ext.getCmp('nameTxt3').show();
                 }
-            }, 'jpg', 50, 'myScreenShot');
+            }, // Ext.getCmp('nameTxt3').show();
+            'jpg', 50, 'myScreenShot');
         }
     },
     onManageDealsTap: function(button, e, eOpts) {
@@ -67687,7 +67687,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'nameTxt2',
                 itemId: 'nameTxt2',
                 left: '40%',
-                margin: '10 5 5 5',
+                margin: '11 5 5 5',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
                 top: '52%',
                 width: '65%'
@@ -67797,7 +67797,7 @@ Ext.define('Ext.picker.Picker', {
     onDealPictureShow: function(component, eOpts) {
         var record = Ext.getStore('LocalStore').getAt(0);
         if (record.get('dealImageURL')) {
-            this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p class="icon-enlarge" style="background:none;position:absolute;bottom: 2em; right: 2em"></p></div>');
+            this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
         } else {
