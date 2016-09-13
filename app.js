@@ -67687,7 +67687,7 @@ Ext.define('Ext.picker.Picker', {
                 left: '25%',
                 margin: '10 5 5 5',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '37vh',
+                top: '38vh',
                 width: '65%'
             },
             {
