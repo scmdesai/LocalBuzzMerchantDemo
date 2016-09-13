@@ -70113,6 +70113,14 @@ Ext.application({
                 }
             }
         }
+        Ext.override(Ext.MessageBox, {
+            hide: function() {
+                if (this.activeAnimation && this.activeAnimation._onEnd) {
+                    this.activeAnimation._onEnd();
+                }
+                return this.callParent(arguments);
+            }
+        });
         document.addEventListener("resume", Ext.bind(onResume, this), false);
         function onResume(e) {}
         //Ext.Msg.alert('Resume',null,null,null);
