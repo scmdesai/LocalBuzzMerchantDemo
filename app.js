@@ -67691,8 +67691,8 @@ Ext.define('Ext.picker.Picker', {
                                 var regex = new RegExp("(http|ftp|https)://[w-]+(.[w-]+)+([w.,@?^=%&amp;:/~+#-]*[w@?^=%&amp;/~+#-])?");
                                 //var url = regex.exec(dealDescription);
                                 var url = dealDescription.match(regex);
-                                console.log('url is ' + url[0]);
-                                window.open(url[0], '_system', 'location=yes');
+                                console.log('url is ' + url);
+                                window.open(url, '_system', 'location=yes');
                             });
                         },
                         event: 'painted'
