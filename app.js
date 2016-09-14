@@ -67672,18 +67672,27 @@ Ext.define('Ext.picker.Picker', {
                                     if (dealDescription) {
                                         console.log('dealDescription is : ' + dealDescription);
                                         var content = dealDescription.split('/');
-                                        console.log(content[0]);
-                                        var index = content.length - 1;
-                                        var firstIndex = dealDescription.indexOf('www.');
-                                        var lastIndex = dealDescription.lastIndexOf('/');
-                                        var tmp = content[index].split(' ');
-                                        var lastPartURLIndex = tmp[0].length;
-                                        var lastPartURLData = content[index];
-                                        var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
-                                        var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
-                                        console.log('url is :' + url);
-                                        if (url) {
-                                            window.open("http://" + url, '_system', 'location=yes');
+                                        if (content.length > 1) {
+                                            var index = content.length - 1;
+                                            var firstIndex = dealDescription.indexOf('www.');
+                                            var lastIndex = dealDescription.lastIndexOf('/');
+                                            var tmp = content[index].split(' ');
+                                            var lastPartURLIndex = tmp[0].length;
+                                            var lastPartURLData = content[index];
+                                            var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
+                                            var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
+                                            console.log('url is :' + url);
+                                            if (url) {
+                                                window.open("http://" + url, '_system', 'location=yes');
+                                            }
+                                        }
+                                    } else {
+                                        var firstIndex1 = dealDescription.indexOf('www.');
+                                        var lastIndex1 = dealDescription.lastIndexOf('/');
+                                        var url1 = dealDescription.substring(firstIndex1, lastIndex1);
+                                        console.log('url is :' + url1);
+                                        if (url1) {
+                                            window.open("http://" + url1, '_system', 'location=yes');
                                         }
                                     }
                                 });
