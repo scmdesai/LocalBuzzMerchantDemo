@@ -67687,9 +67687,12 @@ Ext.define('Ext.picker.Picker', {
                                             }
                                         } else {
                                             var firstIndex1 = dealDescription.indexOf('www.');
+                                            var url1;
                                             var lastIndex1 = dealDescription.indexOf(' ', firstIndex1);
-                                            console.log(lastIndex1);
-                                            var url1 = dealDescription.substring(firstIndex1, lastIndex1);
+                                            if (lastIndex1 < 0) {
+                                                var lastIndex1 = dealDescription.indexOf('', firstIndex1);
+                                            }
+                                            url1 = dealDescription.substring(firstIndex1, lastIndex1);
                                             console.log('url is :' + url1);
                                             if (url1) {
                                                 window.open("http://" + url1, '_system', 'location=yes');
