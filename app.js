@@ -67693,15 +67693,9 @@ Ext.define('Ext.picker.Picker', {
                                 //var url = dealDescription.match(regex);
                                 //console.log('url is ' + url);
                                 var content = dealDescription.split('/');
-                                var url;
-                                var i = 0;
-                                console.log('url is :' + content[1]);
-                                while (content[i]) {
-                                    console.log(content[i]);
-                                    //url = url + content[i];
-                                    url = Ext.urlAppend(url, content[i]);
-                                    i++;
-                                }
+                                var contentUrl = content[0].split(' ');
+                                var contentEnd = content[1].split(' ');
+                                var url = contentUrl[2] + '/' + contentEnd[0];
                                 console.log('url is :' + url);
                                 window.open(url, '_system', 'location=yes');
                             });
