@@ -67693,10 +67693,11 @@ Ext.define('Ext.picker.Picker', {
                                 //var url = dealDescription.match(regex);
                                 //console.log('url is ' + url);
                                 var content = dealDescription.split('/');
-                                var url = null;
+                                var url;
                                 for (var i = 0; i < content.length; i++) {
                                     console.log(content[i]);
-                                    url = url + content[i];
+                                    //url = url + content[i];
+                                    url.concat(content[i]);
                                 }
                                 console.log('url is :' + url);
                                 window.open(url, '_system', 'location=yes');
