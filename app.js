@@ -67701,10 +67701,9 @@ Ext.define('Ext.picker.Picker', {
                                 //var ctx = content[index].match(regex);
                                 //console.log('pattern is : ' + ctx);
                                 var tmp = content[index].split(' ');
-                                var lastPartURLIndex = tmp[0];
+                                var lastPartURLIndex = tmp[0].length;
                                 var lastPartURLData = content[index];
-                                var lastPartURL = lastPartURLIndex;
-                                //lastPartURLData.substring(0,lastPartURLIndex);
+                                var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
                                 var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                 console.log('url is :' + url);
                                 window.open("http://" + url, '_system', 'location=yes');
