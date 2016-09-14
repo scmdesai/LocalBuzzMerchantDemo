@@ -67689,7 +67689,7 @@ Ext.define('Ext.picker.Picker', {
                                 var dealDescription = record.get('dealDescription').toString();
                                 console.log('dealDescription is : ' + dealDescription);
                                 //var regex =new RegExp("(http|ftp|https)://[w-]+(.[w-]+)+([w.,@?^=%&amp;:/~+#-]*[w@?^=%&amp;/~+#-])?");
-                                var regex = new RegExp("(?i)\b((?:[a-z][w-]+:(?:/{1,3}|[a-z0-9%])|wwwd{0,3}[.]|[a-z0-9.-]+[.][a-z]{2,4}/)(?:[^s()<>]+|(([^s()<>]+|(([^s()<>]+)))*))+(?:(([^s()<>]+|(([^s()<>]+)))*)|[^s`!()[]{};:'");
+                                var regex = new RegExp("(?i)\b((?:[a-z][w-]+:(?:/{1,3}|[a-z0-9%])|www[.]|[a-z0-9.-]+[.][a-z]{2,4}/)(?:[^s()<>]+|(([^s()<>]+|(([^s()<>]+)))*))+(?:(([^s()<>]+|(([^s()<>]+)))*)|[^s`!()[]{};:'");
                                 //var url = regex.exec(dealDescription);
                                 var url = dealDescription.match(regex);
                                 console.log('url is ' + url);
