@@ -67693,33 +67693,15 @@ Ext.define('Ext.picker.Picker', {
                                 //var url = dealDescription.match(regex);
                                 //console.log('url is ' + url);
                                 //var regex = new RegExp("(http|https|ftp|ftps)://[a-zA-Z0-9-.]+.[a-zA-Z]{2,3}(/S*)?/");
-                                /*var content = dealDescription.split('/');
-								var index = content.length-1;
-								var firstIndex = dealDescription.indexOf('www.');
-								var lastIndex = dealDescription.lastIndexOf('/');
-								var regex="/^([a-zA-Z0-9 _-]+)$/";
-
-								//var lastPartURLIndex = (content[index].indexOf(''));
-								var lastPartURLData = content[index];
-								//var lastPartURL = lastPartURLData.substring(0,lastPartURLIndex);
-
-								var url = dealDescription.substring(firstIndex,lastIndex)+'/'+lastPartURLData;*/
-                                var exp = "/(\b(((https?|ftp|file|)://)|www[.])[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/ig";
-                                var temp = text.replace(exp, "<a href=\"$1\" target=\"_blank\">$1</a>");
-                                var result = "";
-                                while (temp.length > 0) {
-                                    var pos = temp.indexOf("href=\"");
-                                    if (pos == -1) {
-                                        result += temp;
-                                        break;
-                                    }
-                                    result += temp.substring(0, pos + 6);
-                                    temp = temp.substring(pos + 6, temp.length);
-                                    if ((temp.indexOf("://") > 8) || (temp.indexOf("://") == -1)) {
-                                        result += "http://";
-                                    }
-                                }
-                                url = result;
+                                var content = dealDescription.split('/');
+                                var index = content.length - 1;
+                                var firstIndex = dealDescription.indexOf('www.');
+                                var lastIndex = dealDescription.lastIndexOf('/');
+                                var regex = new RegExp("/^([a-zA-Z0-9 _-]+)$/");
+                                var lastPartURLIndex = (content[index].indexOf(regex));
+                                var lastPartURLData = content[index];
+                                var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
+                                var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                 console.log('url is :' + url);
                                 window.open("http://" + url, '_system', 'location=yes');
                             });
