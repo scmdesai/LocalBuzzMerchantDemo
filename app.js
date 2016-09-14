@@ -67677,8 +67677,11 @@ Ext.define('Ext.picker.Picker', {
                                             var firstIndex = dealDescription.indexOf('www.');
                                             if (firstIndex < 0) {
                                                 var temp = dealDescription.split('.');
+                                                console.log(temp[0]);
                                                 var temp2 = temp[0].split(' ');
+                                                console.log(temp2.length);
                                                 var temp3 = temp2[temp2.length];
+                                                console.log(temp3);
                                                 firstIndex = dealDescription.indexOf(temp3);
                                             }
                                             var lastIndex = dealDescription.lastIndexOf('/');
