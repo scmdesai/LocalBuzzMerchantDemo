@@ -67699,6 +67699,7 @@ Ext.define('Ext.picker.Picker', {
                                 var lastIndex = dealDescription.lastIndexOf('/');
                                 var regex = new RegExp("/^([a-zA-Z0-9 _-]+)$/");
                                 var ctx = regex.exec(content[index]);
+                                console.log('pattern is : ' + ctx);
                                 var lastPartURLIndex = (content[index].lastIndexOf(ctx));
                                 var lastPartURLData = content[index];
                                 var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
