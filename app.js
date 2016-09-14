@@ -67692,10 +67692,13 @@ Ext.define('Ext.picker.Picker', {
                                 //var url = regex.exec(dealDescription);
                                 //var url = dealDescription.match(regex);
                                 //console.log('url is ' + url);
+                                //var regex = new RegExp("(http|https|ftp|ftps)://[a-zA-Z0-9-.]+.[a-zA-Z]{2,3}(/S*)?/");
                                 var content = dealDescription.split('/');
-                                var contentUrl = content[0].split(' ');
-                                var contentEnd = content[1].split(' ');
-                                var url = contentUrl[2] + '/' + contentEnd[0];
+                                var index = content.length - 1;
+                                var firstIndex = dealDescription.indexOf('www.');
+                                var lastIndex = dealDescription.lastIndexOf('/');
+                                var lastPartURL = content[index].indexOf(' ');
+                                var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                 console.log('url is :' + url);
                                 window.open(url, '_system', 'location=yes');
                             });
