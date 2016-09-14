@@ -67675,6 +67675,12 @@ Ext.define('Ext.picker.Picker', {
                                         if (content.length > 1) {
                                             var index = content.length - 1;
                                             var firstIndex = dealDescription.indexOf('www.');
+                                            if (firstIndex < 0) {
+                                                var temp = dealDescription.split('.');
+                                                var temp2 = temp[0].split(' ');
+                                                var temp3 = temp2[temp2.length];
+                                                firstIndex = dealDescription.indexOf(temp3);
+                                            }
                                             var lastIndex = dealDescription.lastIndexOf('/');
                                             var tmp = content[index].split(' ');
                                             var lastPartURLIndex = tmp[0].length;
@@ -67687,6 +67693,12 @@ Ext.define('Ext.picker.Picker', {
                                             }
                                         } else {
                                             var firstIndex1 = dealDescription.indexOf('www.');
+                                            if (firstIndex1 < 0) {
+                                                var temp11 = dealDescription.split('.');
+                                                var temp21 = temp11[0].split(' ');
+                                                var temp31 = temp21[temp21.length];
+                                                firstIndex1 = dealDescription.indexOf(temp31);
+                                            }
                                             var url1;
                                             var lastIndex1 = dealDescription.indexOf(' ', firstIndex1);
                                             if (lastIndex1 < 0) {
