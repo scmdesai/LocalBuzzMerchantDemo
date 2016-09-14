@@ -67680,7 +67680,8 @@ Ext.define('Ext.picker.Picker', {
                                                 console.log(temp[0]);
                                                 var temp2 = temp[0].split(' ');
                                                 console.log(temp2.length);
-                                                var temp3 = temp2[temp2.length];
+                                                var i = temp2.length;
+                                                var temp3 = temp2[i];
                                                 console.log(temp3);
                                                 firstIndex = dealDescription.indexOf(temp3);
                                             }
