@@ -67692,15 +67692,21 @@ Ext.define('Ext.picker.Picker', {
                                             var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
                                             var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                             console.log('url is :' + url);
-                                            if (url) {
+                                            if (url.indexOf("http") < 0) {
                                                 window.open("http://" + url, '_system', 'location=yes');
+                                            } else {
+                                                window.open(url, '_system', 'location=yes');
                                             }
                                         } else {
                                             var firstIndex1 = dealDescription.indexOf('www.');
                                             if (firstIndex1 < 0) {
                                                 var temp11 = dealDescription.split('.');
+                                                console.log(temp11[0]);
                                                 var temp21 = temp11[0].split(' ');
-                                                var temp31 = temp21[temp21.length];
+                                                console.log(temp21.length);
+                                                var i1 = temp21.length;
+                                                var temp31 = temp21[i1 - 1];
+                                                console.log(temp31);
                                                 firstIndex1 = dealDescription.indexOf(temp31);
                                             }
                                             var url1;
@@ -67710,8 +67716,10 @@ Ext.define('Ext.picker.Picker', {
                                             }
                                             url1 = dealDescription.substring(firstIndex1, lastIndex1);
                                             console.log('url is :' + url1);
-                                            if (url1) {
+                                            if (url1.indexOf("http") < 0) {
                                                 window.open("http://" + url1, '_system', 'location=yes');
+                                            } else {
+                                                window.open(url1, '_system', 'location=yes');
                                             }
                                         }
                                     }
