@@ -67706,7 +67706,7 @@ Ext.define('Ext.picker.Picker', {
                                         } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
                                         {
                                             var temp11 = dealDescription.split('.');
-                                            if (temp11.length > 0) {
+                                            if (temp11.length > 1) {
                                                 console.log(temp11[0]);
                                                 var temp21 = temp11[0].split(' ');
                                                 console.log(temp21.length);
@@ -67793,7 +67793,7 @@ Ext.define('Ext.picker.Picker', {
                                     } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
                                     {
                                         var temp111 = dealDescription.split('.');
-                                        if (temp111.length > 0) {
+                                        if (temp111.length > 1) {
                                             console.log(temp111[0]);
                                             var temp211 = temp111[0].split(' ');
                                             console.log(temp211.length);
