@@ -67698,7 +67698,8 @@ Ext.define('Ext.picker.Picker', {
                                 var firstIndex = dealDescription.indexOf('www.');
                                 var lastIndex = dealDescription.lastIndexOf('/');
                                 var regex = new RegExp("/^([a-zA-Z0-9 _-]+)$/");
-                                var lastPartURLIndex = (content[index].indexOf(' '));
+                                var ctx = regex.exec(content[index]);
+                                var lastPartURLIndex = (content[index].lastIndexOf(ctx));
                                 var lastPartURLData = content[index];
                                 var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
                                 var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
