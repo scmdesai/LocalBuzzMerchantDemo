@@ -67698,10 +67698,10 @@ Ext.define('Ext.picker.Picker', {
                                 var firstIndex = dealDescription.indexOf('www.');
                                 var lastIndex = dealDescription.lastIndexOf('/');
                                 var regex = "/^([a-zA-Z0-9 _-]+)$/";
-                                var lastPartURLIndex = (content[index].indexOf(' '));
+                                //var lastPartURLIndex = (content[index].indexOf(''));
                                 var lastPartURLData = content[index];
-                                var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
-                                var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
+                                //var lastPartURL = lastPartURLData.substring(0,lastPartURLIndex);
+                                var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURLData;
                                 console.log('url is :' + url);
                                 window.open("http://" + url, '_system', 'location=yes');
                             });
