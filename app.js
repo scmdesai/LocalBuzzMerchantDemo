@@ -67789,7 +67789,7 @@ Ext.define('Ext.picker.Picker', {
                                         var temp211 = temp111[0].split(' ');
                                         console.log(temp211.length);
                                         var i11 = temp211.length;
-                                        var temp311 = temp21[i11 - 1];
+                                        var temp311 = temp211[i11 - 1];
                                         console.log(temp311);
                                         var firstIndex11 = dealDescription.indexOf(temp311);
                                         var url11;
