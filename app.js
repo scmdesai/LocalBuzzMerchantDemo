@@ -67706,25 +67706,27 @@ Ext.define('Ext.picker.Picker', {
                                         } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
                                         {
                                             var temp11 = dealDescription.split('.');
-                                            console.log(temp11[0]);
-                                            var temp21 = temp11[0].split(' ');
-                                            console.log(temp21.length);
-                                            var i1 = temp21.length;
-                                            var temp31 = temp21[i1 - 1];
-                                            console.log(temp31);
-                                            var firstIndex1 = dealDescription.indexOf(temp31);
-                                            var url1;
-                                            var lastIndex1 = dealDescription.indexOf(' ', firstIndex1);
-                                            if (lastIndex1 < 0) {
-                                                lastIndex1 = dealDescription.length;
-                                            }
-                                            url1 = dealDescription.substring(firstIndex1, lastIndex1);
-                                            console.log('url is :' + url1);
-                                            if (url1) {
-                                                if (url1.indexOf("http") < 0) {
-                                                    window.open("http://" + url1, '_system', 'location=yes');
-                                                } else {
-                                                    window.open(url1, '_system', 'location=yes');
+                                            if (temp11.length > 0) {
+                                                console.log(temp11[0]);
+                                                var temp21 = temp11[0].split(' ');
+                                                console.log(temp21.length);
+                                                var i1 = temp21.length;
+                                                var temp31 = temp21[i1 - 1];
+                                                console.log(temp31);
+                                                var firstIndex1 = dealDescription.indexOf(temp31);
+                                                var url1;
+                                                var lastIndex1 = dealDescription.indexOf(' ', firstIndex1);
+                                                if (lastIndex1 < 0) {
+                                                    lastIndex1 = dealDescription.length;
+                                                }
+                                                url1 = dealDescription.substring(firstIndex1, lastIndex1);
+                                                console.log('url is :' + url1);
+                                                if (url1) {
+                                                    if (url1.indexOf("http") < 0) {
+                                                        window.open("http://" + url1, '_system', 'location=yes');
+                                                    } else {
+                                                        window.open(url1, '_system', 'location=yes');
+                                                    }
                                                 }
                                             }
                                         }
@@ -67791,25 +67793,27 @@ Ext.define('Ext.picker.Picker', {
                                     } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
                                     {
                                         var temp111 = dealDescription.split('.');
-                                        console.log(temp111[0]);
-                                        var temp211 = temp111[0].split(' ');
-                                        console.log(temp211.length);
-                                        var i11 = temp211.length;
-                                        var temp311 = temp211[i11 - 1];
-                                        console.log(temp311);
-                                        var firstIndex11 = dealDescription.indexOf(temp311);
-                                        var url11;
-                                        var lastIndex11 = dealDescription.indexOf(' ', firstIndex11);
-                                        if (lastIndex11 < 0) {
-                                            lastIndex11 = dealDescription.length;
-                                        }
-                                        url11 = dealDescription.substring(firstIndex11, lastIndex11);
-                                        console.log('url is :' + url11);
-                                        if (url11) {
-                                            if (url11.indexOf("http") < 0) {
-                                                window.open("http://" + url11, '_system', 'location=yes');
-                                            } else {
-                                                window.open(url11, '_system', 'location=yes');
+                                        if (temp111.length > 0) {
+                                            console.log(temp111[0]);
+                                            var temp211 = temp111[0].split(' ');
+                                            console.log(temp211.length);
+                                            var i11 = temp211.length;
+                                            var temp311 = temp211[i11 - 1];
+                                            console.log(temp311);
+                                            var firstIndex11 = dealDescription.indexOf(temp311);
+                                            var url11;
+                                            var lastIndex11 = dealDescription.indexOf(' ', firstIndex11);
+                                            if (lastIndex11 < 0) {
+                                                lastIndex11 = dealDescription.length;
+                                            }
+                                            url11 = dealDescription.substring(firstIndex11, lastIndex11);
+                                            console.log('url is :' + url11);
+                                            if (url11) {
+                                                if (url11.indexOf("http") < 0) {
+                                                    window.open("http://" + url11, '_system', 'location=yes');
+                                                } else {
+                                                    window.open(url11, '_system', 'location=yes');
+                                                }
                                             }
                                         }
                                     }
