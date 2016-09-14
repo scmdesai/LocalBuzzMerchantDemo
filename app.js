@@ -67690,7 +67690,7 @@ Ext.define('Ext.picker.Picker', {
                                             var url1;
                                             var lastIndex1 = dealDescription.indexOf(' ', firstIndex1);
                                             if (lastIndex1 < 0) {
-                                                var lastIndex1 = dealDescription.indexOf('', firstIndex1);
+                                                lastIndex1 = dealDescription.length;
                                             }
                                             url1 = dealDescription.substring(firstIndex1, lastIndex1);
                                             console.log('url is :' + url1);
