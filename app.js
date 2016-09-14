@@ -67702,7 +67702,7 @@ Ext.define('Ext.picker.Picker', {
                                 var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
                                 var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                 console.log('url is :' + url);
-                                window.open(url, '_system', 'location=yes');
+                                window.open("http://" + url, '_system', 'location=yes');
                             });
                         },
                         event: 'painted'
