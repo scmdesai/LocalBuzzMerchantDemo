@@ -66696,6 +66696,7 @@ Ext.define('Ext.picker.Picker', {
                         iconCls: 'icon-edit',
                         height: '7vh',
                         width: '15vw',
+                        padding: '0 5 0 0',
                         handler: function() {
                             Ext.Viewport.hideMenu('right');
                             /*var storeUserDetails = Ext.getStore('UserDetails');
@@ -66721,6 +66722,7 @@ Ext.define('Ext.picker.Picker', {
                     {
                         iconCls: 'icon-signout',
                         height: '7vh',
+                        padding: '0 5 0 0',
                         width: '15vw',
                         handler: function() {
                             Ext.Viewport.hideMenu('right');
