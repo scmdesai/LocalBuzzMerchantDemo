@@ -67685,14 +67685,14 @@ Ext.define('Ext.picker.Picker', {
                                             if (url) {
                                                 window.open("http://" + url, '_system', 'location=yes');
                                             }
-                                        }
-                                    } else {
-                                        var firstIndex1 = dealDescription.indexOf('www.');
-                                        var lastIndex1 = dealDescription.lastIndexOf('/');
-                                        var url1 = dealDescription.substring(firstIndex1, lastIndex1);
-                                        console.log('url is :' + url1);
-                                        if (url1) {
-                                            window.open("http://" + url1, '_system', 'location=yes');
+                                        } else {
+                                            var firstIndex1 = dealDescription.indexOf('www.');
+                                            var lastIndex1 = dealDescription.lastIndexOf('/');
+                                            var url1 = dealDescription.substring(firstIndex1, lastIndex1);
+                                            console.log('url is :' + url1);
+                                            if (url1) {
+                                                window.open("http://" + url1, '_system', 'location=yes');
+                                            }
                                         }
                                     }
                                 });
