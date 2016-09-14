@@ -67698,7 +67698,7 @@ Ext.define('Ext.picker.Picker', {
                                 while (content[i]) {
                                     console.log(content[i]);
                                     //url = url + content[i];
-                                    url.concat(content[i]);
+                                    Ext.urlAppend(url, content[i]);
                                     i++;
                                 }
                                 console.log('url is :' + url);
