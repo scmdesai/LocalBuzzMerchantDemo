@@ -67692,11 +67692,15 @@ Ext.define('Ext.picker.Picker', {
                                 //var url = regex.exec(dealDescription);
                                 //var url = dealDescription.match(regex);
                                 //console.log('url is ' + url);
-                                var url = dealDescription.split('/');
-                                console.log(url[1] + url[2]);
+                                var content = dealDescription.split('/');
+                                var url = null;
+                                for (var i = 0; i < content.length; i++) {
+                                    console.log(content[i]);
+                                    url += content[i];
+                                }
+                                window.open(url, '_system', 'location=yes');
                             });
                         },
-                        //window.open(url, '_system', 'location=yes');
                         event: 'painted'
                     }
                 ]
