@@ -67698,7 +67698,8 @@ Ext.define('Ext.picker.Picker', {
                                 var firstIndex = dealDescription.indexOf('www.');
                                 var lastIndex = dealDescription.lastIndexOf('/');
                                 var lastPartURLIndex = content[index].indexOf(' ');
-                                var lastPartURL = content[index].sustring(0, lastPartURLIndex);
+                                var lastPartURLData = content[index];
+                                var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
                                 var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                 console.log('url is :' + url);
                                 window.open(url, '_system', 'location=yes');
