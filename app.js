@@ -67695,6 +67695,7 @@ Ext.define('Ext.picker.Picker', {
                                 var content = dealDescription.split('/');
                                 var url;
                                 var i = 0;
+                                console.log('url is :' + content.length);
                                 while (content[i]) {
                                     console.log(content[i]);
                                     //url = url + content[i];
