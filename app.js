@@ -67671,44 +67671,46 @@ Ext.define('Ext.picker.Picker', {
                                     var dealDescription = record.get('dealDescription').toString();
                                     if (dealDescription) {
                                         console.log('dealDescription is : ' + dealDescription);
+                                        //find if the url is nested(example appsonmobile.com/about-us)
                                         var content = dealDescription.split('/');
                                         if (content.length > 1) {
                                             var index = content.length - 1;
-                                            var firstIndex = dealDescription.indexOf('www.');
-                                            if (firstIndex < 0) {
-                                                var temp = dealDescription.split('.');
-                                                console.log(temp[0]);
-                                                var temp2 = temp[0].split(' ');
-                                                console.log(temp2.length);
-                                                var i = temp2.length;
-                                                var temp3 = temp2[i - 1];
-                                                console.log(temp3);
-                                                firstIndex = dealDescription.indexOf(temp3);
-                                            }
+                                            //Find where url begins
+                                            var temp = dealDescription.split('.');
+                                            //this will have the starting of the string till the first part of the url (eg www. or images.)
+                                            console.log(temp[0]);
+                                            //extract only the first part of the url
+                                            var temp2 = temp[0].split(' ');
+                                            console.log(temp2.length);
+                                            var i = temp2.length;
+                                            var temp3 = temp2[i - 1];
+                                            console.log(temp3);
+                                            //the first part of the url is the firstIndex
+                                            var firstIndex = dealDescription.indexOf(temp3);
                                             var lastIndex = dealDescription.lastIndexOf('/');
                                             var tmp = content[index].split(' ');
                                             var lastPartURLIndex = tmp[0].length;
                                             var lastPartURLData = content[index];
                                             var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
+                                            //copy the entire url till the last '/' and then add the last part
                                             var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                             console.log('url is :' + url);
+                                            //if the url already contains http or https..directly open the link else add http
                                             if (url.indexOf("http") < 0) {
                                                 window.open("http://" + url, '_system', 'location=yes');
                                             } else {
                                                 window.open(url, '_system', 'location=yes');
                                             }
-                                        } else {
-                                            var firstIndex1 = dealDescription.indexOf('www.');
-                                            if (firstIndex1 < 0) {
-                                                var temp11 = dealDescription.split('.');
-                                                console.log(temp11[0]);
-                                                var temp21 = temp11[0].split(' ');
-                                                console.log(temp21.length);
-                                                var i1 = temp21.length;
-                                                var temp31 = temp21[i1 - 1];
-                                                console.log(temp31);
-                                                firstIndex1 = dealDescription.indexOf(temp31);
-                                            }
+                                        } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
+                                        {
+                                            var temp11 = dealDescription.split('.');
+                                            console.log(temp11[0]);
+                                            var temp21 = temp11[0].split(' ');
+                                            console.log(temp21.length);
+                                            var i1 = temp21.length;
+                                            var temp31 = temp21[i1 - 1];
+                                            console.log(temp31);
+                                            var firstIndex1 = dealDescription.indexOf(temp31);
                                             var url1;
                                             var lastIndex1 = dealDescription.indexOf(' ', firstIndex1);
                                             if (lastIndex1 < 0) {
@@ -67750,19 +67752,58 @@ Ext.define('Ext.picker.Picker', {
                                 var dealDescription = record.get('dealDescription').toString();
                                 if (dealDescription) {
                                     console.log('dealDescription is : ' + dealDescription);
+                                    //find if the url is nested(example appsonmobile.com/about-us)
                                     var content = dealDescription.split('/');
-                                    console.log(content[0]);
-                                    var index = content.length - 1;
-                                    var firstIndex = dealDescription.indexOf('www.');
-                                    var lastIndex = dealDescription.lastIndexOf('/');
-                                    var tmp = content[index].split(' ');
-                                    var lastPartURLIndex = tmp[0].length;
-                                    var lastPartURLData = content[index];
-                                    var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
-                                    var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
-                                    console.log('url is :' + url);
-                                    if (url) {
-                                        window.open("http://" + url, '_system', 'location=yes');
+                                    if (content.length > 1) {
+                                        var index = content.length - 1;
+                                        //Find where url begins
+                                        var temp = dealDescription.split('.');
+                                        //this will have the starting of the string till the first part of the url (eg www. or images.)
+                                        console.log(temp[0]);
+                                        //extract only the first part of the url
+                                        var temp2 = temp[0].split(' ');
+                                        console.log(temp2.length);
+                                        var i = temp2.length;
+                                        var temp3 = temp2[i - 1];
+                                        console.log(temp3);
+                                        //the first part of the url is the firstIndex
+                                        var firstIndex = dealDescription.indexOf(temp3);
+                                        var lastIndex = dealDescription.lastIndexOf('/');
+                                        var tmp = content[index].split(' ');
+                                        var lastPartURLIndex = tmp[0].length;
+                                        var lastPartURLData = content[index];
+                                        var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
+                                        //copy the entire url till the last '/' and then add the last part
+                                        var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
+                                        console.log('url is :' + url);
+                                        //if the url already contains http or https..directly open the link else add http
+                                        if (url.indexOf("http") < 0) {
+                                            window.open("http://" + url, '_system', 'location=yes');
+                                        } else {
+                                            window.open(url, '_system', 'location=yes');
+                                        }
+                                    } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
+                                    {
+                                        var temp11 = dealDescription.split('.');
+                                        console.log(temp11[0]);
+                                        var temp21 = temp11[0].split(' ');
+                                        console.log(temp21.length);
+                                        var i1 = temp21.length;
+                                        var temp31 = temp21[i1 - 1];
+                                        console.log(temp31);
+                                        var firstIndex1 = dealDescription.indexOf(temp31);
+                                        var url1;
+                                        var lastIndex1 = dealDescription.indexOf(' ', firstIndex1);
+                                        if (lastIndex1 < 0) {
+                                            lastIndex1 = dealDescription.length;
+                                        }
+                                        url1 = dealDescription.substring(firstIndex1, lastIndex1);
+                                        console.log('url is :' + url1);
+                                        if (url1.indexOf("http") < 0) {
+                                            window.open("http://" + url1, '_system', 'location=yes');
+                                        } else {
+                                            window.open(url1, '_system', 'location=yes');
+                                        }
                                     }
                                 }
                             });
