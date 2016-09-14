@@ -67696,10 +67696,12 @@ Ext.define('Ext.picker.Picker', {
                                             var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                             console.log('url is :' + url);
                                             //if the url already contains http or https..directly open the link else add http
-                                            if (url.indexOf("http") < 0) {
-                                                window.open("http://" + url, '_system', 'location=yes');
-                                            } else {
-                                                window.open(url, '_system', 'location=yes');
+                                            if (url) {
+                                                if (url.indexOf("http") < 0) {
+                                                    window.open("http://" + url, '_system', 'location=yes');
+                                                } else {
+                                                    window.open(url, '_system', 'location=yes');
+                                                }
                                             }
                                         } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
                                         {
@@ -67718,10 +67720,12 @@ Ext.define('Ext.picker.Picker', {
                                             }
                                             url1 = dealDescription.substring(firstIndex1, lastIndex1);
                                             console.log('url is :' + url1);
-                                            if (url1.indexOf("http") < 0) {
-                                                window.open("http://" + url1, '_system', 'location=yes');
-                                            } else {
-                                                window.open(url1, '_system', 'location=yes');
+                                            if (url1) {
+                                                if (url1.indexOf("http") < 0) {
+                                                    window.open("http://" + url1, '_system', 'location=yes');
+                                                } else {
+                                                    window.open(url1, '_system', 'location=yes');
+                                                }
                                             }
                                         }
                                     }
@@ -67777,10 +67781,12 @@ Ext.define('Ext.picker.Picker', {
                                         var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
                                         console.log('url is :' + url);
                                         //if the url already contains http or https..directly open the link else add http
-                                        if (url.indexOf("http") < 0) {
-                                            window.open("http://" + url, '_system', 'location=yes');
-                                        } else {
-                                            window.open(url, '_system', 'location=yes');
+                                        if (url) {
+                                            if (url.indexOf("http") < 0) {
+                                                window.open("http://" + url, '_system', 'location=yes');
+                                            } else {
+                                                window.open(url, '_system', 'location=yes');
+                                            }
                                         }
                                     } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
                                     {
@@ -67799,10 +67805,12 @@ Ext.define('Ext.picker.Picker', {
                                         }
                                         url11 = dealDescription.substring(firstIndex11, lastIndex11);
                                         console.log('url is :' + url11);
-                                        if (url11.indexOf("http") < 0) {
-                                            window.open("http://" + url11, '_system', 'location=yes');
-                                        } else {
-                                            window.open(url11, '_system', 'location=yes');
+                                        if (url11) {
+                                            if (url11.indexOf("http") < 0) {
+                                                window.open("http://" + url11, '_system', 'location=yes');
+                                            } else {
+                                                window.open(url11, '_system', 'location=yes');
+                                            }
                                         }
                                     }
                                 }
