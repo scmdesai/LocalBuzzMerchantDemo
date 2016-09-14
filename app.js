@@ -67663,6 +67663,27 @@ Ext.define('Ext.picker.Picker', {
                                     view.setRecord(record);
                                     view.showBy(Ext.get('dealPicture'));
                                 });
+                            } else {
+                                element.addListener('tap', function() {
+                                    var record = Ext.getStore('LocalStore').getAt(0);
+                                    var dealDescription = record.get('dealDescription').toString();
+                                    if (dealDescription) {
+                                        console.log('dealDescription is : ' + dealDescription);
+                                        var content = dealDescription.split('/');
+                                        var index = content.length - 1;
+                                        var firstIndex = dealDescription.indexOf('www.');
+                                        var lastIndex = dealDescription.lastIndexOf('/');
+                                        var tmp = content[index].split(' ');
+                                        var lastPartURLIndex = tmp[0].length;
+                                        var lastPartURLData = content[index];
+                                        var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
+                                        var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
+                                        console.log('url is :' + url);
+                                        if (url) {
+                                            window.open("http://" + url, '_system', 'location=yes');
+                                        }
+                                    }
+                                });
                             }
                         },
                         event: 'painted'
@@ -67687,26 +67708,22 @@ Ext.define('Ext.picker.Picker', {
                             element.addListener('tap', function() {
                                 var record = Ext.getStore('LocalStore').getAt(0);
                                 var dealDescription = record.get('dealDescription').toString();
-                                console.log('dealDescription is : ' + dealDescription);
-                                // var regex =new RegExp("(http|ftp|https)://[w-]+(.[w-]+)+([w.,@?^=%&amp;:/~+#-]*[w@?^=%&amp;/~+#-])?");
-                                //var url = regex.exec(dealDescription);
-                                //var url = dealDescription.match(regex);
-                                //console.log('url is ' + url);
-                                //var regex = new RegExp("(http|https|ftp|ftps)://[a-zA-Z0-9-.]+.[a-zA-Z]{2,3}(/S*)?/");
-                                var content = dealDescription.split('/');
-                                var index = content.length - 1;
-                                var firstIndex = dealDescription.indexOf('www.');
-                                var lastIndex = dealDescription.lastIndexOf('/');
-                                //var regex= /^[\w\-\s]+$/;
-                                //var ctx = content[index].match(regex);
-                                //console.log('pattern is : ' + ctx);
-                                var tmp = content[index].split(' ');
-                                var lastPartURLIndex = tmp[0].length;
-                                var lastPartURLData = content[index];
-                                var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
-                                var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
-                                console.log('url is :' + url);
-                                window.open("http://" + url, '_system', 'location=yes');
+                                if (dealDescription) {
+                                    console.log('dealDescription is : ' + dealDescription);
+                                    var content = dealDescription.split('/');
+                                    var index = content.length - 1;
+                                    var firstIndex = dealDescription.indexOf('www.');
+                                    var lastIndex = dealDescription.lastIndexOf('/');
+                                    var tmp = content[index].split(' ');
+                                    var lastPartURLIndex = tmp[0].length;
+                                    var lastPartURLData = content[index];
+                                    var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
+                                    var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
+                                    console.log('url is :' + url);
+                                    if (url) {
+                                        window.open("http://" + url, '_system', 'location=yes');
+                                    }
+                                }
                             });
                         },
                         event: 'painted'
