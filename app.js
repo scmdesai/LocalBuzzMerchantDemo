@@ -67946,7 +67946,13 @@ Ext.define('Ext.picker.Picker', {
     onDealPictureShow: function(component, eOpts) {
         var record = Ext.getStore('LocalStore').getAt(0);
         if (record.get('dealImageURL')) {
-            this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
+            var dealImageURL = record.get('dealImageURL').toString();
+            var fileFormat = dealImageURL.split('.');
+            if (fileFormat[1] === 'jpg') {
+                this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
+            } else {
+                this.down('#dealimage').setHtml('<div><video controls><source src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></video></div>');
+            }
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
         } else {
