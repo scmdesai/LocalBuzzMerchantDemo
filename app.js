@@ -67657,14 +67657,19 @@ Ext.define('Ext.picker.Picker', {
                         fn: function(element, eOpts) {
                             var record = Ext.getStore('LocalStore').getAt(0);
                             if (record.get('dealImageURL')) {
-                                element.addListener('tap', function() {
-                                    console.log('DealImage Tap');
-                                    var view = Ext.Viewport.add({
-                                            xtype: 'DealImage'
-                                        });
-                                    view.setRecord(record);
-                                    view.showBy(Ext.get('dealPicture'));
-                                });
+                                var dealImageURL = record.get('dealImageURL').toString();
+                                var fileFormatIndex = dealImageURL.lastIndexOf('.');
+                                var fileFormat = dealImageURL.substring(fileFormatIndex + 1, dealImageURL.length);
+                                if (fileFormat === 'jpg') {
+                                    element.addListener('tap', function() {
+                                        console.log('DealImage Tap');
+                                        var view = Ext.Viewport.add({
+                                                xtype: 'DealImage'
+                                            });
+                                        view.setRecord(record);
+                                        view.showBy(Ext.get('dealPicture'));
+                                    });
+                                }
                             } else {
                                 element.addListener('tap', function() {
                                     var record = Ext.getStore('LocalStore').getAt(0);
@@ -67952,7 +67957,7 @@ Ext.define('Ext.picker.Picker', {
             if (fileFormat === 'jpg') {
                 this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             } else {
-                this.down('#dealimage').setHtml('<div><video width=98% height= 39vh controls preload="auto"><source src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></video></div>');
+                this.down('#dealimage').setHtml('<div><video videoWidth=98% videoHeight= 39vh controls preload="auto"><source src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></video></div>');
             }
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
