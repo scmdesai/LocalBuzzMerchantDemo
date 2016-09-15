@@ -67948,7 +67948,7 @@ Ext.define('Ext.picker.Picker', {
         if (record.get('dealImageURL')) {
             var dealImageURL = record.get('dealImageURL').toString();
             var fileFormatIndex = dealImageURL.lastIndexOf('.');
-            var fileFormat = dealImageURL.substring(fileFormatIndex, dealImageURL.length);
+            var fileFormat = dealImageURL.substring(fileFormatIndex + 1, dealImageURL.length);
             if (fileFormat === 'jpg') {
                 this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             } else {
