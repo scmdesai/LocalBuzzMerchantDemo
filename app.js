@@ -67697,9 +67697,7 @@ Ext.define('Ext.picker.Picker', {
                                             console.log('url is :' + url);
                                             //if the url already contains http or https..directly open the link else add http
                                             if (url) {
-                                                var tmpUrl = url;
-                                                tmpUrl.setStyle('text-decoration:underline');
-                                                dealDescription.replace(url, tmpUrl);
+                                                dealDescription.link(url);
                                                 if (url.indexOf("http") < 0) {
                                                     window.open("http://" + url, '_system', 'location=yes');
                                                 } else {
@@ -67725,9 +67723,7 @@ Ext.define('Ext.picker.Picker', {
                                                 url1 = dealDescription.substring(firstIndex1, lastIndex1);
                                                 console.log('url is :' + url1);
                                                 if (url1) {
-                                                    var tmpUrl1 = url1;
-                                                    tmpUrl1.setStyle('text-decoration:underline');
-                                                    dealDescription.replace(url1, tmpUrl1);
+                                                    dealDescription.link(url1);
                                                     if (url1.indexOf("http") < 0) {
                                                         window.open("http://" + url1, '_system', 'location=yes');
                                                     } else {
@@ -67790,9 +67786,7 @@ Ext.define('Ext.picker.Picker', {
                                         console.log('url is :' + url);
                                         //if the url already contains http or https..directly open the link else add http
                                         if (url) {
-                                            var tmpUrl = url;
-                                            tmpUrl.setStyle('text-decoration:underline');
-                                            dealDescription.replace(url, tmpUrl);
+                                            dealDescription.link(url);
                                             if (url.indexOf("http") < 0) {
                                                 window.open("http://" + url, '_system', 'location=yes');
                                             } else {
@@ -67818,9 +67812,7 @@ Ext.define('Ext.picker.Picker', {
                                             url11 = dealDescription.substring(firstIndex11, lastIndex11);
                                             console.log('url is :' + url11);
                                             if (url11) {
-                                                var tmpUrl11 = url11;
-                                                tmpUrl11.setStyle('text-decoration:underline');
-                                                dealDescription.replace(url11, tmpUrl11);
+                                                dealDescription.link(url11);
                                                 if (url11.indexOf("http") < 0) {
                                                     window.open("http://" + url11, '_system', 'location=yes');
                                                 } else {
