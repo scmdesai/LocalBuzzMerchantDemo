@@ -67947,11 +67947,12 @@ Ext.define('Ext.picker.Picker', {
         var record = Ext.getStore('LocalStore').getAt(0);
         if (record.get('dealImageURL')) {
             var dealImageURL = record.get('dealImageURL').toString();
-            var fileFormat = dealImageURL.split('.');
-            if (fileFormat[1] === 'jpg') {
+            var fileFormatIndex = dealImageURL.lastIndexOf('.');
+            var fileFormat = dealImageURL.substring(fileFormatIndex, dealImageURL.length);
+            if (fileFormat === 'jpg') {
                 this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             } else {
-                this.down('#dealimage').setHtml('<div><video width=98% height= 39vh controls><source src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></video></div>');
+                this.down('#dealimage').setHtml('<div><video width=98% height= 39vh controls preload="auto"><source src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></video></div>');
             }
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
