@@ -66800,12 +66800,12 @@ Ext.define('Ext.picker.Picker', {
         itemTpl: [
             '',
             '',
-            '<div style="font-size:5vw;color:black;font-weight:normal;font-family:Arial">{dealName}<button type="button" id="delete" class="delete_button" style="float:right;padding:0px 15px 0px 15px;">#<button type="button" id="edit" class="delete_button" style="float:right">p</div>',
+            '<div style="font-size:4vw;color:black;font-weight:normal;font-family:Arial;word-wrap:word-break;">{dealName}</div>',
             '<tpl if="dealEndDate &lt; todayplusthreedays ">',
             '<div class= expiringDate >Valid {dealStartDate} to {dealEndDate}</div>',
             '<tpl else>\t',
             '<div class= dateValidity >Valid {dealStartDate} to {dealEndDate}</div></tpl>',
-            ''
+            '<button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button>'
         ]
     }
 }, 0, [
@@ -67957,7 +67957,7 @@ Ext.define('Ext.picker.Picker', {
             if (fileFormat === 'jpg') {
                 this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             } else {
-                this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls><source src="' + record.get('dealImageURL') + '"><param name="allowFullScreen" value="true"></video></div>');
+                this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto"><source src="' + record.get('dealImageURL') + '"><param name="allowFullScreen" value="true"></video></div>');
             }
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
@@ -69696,7 +69696,8 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'DealName',
-                autoCapitalize: true
+                autoCapitalize: true,
+                maxLength: 50
             },
             {
                 xtype: 'textfield',
