@@ -71,7 +71,7 @@
 	<!-- End Geolocation -->
 	<!--social sharing -->
 	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-	<gap:plugin name="cordova-plugin-html5video"  source="npm" />
+	<!--<gap:plugin name="cordova-plugin-html5video"  source="npm" />-->
 	
 	<!--email-->
 	<!--<gap:plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm" /> -->

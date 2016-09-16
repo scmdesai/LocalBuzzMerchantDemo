@@ -67669,14 +67669,13 @@ Ext.define('Ext.picker.Picker', {
                                         view.setRecord(record);
                                         view.showBy(Ext.get('dealPicture'));
                                     });
-                                } else {
-                                    if (Ext.os.is('Android')) {
-                                        window.plugins.html5Video.initialize({
-                                            "video1": '"' + record.get('dealImageURL') + '"'
-                                        });
-                                    }
                                 }
-                            } else {
+                            } else /* else {
+									if(Ext.os.is('Android')){
+									window.plugins.html5Video.initialize( { "video1": '"'+record.get('dealImageURL')+'"'} );
+									}
+									}*/
+                            {
                                 element.addListener('tap', function() {
                                     var record = Ext.getStore('LocalStore').getAt(0);
                                     var dealDescription = record.get('dealDescription').toString();
@@ -67963,13 +67962,7 @@ Ext.define('Ext.picker.Picker', {
             if (fileFormat === 'jpg') {
                 this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             } else {
-                if (Ext.os.is('Android')) {
-                    this.down('#dealimage').setHtml('<video id="video1" controls></video>');
-                    //window.plugins.html5Video.initialize( { "video1": '"'+record.get('dealImageURL')+'"'} );
-                    window.plugins.html5Video.play("video1");
-                } else {
-                    this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="' + record.get('dealImageURL') + '" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
-                }
+                this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="' + record.get('dealImageURL') + '" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
             }
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
@@ -69352,7 +69345,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '29%',
                 labelWrap: true,
                 name: 'fileUpload',
-                accept: 'image,video',
+                accept: 'image',
                 capture: 'camera'
             },
             {

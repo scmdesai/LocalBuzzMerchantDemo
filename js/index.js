@@ -52,10 +52,7 @@ var app = {
     onDeviceReady: function() {
 		console.log("Device is ready");
 		
-		window.plugins.html5Video.initialize({
-      "video1" : "https://s3-us-west-2.amazonaws.com/images.appsonmobile.com/locallink/deals/B7EA-fileUpload-1473960209271.mov"
-     
-  });
+		
 		
 		//this.receivedEvent('deviceready');
 		
