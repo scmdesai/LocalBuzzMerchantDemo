@@ -67957,7 +67957,7 @@ Ext.define('Ext.picker.Picker', {
             if (fileFormat === 'jpg') {
                 this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             } else {
-                this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="' + record.get('dealImageURL') + '"><param name="allowFullScreen" value="true"></video></div>');
+                this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="' + record.get('dealImageURL') + '" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
             }
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
