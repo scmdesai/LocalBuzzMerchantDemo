@@ -67965,9 +67965,7 @@ Ext.define('Ext.picker.Picker', {
             } else {
                 if (Ext.os.is('Android')) {
                     // this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="'+record.get('dealImageURL')+'" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
-                    window.plugins.html5Video.initialize({
-                        "video1": '"' + record.get('dealImageURL') + '"'
-                    });
+                    //window.plugins.html5Video.initialize( { "video1": '"'+record.get('dealImageURL')+'"'} );
                     window.plugins.html5Video.play("video1");
                 } else {
                     this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="' + record.get('dealImageURL') + '" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
