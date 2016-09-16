@@ -66800,12 +66800,13 @@ Ext.define('Ext.picker.Picker', {
         itemTpl: [
             '',
             '',
-            '<div style="font-size:4vw;color:black;font-weight:normal;font-family:Arial;word-wrap:word-break;">{dealName}</div>',
+            '<div style="font-size:4vw;color:black;font-weight:normal;font-family:Arial;word-wrap:word-break;">{dealName}',
+            '<button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button></div>',
             '<tpl if="dealEndDate &lt; todayplusthreedays ">',
             '<div class= expiringDate >Valid {dealStartDate} to {dealEndDate}</div>',
             '<tpl else>\t',
             '<div class= dateValidity >Valid {dealStartDate} to {dealEndDate}</div></tpl>',
-            '<button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button>'
+            ''
         ]
     }
 }, 0, [
@@ -69173,7 +69174,8 @@ Ext.define('Ext.picker.Picker', {
                 label: 'Name',
                 labelWidth: '35%',
                 labelWrap: true,
-                name: 'DealName'
+                name: 'DealName',
+                maxLength: 40
             },
             {
                 xtype: 'textfield',
@@ -69265,8 +69267,7 @@ Ext.define('Ext.picker.Picker', {
                         month: 7,
                         day: 16
                     },
-                    yearFrom: 2016,
-                    yearTo: 2017
+                    yearFrom: 2016
                 }
             },
             {
@@ -69301,8 +69302,7 @@ Ext.define('Ext.picker.Picker', {
                 picker: {
                     itemId: 'mydatepicker3',
                     useTitles: true,
-                    yearFrom: 2016,
-                    yearTo: 2017
+                    yearFrom: 2016
                 }
             },
             {
@@ -69702,7 +69702,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWrap: true,
                 name: 'DealName',
                 autoCapitalize: true,
-                maxLength: 50
+                maxLength: 40
             },
             {
                 xtype: 'textfield',
@@ -69789,13 +69789,7 @@ Ext.define('Ext.picker.Picker', {
                     stretchX: false,
                     stretchY: false,
                     useTitles: true,
-                    value: {
-                        year: 2016,
-                        month: 7,
-                        day: 16
-                    },
-                    yearFrom: 2016,
-                    yearTo: 2017
+                    yearFrom: 2016
                 }
             },
             {
@@ -69830,8 +69824,7 @@ Ext.define('Ext.picker.Picker', {
                 picker: {
                     itemId: 'mydatepicker3',
                     useTitles: true,
-                    yearFrom: 2016,
-                    yearTo: 2017
+                    yearFrom: 2016
                 }
             },
             {
