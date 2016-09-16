@@ -67964,7 +67964,7 @@ Ext.define('Ext.picker.Picker', {
                 this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             } else {
                 if (Ext.os.is('Android')) {
-                    this.down('#dealimage').setHtml('<video id="video1"></video>');
+                    this.down('#dealimage').setHtml('<video id="video1" controls></video>');
                     //window.plugins.html5Video.initialize( { "video1": '"'+record.get('dealImageURL')+'"'} );
                     window.plugins.html5Video.play("video1");
                 } else {
