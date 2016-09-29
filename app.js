@@ -67003,7 +67003,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textareafield',
                 cls: [
-                    'customfield',
+                    'customfield2',
                     'icon-location1'
                 ],
                 id: 'address',
