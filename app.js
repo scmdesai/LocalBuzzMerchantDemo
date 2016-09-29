@@ -67644,31 +67644,18 @@ Ext.define('Ext.picker.Picker', {
                 ]
             },
             {
-                xtype: 'container',
-                cls: 'contact-name',
-                disabled: true,
-                docked: 'top',
-                height: '9vh',
-                hidden: false,
-                id: 'nameTxt6',
-                itemId: 'nameTxt6',
-                margin: '10 5 5 5',
-                style: 'font-family:Arial;font-size:4vw',
-                width: '98%'
-            },
-            {
                 xtype: 'component',
                 cls: [
-                    'dealimage',
-                    'w3-card-4'
+                    'contact-name',
+                    'dealimage'
                 ],
                 disabled: true,
                 height: '40vh',
                 id: 'dealimage',
                 itemId: 'dealimage',
                 left: '2%',
-                style: 'color:#00529D;word-wrap:break-word;font-family:Arial;font-size:6vw;background:#fafefb',
-                width: '96vw',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;border:2px dotted #c0c0c0',
+                width: '95%',
                 listeners: [
                     {
                         fn: function(element, eOpts) {
@@ -67777,7 +67764,7 @@ Ext.define('Ext.picker.Picker', {
                 margin: '10 5 5 5',
                 minHeight: '8vh',
                 style: 'font-family:Arial;font-size:4vw',
-                top: '41vh',
+                top: '39vh',
                 width: '98%',
                 listeners: [
                     {
@@ -67859,33 +67846,19 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'container',
                 cls: 'contact-name',
                 disabled: true,
-                hidden: false,
-                id: 'nameTxt5',
-                itemId: 'nameTxt5',
-                margin: '10 5 5 5',
-                minHeight: '8vh',
-                style: 'font-family:Arial;font-size:4vw',
-                top: '50vh',
-                width: '98%'
-            },
-            {
-                xtype: 'container',
-                cls: 'contact-name',
-                disabled: true,
                 html: '<p style="font-size:3vw;text-align:center">       Published through Local Buzz',
                 id: 'nameTxt2',
                 itemId: 'nameTxt2',
                 left: '40%',
                 margin: '15 5 5 5',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '60vh',
+                top: '52%',
                 width: '65%'
             },
             {
                 xtype: 'textfield',
                 cls: 'icon-phone1',
                 height: '8vh',
-                hidden: true,
                 id: 'phoneNumber1',
                 itemId: 'phoneNumber1',
                 margin: '5 0 0 5',
@@ -67902,7 +67875,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textfield',
                 cls: 'icon-email1',
                 height: '8vh',
-                hidden: true,
+                hidden: false,
                 id: 'email1',
                 itemId: 'email1',
                 margin: '0 0 0 5',
@@ -67936,7 +67909,6 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textfield',
                 cls: 'icon-globe1',
                 height: '8vh',
-                hidden: true,
                 id: 'website3',
                 itemId: 'website3',
                 margin: '0 0 0 5',
@@ -67957,7 +67929,6 @@ Ext.define('Ext.picker.Picker', {
                     'customfield1'
                 ],
                 height: '9vh',
-                hidden: true,
                 id: 'address1',
                 itemId: 'address1',
                 margin: '0 0 0 5',
@@ -68003,8 +67974,6 @@ Ext.define('Ext.picker.Picker', {
             this.down('#dealimage').setHtml('<img src="resources/img/localbuzzicon.png" align="right" style="margin: 5px 5px 5px 5px"/><br><div style="font-size:6vw;">' + record.get('dealName') + '</div><br><br><div style="font-size:4vw;">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
-            this.down('#nameTxt5').hide();
-            this.down('#nameTxt6').hide();
         }
     },
     setRecord: function(record) {
@@ -68014,8 +67983,6 @@ Ext.define('Ext.picker.Picker', {
             var businessName = record.get('businessName');
             this.down('#nameTxt1').setHtml(record.get('businessName'));
             this.down('#nameTxt4').setHtml(record.get('dealDescription'));
-            this.down('#nameTxt5').setHtml('Valid from ' + record.get('dealStartDate') + '-' + record.get('dealEndDate'));
-            this.down('#nameTxt6').setHtml(record.get('dealName'));
             //var store = Ext.getStore('MyJsonPStore');
             //  var rec = store.findRecord('businessName', businessName);
             var rec = Ext.getStore('UserDetails').getAt(0);
@@ -69356,7 +69323,9 @@ Ext.define('Ext.picker.Picker', {
                 },
                 usePicker: true,
                 component: {
-                    useMask: true
+                    useMask: true,
+                    minValue: new Date(),
+                    maxValue: (new Date().getFullYear() + 1)
                 },
                 picker: {
                     itemId: 'mydatepicker3',
@@ -69830,7 +69799,13 @@ Ext.define('Ext.picker.Picker', {
                 autoSelect: false,
                 usePicker: true,
                 component: {
-                    useMask: true
+                    useMask: true,
+                    minValue: new Date(),
+                    maxValue: {
+                        day: new Date().getDate(),
+                        month: (new Date().getMonth() + 1),
+                        year: new Date().getFullYear() + 1
+                    }
                 },
                 dateFormat: 'm/d/Y',
                 picker: {
