@@ -66196,6 +66196,20 @@ Ext.define('Ext.picker.Picker', {
             reader: {
                 type: 'json'
             }
+        },
+        listeners: [
+            {
+                fn: 'onJsonstoreLoad',
+                event: 'load'
+            }
+        ]
+    },
+    onJsonstoreLoad: function(store, records, successful, operation, eOpts) {
+        var storeCount = store.getCount();
+        if (storeCount >= 5) {
+            Ext.getCmp('UploadDeal').setDisabled(true);
+        } else {
+            Ext.getCmp('UploadDeal').setDisabled(false);
         }
     }
 }, 0, 0, 0, 0, 0, 0, [
@@ -68088,12 +68102,6 @@ Ext.define('Ext.picker.Picker', {
                 customerId: customerId
             }
         });
-        var storeCount = dealStore.getCount();
-        if (storeCount >= 5) {
-            Ext.getCmp('UploadDeal').setDisabled(true);
-        } else {
-            Ext.getCmp('UploadDeal').setDisabled(false);
-        }
     },
     initialize: function() {
         Ext.form.Panel.prototype.initialize.call(this);
@@ -69241,8 +69249,7 @@ Ext.define('Ext.picker.Picker', {
                 usePicker: true,
                 component: {
                     useMask: true,
-                    minValue: new Date(),
-                    maxValue: (new Date().getFullYear() + 1)
+                    minValue: new Date()
                 },
                 dateFormat: 'm/d/Y',
                 picker: {
@@ -69252,7 +69259,8 @@ Ext.define('Ext.picker.Picker', {
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    useTitles: true
+                    useTitles: true,
+                    yearFrom: 2016
                 }
             },
             {
