@@ -68897,12 +68897,12 @@ Ext.define('Ext.picker.Picker', {
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    yearFrom: 2016,
                     listeners: [
                         {
                             fn: function(component, eOpts) {
-                                this.setYearTo(2017);
+                                this.setYearFrom(parstInt(new Date().getFullYear()));
                             },
+                            //this.setYearTo(parstInt(new Date().getFullYear()+1));
                             event: 'initialize'
                         }
                     ]
@@ -68929,8 +68929,17 @@ Ext.define('Ext.picker.Picker', {
                 placeHolder: 'mm/dd/yyyy',
                 usePicker: true,
                 picker: {
+                    itemId: 'mydatepicker3',
                     styleHtmlContent: true,
-                    yearFrom: 2016
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                this.setYearFrom(parstInt(new Date().getFullYear()));
+                                this.setYearTo(parstInt(new Date().getFullYear() + 1));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69270,7 +69279,16 @@ Ext.define('Ext.picker.Picker', {
                     stretchY: false,
                     useTitles: true,
                     yearFrom: 2016
-                }
+                },
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+                            this.setYearFrom(parstInt(new Date().getFullYear()));
+                        },
+                        //this.setYearTo(parstInt(new Date().getFullYear()+1));
+                        event: 'initialize'
+                    }
+                ]
             },
             {
                 xtype: 'datepickerfield',
@@ -69305,7 +69323,16 @@ Ext.define('Ext.picker.Picker', {
                 },
                 picker: {
                     itemId: 'mydatepicker3',
-                    useTitles: true
+                    useTitles: true,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                this.setYearFrom(parstInt(new Date().getFullYear()));
+                                this.setYearTo(parstInt(new Date().getFullYear() + 1));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69780,7 +69807,16 @@ Ext.define('Ext.picker.Picker', {
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    useTitles: true
+                    useTitles: true,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                this.setYearFrom(parstInt(new Date().getFullYear()));
+                            },
+                            //this.setYearTo(parstInt(new Date().getFullYear()+1));
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69814,7 +69850,16 @@ Ext.define('Ext.picker.Picker', {
                 },
                 picker: {
                     itemId: 'mydatepicker3',
-                    useTitles: true
+                    useTitles: true,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                this.setYearFrom(parstInt(new Date().getFullYear()));
+                                this.setYearTo(parstInt(new Date().getFullYear() + 1));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
