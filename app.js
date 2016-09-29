@@ -66980,8 +66980,8 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-phone',
-                    'customfield'
+                    'icon-phone1',
+                    'customfield2'
                 ],
                 height: '10vh',
                 id: 'phoneNumber',
@@ -67003,7 +67003,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textareafield',
                 cls: [
-                    'customfield',
+                    'customfield2',
                     'icon-phone1'
                 ],
                 id: 'address',
