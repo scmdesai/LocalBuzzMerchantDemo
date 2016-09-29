@@ -68004,6 +68004,7 @@ Ext.define('Ext.picker.Picker', {
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
+            this.down('#nameTxt6').hide();
         }
     },
     setRecord: function(record) {
@@ -70147,7 +70148,6 @@ Ext.define('Ext.picker.Picker', {
     config: {
         id: 'CreateNewBuzzOption',
         itemId: 'CreateNewBuzzOption',
-        style: 'background:white',
         items: [
             {
                 xtype: 'button',
