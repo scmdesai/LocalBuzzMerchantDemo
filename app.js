@@ -69241,7 +69241,8 @@ Ext.define('Ext.picker.Picker', {
                 usePicker: true,
                 component: {
                     useMask: true,
-                    minValue: new Date()
+                    minValue: new Date(),
+                    maxValue: new Date().getFullYear() + 1
                 },
                 dateFormat: 'm/d/Y',
                 picker: {
@@ -69251,13 +69252,7 @@ Ext.define('Ext.picker.Picker', {
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    useTitles: true,
-                    value: {
-                        year: 2016,
-                        month: 7,
-                        day: 16
-                    },
-                    yearFrom: 2016
+                    useTitles: true
                 }
             },
             {
