@@ -68891,12 +68891,21 @@ Ext.define('Ext.picker.Picker', {
                 usePicker: true,
                 dateFormat: 'm/d/Y',
                 picker: {
+                    id: 'mydatepicker3',
                     itemId: 'mydatepicker3',
                     style: '',
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    yearFrom: 2016
+                    yearFrom: 2016,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                this.setYearTo(2017);
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69261,16 +69270,7 @@ Ext.define('Ext.picker.Picker', {
                     stretchY: false,
                     useTitles: true,
                     yearFrom: 2016
-                },
-                listeners: [
-                    {
-                        fn: function(component, eOpts) {
-                            //Ext.getCmp('DealStartDate3').getPicker().setYearFrom(new Date().getFullYear());
-                            Ext.getCmp('DealStartDate3').getPicker().setYearTo(new Date().getFullYear() + 1);
-                        },
-                        event: 'initialize'
-                    }
-                ]
+                }
             },
             {
                 xtype: 'datepickerfield',
@@ -69306,16 +69306,7 @@ Ext.define('Ext.picker.Picker', {
                 picker: {
                     itemId: 'mydatepicker3',
                     useTitles: true
-                },
-                listeners: [
-                    {
-                        fn: function(component, eOpts) {
-                            Ext.getCmp('DealEndDate3').getPicker().setYearFrom(new Date().getFullYear());
-                            Ext.getCmp('DealEndDate3').getPicker().setYearTo(new Date().getFullYear() + 1);
-                        },
-                        event: 'initialize'
-                    }
-                ]
+                }
             },
             {
                 xtype: 'textfield',
@@ -69790,16 +69781,7 @@ Ext.define('Ext.picker.Picker', {
                     stretchX: false,
                     stretchY: false,
                     useTitles: true
-                },
-                listeners: [
-                    {
-                        fn: function(component, eOpts) {
-                            Ext.getCmp('DealStartDate4').getPicker().setYearFrom(new Date().getFullYear());
-                            Ext.getCmp('DealStartDate4').getPicker().setYearTo(new Date().getFullYear() + 1);
-                        },
-                        event: 'initialize'
-                    }
-                ]
+                }
             },
             {
                 xtype: 'datepickerfield',
@@ -69833,16 +69815,7 @@ Ext.define('Ext.picker.Picker', {
                 picker: {
                     itemId: 'mydatepicker3',
                     useTitles: true
-                },
-                listeners: [
-                    {
-                        fn: function(component, eOpts) {
-                            Ext.getCmp('DealEndDate4').getPicker().setYearFrom(new Date().getFullYear());
-                            Ext.getCmp('DealEndDate4').getPicker().setYearTo(new Date().getFullYear() + 1);
-                        },
-                        event: 'initialize'
-                    }
-                ]
+                }
             },
             {
                 xtype: 'textfield',
