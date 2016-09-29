@@ -66461,7 +66461,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-globe-white',
+                    'icon-globe',
                     'customfield2'
                 ],
                 disabled: false,
@@ -66482,7 +66482,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-email-white',
+                    'icon-email',
                     'customfield2'
                 ],
                 disabled: false,
@@ -66526,7 +66526,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-phone',
+                    'icon-phone1',
                     'customfield2'
                 ],
                 disabled: false,
@@ -67004,7 +67004,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textareafield',
                 cls: [
                     'customfield',
-                    'icon-location'
+                    'icon-location1'
                 ],
                 id: 'address',
                 itemId: 'address',
