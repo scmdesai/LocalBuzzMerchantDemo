@@ -68922,7 +68922,15 @@ Ext.define('Ext.picker.Picker', {
                 picker: {
                     itemId: 'mydatepicker3',
                     styleHtmlContent: true
-                }
+                },
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+                            this.getPicker().setYearTo(2017);
+                        },
+                        event: 'initialize'
+                    }
+                ]
             },
             {
                 xtype: 'textareafield',
