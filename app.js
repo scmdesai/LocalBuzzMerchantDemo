@@ -66438,7 +66438,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textareafield',
                 cls: [
                     'customfield2',
-                    'icon-phone1'
+                    'icon-location'
                 ],
                 disabled: false,
                 docked: 'bottom',
@@ -67668,7 +67668,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'dealimage',
                 itemId: 'dealimage',
                 left: '2%',
-                style: 'color:#00529D;word-wrap:break-word;font-family:Arial;font-size:6vw;background:#fafefb',
+                style: 'color:#00529D;word-wrap:break-word;font-family:Arial;font-size:6vw;background:#fafefb;',
                 width: '96vw',
                 listeners: [
                     {
@@ -68912,6 +68912,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'DealStartDate1',
                 itemId: 'DealStartDate',
                 margin: '5 5 5 5 ',
+                styleHtmlContent: true,
                 width: '97%',
                 label: 'Start Date',
                 labelWidth: '35%',
@@ -68958,6 +68959,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'DealEndDate1',
                 itemId: 'DealEndDate',
                 margin: '5 5 5 5 ',
+                styleHtmlContent: true,
                 width: '97%',
                 label: 'End Date',
                 labelWidth: '35%',
