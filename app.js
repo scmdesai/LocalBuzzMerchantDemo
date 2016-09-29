@@ -69242,7 +69242,7 @@ Ext.define('Ext.picker.Picker', {
                 component: {
                     useMask: true,
                     minValue: new Date(),
-                    maxValue: new Date().getFullYear() + 1
+                    maxValue: (new Date().getFullYear() + 1)
                 },
                 dateFormat: 'm/d/Y',
                 picker: {
