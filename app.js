@@ -68921,7 +68921,18 @@ Ext.define('Ext.picker.Picker', {
                 usePicker: true,
                 picker: {
                     itemId: 'mydatepicker3',
-                    styleHtmlContent: true
+                    styleHtmlContent: true,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                Ext.picker.Date({
+                                    "setYearFrom": parseInt(new Date().getFullYear()),
+                                    "setYearTo": parseInt(new Date().getFullYear() + 1)
+                                });
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
