@@ -68896,7 +68896,18 @@ Ext.define('Ext.picker.Picker', {
                     style: '',
                     scrollable: false,
                     stretchX: false,
-                    stretchY: false
+                    stretchY: false,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                var dateStart = (new Date().getFullYear()).toString();
+                                var dateEnd = (new Date().getFullYear() + 1).toString();
+                                this.setYearFrom(parseInt(dateStart));
+                                this.setYearTo(parseInt(dateEnd));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69271,7 +69282,18 @@ Ext.define('Ext.picker.Picker', {
                     stretchX: false,
                     stretchY: false,
                     useTitles: true,
-                    yearFrom: 2016
+                    yearFrom: 2016,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                var dateStart = (new Date().getFullYear()).toString();
+                                var dateEnd = (new Date().getFullYear() + 1).toString();
+                                this.setYearFrom(parseInt(dateStart));
+                                this.setYearTo(parseInt(dateEnd));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69307,7 +69329,18 @@ Ext.define('Ext.picker.Picker', {
                 },
                 picker: {
                     itemId: 'mydatepicker3',
-                    useTitles: true
+                    useTitles: true,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                var dateStart = (new Date().getFullYear()).toString();
+                                var dateEnd = (new Date().getFullYear() + 1).toString();
+                                this.setYearFrom(parseInt(dateStart));
+                                this.setYearTo(parseInt(dateEnd));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69783,7 +69816,18 @@ Ext.define('Ext.picker.Picker', {
                     stretchX: false,
                     stretchY: false,
                     useTitles: true,
-                    yearFrom: 2016
+                    yearFrom: 2016,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                var dateStart = (new Date().getFullYear()).toString();
+                                var dateEnd = (new Date().getFullYear() + 1).toString();
+                                this.setYearFrom(parseInt(dateStart));
+                                this.setYearTo(parseInt(dateEnd));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
@@ -69818,7 +69862,18 @@ Ext.define('Ext.picker.Picker', {
                 picker: {
                     itemId: 'mydatepicker3',
                     useTitles: true,
-                    yearFrom: 2016
+                    yearFrom: 2016,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                var dateStart = (new Date().getFullYear()).toString();
+                                var dateEnd = (new Date().getFullYear() + 1).toString();
+                                this.setYearFrom(parseInt(dateStart));
+                                this.setYearTo(parseInt(dateEnd));
+                            },
+                            event: 'initialize'
+                        }
+                    ]
                 }
             },
             {
