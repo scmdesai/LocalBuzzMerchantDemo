@@ -66449,7 +66449,7 @@ Ext.define('Ext.picker.Picker', {
                 margin: '0 5 0 5',
                 maxHeight: '',
                 minHeight: '',
-                padding: '10 0 5 10',
+                padding: '10 0 0 15',
                 style: 'font-size:3.5vw;',
                 styleHtmlContent: true,
                 clearIcon: false,
@@ -66461,7 +66461,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-globe',
+                    'icon-globe1',
                     'customfield2'
                 ],
                 disabled: false,
@@ -66470,7 +66470,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: false,
                 itemId: 'websiteDisplayName',
                 margin: '0 5 0 5',
-                padding: '0 0 5 15',
+                padding: '0 0 0 15',
                 style: 'font-size:5vw;font-family: arial',
                 styleHtmlContent: true,
                 width: '95%',
@@ -66482,7 +66482,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-email',
+                    'icon-email1',
                     'customfield2'
                 ],
                 disabled: false,
@@ -66491,7 +66491,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: false,
                 itemId: 'email',
                 margin: '0 5 0 5',
-                padding: '0 0 5 5',
+                padding: '0 0 0 15',
                 style: 'font-size:5vw;font-family: arial',
                 styleHtmlContent: true,
                 width: '95%',
@@ -66536,7 +66536,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'phoneNumber2',
                 itemId: 'phoneNumber',
                 margin: '0 5 0 5',
-                padding: '0 0 5 5',
+                padding: '0 0 0 15',
                 style: 'font-size:4.5vw;font-family: arial;',
                 styleHtmlContent: true,
                 width: '95%',
@@ -67004,7 +67004,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textareafield',
                 cls: [
                     'customfield',
-                    'icon-location1'
+                    'icon-location'
                 ],
                 id: 'address',
                 itemId: 'address',
