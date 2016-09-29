@@ -66437,7 +66437,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textareafield',
                 cls: [
-                    'icon-location1',
+                    'icon-location',
                     'customfield1'
                 ],
                 disabled: false,
@@ -66461,7 +66461,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-globe1',
+                    'icon-globe-white',
                     'customfield2'
                 ],
                 disabled: false,
@@ -66482,7 +66482,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-email1',
+                    'icon-email-white',
                     'customfield2'
                 ],
                 disabled: false,
@@ -66526,7 +66526,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-phone1',
+                    'icon-phone',
                     'customfield2'
                 ],
                 disabled: false,
@@ -68772,7 +68772,10 @@ Ext.define('Ext.picker.Picker', {
                     }
                 ],
                 tabBar: {
-                    cls: 'toolbarCls',
+                    cls: [
+                        'toolbarCls',
+                        'contact-name'
+                    ],
                     docked: 'top'
                 }
             }
