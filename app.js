@@ -69773,7 +69773,14 @@ Ext.define('Ext.picker.Picker', {
                     stretchY: false,
                     useTitles: true,
                     yearFrom: 2016
-                }
+                },
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+                        },
+                        event: 'initialize'
+                    }
+                ]
             },
             {
                 xtype: 'datepickerfield',
