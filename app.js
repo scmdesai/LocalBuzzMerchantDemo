@@ -68921,16 +68921,16 @@ Ext.define('Ext.picker.Picker', {
                 usePicker: true,
                 picker: {
                     itemId: 'mydatepicker3',
-                    styleHtmlContent: true
-                },
-                listeners: [
-                    {
-                        fn: function(component, eOpts) {
-                            this.getPicker().setYearTo(2017);
-                        },
-                        event: 'initialize'
-                    }
-                ]
+                    styleHtmlContent: true,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                this.setYearTo(2017);
+                            },
+                            event: 'initialize'
+                        }
+                    ]
+                }
             },
             {
                 xtype: 'textareafield',
