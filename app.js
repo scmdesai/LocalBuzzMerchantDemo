@@ -67653,7 +67653,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'nameTxt6',
                 itemId: 'nameTxt6',
                 margin: '10 5 5 5',
-                style: 'font-family:Arial;font-size:4vw',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:5.5vw;background:transparent',
                 width: '98%'
             },
             {
@@ -68013,8 +68013,10 @@ Ext.define('Ext.picker.Picker', {
             var businessName = record.get('businessName');
             this.down('#nameTxt1').setHtml(record.get('businessName'));
             this.down('#nameTxt4').setHtml(record.get('dealDescription'));
-            this.down('#nameTxt5').setHtml('Valid from ' + record.get('dealStartDate') + '-' + record.get('dealEndDate'));
-            this.down('#nameTxt6').setHtml(record.get('dealName'));
+            if (record.get('dealImageURL')) {
+                this.down('#nameTxt5').setHtml('Valid from ' + record.get('dealStartDate') + '-' + record.get('dealEndDate'));
+                this.down('#nameTxt6').setHtml(record.get('dealName'));
+            }
             //var store = Ext.getStore('MyJsonPStore');
             //  var rec = store.findRecord('businessName', businessName);
             var rec = Ext.getStore('UserDetails').getAt(0);
@@ -68768,7 +68770,11 @@ Ext.define('Ext.picker.Picker', {
                             }
                         ]
                     }
-                ]
+                ],
+                tabBar: {
+                    cls: 'toolbarCls',
+                    docked: 'top'
+                }
             }
         ],
         tabBar: {
