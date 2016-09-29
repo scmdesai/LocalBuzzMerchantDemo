@@ -66437,7 +66437,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textareafield',
                 cls: [
-                    'icon-location1',
+                    'icon-location',
                     'customfield1'
                 ],
                 disabled: false,
@@ -66461,12 +66461,12 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-globe1',
+                    'icon-globe-white',
                     'customfield2'
                 ],
                 disabled: false,
                 docked: 'bottom',
-                height: '1vh',
+                height: '10vh',
                 hidden: false,
                 itemId: 'websiteDisplayName',
                 margin: '0 5 0 5',
@@ -66482,12 +66482,12 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-email1',
+                    'icon-email-white',
                     'customfield2'
                 ],
                 disabled: false,
                 docked: 'bottom',
-                height: '1vh',
+                height: '10vh',
                 hidden: false,
                 itemId: 'email',
                 margin: '0 5 0 5',
@@ -66526,12 +66526,12 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-phone1',
+                    'icon-phone',
                     'customfield2'
                 ],
                 disabled: false,
                 docked: 'bottom',
-                height: '1vh',
+                height: '10vh',
                 hidden: false,
                 id: 'phoneNumber2',
                 itemId: 'phoneNumber',
@@ -68004,7 +68004,6 @@ Ext.define('Ext.picker.Picker', {
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
-            this.down('#nameTxt6').hide();
         }
     },
     setRecord: function(record) {
@@ -68620,7 +68619,7 @@ Ext.define('Ext.picker.Picker', {
                 iconCls: 'icon-buzzometer',
                 id: 'buzzometer',
                 itemId: 'buzzometer',
-                style: 'font-size:5vw',
+                style: 'font-size:5vw;color:#00529D!important;',
                 styleHtmlContent: true,
                 items: [
                     {
@@ -69661,7 +69660,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'toolbar',
                 cls: 'toolbarCls',
                 docked: 'top',
-                height: '8vh',
+                height: '9vh',
                 ui: 'plain',
                 items: [
                     {
@@ -69669,13 +69668,13 @@ Ext.define('Ext.picker.Picker', {
                         handler: function(button, e) {
                             Ext.Viewport.getComponent('DealImage').destroy();
                         },
-                        iconCls: 'delete',
                         docked: 'right',
                         id: 'close',
                         itemId: 'close',
                         padding: '10 10 10 10',
                         style: 'color:#00529D;font-size:5vw',
-                        ui: 'plain'
+                        ui: 'plain',
+                        iconCls: 'delete'
                     }
                 ]
             }
@@ -70148,6 +70147,7 @@ Ext.define('Ext.picker.Picker', {
     config: {
         id: 'CreateNewBuzzOption',
         itemId: 'CreateNewBuzzOption',
+        style: 'background:white',
         items: [
             {
                 xtype: 'button',
