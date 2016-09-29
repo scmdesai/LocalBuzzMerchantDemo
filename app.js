@@ -67322,32 +67322,21 @@ Ext.define('Ext.picker.Picker', {
                                             customerId: customerId
                                         }
                                     });
-                                    var count = store.getCount() - 1;
-                                    if (count >= 5) {
-                                        Ext.getCmp('UploadDeal').disable();
-                                    } else {
-                                        Ext.getCmp('UploadDeal').enable();
-                                    }
                                 },
                                 failure: function(form, action) {
                                     //Ext.Msg.alert('Oops.....!Something went wrong','Please check your internet connection or try again later',null,null);
                                     Ext.Msg.alert('Failure', action.msg, null, null);
                                     //console.log(action.msg);
                                     var store = Ext.getStore('MyDealsStore');
-                                    /*store.load({
+                                }
+                            });
+                    }
+                }, /*store.load({
 													params: {
 														customerId: customerId
 													}
 												});*/
-                                    if (store.getCount() >= 5) {
-                                        Ext.getCmp('UploadDeal').disable();
-                                    } else {
-                                        Ext.getCmp('UploadDeal').enable();
-                                    }
-                                }
-                            });
-                    }
-                }, this);
+                this);
             } else {
                 var store = Ext.getStore('MyDealsStore');
                 var record = store.getAt(index);
@@ -68099,6 +68088,12 @@ Ext.define('Ext.picker.Picker', {
                 customerId: customerId
             }
         });
+        var storeCount = dealStore.getCount();
+        if (storeCount >= 5) {
+            Ext.getCmp('UploadDeal').setDisabled(true);
+        } else {
+            Ext.getCmp('UploadDeal').setDisabled(false);
+        }
     },
     initialize: function() {
         Ext.form.Panel.prototype.initialize.call(this);
@@ -68114,13 +68109,6 @@ Ext.define('Ext.picker.Picker', {
 
 		});*/
         var store = Ext.getStore('MyDealsStore');
-        //store.clearFilter();
-        //store.filter('customerId',customerId);
-        if (store.getCount() >= 5) {
-            Ext.getCmp('UploadDeal').disable();
-        } else {
-            Ext.getCmp('UploadDeal').enable();
-        }
     }
 }, 0, [
     "DealsPanel"
@@ -68142,6 +68130,8 @@ Ext.define('Ext.picker.Picker', {
     LocalBuzzMerchantDemo.view,
     'DealsPanel'
 ], 0));
+//store.clearFilter();
+//store.filter('customerId',customerId);
 
 /*
  * File: app/view/Login.js
@@ -69391,13 +69381,8 @@ Ext.define('Ext.picker.Picker', {
                         handler: function(button, e) {
                             Ext.Viewport.getActiveItem().destroy();
                             var store = Ext.getStore('MyDealsStore');
-                            //store.load();
-                            if (store.getCount() >= 5) {
-                                Ext.getCmp('UploadDeal').disable();
-                            } else {
-                                Ext.getCmp('UploadDeal').enable();
-                            }
                         },
+                        //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
                         style: 'font-size:5vw!important',
@@ -69435,13 +69420,6 @@ Ext.define('Ext.picker.Picker', {
                                                                 customerId: customerId
                                                             }
                                                         });
-                                                        var count = store.getCount() + 1;
-                                                        console.log('Count is:' + count);
-                                                        if (count > 4) {
-                                                            Ext.getCmp('UploadDeal').disable();
-                                                        } else {
-                                                            Ext.getCmp('UploadDeal').enable();
-                                                        }
                                                         form.destroy();
                                                     },
                                                     failure: function(form, action) {
@@ -69453,11 +69431,6 @@ Ext.define('Ext.picker.Picker', {
 														customerId: customerId
 														}
 														});*/
-                                                        if (store.getCount() >= 5) {
-                                                            Ext.getCmp('UploadDeal').disable();
-                                                        } else {
-                                                            Ext.getCmp('UploadDeal').enable();
-                                                        }
                                                         form.destroy();
                                                     }
                                                 });
@@ -69924,14 +69897,9 @@ Ext.define('Ext.picker.Picker', {
                         xtype: 'button',
                         handler: function(button, e) {
                             Ext.Viewport.getActiveItem().destroy();
-                            var store = Ext.getStore('MyDealsStore');
-                            //store.load();
-                            if (store.getCount() >= 5) {
-                                Ext.getCmp('UploadDeal').disable();
-                            } else {
-                                Ext.getCmp('UploadDeal').enable();
-                            }
                         },
+                        //var store = Ext.getStore('MyDealsStore');
+                        //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
                         style: 'font-size:5vw!important',
@@ -69965,14 +69933,6 @@ Ext.define('Ext.picker.Picker', {
                                                             customerId: customerId
                                                         }
                                                     });
-                                                    var count = store.getCount() + 1;
-                                                    console.log('Count is:' + count);
-                                                    if (count > 4) {
-                                                        console.log('Disabling btn');
-                                                        Ext.getCmp('UploadDeal').disable();
-                                                    } else {
-                                                        Ext.getCmp('UploadDeal').enable();
-                                                    }
                                                     form.destroy();
                                                 },
                                                 failure: function(form, action) {
@@ -69985,11 +69945,6 @@ Ext.define('Ext.picker.Picker', {
 													}
 													});*/
                                                     console.log('Count is:' + count);
-                                                    if (store.getCount() >= 5) {
-                                                        Ext.getCmp('UploadDeal').disable();
-                                                    } else {
-                                                        Ext.getCmp('UploadDeal').enable();
-                                                    }
                                                     form.destroy();
                                                 }
                                             });
