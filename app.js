@@ -69278,17 +69278,17 @@ Ext.define('Ext.picker.Picker', {
                     stretchX: false,
                     stretchY: false,
                     useTitles: true,
-                    yearFrom: 2016
-                },
-                listeners: [
-                    {
-                        fn: function(component, eOpts) {
-                            this.setYearFrom(parstInt(new Date().getFullYear()));
-                        },
-                        //this.setYearTo(parstInt(new Date().getFullYear()+1));
-                        event: 'initialize'
-                    }
-                ]
+                    yearFrom: 2016,
+                    listeners: [
+                        {
+                            fn: function(component, eOpts) {
+                                this.setYearFrom(parstInt(new Date().getFullYear()));
+                            },
+                            //this.setYearTo(parstInt(new Date().getFullYear()+1));
+                            event: 'initialize'
+                        }
+                    ]
+                }
             },
             {
                 xtype: 'datepickerfield',
@@ -69854,7 +69854,7 @@ Ext.define('Ext.picker.Picker', {
                     listeners: [
                         {
                             fn: function(component, eOpts) {
-                                this.setYearFrom(parstInt(new Date().getFullYear()));
+                                //this.setYearFrom(parstInt(new Date().getFullYear()));
                                 this.setYearTo(parstInt(new Date().getFullYear() + 1));
                             },
                             event: 'initialize'
