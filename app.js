@@ -68926,7 +68926,7 @@ Ext.define('Ext.picker.Picker', {
                         {
                             fn: function(component, eOpts) {
                                 //this.setYearFrom(parstInt(new Date().getFullYear()));
-                                this.setYearTo(parstInt(new Date().getFullYear() + 1));
+                                component.setYearTo(parstInt(new Date().getFullYear() + 1));
                             },
                             event: 'initialize'
                         }
@@ -69780,7 +69780,8 @@ Ext.define('Ext.picker.Picker', {
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    useTitles: true
+                    useTitles: true,
+                    yearFrom: 2016
                 }
             },
             {
@@ -69814,7 +69815,8 @@ Ext.define('Ext.picker.Picker', {
                 },
                 picker: {
                     itemId: 'mydatepicker3',
-                    useTitles: true
+                    useTitles: true,
+                    yearFrom: 2016
                 }
             },
             {
