@@ -68619,7 +68619,7 @@ Ext.define('Ext.picker.Picker', {
                 iconCls: 'icon-buzzometer',
                 id: 'buzzometer',
                 itemId: 'buzzometer',
-                style: 'font-size:5vw;color:#00529D!important;',
+                style: 'font-size:5vw',
                 styleHtmlContent: true,
                 items: [
                     {
@@ -68772,7 +68772,10 @@ Ext.define('Ext.picker.Picker', {
                     }
                 ],
                 tabBar: {
-                    cls: 'toolbarCls',
+                    cls: [
+                        'toolbarCls',
+                        'contact-name'
+                    ],
                     docked: 'top'
                 }
             }
