@@ -68896,16 +68896,7 @@ Ext.define('Ext.picker.Picker', {
                     style: '',
                     scrollable: false,
                     stretchX: false,
-                    stretchY: false,
-                    listeners: [
-                        {
-                            fn: function(component, eOpts) {
-                                this.setYearFrom(parstInt(new Date().getFullYear()));
-                            },
-                            //this.setYearTo(parstInt(new Date().getFullYear()+1));
-                            event: 'initialize'
-                        }
-                    ]
+                    stretchY: false
                 }
             },
             {
@@ -68934,7 +68925,7 @@ Ext.define('Ext.picker.Picker', {
                     listeners: [
                         {
                             fn: function(component, eOpts) {
-                                this.setYearFrom(parstInt(new Date().getFullYear()));
+                                //this.setYearFrom(parstInt(new Date().getFullYear()));
                                 this.setYearTo(parstInt(new Date().getFullYear() + 1));
                             },
                             event: 'initialize'
@@ -69278,16 +69269,7 @@ Ext.define('Ext.picker.Picker', {
                     stretchX: false,
                     stretchY: false,
                     useTitles: true,
-                    yearFrom: 2016,
-                    listeners: [
-                        {
-                            fn: function(component, eOpts) {
-                                this.setYearFrom(parstInt(new Date().getFullYear()));
-                            },
-                            //this.setYearTo(parstInt(new Date().getFullYear()+1));
-                            event: 'initialize'
-                        }
-                    ]
+                    yearFrom: 2016
                 }
             },
             {
@@ -69323,16 +69305,7 @@ Ext.define('Ext.picker.Picker', {
                 },
                 picker: {
                     itemId: 'mydatepicker3',
-                    useTitles: true,
-                    listeners: [
-                        {
-                            fn: function(component, eOpts) {
-                                this.setYearFrom(parstInt(new Date().getFullYear()));
-                                this.setYearTo(parstInt(new Date().getFullYear() + 1));
-                            },
-                            event: 'initialize'
-                        }
-                    ]
+                    useTitles: true
                 }
             },
             {
@@ -69807,16 +69780,7 @@ Ext.define('Ext.picker.Picker', {
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    useTitles: true,
-                    listeners: [
-                        {
-                            fn: function(component, eOpts) {
-                                this.setYearFrom(parstInt(new Date().getFullYear()));
-                            },
-                            //this.setYearTo(parstInt(new Date().getFullYear()+1));
-                            event: 'initialize'
-                        }
-                    ]
+                    useTitles: true
                 }
             },
             {
@@ -69850,16 +69814,7 @@ Ext.define('Ext.picker.Picker', {
                 },
                 picker: {
                     itemId: 'mydatepicker3',
-                    useTitles: true,
-                    listeners: [
-                        {
-                            fn: function(component, eOpts) {
-                                //this.setYearFrom(parstInt(new Date().getFullYear()));
-                                this.setYearTo(parstInt(new Date().getFullYear() + 1));
-                            },
-                            event: 'initialize'
-                        }
-                    ]
+                    useTitles: true
                 }
             },
             {
