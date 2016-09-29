@@ -68925,7 +68925,10 @@ Ext.define('Ext.picker.Picker', {
                     listeners: [
                         {
                             fn: function(component, eOpts) {
-                                this.setYearTo(2017);
+                                var dateStart = (new Date().getFullYear()).toString();
+                                var dateEnd = (new Date().getFullYear() + 1).toString();
+                                this.setYearFrom(parseInt(dateStart));
+                                this.setYearTo(parseInt(dateEnd));
                             },
                             event: 'initialize'
                         }
