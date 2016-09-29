@@ -69777,7 +69777,7 @@ Ext.define('Ext.picker.Picker', {
                 listeners: [
                     {
                         fn: function(component, eOpts) {
-                            component.setYearTo(parseInt(new Date().getFullYear() + 1));
+                            component.element.setYearTo(parseInt(new Date().getFullYear() + 1));
                         },
                         event: 'initialize'
                     }
