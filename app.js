@@ -69259,12 +69259,13 @@ Ext.define('Ext.picker.Picker', {
                     scrollable: false,
                     stretchX: false,
                     stretchY: false,
-                    useTitles: true
+                    useTitles: true,
+                    yearFrom: 2016
                 },
                 listeners: [
                     {
                         fn: function(component, eOpts) {
-                            Ext.getCmp('DealStartDate3').getPicker().setYearFrom(new Date().getFullYear());
+                            //Ext.getCmp('DealStartDate3').getPicker().setYearFrom(new Date().getFullYear());
                             Ext.getCmp('DealStartDate3').getPicker().setYearTo(new Date().getFullYear() + 1);
                         },
                         event: 'initialize'
@@ -69514,6 +69515,7 @@ Ext.define('Ext.picker.Picker', {
         ]
     },
     onMydatepicker3Pick: function(picker, value, slot, eOpts) {
+        console.log(value);
         var today = new Date();
         if (value < today) {
             picker.setValue(today);
