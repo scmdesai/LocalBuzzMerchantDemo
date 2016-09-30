@@ -68754,7 +68754,7 @@ Ext.define('Ext.picker.Picker', {
                                             }
                                             // Set chart options
                                             var options = {
-                                                    'pieHole': 0.4,
+                                                    'pieHole': 0.6,
                                                     'pieSliceTextStyle': {
                                                         color: 'black'
                                                     },
@@ -68764,13 +68764,6 @@ Ext.define('Ext.picker.Picker', {
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
                                             chart.draw(data, options);
-                                            var myScroll1 = new IScroll('#mypanel1', {
-                                                    zoom: true,
-                                                    scrollX: true,
-                                                    scrollY: true,
-                                                    mouseWheel: true,
-                                                    wheelAction: 'zoom'
-                                                });
                                         });
                                     }
                                 },
