@@ -66449,7 +66449,7 @@ Ext.define('Ext.picker.Picker', {
                 margin: '0 5 0 5',
                 maxHeight: '',
                 minHeight: '',
-                padding: '10 0 0 15',
+                padding: '10 0 0 10',
                 style: 'font-size:3.5vw;',
                 styleHtmlContent: true,
                 clearIcon: false,
