@@ -67184,7 +67184,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#phoneNumber').setValue(record.data.phoneNumber);
             this.down('#address').setValue(record.data.address);
             //this.child('contactpic').setData(record.data);
-            this.down('#storeImage1').setHtml('<div class="w3-display-container w3-text-w3-light-grey"><img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/><div class="w3-display-bottomleft w3-container"><p style="color:grey">+</p></div></div>');
+            this.down('#storeImage1').setHtml('<div class="w3-display-container w3-text-w3-light-grey"><img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/><div class="w3-display-bottomleft w3-container"><button style="color:grey">+</button></div></div>');
         }
     }
 }, 0, [
