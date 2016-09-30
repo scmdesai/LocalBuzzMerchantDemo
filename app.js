@@ -66384,7 +66384,7 @@ Ext.define('Ext.picker.Picker', {
         style: 'background;#fff',
         styleHtmlContent: true,
         modal: true,
-        scrollable: false,
+        scrollable: true,
         layout: {
             type: 'vbox',
             align: 'stretchmax'
@@ -66435,48 +66435,23 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'storeImage'
             },
             {
-                xtype: 'textareafield',
-                cls: [
-                    'customfield2',
-                    'icon-location'
-                ],
-                disabled: false,
-                docked: 'bottom',
-                height: '10vh',
-                hidden: false,
-                html: '',
-                itemId: 'address',
-                margin: '0 5 0 5',
-                maxHeight: '',
-                minHeight: '',
-                padding: '10 0 0 10',
-                style: 'font-size:3.5vw;',
-                styleHtmlContent: true,
-                clearIcon: false,
-                labelCls: '',
-                name: 'address',
-                placeHolder: 'Not Listed',
-                readOnly: true,
-                maxRows: 2
-            },
-            {
                 xtype: 'textfield',
                 cls: [
-                    'icon-globe1',
-                    'customfield2'
+                    'icon-phone1',
+                    'w3-card-4'
                 ],
                 disabled: false,
-                docked: 'bottom',
                 height: '10vh',
                 hidden: false,
-                itemId: 'websiteDisplayName',
-                margin: '0 5 0 5',
-                padding: '0 0 0 15',
-                style: 'font-size:5vw;font-family: arial',
+                id: 'phoneNumber2',
+                itemId: 'phoneNumber',
+                margin: '0 0 2 0',
+                padding: '5 0 0 15',
+                style: 'font-size:4.5vw;font-family: arial;',
                 styleHtmlContent: true,
-                width: '95%',
+                width: '100%',
                 clearIcon: false,
-                name: 'websiteDisplayName',
+                name: 'phoneNumber',
                 placeHolder: 'Not Listed',
                 readOnly: true
             },
@@ -66484,23 +66459,68 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'textfield',
                 cls: [
                     'icon-email1',
-                    'customfield2'
+                    'customfield2',
+                    'w3-card-4'
                 ],
                 disabled: false,
-                docked: 'bottom',
                 height: '10vh',
                 hidden: false,
                 itemId: 'email',
-                margin: '0 5 0 5',
-                padding: '0 0 0 15',
+                margin: '2 0 2 0',
+                padding: '5 0 0 15',
                 style: 'font-size:5vw;font-family: arial',
                 styleHtmlContent: true,
-                width: '95%',
+                width: '100%',
                 clearIcon: false,
                 label: '',
                 name: 'emailAddress',
                 placeHolder: 'Not Listed',
                 readOnly: true
+            },
+            {
+                xtype: 'textfield',
+                cls: [
+                    'icon-globe1',
+                    'w3-card-4'
+                ],
+                disabled: false,
+                height: '10vh',
+                hidden: false,
+                itemId: 'websiteDisplayName',
+                margin: '2 0 2 0',
+                padding: '5 0 0 20',
+                style: 'font-size:5vw;font-family: arial',
+                styleHtmlContent: true,
+                width: '100%',
+                clearIcon: false,
+                name: 'websiteDisplayName',
+                placeHolder: 'Not Listed',
+                readOnly: true
+            },
+            {
+                xtype: 'textareafield',
+                cls: [
+                    'icon-location',
+                    'w3-card-4'
+                ],
+                disabled: false,
+                height: '15vh',
+                hidden: false,
+                html: '',
+                itemId: 'address',
+                margin: '2 0 2 0',
+                maxHeight: '',
+                minHeight: '',
+                padding: '10 0 0 10',
+                style: 'font-size:5vw;font-family: arial',
+                styleHtmlContent: true,
+                width: '100%',
+                clearIcon: false,
+                labelCls: '',
+                name: 'address',
+                placeHolder: 'Not Listed',
+                readOnly: true,
+                maxRows: 2
             },
             {
                 xtype: 'textfield',
@@ -66521,28 +66541,6 @@ Ext.define('Ext.picker.Picker', {
                 clearIcon: false,
                 label: '',
                 name: 'loginEmail',
-                placeHolder: 'Not Listed',
-                readOnly: true
-            },
-            {
-                xtype: 'textfield',
-                cls: [
-                    'icon-phone1',
-                    'customfield2'
-                ],
-                disabled: false,
-                docked: 'bottom',
-                height: '10vh',
-                hidden: false,
-                id: 'phoneNumber2',
-                itemId: 'phoneNumber',
-                margin: '0 5 0 5',
-                padding: '0 0 0 15',
-                style: 'font-size:4.5vw;font-family: arial;',
-                styleHtmlContent: true,
-                width: '95%',
-                clearIcon: false,
-                name: 'phoneNumber',
                 placeHolder: 'Not Listed',
                 readOnly: true
             },
