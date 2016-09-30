@@ -68754,12 +68754,12 @@ Ext.define('Ext.picker.Picker', {
                                             }
                                             // Set chart options
                                             var options = {
-                                                    'pieHole': 0.6,
+                                                    'pieHole': 0.4,
                                                     'pieSliceTextStyle': {
                                                         color: 'black'
                                                     },
-                                                    height: '550',
-                                                    width: '375'
+                                                    height: '650',
+                                                    width: '400'
                                                 };
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
