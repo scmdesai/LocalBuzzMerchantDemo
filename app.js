@@ -66819,7 +66819,16 @@ Ext.define('Ext.picker.Picker', {
             '<tpl else>\t',
             '<div class= dateValidity >Valid {dealStartDate} to {dealEndDate}</div></tpl>',
             ''
+        ],
+        listeners: [
+            {
+                fn: 'onListOfDealsRemove',
+                event: 'remove'
+            }
         ]
+    },
+    onListOfDealsRemove: function(container, item, index, eOpts) {
+        console.log(item + " " + index);
     }
 }, 0, [
     "listofdeals"
@@ -66955,11 +66964,11 @@ Ext.define('Ext.picker.Picker', {
                     view.showBy(button);
                 },
                 height: '20%',
-                hidden: true,
+                hidden: false,
                 id: 'changePicButton',
                 left: '0px',
                 margin: '5 5 5 5',
-                style: 'opacity:0.5;position:absolute',
+                style: 'opacity:0.5;position:absolute;',
                 top: '-1%',
                 ui: 'plain',
                 width: '20%',
@@ -67184,7 +67193,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#phoneNumber').setValue(record.data.phoneNumber);
             this.down('#address').setValue(record.data.address);
             //this.child('contactpic').setData(record.data);
-            this.down('#storeImage1').setHtml('<div class="w3-display-container w3-text-w3-light-grey"><img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/><button class="w3-btn">+</button></div>');
+            this.down('#storeImage1').setHtml('<div><img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/></div>');
         }
     }
 }, 0, [
@@ -68122,8 +68131,8 @@ Ext.define('Ext.picker.Picker', {
             }
         ]
     },
-    onDealsPanelActivate: function(newActiveItem, container, oldActiveItem, eOpts) {},
-    /*var storeUserDetails = Ext.getStore('UserDetails');
+    onDealsPanelActivate: function(newActiveItem, container, oldActiveItem, eOpts) {
+        /*var storeUserDetails = Ext.getStore('UserDetails');
 		storeUserDetails.load();
 		var customerId;
 		var businessName;
@@ -68140,6 +68149,15 @@ Ext.define('Ext.picker.Picker', {
 		var store = Ext.getStore('MyDealsStore');
 		store.clearFilter();
 		store.filter('customerId',customerId);*/
+        var dealStore = Ext.getStore('MyDealsStore');
+        var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
+        //dealStore.filter('customerId',customerId);
+        dealStore.load({
+            params: {
+                customerId: customerId
+            }
+        });
+    },
     onDealsPanelPainted: function(element, eOpts) {
         /*var store = Ext.getStore('MyDealsStore');
 		store.load();*/
