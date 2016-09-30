@@ -68757,8 +68757,8 @@ Ext.define('Ext.picker.Picker', {
                                                     'pieSliceTextStyle': {
                                                         color: 'black'
                                                     },
-                                                    height: '10em',
-                                                    width: '10em'
+                                                    height: '100em',
+                                                    width: '100em'
                                                 };
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
