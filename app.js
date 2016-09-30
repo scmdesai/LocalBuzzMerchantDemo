@@ -66504,7 +66504,7 @@ Ext.define('Ext.picker.Picker', {
                     'w3-card-4'
                 ],
                 disabled: false,
-                height: '16vh',
+                height: '12vh',
                 hidden: false,
                 html: '',
                 itemId: 'address',
