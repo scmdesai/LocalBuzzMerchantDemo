@@ -67134,7 +67134,7 @@ Ext.define('Ext.picker.Picker', {
                                 //var record = Ext.getStore('MyJsonPStore').findRecord('customerId',customerId,0,true,false,false);
                                 var record = Ext.getStore('UserDetails').getAt(0);
                                 view.setRecord(record);
-                                view.showBy(Ext.getCmp('changePicBtn'));
+                                view.showBy(element);
                             });
                         },
                         event: 'painted'
@@ -67184,7 +67184,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#phoneNumber').setValue(record.data.phoneNumber);
             this.down('#address').setValue(record.data.address);
             //this.child('contactpic').setData(record.data);
-            this.down('#storeImage1').setHtml('<div class="w3-display-container w3-text-w3-light-grey"><img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/><button id="changePicBtn" class="w3-btn">+</button></div>');
+            this.down('#storeImage1').setHtml('<div class="w3-display-container w3-text-w3-light-grey"><img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/><div class="w3-display-bottomleft w3-container"><p style="color:grey">+</p></div></div>');
         }
     }
 }, 0, [
