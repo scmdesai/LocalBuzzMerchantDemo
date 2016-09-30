@@ -68708,6 +68708,7 @@ Ext.define('Ext.picker.Picker', {
                         title: 'User Location',
                         height: '100%',
                         html: '<div id="chart2"></div>',
+                        id: 'mypanel1',
                         itemId: 'mypanel1',
                         styleHtmlContent: true,
                         scrollable: true,
@@ -68763,6 +68764,13 @@ Ext.define('Ext.picker.Picker', {
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
                                             chart.draw(data, options);
+                                            var myScroll1 = new IScroll('#mypanel1', {
+                                                    zoom: true,
+                                                    scrollX: true,
+                                                    scrollY: true,
+                                                    mouseWheel: true,
+                                                    wheelAction: 'zoom'
+                                                });
                                         });
                                     }
                                 },
