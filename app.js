@@ -68001,7 +68001,7 @@ Ext.define('Ext.picker.Picker', {
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
         } else {
-            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:none"/><br><div style="font-size:6vw;">' + record.get('dealName') + '</div><br><div style="font-size:4vw;">' + record.get('dealDescription') + '</div><div style="font-size:3vw;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
+            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:none"/><br><div style="font-size:6vw;">' + record.get('dealName') + '</div><br><div style="font-size:4vw;">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
