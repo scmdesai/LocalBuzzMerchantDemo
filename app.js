@@ -66504,7 +66504,7 @@ Ext.define('Ext.picker.Picker', {
                     'w3-card-4'
                 ],
                 disabled: false,
-                height: '12vh',
+                height: '10vh',
                 hidden: false,
                 html: '',
                 itemId: 'address',
@@ -66955,6 +66955,7 @@ Ext.define('Ext.picker.Picker', {
                     view.showBy(button);
                 },
                 height: '20%',
+                hidden: true,
                 id: 'changePicButton',
                 left: '0px',
                 margin: '5 5 5 5',
@@ -67122,7 +67123,23 @@ Ext.define('Ext.picker.Picker', {
                 docked: 'top',
                 height: '40vh',
                 id: 'storeImage1',
-                itemId: 'storeImage1'
+                itemId: 'storeImage1',
+                listeners: [
+                    {
+                        fn: function(element, eOpts) {
+                            element.addListener('tap', function() {
+                                var view = Ext.Viewport.add({
+                                        xtype: 'ChangeContactPicForm'
+                                    });
+                                //var record = Ext.getStore('MyJsonPStore').findRecord('customerId',customerId,0,true,false,false);
+                                var record = Ext.getStore('UserDetails').getAt(0);
+                                view.setRecord(record);
+                                view.showBy(Ext.getCmp('changePicBtn'));
+                            });
+                        },
+                        event: 'painted'
+                    }
+                ]
             }
         ],
         listeners: [
@@ -67167,7 +67184,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#phoneNumber').setValue(record.data.phoneNumber);
             this.down('#address').setValue(record.data.address);
             //this.child('contactpic').setData(record.data);
-            this.down('#storeImage1').setHtml('<img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/>');
+            this.down('#storeImage1').setHtml('<div class="w3-display-container w3-text-w3-light-grey"><img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/><button id="changePicBtn" class="w3-btn">+</button></div>');
         }
     }
 }, 0, [
