@@ -67512,8 +67512,15 @@ Ext.define('Ext.picker.Picker', {
     },
     onUploadDealTap: function(button, e, eOpts) {
         var store = Ext.getStore('MyDealsStore');
-        if (store.getCount >= 5) {
-            Ext.Msg.alert('Max limit reached', 'Only 5 active buzz per account allowed');
+        var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
+        //dealStore.filter('customerId',customerId);
+        store.load({
+            params: {
+                customerId: customerId
+            }
+        });
+        if (store.getCount() >= 5) {
+            Ext.Msg.alert('Max limit reached', 'Only 5 active buzz per account allowed', null, null);
         } else {
             var view = Ext.Viewport.add({
                     xtype: 'CreateNewBuzzOption'
