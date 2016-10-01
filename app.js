@@ -67511,22 +67511,15 @@ Ext.define('Ext.picker.Picker', {
         Ext.Viewport.setActiveItem(info);
     },
     onUploadDealTap: function(button, e, eOpts) {
-        var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
-        Ext.Ajax.request({
-            method: 'GET',
-            url: 'http://services.appsonmobile.com/demoDeals/' + customerId,
-            success: function(form, action) {
-                console.log(action.msg);
-                if (parseInt(action.msg) >= 5) {
-                    Ext.Msg.alert('Max limit reached', 'Only 5 active buzz per account', null, null);
-                } else {
-                    var view = Ext.Viewport.add({
-                            xtype: 'CreateNewBuzzOption'
-                        });
-                    Ext.Viewport.setActiveItem(view);
-                }
-            }
-        });
+        var store = Ext.getStore('MyDealsStore');
+        if (store.getCount >= 5) {
+            Ext.Msg.alert('Max limit reached', 'Only 5 active buzz per account allowed');
+        } else {
+            var view = Ext.Viewport.add({
+                    xtype: 'CreateNewBuzzOption'
+                });
+            Ext.Viewport.setActiveItem(view);
+        }
     },
     //view.showBy(button);
     onShareTap: function(button, e, eOpts) {
