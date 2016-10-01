@@ -66208,15 +66208,16 @@ Ext.define('Ext.picker.Picker', {
         var storeCount = store.getCount();
         console.log(Ext.getCmp('UploadDeal').isDisabled());
         console.log(storeCount);
+        var btn = Ext.ComponentQuery.query('DealsPanel > UploadDeal');
         if (storeCount >= 5) {
-            Ext.getCmp('DealsPanel').down('#UploadDeal').setDisabled(true);
+            btn.disable();
             //Ext.getCmp('UploadDeal').setDisabled(true);
             //Ext.getCmp('UploadDeal').disable();
             //Ext.getCmp('DealsPanelContainer').disable();
             console.log('disabling');
         } else {
             // Ext.getCmp('UploadDeal').setDisabled(false);
-            Ext.getCmp('DealsPanel').down('#UploadDeal').setDisabled(false);
+            btn.enable();
             //Ext.getCmp('DealsPanelContainer').enable();
             console.log('enabling');
         }
