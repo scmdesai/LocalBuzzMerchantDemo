@@ -68167,6 +68167,7 @@ Ext.define('Ext.picker.Picker', {
 		var store = Ext.getStore('MyDealsStore');
 		store.clearFilter();
 		store.filter('customerId',customerId);*/
+        Ext.getCmp('UploadDeal').disable();
         var dealStore = Ext.getStore('MyDealsStore');
         var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
         //dealStore.filter('customerId',customerId);
@@ -68179,6 +68180,7 @@ Ext.define('Ext.picker.Picker', {
     onDealsPanelPainted: function(element, eOpts) {
         /*var store = Ext.getStore('MyDealsStore');
 		store.load();*/
+        Ext.getCmp('UploadDeal').disable();
         var dealStore = Ext.getStore('MyDealsStore');
         var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
         //dealStore.filter('customerId',customerId);
