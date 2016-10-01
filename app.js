@@ -69683,7 +69683,7 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('LocalBuzzMerchantDemo.view.DealImage', Ext.Panel, {
     config: {
-        height: '80%',
+        height: '100%',
         id: 'DealImage',
         itemId: 'DealImage',
         style: 'background:#FFF;border:1px solid #00529D',
