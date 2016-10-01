@@ -66209,16 +66209,18 @@ Ext.define('Ext.picker.Picker', {
         console.log(storeCount);
         if (storeCount >= 5) {
             Ext.getCmp('UploadDeal').setDisabled(true);
-        } else //Ext.getCmp('UploadDeal').disable();
-        {
+            Ext.getCmp('UploadDeal').disable();
+            console.log(disabling);
+        } else {
             Ext.getCmp('UploadDeal').setDisabled(false);
+            Ext.getCmp('UploadDeal').enable();
+            console.log(enabling);
         }
     }
 }, 0, 0, 0, 0, 0, 0, [
     LocalBuzzMerchantDemo.store,
     'MyDealsStore'
 ], 0));
-// Ext.getCmp('UploadDeal').enable();
 
 /*
  * File: app/store/UserDetails.js
