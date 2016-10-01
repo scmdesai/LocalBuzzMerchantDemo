@@ -67343,6 +67343,7 @@ Ext.define('Ext.picker.Picker', {
         });
         Ext.getStore('LocalStore').removeAt(0);
         Ext.Viewport.getActiveItem().destroy();
+        Ext.Viewport.setActiveItem(Ext.Viewport.getComponent('DealsPanel'));
     },
     onListOfDealsItemTap: function(dataview, index, target, record, e, eOpts) {
         var recordsToDelete = [];
