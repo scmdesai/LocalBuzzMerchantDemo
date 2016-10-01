@@ -67333,7 +67333,7 @@ Ext.define('Ext.picker.Picker', {
     //var ds = Ext.StoreManager.lookup('MyJsonPStore');
     //ds.clearFilter();
     onDealBackBtnTap: function(button, e, eOpts) {
-        console.log(Ext.getCmp('UploadDeal').isDisabled());
+        //console.log(Ext.getCmp('UploadDeal').isDisabled());
         var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
         var store = Ext.getStore('MyDealsStore');
         store.load({
