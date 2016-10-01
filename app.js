@@ -67343,7 +67343,6 @@ Ext.define('Ext.picker.Picker', {
         });
         Ext.getStore('LocalStore').removeAt(0);
         Ext.Viewport.getActiveItem().destroy();
-        Ext.Viewport.setActiveItem(Ext.Viewport.getComponent('DealsPanel'));
     },
     onListOfDealsItemTap: function(dataview, index, target, record, e, eOpts) {
         var recordsToDelete = [];
@@ -67370,6 +67369,7 @@ Ext.define('Ext.picker.Picker', {
                                             customerId: customerId
                                         }
                                     });
+                                    Ext.Viewport.setActiveItem(Ext.Viewport.getComponent('DealsPanel'));
                                 },
                                 failure: function(form, action) {
                                     //Ext.Msg.alert('Oops.....!Something went wrong','Please check your internet connection or try again later',null,null);
@@ -69561,6 +69561,7 @@ Ext.define('Ext.picker.Picker', {
                                                             }
                                                         });
                                                         form.destroy();
+                                                        Ext.Viewport.setActiveItem(Ext.Viewport.getComponent('DealsPanel'));
                                                     },
                                                     failure: function(form, action) {
                                                         //console.log('Action is '+action);
@@ -70098,6 +70099,7 @@ Ext.define('Ext.picker.Picker', {
                                                         }
                                                     });
                                                     form.destroy();
+                                                    Ext.Viewport.setActiveItem(Ext.Viewport.getComponent('DealsPanel'));
                                                 },
                                                 failure: function(form, action) {
                                                     //Ext.Msg.alert('Oops.....!Something went wrong','Please check your internet connection or try again later',null,null);
