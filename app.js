@@ -67515,6 +67515,7 @@ Ext.define('Ext.picker.Picker', {
             method: 'GET',
             url: 'http://services.appsonmobile.com/demoDeals/' + customerId,
             success: function(form, action) {
+                console.log(action.msg);
                 if (parseInt(action.msg) >= 5) {
                     Ext.Msg.alert('Max limit reached', 'Only 5 active buzz per account', null, null);
                 } else {
