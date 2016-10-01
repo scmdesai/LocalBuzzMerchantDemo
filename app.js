@@ -66206,6 +66206,7 @@ Ext.define('Ext.picker.Picker', {
     },
     onJsonstoreLoad: function(store, records, successful, operation, eOpts) {
         var storeCount = store.getCount();
+        console.log(storeCount);
         if (storeCount >= 5) {
             Ext.getCmp('UploadDeal').setDisabled(true);
         } else {
