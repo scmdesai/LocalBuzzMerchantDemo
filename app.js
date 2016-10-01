@@ -66208,15 +66208,17 @@ Ext.define('Ext.picker.Picker', {
         var storeCount = store.getCount();
         console.log(storeCount);
         if (storeCount >= 5) {
-            Ext.get('UploadDeal').setDisabled(true);
-        } else {
-            Ext.get('UploadDeal').setDisabled(false);
+            Ext.getCmp('UploadDeal').setDisabled(true);
+        } else //Ext.getCmp('UploadDeal').disable();
+        {
+            Ext.getCmp('UploadDeal').setDisabled(false);
         }
     }
 }, 0, 0, 0, 0, 0, 0, [
     LocalBuzzMerchantDemo.store,
     'MyDealsStore'
 ], 0));
+// Ext.getCmp('UploadDeal').enable();
 
 /*
  * File: app/store/UserDetails.js
@@ -67336,6 +67338,13 @@ Ext.define('Ext.picker.Picker', {
     //var ds = Ext.StoreManager.lookup('MyJsonPStore');
     //ds.clearFilter();
     onDealBackBtnTap: function(button, e, eOpts) {
+        var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
+        var store = Ext.getStore('MyDealsStore');
+        store.load({
+            params: {
+                customerId: customerId
+            }
+        });
         Ext.getStore('LocalStore').removeAt(0);
         Ext.Viewport.getActiveItem().destroy();
     },
