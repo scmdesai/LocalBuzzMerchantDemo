@@ -66209,12 +66209,12 @@ Ext.define('Ext.picker.Picker', {
         console.log(storeCount);
         if (storeCount >= 5) {
             Ext.getCmp('UploadDeal').setDisabled(true);
-            //Ext.getCmp('UploadDeal').disable();
-            console.log(disabling);
+            Ext.getCmp('UploadDeal').disable();
+            console.log('disabling');
         } else {
             Ext.getCmp('UploadDeal').setDisabled(false);
-            //Ext.getCmp('UploadDeal').enable();
-            console.log(enabling);
+            Ext.getCmp('UploadDeal').enable();
+            console.log('enabling');
         }
     }
 }, 0, 0, 0, 0, 0, 0, [
