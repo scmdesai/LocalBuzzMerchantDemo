@@ -67702,23 +67702,23 @@ Ext.define('Ext.picker.Picker', {
                             var record = Ext.getStore('LocalStore').getAt(0);
                             if (record.get('dealImageURL')) {
                                 var dealImageURL = record.get('dealImageURL').toString();
-                                var fileFormatIndex = dealImageURL.lastIndexOf('.');
-                                var fileFormat = dealImageURL.substring(fileFormatIndex + 1, dealImageURL.length);
-                                if (fileFormat === 'jpg') {
-                                    element.addListener('tap', function() {
-                                        console.log('DealImage Tap');
-                                        var view = Ext.Viewport.add({
-                                                xtype: 'DealImage'
-                                            });
-                                        view.setRecord(record);
-                                        view.showBy(Ext.get('dealPicture'));
-                                    });
-                                }
-                            } else /* else {
-									if(Ext.os.is('Android')){
-									window.plugins.html5Video.initialize( { "video1": '"'+record.get('dealImageURL')+'"'} );
-									}
-									}*/
+                                //var fileFormatIndex = dealImageURL.lastIndexOf('.');
+                                // var fileFormat = dealImageURL.substring(fileFormatIndex+1,dealImageURL.length);
+                                //if(fileFormat==='jpg') {
+                                element.addListener('tap', function() {
+                                    console.log('DealImage Tap');
+                                    var view = Ext.Viewport.add({
+                                            xtype: 'DealImage'
+                                        });
+                                    view.setRecord(record);
+                                    view.showBy(Ext.get('dealPicture'));
+                                });
+                            } else //}
+                            /* else {
+								if(Ext.os.is('Android')){
+								window.plugins.html5Video.initialize( { "video1": '"'+record.get('dealImageURL')+'"'} );
+								}
+								}*/
                             {
                                 element.addListener('tap', function() {
                                     var record = Ext.getStore('LocalStore').getAt(0);
@@ -67892,7 +67892,7 @@ Ext.define('Ext.picker.Picker', {
                 margin: '10 5 5 5',
                 minHeight: '8vh',
                 style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;',
-                top: '50vh',
+                top: '51vh',
                 width: '98%'
             },
             {
