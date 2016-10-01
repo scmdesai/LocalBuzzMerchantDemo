@@ -66208,17 +66208,17 @@ Ext.define('Ext.picker.Picker', {
         var storeCount = store.getCount();
         console.log(Ext.getCmp('UploadDeal').isDisabled());
         console.log(storeCount);
-        var btn = Ext.ComponentQuery.query('DealsPanel > UploadDeal');
+        //var btn = Ext.ComponentQuery.query('DealsPanel > UploadDeal' );
         if (storeCount >= 5) {
-            btn.disable();
+            //btn.disable();
             //Ext.getCmp('UploadDeal').setDisabled(true);
-            //Ext.getCmp('UploadDeal').disable();
+            Ext.getCmp('UploadDeal').disable();
             //Ext.getCmp('DealsPanelContainer').disable();
             console.log('disabling');
         } else {
             // Ext.getCmp('UploadDeal').setDisabled(false);
-            btn.enable();
-            //Ext.getCmp('DealsPanelContainer').enable();
+            //btn.enable();
+            Ext.getCmp('UploadDeal').enable();
             console.log('enabling');
         }
     }
@@ -67511,10 +67511,20 @@ Ext.define('Ext.picker.Picker', {
         Ext.Viewport.setActiveItem(info);
     },
     onUploadDealTap: function(button, e, eOpts) {
-        var view = Ext.Viewport.add({
-                xtype: 'CreateNewBuzzOption'
-            });
-        Ext.Viewport.setActiveItem(view);
+        Ext.Ajax.request({
+            method: 'GET',
+            url: 'http://services.appsonmobile.com/demoDeals/' + customerId,
+            success: function(form, action) {
+                if (parseInt(action.msg) >= 5) {
+                    Ext.Msg.alert('Max limit reached', 'Only 5 active buzz per account', null, null);
+                } else {
+                    var view = Ext.Viewport.add({
+                            xtype: 'CreateNewBuzzOption'
+                        });
+                    Ext.Viewport.setActiveItem(view);
+                }
+            }
+        });
     },
     //view.showBy(button);
     onShareTap: function(button, e, eOpts) {
