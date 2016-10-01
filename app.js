@@ -66206,19 +66206,19 @@ Ext.define('Ext.picker.Picker', {
     },
     onJsonstoreLoad: function(store, records, successful, operation, eOpts) {
         var storeCount = store.getCount();
-        console.log(Ext.getCmp('UploadDeal').isDisabled());
+        //console.log(Ext.getCmp('UploadDeal').isDisabled());
         console.log(storeCount);
         //var btn = Ext.ComponentQuery.query('DealsPanel > UploadDeal' );
         if (storeCount >= 5) {
             //btn.disable();
             //Ext.getCmp('UploadDeal').setDisabled(true);
-            Ext.getCmp('UploadDeal').disable();
+            //Ext.getCmp('UploadDeal').disable();
             //Ext.getCmp('DealsPanelContainer').disable();
             console.log('disabling');
         } else {
             // Ext.getCmp('UploadDeal').setDisabled(false);
             //btn.enable();
-            Ext.getCmp('UploadDeal').enable();
+            //Ext.getCmp('UploadDeal').enable();
             console.log('enabling');
         }
     }
@@ -68189,7 +68189,7 @@ Ext.define('Ext.picker.Picker', {
     onDealsPanelPainted: function(element, eOpts) {
         /*var store = Ext.getStore('MyDealsStore');
 		store.load();*/
-        Ext.getCmp('UploadDeal').disable();
+        //Ext.getCmp('UploadDeal').disable();
         var dealStore = Ext.getStore('MyDealsStore');
         var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
         //dealStore.filter('customerId',customerId);
