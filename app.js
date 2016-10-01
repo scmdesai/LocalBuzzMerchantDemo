@@ -66206,6 +66206,7 @@ Ext.define('Ext.picker.Picker', {
     },
     onJsonstoreLoad: function(store, records, successful, operation, eOpts) {
         var storeCount = store.getCount();
+        console.log(Ext.getCmp('UploadDeal').isDisabled());
         console.log(storeCount);
         if (storeCount >= 5) {
             Ext.getCmp('UploadDeal').disable();
@@ -66826,16 +66827,7 @@ Ext.define('Ext.picker.Picker', {
             '<tpl else>\t',
             '<div class= dateValidity >Valid {dealStartDate} to {dealEndDate}</div></tpl>',
             ''
-        ],
-        listeners: [
-            {
-                fn: 'onListOfDealsRemove',
-                event: 'remove'
-            }
         ]
-    },
-    onListOfDealsRemove: function(container, item, index, eOpts) {
-        console.log(item + " " + index);
     }
 }, 0, [
     "listofdeals"
@@ -67341,6 +67333,7 @@ Ext.define('Ext.picker.Picker', {
     //var ds = Ext.StoreManager.lookup('MyJsonPStore');
     //ds.clearFilter();
     onDealBackBtnTap: function(button, e, eOpts) {
+        console.log(Ext.getCmp('UploadDeal').isDisabled());
         var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
         var store = Ext.getStore('MyDealsStore');
         store.load({
@@ -68167,7 +68160,6 @@ Ext.define('Ext.picker.Picker', {
 		var store = Ext.getStore('MyDealsStore');
 		store.clearFilter();
 		store.filter('customerId',customerId);*/
-        Ext.getCmp('UploadDeal').disable();
         var dealStore = Ext.getStore('MyDealsStore');
         var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
         //dealStore.filter('customerId',customerId);
