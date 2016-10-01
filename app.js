@@ -67665,7 +67665,7 @@ Ext.define('Ext.picker.Picker', {
                         html: '<b>Business Name</b>',
                         id: 'nameTxt1',
                         itemId: 'nameTxt1',
-                        style: 'word-wrap:break-word;font-family:Arial;font-size:5vw;text-align:center',
+                        style: 'word-wrap:break-word;font-family:Arial;font-size:5.5vw;text-align:center',
                         width: '100%'
                     }
                 ]
@@ -67680,7 +67680,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'nameTxt6',
                 itemId: 'nameTxt6',
                 margin: '10 5 5 5',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:5.5vw;background:url(resources/img/whitetexture.png)',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:4.5vw;background:url(resources/img/whitetexture.png);color:black',
                 width: '98%'
             },
             {
@@ -67803,7 +67803,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'nameTxt4',
                 margin: '10 5 5 5',
                 minHeight: '8vh',
-                style: 'font-family:Arial;font-size:4vw;background:url(resources/img/whitetexture.png)',
+                style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black',
                 top: '41vh',
                 width: '98%',
                 listeners: [
@@ -67891,7 +67891,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'nameTxt5',
                 margin: '10 5 5 5',
                 minHeight: '8vh',
-                style: 'font-family:Arial;font-size:4vw;background:url(resources/img/whitetexture.png)',
+                style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;',
                 top: '50vh',
                 width: '98%'
             },
@@ -68017,17 +68017,19 @@ Ext.define('Ext.picker.Picker', {
         var record = Ext.getStore('LocalStore').getAt(0);
         if (record.get('dealImageURL')) {
             var dealImageURL = record.get('dealImageURL').toString();
-            var fileFormatIndex = dealImageURL.lastIndexOf('.');
-            var fileFormat = dealImageURL.substring(fileFormatIndex + 1, dealImageURL.length);
-            if (fileFormat === 'jpg') {
-                this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
-            } else {
-                this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="' + record.get('dealImageURL') + '" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
-            }
+            //var fileFormatIndex = dealImageURL.lastIndexOf('.');
+            // var fileFormat = dealImageURL.substring(fileFormatIndex+1,dealImageURL.length);
+            //if(fileFormat==='jpg') {
+            this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:98%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
+            // }
+            // else {
+            // this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="'+record.get('dealImageURL')+'" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
+            //}
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
         } else {
-            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc"/><div style="font-size:5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
+            // this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc"/><div style="font-size:5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
+            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;background: #f6fbfc;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc;"/><div style="background:#f6fbfc;font-size:4.5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
