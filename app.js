@@ -69853,8 +69853,7 @@ Ext.define('Ext.picker.Picker', {
                         text: 'Expired',
                         value: 'Expired'
                     }
-                ],
-                store: 'font-family:Arial'
+                ]
             },
             {
                 xtype: 'datepickerfield',
