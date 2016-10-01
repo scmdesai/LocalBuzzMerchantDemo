@@ -66209,14 +66209,14 @@ Ext.define('Ext.picker.Picker', {
         console.log(Ext.getCmp('UploadDeal').isDisabled());
         console.log(storeCount);
         if (storeCount >= 5) {
-            Ext.getCmp('UploadDeal').disable();
+            Ext.getCmp('DealsPanel').down('#UploadDeal').setDisabled(true);
             //Ext.getCmp('UploadDeal').setDisabled(true);
             //Ext.getCmp('UploadDeal').disable();
             //Ext.getCmp('DealsPanelContainer').disable();
             console.log('disabling');
         } else {
             // Ext.getCmp('UploadDeal').setDisabled(false);
-            Ext.getCmp('UploadDeal').enable();
+            Ext.getCmp('DealsPanel').down('#UploadDeal').setDisabled(false);
             //Ext.getCmp('DealsPanelContainer').enable();
             console.log('enabling');
         }
@@ -68120,7 +68120,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'component',
                 docked: 'bottom',
                 html: '<p style="font-size:2.5vw;text-align:center" > As per our Fair Use Policy,there cannot be more than 5 Active Buzz per account </p>',
-                style: 'font-family:Arial'
+                style: 'font-family:Arial;font-size:2vw'
             },
             {
                 xtype: 'button',
