@@ -67511,6 +67511,7 @@ Ext.define('Ext.picker.Picker', {
         Ext.Viewport.setActiveItem(info);
     },
     onUploadDealTap: function(button, e, eOpts) {
+        var customerId = Ext.getStore('UserDetails').getAt(0).get('customerId');
         Ext.Ajax.request({
             method: 'GET',
             url: 'http://services.appsonmobile.com/demoDeals/' + customerId,
