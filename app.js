@@ -66208,12 +66208,13 @@ Ext.define('Ext.picker.Picker', {
         var storeCount = store.getCount();
         console.log(storeCount);
         if (storeCount >= 5) {
-            Ext.getCmp('UploadDeal').setDisabled(true);
+            Ext.getCmp('UploadDeal').disable();
+            //Ext.getCmp('UploadDeal').setDisabled(true);
             //Ext.getCmp('UploadDeal').disable();
             console.log('disabling');
         } else {
-            Ext.getCmp('UploadDeal').setDisabled(false);
-            //Ext.getCmp('UploadDeal').enable();
+            // Ext.getCmp('UploadDeal').setDisabled(false);
+            Ext.getCmp('UploadDeal').enable();
             console.log('enabling');
         }
     }
