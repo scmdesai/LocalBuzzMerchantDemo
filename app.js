@@ -66212,10 +66212,12 @@ Ext.define('Ext.picker.Picker', {
             Ext.getCmp('UploadDeal').disable();
             //Ext.getCmp('UploadDeal').setDisabled(true);
             //Ext.getCmp('UploadDeal').disable();
+            Ext.getCmp('DealsPanelContainer').disable();
             console.log('disabling');
         } else {
             // Ext.getCmp('UploadDeal').setDisabled(false);
             Ext.getCmp('UploadDeal').enable();
+            Ext.getCmp('DealsPanelContainer').enable();
             console.log('enabling');
         }
     }
@@ -68115,21 +68117,29 @@ Ext.define('Ext.picker.Picker', {
                 width: '100%'
             },
             {
-                xtype: 'component',
-                docked: 'bottom',
-                html: '<p style="font-size:2.5vw;text-align:center" > As per our Fair Use Policy,there cannot be more than 5 Active Buzz per account </p>'
-            },
-            {
-                xtype: 'button',
-                docked: 'bottom',
-                height: '7vh',
-                id: 'UploadDeal',
-                itemId: 'UploadDeal',
-                margin: '0 5 0 5',
-                style: 'font-size:5vw',
-                ui: 'confirm',
-                width: '',
-                text: 'Create Buzz'
+                xtype: 'container',
+                id: 'DealsPanelContainer',
+                itemId: 'DealsPanelContainer',
+                items: [
+                    {
+                        xtype: 'button',
+                        docked: 'top',
+                        height: '7vh',
+                        id: 'UploadDeal',
+                        itemId: 'UploadDeal',
+                        margin: '0 5 0 5',
+                        style: 'font-size:5vw',
+                        ui: 'confirm',
+                        width: '',
+                        text: 'Create Buzz'
+                    },
+                    {
+                        xtype: 'component',
+                        docked: 'bottom',
+                        html: '<p style="font-size:2.5vw;text-align:center" > As per our Fair Use Policy,there cannot be more than 5 Active Buzz per account </p>',
+                        style: 'font-family:Arial'
+                    }
+                ]
             }
         ],
         listeners: [
