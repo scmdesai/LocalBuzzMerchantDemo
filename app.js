@@ -66297,9 +66297,9 @@ Ext.define('Ext.picker.Picker', {
                 hidden: false,
                 html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
                 id: 'text1',
+                left: '12%',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                styleHtmlContent: true,
-                top: '7%'
+                top: '15%'
             },
             {
                 xtype: 'button',
@@ -66404,8 +66404,7 @@ Ext.define('Ext.picker.Picker', {
                         html: '<b>First Name</b>',
                         id: 'nameTxt',
                         itemId: 'nameTxt',
-                        margin: '10 0 0 10',
-                        style: 'font-family:Arial'
+                        margin: '10 0 0 10'
                     },
                     {
                         xtype: 'spacer',
@@ -66693,7 +66692,7 @@ Ext.define('Ext.picker.Picker', {
         if (record) {
             var name = record.get('businessName');
             var customerId = record.get('customerId');
-            this.down('#nameTxt').setHtml('<div style="font-family:Arial">' + name + '</div>');
+            this.down('#nameTxt').setHtml(name);
             //this.down('contactpic').setData(record.data);
             this.down('#storeImage').setHtml('<img src = "' + record.get('pictureURL') + '" style="height:40vh;width:95%;margin-left:5px;margin-top:2px;"/>');
         }
@@ -66896,7 +66895,6 @@ Ext.define('Ext.picker.Picker', {
                         height: '8vh',
                         itemId: 'cancelButton',
                         margin: '10 0 10 10',
-                        style: 'font-family:Arial',
                         ui: 'decline',
                         width: '30%',
                         text: 'Cancel'
@@ -66937,7 +66935,6 @@ Ext.define('Ext.picker.Picker', {
                         height: '8vh',
                         itemId: 'saveContactButton',
                         margin: '10 10 10 0',
-                        style: 'font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Save'
@@ -67612,7 +67609,7 @@ Ext.define('Ext.picker.Picker', {
         fullscreen: true,
         id: 'dealPicture',
         itemId: 'dealPicture',
-        style: 'background:url(resources/img/whitetexture.png)',
+        style: 'background:#fff',
         width: '100%',
         autoDestroy: false,
         layout: {
@@ -67680,7 +67677,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'nameTxt6',
                 itemId: 'nameTxt6',
                 margin: '10 5 5 5',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:5.5vw;background:url(resources/img/whitetexture.png)',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:5.5vw;background:transparent',
                 width: '98%'
             },
             {
@@ -67803,7 +67800,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'nameTxt4',
                 margin: '10 5 5 5',
                 minHeight: '8vh',
-                style: 'font-family:Arial;font-size:4vw;background:url(resources/img/whitetexture.png)',
+                style: 'font-family:Arial;font-size:4vw',
                 top: '41vh',
                 width: '98%',
                 listeners: [
@@ -67891,7 +67888,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'nameTxt5',
                 margin: '10 5 5 5',
                 minHeight: '8vh',
-                style: 'font-family:Arial;font-size:4vw;background:url(resources/img/whitetexture.png)',
+                style: 'font-family:Arial;font-size:4vw',
                 top: '50vh',
                 width: '98%'
             },
@@ -68027,7 +68024,7 @@ Ext.define('Ext.picker.Picker', {
             //this.down('#nameTxt3').show();
             this.down('#nameTxt4').show();
         } else {
-            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc"/><div style="font-size:5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
+            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:none"/><div style="font-size:6vw;">' + record.get('dealName') + '</div><br><div style="font-size:4vw;">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
@@ -68038,11 +68035,11 @@ Ext.define('Ext.picker.Picker', {
         if (record) {
             var name = record.get('itemName');
             var businessName = record.get('businessName');
-            this.down('#nameTxt1').setHtml('<div style="font-family:Arial">' + record.get('businessName') + '</div>');
-            this.down('#nameTxt4').setHtml('<div style="font-family:Arial">' + record.get('dealDescription') + '</div>');
+            this.down('#nameTxt1').setHtml(record.get('businessName'));
+            this.down('#nameTxt4').setHtml(record.get('dealDescription'));
             if (record.get('dealImageURL')) {
-                this.down('#nameTxt5').setHtml('<div style="font-family:Arial">Valid from ' + record.get('dealStartDate') + '-' + record.get('dealEndDate') + '</div>');
-                this.down('#nameTxt6').setHtml('<div style="font-family:Arial">' + record.get('dealName') + '</div>');
+                this.down('#nameTxt5').setHtml('Valid from ' + record.get('dealStartDate') + '-' + record.get('dealEndDate'));
+                this.down('#nameTxt6').setHtml(record.get('dealName'));
             }
             //var store = Ext.getStore('MyJsonPStore');
             //  var rec = store.findRecord('businessName', businessName);
@@ -68902,7 +68899,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealName',
                 margin: '5 5 5 5 ',
                 padding: '',
-                style: 'border:1px solid #C0C0C0!important:color: #d3d3d3!important;font-family:Arial',
+                style: 'border:1px solid #C0C0C0!important:color: #d3d3d3!important',
                 styleHtmlContent: true,
                 width: '',
                 clearIcon: false,
@@ -68918,7 +68915,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealStatus',
                 margin: '5 5 5 5 ',
                 maxHeight: '',
-                style: 'font-family:Arial',
+                style: '',
                 styleHtmlContent: true,
                 label: 'Status',
                 labelWidth: '35%',
@@ -68947,7 +68944,6 @@ Ext.define('Ext.picker.Picker', {
                 id: 'DealStartDate1',
                 itemId: 'DealStartDate',
                 margin: '5 5 5 5 ',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 width: '97%',
                 label: 'Start Date',
@@ -68995,7 +68991,6 @@ Ext.define('Ext.picker.Picker', {
                 id: 'DealEndDate1',
                 itemId: 'DealEndDate',
                 margin: '5 5 5 5 ',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 width: '97%',
                 label: 'End Date',
@@ -69032,7 +69027,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealDescription',
                 margin: '5 5 5 5 ',
                 padding: '0 0 20 0',
-                style: 'border:1px solid #C0C0C0!important;font-family:Arial',
+                style: 'border:1px solid #C0C0C0!important',
                 styleHtmlContent: true,
                 width: '',
                 clearIcon: false,
@@ -69075,7 +69070,6 @@ Ext.define('Ext.picker.Picker', {
                 left: '',
                 margin: '10 10 10 10',
                 padding: '5 5 5 5',
-                style: 'font-family:Arial',
                 layout: 'hbox',
                 listeners: [
                     {
@@ -69269,7 +69263,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'businessName',
                 margin: '5 5 5 5 ',
                 padding: '0 5 5 5',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 label: 'Name',
                 labelWidth: '35%',
@@ -69335,7 +69328,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealStartDate',
                 margin: '0 5 5 5 ',
                 padding: '0 5 5 5',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 width: '97%',
                 label: 'Start Date',
@@ -69388,7 +69380,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealEndDate',
                 margin: '0 5 5 5 ',
                 padding: '0 5 5 5',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 width: '97%',
                 label: 'End Date',
@@ -69438,7 +69429,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealDescription',
                 margin: '0 5 5 5',
                 padding: '0 0 20 0',
-                style: 'border:1px solid #C0C0C0!important;font-family:Arial',
+                style: 'border:1px solid #C0C0C0!important',
                 styleHtmlContent: true,
                 width: '',
                 clearIcon: false,
@@ -69456,7 +69447,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'myfilefield2',
                 margin: '0 5 5 5 ',
                 padding: '5 5 5 5',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 width: '97%',
                 clearIcon: false,
@@ -69475,7 +69465,6 @@ Ext.define('Ext.picker.Picker', {
                 left: '',
                 margin: '10 10 10 10',
                 padding: '5 5 5 5',
-                style: 'font-family:Arial',
                 layout: 'hbox',
                 listeners: [
                     {
@@ -69515,7 +69504,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
+                        style: 'font-size:5vw!important',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -69584,7 +69573,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
+                        style: 'font-size:5vw!important',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
@@ -69800,7 +69789,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'businessName',
                 margin: '5 5 5 5 ',
                 padding: '0 0 5 5',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 label: 'Name',
                 labelWidth: '35%',
@@ -69854,8 +69842,7 @@ Ext.define('Ext.picker.Picker', {
                         text: 'Expired',
                         value: 'Expired'
                     }
-                ],
-                store: 'font-family:Arial'
+                ]
             },
             {
                 xtype: 'datepickerfield',
@@ -69868,7 +69855,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealStartDate',
                 margin: '0 5 5 5 ',
                 padding: '5 0 5 5',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 width: '97%',
                 label: 'Start Date',
@@ -69920,7 +69906,6 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealEndDate',
                 margin: '0 5 5 5 ',
                 padding: '5 0 5 5',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 width: '97%',
                 label: 'End Date',
@@ -69978,7 +69963,7 @@ Ext.define('Ext.picker.Picker', {
                 itemId: 'DealDescription',
                 margin: '0 5 5 5 ',
                 padding: '0 0 20 0',
-                style: 'border:1px solid #C0C0C0!important;font-family:Arial',
+                style: 'border:1px solid #C0C0C0!important',
                 styleHtmlContent: true,
                 width: '',
                 clearIcon: false,
@@ -70019,7 +70004,6 @@ Ext.define('Ext.picker.Picker', {
                 left: '',
                 margin: '10 10 10 10',
                 padding: '5 5 5 5',
-                style: 'font-family:Arial',
                 layout: 'hbox',
                 listeners: [
                     {
@@ -70059,7 +70043,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
+                        style: 'font-size:5vw!important',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -70122,7 +70106,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
+                        style: 'font-size:5vw!important',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
@@ -70227,7 +70211,6 @@ Ext.define('Ext.picker.Picker', {
                 },
                 height: '9vh',
                 left: '20%',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 top: '30%',
                 ui: 'action',
@@ -70261,7 +70244,6 @@ Ext.define('Ext.picker.Picker', {
                 },
                 height: '9vh',
                 left: '20%',
-                style: 'font-family:Arial',
                 styleHtmlContent: true,
                 top: '50%',
                 ui: 'action',
