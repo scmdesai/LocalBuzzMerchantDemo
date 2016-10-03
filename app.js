@@ -67910,8 +67910,7 @@ Ext.define('Ext.picker.Picker', {
                                                     //window.open("http://"+ url11, '_system', 'location=yes');
                                                     Ext.Ajax.request({
                                                         method: 'GET',
-                                                        url: "'" + url_temp1 + "'",
-                                                        timeout: 3000,
+                                                        url: url_temp1,
                                                         success: function(response) {
                                                             //window.open(url, '_system', 'location=yes');
                                                             console.log('Success');
