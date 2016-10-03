@@ -67712,7 +67712,7 @@ Ext.define('Ext.picker.Picker', {
                     'dealimage',
                     'w3-card-4',
                     'w3-container',
-                    'w3-theme-l4'
+                    'w3-theme-l1'
                 ],
                 disabled: true,
                 docked: 'top',
