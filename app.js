@@ -67906,7 +67906,24 @@ Ext.define('Ext.picker.Picker', {
                                             if (url11) {
                                                 dealDescription.link(url11);
                                                 if (url11.indexOf("http") < 0) {
-                                                    window.open("http://" + url11, '_system', 'location=yes');
+                                                    //window.open("http://"+ url11, '_system', 'location=yes');
+                                                    var url_temp1 = "http://" + url11;
+                                                    //window.open("http://"+ url11, '_system', 'location=yes');
+                                                    Ext.Ajax.request({
+                                                        method: 'GET',
+                                                        url: "'" + url_temp1 + "'",
+                                                        timeout: 300,
+                                                        success: function(response) {
+                                                            //window.open(url, '_system', 'location=yes');
+                                                            console.log('Success');
+                                                            Ext.Msg.alert(response.status);
+                                                        },
+                                                        failure: function(response) {
+                                                            //window.open(url, '_system', 'location=yes');
+                                                            console.log('Failure');
+                                                            Ext.Msg.alert(response.status);
+                                                        }
+                                                    });
                                                 } else {
                                                     window.open(url11, '_system', 'location=yes');
                                                 }
