@@ -67902,7 +67902,6 @@ Ext.define('Ext.picker.Picker', {
                                                 lastIndex11 = dealDescription.length;
                                             }
                                             url11 = dealDescription.substring(firstIndex11, lastIndex11);
-                                            console.log('url is :' + url11);
                                             if (url11) {
                                                 dealDescription.link(url11);
                                                 if (url11.indexOf("http") < 0) {
@@ -67912,7 +67911,7 @@ Ext.define('Ext.picker.Picker', {
                                                     Ext.Ajax.request({
                                                         method: 'GET',
                                                         url: "'" + url_temp1 + "'",
-                                                        timeout: 300,
+                                                        timeout: 3000,
                                                         success: function(response) {
                                                             //window.open(url, '_system', 'location=yes');
                                                             console.log('Success');
