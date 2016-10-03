@@ -67631,6 +67631,7 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('LocalBuzzMerchantDemo.view.DealPicture', Ext.Panel, {
     config: {
+        cls: 'w3-theme-l5',
         fullscreen: true,
         id: 'dealPicture',
         itemId: 'dealPicture',
@@ -67715,7 +67716,8 @@ Ext.define('Ext.picker.Picker', {
                     'w3-bottombar',
                     'w3-topbar',
                     'w3-rightbar',
-                    'w3-border-grey'
+                    'w3-border-grey',
+                    'w3-theme-l4'
                 ],
                 disabled: true,
                 docked: 'top',
@@ -67723,7 +67725,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'dealimage',
                 itemId: 'dealimage',
                 left: '2%',
-                style: 'color:#00529D;word-wrap:break-word;font-family:Arial;font-size:6vw;background:#fafefb;',
+                style: '',
                 width: '96vw',
                 listeners: [
                     {
