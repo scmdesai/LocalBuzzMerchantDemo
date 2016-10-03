@@ -67870,8 +67870,15 @@ Ext.define('Ext.picker.Picker', {
                                                     method: 'GET',
                                                     url: "'" + url_temp + "'",
                                                     timeout: 300,
-                                                    success: function() {
-                                                        window.open(url, '_system', 'location=yes');
+                                                    success: function(response) {
+                                                        //window.open(url, '_system', 'location=yes');
+                                                        console.log('Success');
+                                                        Ext.Msg.alert(response.status);
+                                                    },
+                                                    failure: function(response) {
+                                                        //window.open(url, '_system', 'location=yes');
+                                                        console.log('Failure');
+                                                        Ext.Msg.alert(response.status);
                                                     }
                                                 });
                                             } else {
