@@ -67709,7 +67709,13 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'component',
                 cls: [
                     'dealimage',
-                    'w3-card-4'
+                    'w3-card-4',
+                    'w3-container',
+                    'w3-leftbar',
+                    'w3-bottombar',
+                    'w3-topbar',
+                    'w3-rightbar',
+                    'w3-border-grey'
                 ],
                 disabled: true,
                 docked: 'top',
@@ -67988,13 +67994,14 @@ Ext.define('Ext.picker.Picker', {
                         xtype: 'container',
                         cls: 'contact-name',
                         disabled: true,
-                        html: '<p style="font-size:3vw;text-align:center">       Published through Local Buzz',
-                        id: 'nameTxt2',
-                        itemId: 'nameTxt2',
-                        left: '40%',
-                        margin: '15 5 5 5',
-                        style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                        width: '65%',
+                        docked: 'top',
+                        hidden: false,
+                        html: '<p style="font-size:3vw;text-align:right">       Published through Local Buzz</p>',
+                        id: 'nameTxt7',
+                        itemId: 'nameTxt6',
+                        margin: '10 5 5 0',
+                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;',
+                        width: '98%',
                         layout: 'fit'
                     }
                 ]
