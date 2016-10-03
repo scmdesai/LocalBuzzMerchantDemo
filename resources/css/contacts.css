@@ -25,7 +25,9 @@ $list-header-bg-color: $base-color;
 	word-wrap: normal;
 	font-size:6vw;
 }
-
+.inputCls{
+	background:url(resources/img/whitetexture.png);
+}
 .toolbarCls {
 	background:url(resources/img/whitetexture.png);
 	border-bottom:1px solid #C0C0C0 !important;

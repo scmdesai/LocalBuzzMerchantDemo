@@ -66307,7 +66307,7 @@ Ext.define('Ext.picker.Picker', {
                 hidden: false,
                 html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
                 id: 'text1',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;background:url(resources/img/whitetexture.png);',
                 styleHtmlContent: true,
                 top: '7%'
             },
@@ -66469,9 +66469,8 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-email1',
-                    'customfield2',
-                    'w3-card-4'
+                    'w3-card-4',
+                    'icon-email1'
                 ],
                 disabled: false,
                 height: '10vh',
@@ -66483,6 +66482,7 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 width: '100%',
                 clearIcon: false,
+                inputCls: 'inputCls',
                 label: '',
                 name: 'emailAddress',
                 placeHolder: 'Not Listed',
