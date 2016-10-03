@@ -109,7 +109,7 @@ $list-header-bg-color: $base-color;
 
 
 .x-field {
-	border-bottom:1px groove #C0C0C0!important;
+	
 	height:12vh;
 	font-weight:normal !important;
 	text-align:center !important;

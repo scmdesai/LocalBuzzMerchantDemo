@@ -67654,6 +67654,7 @@ Ext.define('Ext.picker.Picker', {
                 docked: 'top',
                 height: '8vh',
                 margin: '0 0 5 0',
+                style: 'background:url(resources/img/whitetexture.png);',
                 ui: 'plain',
                 width: '100%',
                 scrollable: false,
@@ -67988,7 +67989,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt5',
                         itemId: 'nameTxt5',
                         margin: '10 5 5 5',
-                        style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black;font-weight:bold;',
+                        style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black;',
                         width: '98%',
                         layout: 'fit'
                     },
