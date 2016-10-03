@@ -67712,11 +67712,6 @@ Ext.define('Ext.picker.Picker', {
                     'dealimage',
                     'w3-card-4',
                     'w3-container',
-                    'w3-leftbar',
-                    'w3-bottombar',
-                    'w3-topbar',
-                    'w3-rightbar',
-                    'w3-border-grey',
                     'w3-theme-l4'
                 ],
                 disabled: true,
@@ -67725,7 +67720,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'dealimage',
                 itemId: 'dealimage',
                 left: '2%',
-                style: '',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;',
                 width: '96vw',
                 listeners: [
                     {
@@ -68129,7 +68124,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#nameTxt4').show();
         } else {
             // this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc"/><div style="font-size:5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
-            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;background: #f6fbfc;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc;"/><div style="background:#f6fbfc;font-size:4.5vw;font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
+            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;"/><div style="font-size:4.5vw;font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
