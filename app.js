@@ -67712,6 +67712,7 @@ Ext.define('Ext.picker.Picker', {
                     'w3-card-4'
                 ],
                 disabled: true,
+                docked: 'top',
                 height: '40vh',
                 id: 'dealimage',
                 itemId: 'dealimage',
@@ -67848,147 +67849,155 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
-                cls: 'contact-name',
-                disabled: true,
-                hidden: false,
-                id: 'nameTxt4',
-                itemId: 'nameTxt4',
-                margin: '10 5 5 5',
-                minHeight: '8vh',
-                style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black',
                 top: '41vh',
-                width: '98%',
-                listeners: [
+                width: '100%',
+                layout: 'fit',
+                items: [
                     {
-                        fn: function(element, eOpts) {
-                            element.addListener('tap', function() {
-                                var record = Ext.getStore('LocalStore').getAt(0);
-                                var dealDescription = record.get('dealDescription').toString();
-                                if (dealDescription) {
-                                    console.log('dealDescription is : ' + dealDescription);
-                                    //find if the url is nested(example appsonmobile.com/about-us)
-                                    var content = dealDescription.split('/');
-                                    if (content.length > 1) {
-                                        var index = content.length - 1;
-                                        //Find where url begins
-                                        var temp = dealDescription.split('.');
-                                        //this will have the starting of the string till the first part of the url (eg www. or images.)
-                                        console.log(temp[0]);
-                                        //extract only the first part of the url
-                                        var temp2 = temp[0].split(' ');
-                                        console.log(temp2.length);
-                                        var i = temp2.length;
-                                        var temp3 = temp2[i - 1];
-                                        console.log(temp3);
-                                        //the first part of the url is the firstIndex
-                                        var firstIndex = dealDescription.indexOf(temp3);
-                                        var lastIndex = dealDescription.lastIndexOf('/');
-                                        var tmp = content[index].split(' ');
-                                        var lastPartURLIndex = tmp[0].length;
-                                        var lastPartURLData = content[index];
-                                        var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
-                                        //copy the entire url till the last '/' and then add the last part
-                                        var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
-                                        console.log('url is :' + url);
-                                        //if the url already contains http or https..directly open the link else add http
-                                        if (url) {
-                                            dealDescription.link(url);
-                                            if (url.indexOf("http") < 0) {
-                                                var url_temp = "http://" + url;
-                                                //window.open("http://"+ url, '_system', 'location=yes');
-                                                Ext.Ajax.request({
-                                                    method: 'GET',
-                                                    url: url_temp,
-                                                    success: function(response) {
-                                                        //window.open(url, '_system', 'location=yes');
-                                                        console.log('Success');
-                                                        window.open(url_temp, '_system', 'location=yes');
-                                                    },
-                                                    failure: function(response) {
-                                                        //window.open(url, '_system', 'location=yes');
-                                                        console.log('Failure');
+                        xtype: 'container',
+                        cls: 'contact-name',
+                        disabled: true,
+                        docked: 'top',
+                        hidden: false,
+                        id: 'nameTxt4',
+                        itemId: 'nameTxt4',
+                        margin: '10 5 5 5',
+                        style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black',
+                        width: '98%',
+                        layout: 'fit',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    element.addListener('tap', function() {
+                                        var record = Ext.getStore('LocalStore').getAt(0);
+                                        var dealDescription = record.get('dealDescription').toString();
+                                        if (dealDescription) {
+                                            console.log('dealDescription is : ' + dealDescription);
+                                            //find if the url is nested(example appsonmobile.com/about-us)
+                                            var content = dealDescription.split('/');
+                                            if (content.length > 1) {
+                                                var index = content.length - 1;
+                                                //Find where url begins
+                                                var temp = dealDescription.split('.');
+                                                //this will have the starting of the string till the first part of the url (eg www. or images.)
+                                                console.log(temp[0]);
+                                                //extract only the first part of the url
+                                                var temp2 = temp[0].split(' ');
+                                                console.log(temp2.length);
+                                                var i = temp2.length;
+                                                var temp3 = temp2[i - 1];
+                                                console.log(temp3);
+                                                //the first part of the url is the firstIndex
+                                                var firstIndex = dealDescription.indexOf(temp3);
+                                                var lastIndex = dealDescription.lastIndexOf('/');
+                                                var tmp = content[index].split(' ');
+                                                var lastPartURLIndex = tmp[0].length;
+                                                var lastPartURLData = content[index];
+                                                var lastPartURL = lastPartURLData.substring(0, lastPartURLIndex);
+                                                //copy the entire url till the last '/' and then add the last part
+                                                var url = dealDescription.substring(firstIndex, lastIndex) + '/' + lastPartURL;
+                                                console.log('url is :' + url);
+                                                //if the url already contains http or https..directly open the link else add http
+                                                if (url) {
+                                                    dealDescription.link(url);
+                                                    if (url.indexOf("http") < 0) {
+                                                        var url_temp = "http://" + url;
+                                                        //window.open("http://"+ url, '_system', 'location=yes');
+                                                        Ext.Ajax.request({
+                                                            method: 'GET',
+                                                            url: url_temp,
+                                                            success: function(response) {
+                                                                //window.open(url, '_system', 'location=yes');
+                                                                console.log('Success');
+                                                                window.open(url_temp, '_system', 'location=yes');
+                                                            },
+                                                            failure: function(response) {
+                                                                //window.open(url, '_system', 'location=yes');
+                                                                console.log('Failure');
+                                                            }
+                                                        });
+                                                    } else {
+                                                        window.open(url, '_system', 'location=yes');
                                                     }
-                                                });
-                                            } else {
-                                                window.open(url, '_system', 'location=yes');
-                                            }
-                                        }
-                                    } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
-                                    {
-                                        var temp111 = dealDescription.split('.');
-                                        if (temp111.length > 1) {
-                                            console.log(temp111[0]);
-                                            var temp211 = temp111[0].split(' ');
-                                            console.log(temp211.length);
-                                            var i11 = temp211.length;
-                                            var temp311 = temp211[i11 - 1];
-                                            console.log(temp311);
-                                            var firstIndex11 = dealDescription.indexOf(temp311);
-                                            var url11;
-                                            var lastIndex11 = dealDescription.indexOf(' ', firstIndex11);
-                                            if (lastIndex11 < 0) {
-                                                lastIndex11 = dealDescription.length;
-                                            }
-                                            url11 = dealDescription.substring(firstIndex11, lastIndex11);
-                                            if (url11) {
-                                                dealDescription.link(url11);
-                                                if (url11.indexOf("http") < 0) {
-                                                    //window.open("http://"+ url11, '_system', 'location=yes');
-                                                    var url_temp1 = "http://" + url11;
-                                                    //window.open("http://"+ url11, '_system', 'location=yes');
-                                                    Ext.Ajax.request({
-                                                        method: 'GET',
-                                                        url: url_temp1,
-                                                        success: function(response) {
-                                                            //window.open(url, '_system', 'location=yes');
-                                                            console.log('Success');
-                                                            window.open(url_temp1, '_system', 'location=yes');
-                                                        },
-                                                        //Ext.Msg.alert(response.status);
-                                                        failure: function(response) {
-                                                            //window.open(url, '_system', 'location=yes');
-                                                            console.log('Failure');
+                                                }
+                                            } else //if there is no nesting ( example www.google.com,appsonmobile.com,news.google.com)
+                                            {
+                                                var temp111 = dealDescription.split('.');
+                                                if (temp111.length > 1) {
+                                                    console.log(temp111[0]);
+                                                    var temp211 = temp111[0].split(' ');
+                                                    console.log(temp211.length);
+                                                    var i11 = temp211.length;
+                                                    var temp311 = temp211[i11 - 1];
+                                                    console.log(temp311);
+                                                    var firstIndex11 = dealDescription.indexOf(temp311);
+                                                    var url11;
+                                                    var lastIndex11 = dealDescription.indexOf(' ', firstIndex11);
+                                                    if (lastIndex11 < 0) {
+                                                        lastIndex11 = dealDescription.length;
+                                                    }
+                                                    url11 = dealDescription.substring(firstIndex11, lastIndex11);
+                                                    if (url11) {
+                                                        dealDescription.link(url11);
+                                                        if (url11.indexOf("http") < 0) {
+                                                            //window.open("http://"+ url11, '_system', 'location=yes');
+                                                            var url_temp1 = "http://" + url11;
+                                                            //window.open("http://"+ url11, '_system', 'location=yes');
+                                                            Ext.Ajax.request({
+                                                                method: 'GET',
+                                                                url: url_temp1,
+                                                                success: function(response) {
+                                                                    //window.open(url, '_system', 'location=yes');
+                                                                    console.log('Success');
+                                                                    window.open(url_temp1, '_system', 'location=yes');
+                                                                },
+                                                                //Ext.Msg.alert(response.status);
+                                                                failure: function(response) {
+                                                                    //window.open(url, '_system', 'location=yes');
+                                                                    console.log('Failure');
+                                                                }
+                                                            });
+                                                        } else //Ext.Msg.alert(response.status);
+                                                        {
+                                                            window.open(url11, '_system', 'location=yes');
                                                         }
-                                                    });
-                                                } else //Ext.Msg.alert(response.status);
-                                                {
-                                                    window.open(url11, '_system', 'location=yes');
+                                                    }
                                                 }
                                             }
                                         }
-                                    }
-                                }
-                            });
-                        },
-                        event: 'painted'
+                                    });
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'container',
+                        cls: 'contact-name',
+                        disabled: true,
+                        docked: 'top',
+                        hidden: false,
+                        id: 'nameTxt5',
+                        itemId: 'nameTxt5',
+                        margin: '10 5 5 5',
+                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;',
+                        width: '98%',
+                        layout: 'fit'
+                    },
+                    {
+                        xtype: 'container',
+                        cls: 'contact-name',
+                        disabled: true,
+                        html: '<p style="font-size:3vw;text-align:center">       Published through Local Buzz',
+                        id: 'nameTxt2',
+                        itemId: 'nameTxt2',
+                        left: '40%',
+                        margin: '15 5 5 5',
+                        style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
+                        width: '65%',
+                        layout: 'fit'
                     }
                 ]
-            },
-            {
-                xtype: 'container',
-                cls: 'contact-name',
-                disabled: true,
-                hidden: false,
-                id: 'nameTxt5',
-                itemId: 'nameTxt5',
-                margin: '10 5 5 5',
-                minHeight: '8vh',
-                style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;',
-                top: '51vh',
-                width: '98%'
-            },
-            {
-                xtype: 'container',
-                cls: 'contact-name',
-                disabled: true,
-                html: '<p style="font-size:3vw;text-align:center">       Published through Local Buzz',
-                id: 'nameTxt2',
-                itemId: 'nameTxt2',
-                left: '40%',
-                margin: '15 5 5 5',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw',
-                top: '60vh',
-                width: '65%'
             },
             {
                 xtype: 'textfield',
@@ -68111,7 +68120,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#nameTxt4').show();
         } else {
             // this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc"/><div style="font-size:5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
-            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;background: #f6fbfc;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc;"/><div style="background:#f6fbfc;font-size:4.5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
+            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;background: #f6fbfc;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc;"/><div style="background:#f6fbfc;font-size:4.5vw;font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
