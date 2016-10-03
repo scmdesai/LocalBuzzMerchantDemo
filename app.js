@@ -67697,13 +67697,13 @@ Ext.define('Ext.picker.Picker', {
                 cls: 'contact-name',
                 disabled: true,
                 docked: 'top',
-                height: '9vh',
                 hidden: false,
                 id: 'nameTxt6',
                 itemId: 'nameTxt6',
                 margin: '10 5 5 5',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:4.5vw;background:url(resources/img/whitetexture.png);color:black',
-                width: '98%'
+                width: '98%',
+                layout: 'fit'
             },
             {
                 xtype: 'component',
@@ -69361,7 +69361,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWidth: '35%',
                 labelWrap: true,
                 name: 'DealName',
-                maxLength: 40
+                maxLength: 80
             },
             {
                 xtype: 'textfield',
@@ -69894,7 +69894,7 @@ Ext.define('Ext.picker.Picker', {
                 labelWrap: true,
                 name: 'DealName',
                 autoCapitalize: true,
-                maxLength: 40
+                maxLength: 80
             },
             {
                 xtype: 'textfield',
