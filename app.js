@@ -67942,15 +67942,16 @@ Ext.define('Ext.picker.Picker', {
                                                         success: function(response) {
                                                             //window.open(url, '_system', 'location=yes');
                                                             console.log('Success');
-                                                            Ext.Msg.alert(response.status);
+                                                            window.open(url_temp1, '_system', 'location=yes');
                                                         },
+                                                        //Ext.Msg.alert(response.status);
                                                         failure: function(response) {
                                                             //window.open(url, '_system', 'location=yes');
                                                             console.log('Failure');
-                                                            Ext.Msg.alert(response.status);
                                                         }
                                                     });
-                                                } else {
+                                                } else //Ext.Msg.alert(response.status);
+                                                {
                                                     window.open(url11, '_system', 'location=yes');
                                                 }
                                             }
