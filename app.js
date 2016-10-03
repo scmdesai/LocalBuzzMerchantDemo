@@ -67775,7 +67775,22 @@ Ext.define('Ext.picker.Picker', {
                                             if (url) {
                                                 dealDescription.link(url);
                                                 if (url.indexOf("http") < 0) {
-                                                    window.open("http://" + url, '_system', 'location=yes');
+                                                    //window.open("http://"+ url, '_system', 'location=yes');
+                                                    var url_temp = "http://" + url;
+                                                    //window.open("http://"+ url, '_system', 'location=yes');
+                                                    Ext.Ajax.request({
+                                                        method: 'GET',
+                                                        url: url_temp,
+                                                        success: function(response) {
+                                                            //window.open(url, '_system', 'location=yes');
+                                                            console.log('Success');
+                                                            window.open(url_temp, '_system', 'location=yes');
+                                                        },
+                                                        failure: function(response) {
+                                                            //window.open(url, '_system', 'location=yes');
+                                                            console.log('Failure');
+                                                        }
+                                                    });
                                                 } else {
                                                     window.open(url, '_system', 'location=yes');
                                                 }
@@ -67801,7 +67816,22 @@ Ext.define('Ext.picker.Picker', {
                                                 if (url1) {
                                                     dealDescription.link(url1);
                                                     if (url1.indexOf("http") < 0) {
-                                                        window.open("http://" + url1, '_system', 'location=yes');
+                                                        //window.open("http://"+ url1, '_system', 'location=yes');
+                                                        var url_temp1 = "http://" + url1;
+                                                        //window.open("http://"+ url, '_system', 'location=yes');
+                                                        Ext.Ajax.request({
+                                                            method: 'GET',
+                                                            url: url_temp1,
+                                                            success: function(response) {
+                                                                //window.open(url, '_system', 'location=yes');
+                                                                console.log('Success');
+                                                                window.open(url_temp1, '_system', 'location=yes');
+                                                            },
+                                                            failure: function(response) {
+                                                                //window.open(url, '_system', 'location=yes');
+                                                                console.log('Failure');
+                                                            }
+                                                        });
                                                     } else {
                                                         window.open(url1, '_system', 'location=yes');
                                                     }
@@ -67868,17 +67898,15 @@ Ext.define('Ext.picker.Picker', {
                                                 //window.open("http://"+ url, '_system', 'location=yes');
                                                 Ext.Ajax.request({
                                                     method: 'GET',
-                                                    url: "'" + url_temp + "'",
-                                                    timeout: 300,
+                                                    url: url_temp,
                                                     success: function(response) {
                                                         //window.open(url, '_system', 'location=yes');
                                                         console.log('Success');
-                                                        Ext.Msg.alert(response.status);
+                                                        window.open(url_temp, '_system', 'location=yes');
                                                     },
                                                     failure: function(response) {
                                                         //window.open(url, '_system', 'location=yes');
                                                         console.log('Failure');
-                                                        Ext.Msg.alert(response.status);
                                                     }
                                                 });
                                             } else {
