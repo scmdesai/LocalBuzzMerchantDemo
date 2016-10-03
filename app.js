@@ -66824,7 +66824,7 @@ Ext.define('Ext.picker.Picker', {
             '',
             '',
             '<div style="font-size:4vw;color:black;font-weight:normal;font-family:Arial;word-wrap:word-break;">{dealName}',
-            '<button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button></div>',
+            '<br><button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button></div>',
             '<tpl if="dealEndDate &lt; todayplusthreedays ">',
             '<div class= expiringDate >Valid {dealStartDate} to {dealEndDate}</div>',
             '<tpl else>\t',
@@ -68126,7 +68126,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#nameTxt4').setHtml('<div style="font-family:Arial">' + record.get('dealDescription') + '</div>');
             if (record.get('dealImageURL')) {
                 this.down('#nameTxt5').setHtml('<div style="font-family:Arial">Valid from ' + record.get('dealStartDate') + '-' + record.get('dealEndDate') + '</div>');
-                this.down('#nameTxt6').setHtml('<div style="font-family:Arial">' + record.get('dealName') + '</div>');
+                this.down('#nameTxt6').setHtml('<div style="font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div>');
             }
             //var store = Ext.getStore('MyJsonPStore');
             //  var rec = store.findRecord('businessName', businessName);
