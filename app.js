@@ -67701,7 +67701,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'nameTxt6',
                 itemId: 'nameTxt6',
                 margin: '10 5 5 5',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:4.5vw;background:url(resources/img/whitetexture.png);color:black',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:4.5vw;background:url(resources/img/whitetexture.png);color:black;font-weight:bold;',
                 width: '98%',
                 layout: 'fit'
             },
@@ -67711,7 +67711,7 @@ Ext.define('Ext.picker.Picker', {
                     'dealimage',
                     'w3-card-4',
                     'w3-container',
-                    'w3-theme-l4'
+                    'w3-theme'
                 ],
                 disabled: true,
                 docked: 'top',
@@ -67864,7 +67864,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt4',
                         itemId: 'nameTxt4',
                         margin: '10 5 5 5',
-                        style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black',
+                        style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black;font-weight:bold;',
                         width: '98%',
                         layout: 'fit',
                         listeners: [
@@ -67982,7 +67982,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt5',
                         itemId: 'nameTxt5',
                         margin: '10 5 5 5',
-                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;',
+                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;font-weight:bold;',
                         width: '98%',
                         layout: 'fit'
                     },
@@ -67996,7 +67996,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt7',
                         itemId: 'nameTxt6',
                         margin: '10 5 5 0',
-                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);color:black;',
+                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);',
                         width: '98%',
                         layout: 'fit'
                     }
@@ -68123,7 +68123,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#nameTxt4').show();
         } else {
             // this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc"/><div style="font-size:5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
-            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;"/><div style="font-size:4.5vw;font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
+            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;"/><div style="font-size:4.5vw;font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial;font-weight:bold;">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial;font-weight:bold;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
