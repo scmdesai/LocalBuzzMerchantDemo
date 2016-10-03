@@ -67864,7 +67864,16 @@ Ext.define('Ext.picker.Picker', {
                                         if (url) {
                                             dealDescription.link(url);
                                             if (url.indexOf("http") < 0) {
-                                                window.open("http://" + url, '_system', 'location=yes');
+                                                var url_temp = "http://" + url;
+                                                //window.open("http://"+ url, '_system', 'location=yes');
+                                                Ext.Ajax.request({
+                                                    method: 'GET',
+                                                    url: "'" + url_temp + "'",
+                                                    timeout: 300,
+                                                    success: function() {
+                                                        window.open(url, '_system', 'location=yes');
+                                                    }
+                                                });
                                             } else {
                                                 window.open(url, '_system', 'location=yes');
                                             }
