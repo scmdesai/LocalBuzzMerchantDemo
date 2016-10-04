@@ -67536,7 +67536,7 @@ Ext.define('Ext.picker.Picker', {
             }
         });
         if (store.getCount() >= 5) {
-            Ext.Msg.alert('Max limit reached', 'Only 5 active buzz per account allowed', null, null);
+            Ext.Msg.alert('Max Limit reached', 'Only 5 active buzz per account allowed', null, null);
         } else {
             var view = Ext.Viewport.add({
                     xtype: 'CreateNewBuzzOption'
@@ -67656,7 +67656,7 @@ Ext.define('Ext.picker.Picker', {
         fullscreen: true,
         id: 'dealPicture',
         itemId: 'dealPicture',
-        style: 'background:url(resources/img/whitetexture.png)',
+        style: 'border-top:none;background:url(resources/img/whitetexture.png);',
         width: '100%',
         autoDestroy: false,
         layout: {
@@ -67669,7 +67669,7 @@ Ext.define('Ext.picker.Picker', {
                 docked: 'top',
                 height: '8vh',
                 margin: '0 0 5 0',
-                style: 'background:url(resources/img/whitetexture.png)!important;border-bottom:1px solid #C0C0C0 !important;',
+                style: 'background:url(resources/img/whitetexture.png);border-bottom:1px solid #C0C0C0 !important;',
                 ui: 'plain',
                 width: '100%',
                 scrollable: false,
@@ -68136,7 +68136,7 @@ Ext.define('Ext.picker.Picker', {
             //var fileFormatIndex = dealImageURL.lastIndexOf('.');
             // var fileFormat = dealImageURL.substring(fileFormatIndex+1,dealImageURL.length);
             //if(fileFormat==='jpg') {
-            this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:39vh;width:100%;display:inline;border:none;"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
+            this.down('#dealimage').setHtml('<div><img src="' + record.get('dealImageURL') + '" style="height:40vh;width:100%;display:inline;border:none;padding:5px 5px 5px 5px"/><p id="enlargebtn" class="icon-enlarge" style="background:none;position:absolute;bottom: 1.5em; right: 1.5em"></p></div>');
             // }
             // else {
             // this.down('#dealimage').setHtml('<div><video style="height:39vh;width:100%;" videoWidth=98% videoHeight= 39vh controls preload="auto" onclick="this.play();" > <source src="'+record.get('dealImageURL')+'" type="video/mp4"><param name="allowFullScreen" value="true"></video></div>');
@@ -68226,8 +68226,8 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'component',
                 docked: 'bottom',
-                html: '<p style="font-size:2.5vw;text-align:center" > As per our Fair Use Policy,there cannot be more than 5 Active Buzz per account </p>',
-                style: 'font-family:Arial;font-size:2vw'
+                html: '<p style="font-size:2.5vw;text-align:center" > As per our Fair Use Policy,only 5 Active Buzz per account are allowed</p>',
+                style: 'font-family:Arial;font-size:2vw;\tbackground:url(resources/img/whitetexture.png)!important;'
             },
             {
                 xtype: 'button',
@@ -68787,7 +68787,6 @@ Ext.define('Ext.picker.Picker', {
                         height: '100%',
                         html: '<div id="chart1"></div>',
                         itemId: 'mypanel',
-                        style: 'background:url(resources/img/whitetexture.png);',
                         styleHtmlContent: true,
                         scrollable: true,
                         listeners: [
@@ -68848,7 +68847,6 @@ Ext.define('Ext.picker.Picker', {
                                                     legend: 'none',
                                                     height: '400',
                                                     orientation: 'horizontal',
-                                                    background: url(resources / img / whitetexture.png),
                                                     bar: {
                                                         groupWidth: 20
                                                     }
@@ -68870,7 +68868,6 @@ Ext.define('Ext.picker.Picker', {
                         html: '<div id="chart2"></div>',
                         id: 'mypanel1',
                         itemId: 'mypanel1',
-                        style: 'background:url(resources/img/whitetexture.png);',
                         styleHtmlContent: true,
                         scrollable: true,
                         listeners: [
@@ -68920,8 +68917,7 @@ Ext.define('Ext.picker.Picker', {
                                                         color: 'black'
                                                     },
                                                     height: '650',
-                                                    width: '400',
-                                                    background: url(resources / img / whitetexture.png)
+                                                    width: '400'
                                                 };
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
@@ -69378,7 +69374,6 @@ Ext.define('Ext.picker.Picker', {
         id: 'formpanel3',
         itemId: 'formpanel',
         padding: '0 0 35 0',
-        style: 'background:url(resources/img/whitetexture.png);',
         ui: 'light',
         autoDestroy: false,
         modal: true,
@@ -70167,7 +70162,6 @@ Ext.define('Ext.picker.Picker', {
                 height: 140,
                 margin: '0 10 50 10',
                 padding: '5 5 5 5',
-                style: 'background:url(resources/img/whitetexture.png);',
                 styleHtmlContent: true,
                 layout: 'fit',
                 scrollable: false,
