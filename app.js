@@ -66462,6 +66462,7 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 width: '100%',
                 clearIcon: false,
+                inputCls: 'inputCls',
                 name: 'phoneNumber',
                 placeHolder: 'Not Listed',
                 readOnly: true
@@ -66469,8 +66470,8 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'w3-card-4',
-                    'icon-email1'
+                    'icon-email1',
+                    'w3-card-4'
                 ],
                 disabled: false,
                 height: '10vh',
@@ -66504,6 +66505,7 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 width: '100%',
                 clearIcon: false,
+                inputCls: 'inputCls',
                 name: 'websiteDisplayName',
                 placeHolder: 'Not Listed',
                 readOnly: true
@@ -66526,6 +66528,7 @@ Ext.define('Ext.picker.Picker', {
                 styleHtmlContent: true,
                 width: '100%',
                 clearIcon: false,
+                inputCls: 'inputCls',
                 labelCls: '',
                 name: 'address',
                 placeHolder: 'Not Listed',
