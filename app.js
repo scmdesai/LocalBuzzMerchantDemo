@@ -66349,19 +66349,6 @@ Ext.define('Ext.picker.Picker', {
                 ui: 'action',
                 width: '60%',
                 text: 'Login'
-            },
-            {
-                xtype: 'container',
-                docked: 'top',
-                height: '100%',
-                hidden: true,
-                style: 'background:url(resources/img/whitetexture.png);',
-                styleHtmlContent: true,
-                width: '100%',
-                layout: {
-                    type: 'vbox',
-                    align: 'stretchmax'
-                }
             }
         ]
     },
