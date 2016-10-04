@@ -66326,6 +66326,7 @@ Ext.define('Ext.picker.Picker', {
                 height: '9vh',
                 hidden: false,
                 left: '20%',
+                margin: '50 0 0 0',
                 style: 'font-size:5vw;font-family:Arial',
                 top: '35%',
                 ui: 'action',
