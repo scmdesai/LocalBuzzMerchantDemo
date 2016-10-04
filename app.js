@@ -66448,96 +66448,6 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'textfield',
                 cls: [
-                    'icon-phone1',
-                    'w3-card-4'
-                ],
-                disabled: false,
-                height: '10vh',
-                hidden: false,
-                id: 'phoneNumber2',
-                itemId: 'phoneNumber',
-                margin: '0 0 2 0',
-                padding: '5 0 0 15',
-                style: 'font-size:1.2em;font-family: arial',
-                styleHtmlContent: true,
-                width: '100%',
-                clearIcon: false,
-                inputCls: 'inputCls',
-                name: 'phoneNumber',
-                placeHolder: 'Not Listed',
-                readOnly: true
-            },
-            {
-                xtype: 'textfield',
-                cls: [
-                    'icon-email1',
-                    'w3-card-4'
-                ],
-                disabled: false,
-                height: '10vh',
-                hidden: false,
-                itemId: 'email',
-                margin: '2 0 2 0',
-                padding: '5 0 0 15',
-                style: 'font-size:1.2em;font-family:Arial;background:url(resources/img/whitetexture.png);',
-                styleHtmlContent: true,
-                width: '100%',
-                clearIcon: false,
-                inputCls: 'inputCls',
-                label: '',
-                name: 'emailAddress',
-                placeHolder: 'Not Listed',
-                readOnly: true
-            },
-            {
-                xtype: 'textfield',
-                cls: [
-                    'icon-globe1',
-                    'w3-card-4'
-                ],
-                disabled: false,
-                height: '10vh',
-                hidden: false,
-                itemId: 'websiteDisplayName',
-                margin: '2 0 2 0',
-                padding: '5 0 0 20',
-                style: 'font-size:1.2em;font-family: arial',
-                styleHtmlContent: true,
-                width: '100%',
-                clearIcon: false,
-                inputCls: 'inputCls',
-                name: 'websiteDisplayName',
-                placeHolder: 'Not Listed',
-                readOnly: true
-            },
-            {
-                xtype: 'textareafield',
-                cls: [
-                    'icon-location',
-                    'w3-card-4'
-                ],
-                disabled: false,
-                height: '10vh',
-                hidden: false,
-                html: '',
-                itemId: 'address',
-                margin: '2 0 2 0',
-                maxHeight: '',
-                minHeight: '',
-                style: 'font-size:0.9em;font-family: arial',
-                styleHtmlContent: true,
-                width: '100%',
-                clearIcon: false,
-                inputCls: 'inputCls',
-                labelCls: '',
-                name: 'address',
-                placeHolder: 'Not Listed',
-                readOnly: true,
-                maxRows: 2
-            },
-            {
-                xtype: 'textfield',
-                cls: [
                     'icon-email1',
                     'customfield2'
                 ],
@@ -66660,6 +66570,101 @@ Ext.define('Ext.picker.Picker', {
                 ui: 'plain',
                 width: '7vw',
                 iconCls: 'compose'
+            },
+            {
+                xtype: 'container',
+                style: 'background:url(resources/img/whitetexture.png);',
+                layout: 'fit',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        cls: [
+                            'w3-card-4',
+                            'icon-email1'
+                        ],
+                        disabled: false,
+                        height: '10vh',
+                        hidden: false,
+                        itemId: 'email2',
+                        margin: '2 0 2 0',
+                        padding: '5 0 0 15',
+                        style: 'font-size:1.2em;font-family:Arial;background:url(resources/img/whitetexture.png);',
+                        styleHtmlContent: true,
+                        width: '100%',
+                        clearIcon: false,
+                        inputCls: 'inputCls',
+                        labelCls: 'icon-email1',
+                        name: 'emailAddress',
+                        placeHolder: 'Not Listed',
+                        readOnly: true
+                    },
+                    {
+                        xtype: 'textfield',
+                        cls: [
+                            'icon-phone1',
+                            'w3-card-4'
+                        ],
+                        disabled: false,
+                        height: '10vh',
+                        hidden: false,
+                        id: 'phoneNumber2',
+                        itemId: 'phoneNumber',
+                        margin: '2 0 2 0',
+                        padding: '5 0 0 15',
+                        style: 'font-size:1.2em;font-family:Arial;background:url(resources/img/whitetexture.png);',
+                        styleHtmlContent: true,
+                        width: '100%',
+                        clearIcon: false,
+                        inputCls: 'inputCls',
+                        name: 'phoneNumber',
+                        placeHolder: 'Not Listed',
+                        readOnly: true
+                    },
+                    {
+                        xtype: 'textfield',
+                        cls: [
+                            'icon-globe1',
+                            'w3-card-4'
+                        ],
+                        disabled: false,
+                        height: '10vh',
+                        hidden: false,
+                        itemId: 'websiteDisplayName',
+                        margin: '2 0 2 0',
+                        padding: '5 0 0 20',
+                        style: 'font-size:1.2em;font-family: Arial;background:url(resources/img/whitetexture.png);',
+                        styleHtmlContent: true,
+                        width: '100%',
+                        clearIcon: false,
+                        inputCls: 'inputCls',
+                        name: 'websiteDisplayName',
+                        readOnly: true
+                    },
+                    {
+                        xtype: 'textareafield',
+                        cls: [
+                            'icon-location',
+                            'w3-card-4'
+                        ],
+                        disabled: false,
+                        height: '10vh',
+                        hidden: false,
+                        html: '',
+                        itemId: 'address',
+                        margin: '2 0 2 0',
+                        maxHeight: '',
+                        minHeight: '',
+                        style: 'font-size:0.9em;font-family: Arial;background:url(resources/img/whitetexture.png);',
+                        styleHtmlContent: true,
+                        width: '100%',
+                        clearIcon: false,
+                        inputCls: 'inputCls',
+                        name: 'address',
+                        placeHolder: 'Not Listed',
+                        readOnly: true,
+                        maxRows: 2
+                    }
+                ]
             }
         ],
         listeners: [
