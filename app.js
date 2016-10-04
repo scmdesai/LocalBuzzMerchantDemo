@@ -66405,6 +66405,7 @@ Ext.define('Ext.picker.Picker', {
                 cls: 'toolbarCls',
                 docked: 'top',
                 height: '8vh',
+                style: 'background:url(resources/img/whitetexture.png);',
                 ui: 'plain',
                 items: [
                     {
@@ -68751,6 +68752,7 @@ Ext.define('Ext.picker.Picker', {
                 height: '',
                 id: 'home',
                 itemId: 'home',
+                style: 'background:url(resources/img/whitetexture.png);',
                 items: [
                     {
                         xtype: 'contactinfo',
@@ -68762,6 +68764,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'container',
                 title: 'Manage Buzz',
                 iconCls: 'icon-localbuzzicon_latest',
+                style: 'background:url(resources/img/whitetexture.png);',
                 items: [
                     {
                         xtype: 'DealsPanel',
@@ -68775,7 +68778,7 @@ Ext.define('Ext.picker.Picker', {
                 iconCls: 'icon-buzzometer',
                 id: 'buzzometer',
                 itemId: 'buzzometer',
-                style: 'font-size:5vw;color:#00529D!important;',
+                style: 'font-size:5vw;color:#00529D!important;background:url(resources/img/whitetexture.png);',
                 styleHtmlContent: true,
                 items: [
                     {
@@ -68784,6 +68787,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '100%',
                         html: '<div id="chart1"></div>',
                         itemId: 'mypanel',
+                        style: 'background:url(resources/img/whitetexture.png);',
                         styleHtmlContent: true,
                         scrollable: true,
                         listeners: [
@@ -68865,6 +68869,7 @@ Ext.define('Ext.picker.Picker', {
                         html: '<div id="chart2"></div>',
                         id: 'mypanel1',
                         itemId: 'mypanel1',
+                        style: 'background:url(resources/img/whitetexture.png);',
                         styleHtmlContent: true,
                         scrollable: true,
                         listeners: [
@@ -69901,7 +69906,7 @@ Ext.define('Ext.picker.Picker', {
         id: 'formpanel5',
         itemId: 'formpanel',
         padding: '0 0 35 0',
-        style: 'background:url(resources/img/whitetexture.png);',
+        style: 'background:url(resources/img/whitetexture.png)!important;',
         ui: 'light',
         autoDestroy: false,
         modal: true,
@@ -70130,6 +70135,7 @@ Ext.define('Ext.picker.Picker', {
             },
             {
                 xtype: 'container',
+                cls: 'inputCls',
                 height: '11vh',
                 html: '<input id="chkbx" class="chkboxStyle" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp;  <u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
                 itemId: 'mycontainer13',
@@ -70158,6 +70164,7 @@ Ext.define('Ext.picker.Picker', {
                 height: 140,
                 margin: '0 10 50 10',
                 padding: '5 5 5 5',
+                style: 'background:url(resources/img/whitetexture.png);',
                 styleHtmlContent: true,
                 layout: 'fit',
                 scrollable: false,
