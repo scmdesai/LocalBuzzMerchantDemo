@@ -29,7 +29,7 @@ $list-header-bg-color: $base-color;
 	background:url(resources/img/whitetexture.png);
 }
 .toolbarCls {
-	background:url(resources/img/whitetexture.png);
+	background:url(resources/img/whitetexture.png)!important;
 	border-bottom:1px solid #C0C0C0 !important;
 }
 
@@ -74,6 +74,7 @@ $list-header-bg-color: $base-color;
 	font-size:5vw !important;
 	padding-right:5px!important;
 	overflow: visible;
+	
 
 
 

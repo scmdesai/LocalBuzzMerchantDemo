@@ -66904,7 +66904,7 @@ Ext.define('Ext.picker.Picker', {
                 cls: 'toolbarCls',
                 docked: 'top',
                 height: '12vh',
-                style: 'border-top:none',
+                style: 'border-top:none;background:url(resources/img/whitetexture.png);',
                 ui: 'plain',
                 autoDestroy: false,
                 items: [
@@ -68778,7 +68778,7 @@ Ext.define('Ext.picker.Picker', {
                 iconCls: 'icon-buzzometer',
                 id: 'buzzometer',
                 itemId: 'buzzometer',
-                style: 'font-size:5vw;color:#00529D!important;background:url(resources/img/whitetexture.png);',
+                style: 'font-size:5vw;color:#00529D!important;background:url(resources/img/whitetexture.png)!important;',
                 styleHtmlContent: true,
                 items: [
                     {
@@ -68848,6 +68848,7 @@ Ext.define('Ext.picker.Picker', {
                                                     legend: 'none',
                                                     height: '400',
                                                     orientation: 'horizontal',
+                                                    background: url(resources / img / whitetexture.png),
                                                     bar: {
                                                         groupWidth: 20
                                                     }
@@ -68919,7 +68920,8 @@ Ext.define('Ext.picker.Picker', {
                                                         color: 'black'
                                                     },
                                                     height: '650',
-                                                    width: '400'
+                                                    width: '400',
+                                                    background: url(resources / img / whitetexture.png)
                                                 };
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
@@ -68934,7 +68936,8 @@ Ext.define('Ext.picker.Picker', {
                 ],
                 tabBar: {
                     cls: 'toolbarCls',
-                    docked: 'top'
+                    docked: 'top',
+                    style: 'background:url(resources/img/whitetexture.png)!important;'
                 }
             }
         ],
