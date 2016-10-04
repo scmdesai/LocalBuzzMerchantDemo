@@ -66815,26 +66815,30 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('LocalBuzzMerchantDemo.view.ListOfDeals', Ext.dataview.List, {
     config: {
-        cls: 'customlist',
         height: '100%',
         id: 'ListOfDeals',
         itemId: 'ListOfDeals',
+        style: 'background:url(resources/img/whitetexture.png);',
         autoDestroy: false,
         allowDeselect: true,
         deselectOnContainerClick: false,
         mode: 'MULTI',
         deferEmptyText: false,
         emptyText: 'Create a Buzz!',
-        itemCls: 'list-item',
+        itemCls: 'w3-card-4',
         store: 'MyDealsStore',
         pinHeaders: false,
         preventSelectionOnDisclose: false,
         refreshHeightOnUpdate: false,
         useSimpleItems: false,
+        cls: [
+            'customlist',
+            'w3-card-4'
+        ],
         itemTpl: [
             '',
             '',
-            '<div style="font-size:4vw;color:black;font-weight:normal;font-family:Arial;word-wrap:word-break;">{dealName}',
+            '<div style="font-size:4vw;color:black;font-weight:bold;font-family:Arial;word-wrap:word-break;">{dealName}',
             '<br><button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button></div>',
             '<tpl if="dealEndDate &lt; todayplusthreedays ">',
             '<div class= expiringDate >Valid {dealStartDate} to {dealEndDate}</div>',
