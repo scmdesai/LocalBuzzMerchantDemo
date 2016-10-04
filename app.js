@@ -66297,16 +66297,11 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('LocalBuzzMerchantDemo.view.WelcomeScreen', Ext.Panel, {
     config: {
-        docked: 'top',
         height: '100%',
         hidden: false,
         hideAnimation: 'flip',
         id: 'WelcomeScreen',
         itemId: 'WelcomeScreen',
-        minHeight: '100%',
-        style: 'background:url(resources/img/whitetexture.png)!important;',
-        styleHtmlContent: true,
-        scrollable: false,
         layout: {
             type: 'vbox',
             align: 'stretchmax'
