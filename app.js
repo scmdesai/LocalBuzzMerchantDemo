@@ -66320,49 +66320,48 @@ Ext.define('Ext.picker.Picker', {
         ],
         items: [
             {
+                xtype: 'component',
+                docked: 'top',
+                hidden: false,
+                html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D;font-family:Arial;font-size:6vw;text-align:center"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
+                id: 'text1',
+                margin: '100 0 0 0',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;background:url(resources/img/whitetexture.png);',
+                styleHtmlContent: true,
+                width: '100%'
+            },
+            {
+                xtype: 'button',
+                handler: function(button, e) {
+                    Ext.Viewport.getActiveItem().destroy();
+                    var view = Ext.Viewport.add({
+                            xtype: 'Login'
+                        });
+                    Ext.Viewport.setActiveItem(view);
+                },
+                centered: false,
+                docked: 'top',
+                height: '9vh',
+                hidden: false,
+                left: '20%',
+                margin: '50 0 0 0',
+                style: 'font-size:5vw;font-family:Arial',
+                ui: 'action',
+                width: '60%',
+                text: 'Login'
+            },
+            {
                 xtype: 'container',
                 docked: 'top',
                 height: '100%',
+                hidden: true,
                 style: 'background:url(resources/img/whitetexture.png);',
                 styleHtmlContent: true,
                 width: '100%',
                 layout: {
                     type: 'vbox',
                     align: 'stretchmax'
-                },
-                items: [
-                    {
-                        xtype: 'component',
-                        docked: 'top',
-                        hidden: false,
-                        html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D;font-family:Arial;font-size:6vw;text-align:center"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
-                        id: 'text1',
-                        margin: '100 0 0 0',
-                        style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;background:url(resources/img/whitetexture.png);',
-                        styleHtmlContent: true,
-                        width: '100%'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-                            Ext.Viewport.getActiveItem().destroy();
-                            var view = Ext.Viewport.add({
-                                    xtype: 'Login'
-                                });
-                            Ext.Viewport.setActiveItem(view);
-                        },
-                        centered: false,
-                        docked: 'top',
-                        height: '9vh',
-                        hidden: false,
-                        left: '20%',
-                        margin: '50 0 0 0',
-                        style: 'font-size:5vw;font-family:Arial',
-                        ui: 'action',
-                        width: '60%',
-                        text: 'Login'
-                    }
-                ]
+                }
             }
         ]
     },
