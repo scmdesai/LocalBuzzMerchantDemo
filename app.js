@@ -66297,10 +66297,15 @@ Ext.define('Ext.picker.Picker', {
  */
 (Ext.cmd.derive('LocalBuzzMerchantDemo.view.WelcomeScreen', Ext.Panel, {
     config: {
+        height: '100%',
         hidden: false,
         hideAnimation: 'flip',
         id: 'WelcomeScreen',
         itemId: 'WelcomeScreen',
+        layout: {
+            type: 'vbox',
+            align: 'stretchmax'
+        },
         items: [
             {
                 xtype: 'component',
