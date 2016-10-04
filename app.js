@@ -66574,7 +66574,10 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'container',
                 style: 'background:url(resources/img/whitetexture.png);',
-                layout: 'fit',
+                layout: {
+                    type: 'vbox',
+                    pack: 'end'
+                },
                 items: [
                     {
                         xtype: 'textfield',
