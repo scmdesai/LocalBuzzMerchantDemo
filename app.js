@@ -66312,57 +66312,56 @@ Ext.define('Ext.picker.Picker', {
             type: 'vbox',
             align: 'stretchmax'
         },
+        items: [
+            {
+                xtype: 'component',
+                docked: 'top',
+                hidden: false,
+                html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D;font-family:Arial;font-size:6vw;text-align:center"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
+                id: 'text1',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;background:url(resources/img/whitetexture.png);',
+                styleHtmlContent: true,
+                top: '7%',
+                width: '100%'
+            },
+            {
+                xtype: 'button',
+                docked: 'top',
+                height: '9vh',
+                hidden: true,
+                left: '20%',
+                margin: '50 0 0 0',
+                style: 'font-size:5vw;font-family:Arial',
+                top: '65%',
+                ui: 'action',
+                width: '60%',
+                text: 'Login'
+            },
+            {
+                xtype: 'button',
+                handler: function(button, e) {
+                    Ext.Viewport.getActiveItem().destroy();
+                    var view = Ext.Viewport.add({
+                            xtype: 'Login'
+                        });
+                    Ext.Viewport.setActiveItem(view);
+                },
+                docked: 'top',
+                height: '9vh',
+                hidden: false,
+                left: '20%',
+                margin: '50 0 0 0',
+                style: 'font-size:5vw;font-family:Arial',
+                top: '35%',
+                ui: 'action',
+                width: '60%',
+                text: 'Login'
+            }
+        ],
         listeners: [
             {
                 fn: 'onWelcomeScreenInitialize',
                 event: 'initialize'
-            }
-        ],
-        items: [
-            {
-                xtype: 'container',
-                docked: 'top',
-                height: '100%',
-                style: 'background:url(resources/img/whitetexture.png);',
-                styleHtmlContent: true,
-                width: '100%',
-                layout: {
-                    type: 'vbox',
-                    align: 'stretchmax'
-                },
-                items: [
-                    {
-                        xtype: 'component',
-                        docked: 'top',
-                        hidden: false,
-                        html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D;font-family:Arial;font-size:6vw;text-align:center"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
-                        id: 'text1',
-                        margin: '100 0 0 0',
-                        style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;background:url(resources/img/whitetexture.png);',
-                        styleHtmlContent: true,
-                        width: '100%'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-                            Ext.Viewport.getActiveItem().destroy();
-                            var view = Ext.Viewport.add({
-                                    xtype: 'Login'
-                                });
-                            Ext.Viewport.setActiveItem(view);
-                        },
-                        centered: false,
-                        docked: 'top',
-                        height: '9vh',
-                        hidden: false,
-                        left: '20%',
-                        margin: '50 0 0 0',
-                        style: 'font-size:5vw;font-family:Arial',
-                        ui: 'action',
-                        width: '60%',
-                        text: 'Login'
-                    }
-                ]
             }
         ]
     },
