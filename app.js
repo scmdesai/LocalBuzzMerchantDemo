@@ -66301,15 +66301,18 @@ Ext.define('Ext.picker.Picker', {
         hideAnimation: 'flip',
         id: 'WelcomeScreen',
         itemId: 'WelcomeScreen',
+        style: 'background:url(resources/img/whitetexture.png);',
+        styleHtmlContent: true,
         items: [
             {
                 xtype: 'component',
                 hidden: false,
-                html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
+                html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D;font-family:Arial;font-size:6vw;text-align:center"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
                 id: 'text1',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;background:url(resources/img/whitetexture.png);',
                 styleHtmlContent: true,
-                top: '7%'
+                top: '7%',
+                width: '100%'
             },
             {
                 xtype: 'button',
@@ -66323,7 +66326,6 @@ Ext.define('Ext.picker.Picker', {
                 height: '9vh',
                 hidden: false,
                 left: '20%',
-                margin: '50 0 0 0',
                 style: 'font-size:5vw;font-family:Arial',
                 top: '35%',
                 ui: 'action',
