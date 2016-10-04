@@ -67669,7 +67669,7 @@ Ext.define('Ext.picker.Picker', {
                 docked: 'top',
                 height: '8vh',
                 margin: '0 0 5 0',
-                style: 'background:url(resources/img/whitetexture.png);border-bottom:1px solid #C0C0C0 !important;',
+                style: 'background:url(resources/img/whitetexture.png);',
                 ui: 'plain',
                 width: '100%',
                 scrollable: false,
