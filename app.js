@@ -66304,8 +66304,9 @@ Ext.define('Ext.picker.Picker', {
         id: 'WelcomeScreen',
         itemId: 'WelcomeScreen',
         minHeight: '100%',
-        style: 'background:url(resources/img/whitetexture.png)!important;',
+        style: 'background:url(resources/img/whitetexture.png);',
         styleHtmlContent: true,
+        width: '100%',
         scrollable: false,
         layout: {
             type: 'vbox',
@@ -66314,12 +66315,26 @@ Ext.define('Ext.picker.Picker', {
         items: [
             {
                 xtype: 'component',
+                docked: 'top',
                 hidden: false,
                 html: '<center><img src ="resources/img/localbuzzicon.png"/><br><div style="text-align:center;"><h3 style="color:#00529D"><b>Welcome to <br><br>Local Buzz For Merchants</h3></div></center>',
                 id: 'text1',
                 style: 'word-wrap:break-word;font-family:Arial;font-size:6vw;background:url(resources/img/whitetexture.png);',
                 styleHtmlContent: true,
                 top: '7%'
+            },
+            {
+                xtype: 'button',
+                docked: 'top',
+                height: '9vh',
+                hidden: true,
+                left: '20%',
+                margin: '50 0 0 0',
+                style: 'font-size:5vw;font-family:Arial',
+                top: '65%',
+                ui: 'action',
+                width: '60%',
+                text: 'Login'
             },
             {
                 xtype: 'button',
@@ -66330,6 +66345,7 @@ Ext.define('Ext.picker.Picker', {
                         });
                     Ext.Viewport.setActiveItem(view);
                 },
+                docked: 'top',
                 height: '9vh',
                 hidden: false,
                 left: '20%',
