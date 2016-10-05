@@ -67689,7 +67689,6 @@ Ext.define('Ext.picker.Picker', {
                         id: 'dealBackBtn',
                         itemId: 'dealBackBtn',
                         minHeight: '100%',
-                        style: 'font-size:8vw',
                         ui: 'plain',
                         iconAlign: 'top'
                     },
