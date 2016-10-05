@@ -67669,6 +67669,7 @@ Ext.define('Ext.picker.Picker', {
         items: [
             {
                 xtype: 'toolbar',
+                cls: 'toolbarCls',
                 docked: 'top',
                 height: '8vh',
                 margin: '0 0 5 0',
@@ -67684,12 +67685,11 @@ Ext.define('Ext.picker.Picker', {
                     {
                         xtype: 'button',
                         cls: 'icon-back-button',
-                        docked: 'left',
                         height: '100%',
                         id: 'dealBackBtn',
                         itemId: 'dealBackBtn',
+                        minHeight: '100%',
                         style: 'font-size:8vw',
-                        styleHtmlContent: true,
                         ui: 'plain',
                         iconAlign: 'top'
                     },
