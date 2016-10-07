@@ -68020,7 +68020,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt7',
                         itemId: 'nameTxt6',
                         margin: '10 5 5 0',
-                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);',
+                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);font-weight:bold;',
                         width: '98%',
                         layout: 'fit'
                     }
