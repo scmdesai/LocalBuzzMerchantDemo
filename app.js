@@ -66618,7 +66618,7 @@ Ext.define('Ext.picker.Picker', {
                         itemId: 'phoneNumber',
                         margin: '2 0 2 0',
                         padding: '15 0 0 15',
-                        style: 'font-size:1.2em;font-family:Arial;background:url(resources/img/whitetexture.png);',
+                        style: 'font-size:1em;font-family:Arial;background:url(resources/img/whitetexture.png);',
                         styleHtmlContent: true,
                         width: '100%',
                         clearIcon: false,
