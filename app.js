@@ -66843,7 +66843,7 @@ Ext.define('Ext.picker.Picker', {
         itemTpl: [
             '',
             '',
-            '<div style="font-size:4vw;color:black;font-weight:bold;font-family:Arial;word-wrap:word-break;">{dealName}',
+            '<div style="font-size:4vw;color:green;font-family:Arial;word-wrap:word-break;">{dealName}',
             '<br><button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button></div>',
             '<tpl if="dealEndDate &lt; todayplusthreedays ">',
             '<div class= expiringDate >Valid {dealStartDate} to {dealEndDate}</div>',
@@ -67712,7 +67712,7 @@ Ext.define('Ext.picker.Picker', {
                         html: '<b>Business Name</b>',
                         id: 'nameTxt1',
                         itemId: 'nameTxt1',
-                        style: 'word-wrap:break-word;font-family:Arial;font-size:5.5vw;text-align:left;font-weight:bold;'
+                        style: 'word-wrap:break-word;font-family:Arial;font-size:5.5vw;text-align:left;\''
                     }
                 ]
             },
@@ -67725,7 +67725,7 @@ Ext.define('Ext.picker.Picker', {
                 id: 'nameTxt6',
                 itemId: 'nameTxt6',
                 margin: '10 5 5 5',
-                style: 'word-wrap:break-word;font-family:Arial;font-size:4.5vw;background:url(resources/img/whitetexture.png);color:black;font-weight:bold;',
+                style: 'word-wrap:break-word;font-family:Arial;font-size:4.5vw;background:url(resources/img/whitetexture.png);color:green;',
                 width: '98%',
                 layout: 'fit'
             },
@@ -68006,7 +68006,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt5',
                         itemId: 'nameTxt5',
                         margin: '10 5 5 5',
-                        style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:black;',
+                        style: 'font-family:Arial;font-size:3.5vw;background:url(resources/img/whitetexture.png);color:#00529D',
                         width: '98%',
                         layout: 'fit'
                     },
@@ -68020,7 +68020,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt7',
                         itemId: 'nameTxt6',
                         margin: '10 5 5 0',
-                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);',
+                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);font-weight:bold',
                         width: '98%',
                         layout: 'fit'
                     }
@@ -68147,7 +68147,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#nameTxt4').show();
         } else {
             // this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;"" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;background:#f6fbfc"/><div style="font-size:5vw;font-family:Arial">' + record.get('dealName') + '</div><br><div style="font-size:3.5vw;font-family:Arial">' + record.get('dealDescription') + '</div><br><div style="font-size:3vw;font-family:Arial">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '</div></div>');
-            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;"/><div style="font-size:4.5vw;font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div><br><div style="font-size:3.8vw;font-family:Arial;">' + record.get('dealDescription') + '</div><br><div style="font-size:3.5vw;font-family:Arial;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
+            this.down('#dealimage').setHtml('<div style="padding:5px 5px 5px 5px;" ><img src="resources/img/localbuzzicon.png" align="right" style="border:none;margin: 5px 5px 5px 5px;"/><div style="font-size:4.5vw;font-family:Arial;color:green;">' + record.get('dealName') + '</div><br><div style="font-size:3.8vw;font-family:Arial;">' + record.get('dealDescription') + '</div><br><div style="font-size:3.5vw;font-family:Arial;color:#00529D;">Valid ' + record.get('dealStartDate') + ' - ' + record.get('dealEndDate') + '<br></div><br></div>');
             //this.down('#nameTxt3').hide();
             this.down('#nameTxt4').hide();
             this.down('#nameTxt5').hide();
@@ -68888,6 +68888,14 @@ Ext.define('Ext.picker.Picker', {
                                     // Set a callback to run when the Google Visualization API is loaded.
                                     google.charts.setOnLoadCallback(drawChart);
                                     function drawChart() {
+                                        var myScroll = new IScroll('#mypanel1', {
+                                                zoom: true,
+                                                scrollX: true,
+                                                scrollY: true,
+                                                mouseWheel: true,
+                                                wheelAction: 'zoom',
+                                                tap: true
+                                            });
                                         // Create the data table.
                                         var data = new google.visualization.DataTable();
                                         var zipcode = [];
@@ -68918,8 +68926,8 @@ Ext.define('Ext.picker.Picker', {
                                                     'pieSliceTextStyle': {
                                                         color: 'black'
                                                     },
-                                                    height: '650',
-                                                    width: '400'
+                                                    height: '850',
+                                                    width: '600'
                                                 };
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
