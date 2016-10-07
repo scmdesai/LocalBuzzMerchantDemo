@@ -66843,7 +66843,7 @@ Ext.define('Ext.picker.Picker', {
         itemTpl: [
             '',
             '',
-            '<div style="font-size:4vw;color:green;font-family:Arial;word-wrap:word-break;">{dealName}',
+            '<div style="font-size:4vw;color:black;font-family:Arial;word-wrap:word-break;">{dealName}',
             '<br><button type="button" id="delete" class="delete_button" style="float:right;margin:0px 15px 0px 15px;">#</button><button type="button" id="edit" class="delete_button" style="float:right">p</button></div>',
             '<tpl if="dealEndDate &lt; todayplusthreedays ">',
             '<div class= expiringDate >Valid {dealStartDate} to {dealEndDate}</div>',
@@ -68020,7 +68020,7 @@ Ext.define('Ext.picker.Picker', {
                         id: 'nameTxt7',
                         itemId: 'nameTxt6',
                         margin: '10 5 5 0',
-                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);font-weight:bold',
+                        style: 'font-family:Arial;font-size:3vw;background:url(resources/img/whitetexture.png);',
                         width: '98%',
                         layout: 'fit'
                     }
@@ -68162,7 +68162,7 @@ Ext.define('Ext.picker.Picker', {
             this.down('#nameTxt4').setHtml('<div style="font-family:Arial">' + record.get('dealDescription') + '</div>');
             if (record.get('dealImageURL')) {
                 this.down('#nameTxt5').setHtml('<div style="font-family:Arial">Valid from ' + record.get('dealStartDate') + '-' + record.get('dealEndDate') + '</div>');
-                this.down('#nameTxt6').setHtml('<div style="font-family:Arial;font-weight:bold;">' + record.get('dealName') + '</div>');
+                this.down('#nameTxt6').setHtml('<div style="font-family:Arial;">' + record.get('dealName') + '</div>');
             }
             //var store = Ext.getStore('MyJsonPStore');
             //  var rec = store.findRecord('businessName', businessName);
@@ -68888,14 +68888,6 @@ Ext.define('Ext.picker.Picker', {
                                     // Set a callback to run when the Google Visualization API is loaded.
                                     google.charts.setOnLoadCallback(drawChart);
                                     function drawChart() {
-                                        var myScroll = new IScroll('#mypanel1', {
-                                                zoom: true,
-                                                scrollX: true,
-                                                scrollY: true,
-                                                mouseWheel: true,
-                                                wheelAction: 'zoom',
-                                                tap: true
-                                            });
                                         // Create the data table.
                                         var data = new google.visualization.DataTable();
                                         var zipcode = [];
@@ -68926,8 +68918,8 @@ Ext.define('Ext.picker.Picker', {
                                                     'pieSliceTextStyle': {
                                                         color: 'black'
                                                     },
-                                                    height: '850',
-                                                    width: '600'
+                                                    height: '750',
+                                                    width: '500'
                                                 };
                                             // Instantiate and draw our chart, passing in some options.
                                             var chart = new google.visualization.PieChart(document.getElementById('chart2'));
