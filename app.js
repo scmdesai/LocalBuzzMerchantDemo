@@ -67686,12 +67686,15 @@ Ext.define('Ext.picker.Picker', {
                     {
                         xtype: 'button',
                         cls: 'icon-back-button',
-                        height: '100%',
                         id: 'dealBackBtn',
                         itemId: 'dealBackBtn',
                         minHeight: '100%',
                         ui: 'plain',
                         iconAlign: 'top'
+                    },
+                    {
+                        xtype: 'spacer',
+                        width: 30
                     },
                     {
                         xtype: 'button',
