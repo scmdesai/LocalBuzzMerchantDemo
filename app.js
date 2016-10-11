@@ -68943,10 +68943,10 @@ Ext.define('Ext.picker.Picker', {
             }
         ],
         tabBar: {
-            cls: 'toolbarCls',
             docked: 'bottom',
+            height: '8.5vh',
             itemId: 'mytabbar1',
-            padding: '45 40 0 40',
+            padding: '0 40 0 40',
             style: 'color:#c0c0c0;background:url(resources/img/whitetexture.png);;font-size:4vw',
             ui: 'plain',
             layout: {
