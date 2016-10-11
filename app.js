@@ -68944,7 +68944,6 @@ Ext.define('Ext.picker.Picker', {
         ],
         tabBar: {
             docked: 'bottom',
-            height: '8.5vh',
             itemId: 'mytabbar1',
             padding: '0 40 0 40',
             style: 'color:#c0c0c0;background:url(resources/img/whitetexture.png);;font-size:6vw',
