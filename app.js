@@ -68757,7 +68757,7 @@ Ext.define('Ext.picker.Picker', {
                 height: '',
                 id: 'home',
                 itemId: 'home',
-                style: 'background:url(resources/img/whitetexture.png);',
+                style: 'background:url(resources/img/whitetexture.png);color:#00529D!important;',
                 items: [
                     {
                         xtype: 'contactinfo',
@@ -68944,9 +68944,8 @@ Ext.define('Ext.picker.Picker', {
         ],
         tabBar: {
             docked: 'bottom',
-            height: '8%',
             itemId: 'mytabbar1',
-            padding: '37 40 5 40',
+            padding: '45 40 0 40',
             style: 'color:#c0c0c0;background:url(resources/img/whitetexture.png);;font-size:4vw',
             ui: 'plain',
             layout: {
