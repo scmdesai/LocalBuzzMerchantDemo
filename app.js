@@ -66433,7 +66433,7 @@ Ext.define('Ext.picker.Picker', {
                         itemId: 'mybutton10',
                         margin: '10 10 10 10',
                         padding: '5 5 5 5',
-                        style: 'color:#00529D',
+                        style: 'color:#00529D;font-size:5vw',
                         ui: 'plain',
                         width: '10vw',
                         iconCls: 'icon-menu'
@@ -66735,7 +66735,7 @@ Ext.define('Ext.picker.Picker', {
                     {
                         iconCls: 'icon-edit',
                         height: '6vh',
-                        width: '11vw',
+                        width: '14vw',
                         padding: '0 5 0 0',
                         handler: function() {
                             Ext.Viewport.hideMenu('right');
@@ -66763,7 +66763,7 @@ Ext.define('Ext.picker.Picker', {
                         iconCls: 'icon-signout',
                         height: '6vh',
                         padding: '0 5 0 0',
-                        width: '11vw',
+                        width: '14vw',
                         handler: function() {
                             Ext.Viewport.hideMenu('right');
                             Ext.Msg.confirm('Logout', 'Are you sure you want to logout?', function(btn) {
