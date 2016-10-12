@@ -66734,7 +66734,7 @@ Ext.define('Ext.picker.Picker', {
                 items: [
                     {
                         iconCls: 'icon-edit',
-                        height: '10vh',
+                        height: '7vh',
                         width: '12vw',
                         padding: '0 5 0 0',
                         handler: function() {
@@ -66761,7 +66761,7 @@ Ext.define('Ext.picker.Picker', {
                     },
                     {
                         iconCls: 'icon-signout',
-                        height: '10vh',
+                        height: '7vh',
                         padding: '0 5 0 0',
                         width: '12vw',
                         handler: function() {
