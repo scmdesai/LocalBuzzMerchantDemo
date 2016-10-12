@@ -69198,7 +69198,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'container',
                 height: '11vh',
-                html: '<input id="chkbx" class="chkboxStyle" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp;  <u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
+                html: '<input id="chkbx" class="chkboxStyle" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp; &nbsp;  &nbsp; &nbsp;<u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
                 itemId: 'mycontainer15',
                 left: '',
                 margin: '10 10 10 10',
@@ -69597,7 +69597,7 @@ Ext.define('Ext.picker.Picker', {
             {
                 xtype: 'container',
                 height: '11vh',
-                html: '<input id="chkbx" class="chkboxStyle" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp;  <u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
+                html: '<input id="chkbx" class="chkboxStyle" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp; &nbsp;  &nbsp; &nbsp;<u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
                 itemId: 'mycontainer14',
                 left: '',
                 margin: '10 10 10 10',
@@ -70139,7 +70139,7 @@ Ext.define('Ext.picker.Picker', {
                 xtype: 'container',
                 cls: 'inputCls',
                 height: '11vh',
-                html: '<input id="chkbx" class="chkboxStyle" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp; &nbsp; <u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
+                html: '<input id="chkbx" class="chkboxStyle" type="checkbox" name="chkbx"> <label for="chkbx"  id="chkboxLabel" style="font-size:3vw;" onclick=\'window.open("http://www.appsonmobile.com/terms-and-conditions/", "_system", "location=yes");\'>&nbsp; &nbsp;  &nbsp; &nbsp;<u style="color:#00529D;">I agree to Apps On Mobile LLC\'s Terms & Conditions</u></label>',
                 itemId: 'mycontainer13',
                 left: '',
                 margin: '10 10 10 10',
