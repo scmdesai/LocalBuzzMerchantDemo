@@ -69298,7 +69298,7 @@ Ext.define('Ext.picker.Picker', {
                         docked: 'right',
                         height: '7vh',
                         itemId: 'submit',
-                        style: 'font-size:5vw;font-family:Arial',
+                        style: 'font-size:4vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
@@ -69643,7 +69643,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw;font-family:Arial',
+                        style: 'font-size:4vw;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -69713,7 +69713,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw;font-family:Arial',
+                        style: 'font-size:4vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
@@ -70185,7 +70185,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw;font-family:Arial',
+                        style: 'font-size:4vw;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -70249,7 +70249,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw;font-family:Arial',
+                        style: 'font-size:4vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
