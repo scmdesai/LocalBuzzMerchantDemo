@@ -68944,7 +68944,7 @@ Ext.define('Ext.picker.Picker', {
         ],
         tabBar: {
             docked: 'bottom',
-            height: '8%',
+            height: '7%',
             itemId: 'mytabbar1',
             padding: '0 40 0 40',
             style: 'color:#c0c0c0;background:url(resources/img/whitetexture.png);;font-size:6vw',
@@ -69240,7 +69240,7 @@ Ext.define('Ext.picker.Picker', {
                             Ext.Viewport.getActiveItem().destroy();
                         },
                         height: '7vh',
-                        style: 'font-size:5vw!important;font-family:Arial',
+                        style: 'font-size:5.5vw;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -69298,7 +69298,7 @@ Ext.define('Ext.picker.Picker', {
                         docked: 'right',
                         height: '7vh',
                         itemId: 'submit',
-                        style: 'font:size:4vw',
+                        style: 'font-size:5.5vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
@@ -69643,7 +69643,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:6vw;font-family:Arial',
+                        style: 'font-size:5.5vw;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -69713,7 +69713,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:6vw;font-family:Arial',
+                        style: 'font-size:5.5vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
@@ -70185,7 +70185,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:6vw;font-family:Arial',
+                        style: 'font-size:5.5vw;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -70249,7 +70249,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:6vw;font-family:Arial',
+                        style: 'font-size:5.5vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
