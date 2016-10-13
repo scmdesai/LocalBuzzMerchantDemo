@@ -68556,7 +68556,7 @@ Ext.define('Ext.picker.Picker', {
                 height: '8vh',
                 itemId: 'myfilefield1',
                 margin: '5 5 5 5',
-                style: 'background:url(resources/img/whitetexture.png);',
+                style: '',
                 styleHtmlContent: true,
                 width: '50vh',
                 clearIcon: false,
