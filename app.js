@@ -66917,7 +66917,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '8vh',
                         itemId: 'cancelButton',
                         margin: '10 0 10 10',
-                        style: 'font-family:Arial',
+                        style: 'font-size:7vw;font-family:Arial',
                         ui: 'decline',
                         width: '30%',
                         text: 'Cancel'
@@ -66958,7 +66958,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '8vh',
                         itemId: 'saveContactButton',
                         margin: '10 10 10 0',
-                        style: 'font-family:Arial',
+                        style: 'font-size:7vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Save'
@@ -69239,7 +69239,7 @@ Ext.define('Ext.picker.Picker', {
                             Ext.Viewport.getActiveItem().destroy();
                         },
                         height: '7vh',
-                        style: 'font-size:5vw!important',
+                        style: 'font-size:5vw!important;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -69642,7 +69642,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
+                        style: 'font-size:5vw;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -69712,7 +69712,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
+                        style: 'font-size:5vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
@@ -70184,8 +70184,7 @@ Ext.define('Ext.picker.Picker', {
                         //store.load();
                         height: '7vh',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
-                        styleHtmlContent: true,
+                        style: 'font-size:5vw;font-family:Arial',
                         ui: 'decline',
                         width: '40%',
                         text: 'Cancel'
@@ -70249,8 +70248,7 @@ Ext.define('Ext.picker.Picker', {
                         height: '7vh',
                         itemId: 'submit',
                         margin: '0 0 5 0',
-                        style: 'font-size:5vw!important;font-family:Arial',
-                        styleHtmlContent: true,
+                        style: 'font-size:5vw;font-family:Arial',
                         ui: 'confirm',
                         width: '30%',
                         text: 'Submit'
